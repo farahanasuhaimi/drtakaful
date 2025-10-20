@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Borang Permohonan Takaful Online | Dr. Takaful</title>
+  <meta name="description" content="Isi borang permohonan Takaful Medical Card & Hibah secara online. Cepat, mudah dan selamat.">
+  <meta name="robots" content="noindex, nofollow"> <!-- Elak enjin carian dari indek borang ini -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-b from-rose-50 to-white text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-rose-600 text-white py-4 px-6 shadow-md">
+    <div class="max-w-4xl mx-auto">
+      <a href="/" class="text-sm hover:underline">← Kembali ke Laman Utama</a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-4xl mx-auto py-12 px-6">
+    
+    <!-- Title Section -->
+    <div class="text-center mb-10">
+      <h1 class="text-3xl md:text-4xl font-bold text-rose-700 mb-4">Borang Permohonan Takaful Online</h1>
+      <p class="text-gray-600 text-lg">Sila lengkapkan maklumat di bawah untuk proses permohonan yang pantas.</p>
+    </div>
+
+    <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 my-6 rounded-r-lg">
+      <p class="text-sm text-yellow-800">
+        <strong>🔒 Privasi Anda Dijamin:</strong> Semua maklumat yang anda isi akan dihantar terus ke WhatsApp saya dan tidak akan disimpan di laman web ini. Data anda adalah sulit dan hanya digunakan untuk tujuan permohonan takaful.
+      </p>
+    </div>
+
+    <!-- Form Section -->
+    <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
+
+      <!-- Policy Owner Details -->
+      <section id="pemilik-polisi">
+        <h2 class="text-2xl font-semibold text-rose-700 mb-6 border-b pb-3">Maklumat Pemilik Polisi</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-6">
+          
+          <div class="md:col-span-2">
+            <label for="namaPenuh" class="block text-sm font-medium text-gray-700 mb-1">1. Nama Penuh (seperti dalam IC)</label>
+            <input type="text" id="namaPenuh" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-rose-500 focus:border-rose-500" placeholder="cth: AHMAD BIN ALI">
+          </div>
+
+          <div>
+            <label for="noIC" class="block text-sm font-medium text-gray-700 mb-1">2. No. Kad Pengenalan</label>
+            <input type="text" id="noIC" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-rose-500 focus:border-rose-500" placeholder="cth: 880101-10-1234">
+          </div>
+
+          <div>
+            <label for="statusKahwin" class="block text-sm font-medium text-gray-700 mb-1">13. Status Perkahwinan</label>
+            <select id="statusKahwin" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-rose-500 focus:border-rose-500">
+              <option value="">Pilih status</option>
+              <option value="Bujang">Bujang</option>
+              <option value="Berkahwin">Berkahwin</option>
+              <option value="Bercerai / Balu / Duda">Bercerai / Balu / Duda</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="berat" class="block text-sm font-medium text-gray-700 mb-1">3. Berat (kg)</label>
+            <input type="number" id="berat" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-rose-500 focus:border-rose-500" placeholder="cth: 75">
+          </div>
+
+          <div>
+            <label for="tinggi" class="block text-sm font-medium text-gray-700 mb-1">4. Tinggi (cm)</label>
+            <input type="number" id="tinggi" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-rose-500 focus:border-rose-500" placeholder="cth: 170">
+          </div>
+
+          <div class="md:col-span-2">
+            <label class="block text-sm font-medium text-gray-700 mb-2">12. Status Gaya Hidup</label>
+            <div class="grid grid-cols-3 gap-4">
+              <div>
+                <label for="merokok" class="block text-xs font-medium text-gray-600 mb-1">Merokok</label>
+                <select id="merokok" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-rose-500 focus:border-rose-500">
+                  <option value="Tidak">Tidak</option>
+                  <option value="Ya">Ya</option>
+                </select>
+              </div>
+              <div>
+                <label for="vape" class="block text-xs font-medium text-gray-600 mb-1">Vape</label>
+                <select id="vape" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-rose-500 focus:border-rose-500">
+                  <option value="Tidak">Tidak</option>
+                  <option value="Ya">Ya</option>
+                </select>
+              </div>
+              <div>
+                <label for="alkohol" class="block text-xs font-medium text-gray-600 mb-1">Alkohol</label>
+                <select id="alkohol" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-rose-500 focus:border-rose-500">
+                  <option value="Tidak">Tidak</option>
+                  <option value="Ya">Ya</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="md:col-span-2">
+            <label for="sejarahKesihatanDiri" class="block text-sm font-medium text-gray-700 mb-1">11. Sejarah Kesihatan / Pembedahan Diri</label>
+            <textarea id="sejarahKesihatanDiri" rows="3" class="w-full mt-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-rose-500 focus:border-rose-500" placeholder="Jika tiada, tulis 'Tiada'. Jika ada, nyatakan penyakit dan tarikh. cth: Apendiks (2018), Darah Tinggi (sejak 2020)"></textarea>
+          </div>
+
+          <div class="md:col-span-2">
+            <label for="sejarahKesihatanKeluarga" class="block text-sm font-medium text-gray-700 mb-1">Sejarah Kesihatan Keluarga (Ibu, Bapa, Adik-beradik)</label>
+            <textarea id="sejarahKesihatanKeluarga" rows="3" class="w-full mt-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-rose-500 focus:border-rose-500" placeholder="Jika tiada, tulis 'Tiada'. Jika ada, nyatakan penyakit dan hubungan. cth: Bapa - Sakit Jantung, Ibu - Kanser Payudara"></textarea>
+          </div>
+
+          <div class="md:col-span-2 pt-4 border-t">
+            <h3 class="text-lg font-semibold text-gray-800 mb-4">Maklumat Pekerjaan</h3>
+          </div>
+
+          <div>
+            <label for="namaSyarikat" class="block text-sm font-medium text-gray-700 mb-1">5. Nama Syarikat Bekerja</label>
+            <input type="text" id="namaSyarikat" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-rose-500 focus:border-rose-500">
+          </div>
+
+          <div>
+            <label for="jawatan" class="block text-sm font-medium text-gray-700 mb-1">7. Jawatan</label>
+            <input type="text" id="jawatan" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-rose-500 focus:border-rose-500" placeholder="cth: Jurutera, Guru, Eksekutif Pemasaran">
+          </div>
+
+          <div>
+            <label for="industri" class="block text-sm font-medium text-gray-700 mb-1">9. Industri Pekerjaan</label>
+            <input type="text" id="industri" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-rose-500 focus:border-rose-500" placeholder="cth: Pembinaan, Pendidikan, Perkilangan">
+          </div>
+
+          <div>
+            <label for="gaji" class="block text-sm font-medium text-gray-700 mb-1">8. Gaji Bulanan (RM)</label>
+            <input type="number" id="gaji" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-rose-500 focus:border-rose-500" placeholder="cth: 4500">
+          </div>
+
+          <div class="md:col-span-2">
+            <label for="alamatKerja" class="block text-sm font-medium text-gray-700 mb-1">6. Alamat Tempat Bekerja</label>
+            <textarea id="alamatKerja" rows="3" class="w-full mt-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-rose-500 focus:border-rose-500"></textarea>
+          </div>
+
+          <div class="md:col-span-2 pt-4 border-t">
+            <h3 class="text-lg font-semibold text-gray-800 mb-4">Maklumat Hubungi & Surat-Menyurat</h3>
+          </div>
+
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">14. Alamat E-mel</label>
+            <input type="email" id="email" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-rose-500 focus:border-rose-500" placeholder="cth: ahmad@gmail.com">
+          </div>
+
+          <div>
+            <label for="noTelefon" class="block text-sm font-medium text-gray-700 mb-1">15. No. Telefon</label>
+            <input type="tel" id="noTelefon" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-rose-500 focus:border-rose-500" placeholder="cth: 012-3456789">
+          </div>
+
+          <div class="md:col-span-2">
+            <label for="alamatSurat" class="block text-sm font-medium text-gray-700 mb-1">10. Alamat Surat-Menyurat</label>
+            <textarea id="alamatSurat" rows="3" class="w-full mt-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-rose-500 focus:border-rose-500" placeholder="Alamat rumah terkini"></textarea>
+          </div>
+
+          <div class="md:col-span-2 pt-4 border-t">
+            <h3 class="text-lg font-semibold text-gray-800 mb-4">16. Maklumat Bank (Untuk Auto-Debit)</h3>
+          </div>
+
+          <div>
+            <label for="namaBank" class="block text-sm font-medium text-gray-700 mb-1">Nama Bank</label>
+            <input type="text" id="namaBank" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-rose-500 focus:border-rose-500" placeholder="cth: Maybank, CIMB Bank">
+          </div>
+
+          <div>
+            <label for="noAkaun" class="block text-sm font-medium text-gray-700 mb-1">Nombor Akaun</label>
+            <input type="text" id="noAkaun" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-rose-500 focus:border-rose-500">
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Nominee Details -->
+      <section id="penama-hibah" class="mt-12">
+        <h2 class="text-2xl font-semibold text-rose-700 mb-6 border-b pb-3">Maklumat Penama Hibah</h2>
+        <p class="text-sm text-gray-600 mb-6">Anda boleh meletakkan sehingga 4 penama. Untuk permulaan, sila isi maklumat penama pertama. Jika ada lebih dari seorang, nyatakan di ruangan nota di bawah.</p>
+
+        <div class="bg-gray-50 p-6 rounded-lg border">
+          <h3 class="text-lg font-semibold text-gray-800 mb-4">Penama Pertama (100%)</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-6">
+            <div class="md:col-span-2">
+              <label for="namaPenama1" class="block text-sm font-medium text-gray-700 mb-1">1. Nama Penuh Penama</label>
+              <input type="text" id="namaPenama1" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-rose-500 focus:border-rose-500">
+            </div>
+
+            <div>
+              <label for="icPenama1" class="block text-sm font-medium text-gray-700 mb-1">2. No. Kad Pengenalan Penama</label>
+              <input type="text" id="icPenama1" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-rose-500 focus:border-rose-500">
+            </div>
+
+            <div>
+              <label for="hubunganPenama1" class="block text-sm font-medium text-gray-700 mb-1">5. Hubungan</label>
+              <input type="text" id="hubunganPenama1" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-rose-500 focus:border-rose-500" placeholder="cth: Isteri, Suami, Anak, Ibu">
+            </div>
+
+            <div>
+              <label for="telefonPenama1" class="block text-sm font-medium text-gray-700 mb-1">4. No. Telefon Penama</label>
+              <input type="tel" id="telefonPenama1" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-rose-500 focus:border-rose-500">
+            </div>
+
+            <div>
+              <label for="peratusanPenama1" class="block text-sm font-medium text-gray-700 mb-1">3. Peratusan Hibah (%)</label>
+              <input type="number" id="peratusanPenama1" value="100" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-rose-500 focus:border-rose-500">
+            </div>
+
+            <div class="md:col-span-2">
+              <label for="alamatPenama1" class="block text-sm font-medium text-gray-700 mb-1">6. Alamat Surat-Menyurat Penama</label>
+              <textarea id="alamatPenama1" rows="3" class="w-full mt-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-rose-500 focus:border-rose-500"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-6">
+          <label for="notaPenama" class="block text-sm font-medium text-gray-700 mb-1">Nota Tambahan (cth: untuk 2-4 penama)</label>
+          <textarea id="notaPenama" rows="4" class="w-full mt-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-rose-500 focus:border-rose-500" placeholder="Contoh:&#10;Penama Kedua: Nama, IC, Hubungan, Peratusan&#10;Penama Ketiga: Nama, IC, Hubungan, Peratusan"></textarea>
+        </div>
+      </section>
+
+      <!-- Submit Button -->
+      <div class="mt-10 text-center">
+        <button onclick="sendWhatsApp()" class="w-full md:w-auto bg-rose-600 text-white px-12 py-4 rounded-lg hover:bg-rose-700 transition font-bold text-lg shadow-lg">
+          Hantar Maklumat Melalui WhatsApp 🚀
+        </button>
+        <p id="formMessage" class="text-center text-sm mt-4 text-gray-600"></p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-100 py-8 px-6 mt-16">
+    <div class="max-w-4xl mx-auto text-center">
+      <p class="text-gray-600 mb-4">
+        <a href="/" class="text-rose-600 hover:underline">← Kembali ke Laman Utama</a>
+      </p>
+      <p class="text-gray-500 text-sm">© 2025 Takaful by Hana — Dr. Takaful | Semua Hak Terpelihara</p>
+    </div>
+  </footer>
+
+  <script>
+    function sendWhatsApp() {
+      // Helper function to get value
+      const getVal = (id) => document.getElementById(id).value.trim();
+
+      // Validation
+      const requiredFields = ['namaPenuh', 'noIC', 'berat', 'tinggi', 'jawatan', 'gaji', 'email', 'noTelefon', 'namaBank', 'noAkaun', 'namaPenama1', 'icPenama1', 'hubunganPenama1'];
+      for (const fieldId of requiredFields) {
+        if (!getVal(fieldId)) {
+          const fieldLabel = document.querySelector(`label[for='${fieldId}']`).innerText;
+          document.getElementById('formMessage').textContent = `❌ Sila isi maklumat wajib: ${fieldLabel}`;
+          document.getElementById('formMessage').className = 'text-center text-sm mt-4 text-red-600 font-semibold';
+          document.getElementById(fieldId).focus();
+          return;
+        }
+      }
+
+      // Build the message string
+      let message = `*PERMOHONAN TAKAFUL ONLINE - Dr. Takaful*\n\n`;
+      message += `Assalamualaikum Hana, berikut adalah butiran permohonan saya:\n\n`;
+      message += `*MAKLUMAT PEMILIK POLISI*\n`;
+      message += `-----------------------------------\n`;
+      message += `1. Nama Penuh: *${getVal('namaPenuh')}*\n`;
+      message += `2. No IC: *${getVal('noIC')}*\n`;
+      message += `3. Berat: *${getVal('berat')} kg*\n`;
+      message += `4. Tinggi: *${getVal('tinggi')} cm*\n`;
+      message += `5. Syarikat Bekerja: *${getVal('namaSyarikat') || '-'}*\n`;
+      message += `6. Alamat Bekerja: *${getVal('alamatKerja') || '-'}*\n`;
+      message += `7. Jawatan: *${getVal('jawatan')}*\n`;
+      message += `8. Gaji Bulanan: *RM ${getVal('gaji')}*\n`;
+      message += `9. Industri: *${getVal('industri') || '-'}*\n`;
+      message += `10. Alamat Surat Menyurat: *${getVal('alamatSurat')}*\n`;
+      message += `11. Sejarah Kesihatan Diri: *${getVal('sejarahKesihatanDiri') || 'Tiada'}*\n`;
+      message += `   Sejarah Kesihatan Keluarga: *${getVal('sejarahKesihatanKeluarga') || 'Tiada'}*\n`;
+      message += `12. Status Gaya Hidup:\n`;
+      message += `   - Merokok: *${getVal('merokok')}*\n`;
+      message += `   - Vape: *${getVal('vape')}*\n`;
+      message += `   - Alkohol: *${getVal('alkohol')}*\n`;
+      message += `13. Status Kahwin: *${getVal('statusKahwin')}*\n`;
+      message += `14. Email: *${getVal('email')}*\n`;
+      message += `15. No Telefon: *${getVal('noTelefon')}*\n`;
+      message += `16. Bank Details (Auto-Debit):\n`;
+      message += `   - Nama Bank: *${getVal('namaBank')}*\n`;
+      message += `   - No Akaun: *${getVal('noAkaun')}*\n\n`;
+
+      message += `*MAKLUMAT PENAMA HIBAH*\n`;
+      message += `-----------------------------------\n`;
+      message += `*Penama Pertama:*\n`;
+      message += `1. Nama: *${getVal('namaPenama1')}*\n`;
+      message += `2. No IC: *${getVal('icPenama1')}*\n`;
+      message += `3. Peratusan: *${getVal('peratusanPenama1')}%*\n`;
+      message += `4. No Telefon: *${getVal('telefonPenama1') || '-'}*\n`;
+      message += `5. Hubungan: *${getVal('hubunganPenama1')}*\n`;
+      message += `6. Alamat: *${getVal('alamatPenama1') || '-'}*\n\n`;
+
+      const notaPenama = getVal('notaPenama');
+      if (notaPenama) {
+        message += `*Nota Tambahan (Penama Lain):*\n${notaPenama}\n\n`;
+      }
+
+      message += `Saya dengan ini mengesahkan bahawa semua maklumat di atas adalah benar dan membenarkan pihak puan untuk memproses permohonan saya.\n\n`;
+      message += `Terima kasih.`;
+
+      // Encode and open WhatsApp
+      const encodedMessage = encodeURIComponent(message);
+      const whatsappURL = `https://wa.me/60132522587?text=${encodedMessage}`;
+      
+      document.getElementById('formMessage').textContent = '✅ Berjaya! Membuka WhatsApp...';
+      document.getElementById('formMessage').className = 'text-center text-sm mt-4 text-green-600 font-semibold';
+
+      window.open(whatsappURL, '_blank');
+    }
+  </script>
+
+</body>
+</html>
