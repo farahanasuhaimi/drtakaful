@@ -1,0 +1,82 @@
+<section id="blog" class="bg-white max-w-5xl mx-auto py-16 px-6">
+  <h2 class="text-3xl font-bold text-center mb-4 text-rose-700">Blog Awareness</h2>
+  <!-- <p class="text-center text-gray-600 mb-12">Bacaan untuk tingkatkan kefahaman takaful anda.</p> -->
+
+  <!-- Tab Navigation -->
+  <div class="flex justify-center flex-wrap gap-2 mb-8">
+    <button onclick="filterArticles('all')" class="tab-button active-tab">Semua Artikel</button>
+    <button onclick="filterArticles('hibah')" class="tab-button">Hibah & Legasi</button>
+    <button onclick="filterArticles('medical')" class="tab-button">Medical & Kritikal</button>
+    <button onclick="filterArticles('asas')" class="tab-button">Asas Takaful</button>
+  </div>
+
+  <!-- Blog Grid -->
+  <div id="article-grid" class="grid md:grid-cols-3 gap-6">
+    <!-- Articles will be populated by JS, but we list them here with data-category -->
+    <article class="blog-article" data-category="medical">
+      <h3 class="text-lg font-semibold text-rose-700 mb-2">Penyakit Kritikal (CI) vs. HUMK: Apa Bezanya?</h3>
+      <p class="text-gray-600 text-sm mb-4">Ramai keliru antara pampasan CI dan Hilang Upaya (HUMK/TPD). Fahami kenapa anda perlukan kedua-duanya.</p>
+      <a href="/penyakit-kritikal-dan-humk.html" class="text-rose-600 font-medium hover:underline">Baca lanjut →</a>
+    </article>
+    <article class="blog-article" data-category="medical">
+      <h3 class="text-lg font-semibold text-rose-700 mb-2">Medical Card ≠ Pelan Penyakit Kritikal</h3>
+      <p class="text-gray-600 text-sm mb-4">Medical card rawat anda, tapi pelan CI bantu teruskan hidup bila tak boleh bekerja.</p>
+      <a href="/beza-medical-card-vs-pelan-penyakit-kritikal.html" class="text-rose-600 font-medium hover:underline">Baca lanjut →</a>
+    </article>
+    <article class="blog-article" data-category="medical">
+      <h3 class="text-lg font-semibold text-rose-700 mb-2">MediFlex-i vs Idaman</h3>
+      <p class="text-gray-600 text-sm mb-4">Pelan asas Takaful Keluarga atau pelan medical card standalone?</p>
+      <a href="/beza-medical-card-mediflex-vs-idaman.html" class="text-rose-600 font-medium hover:underline">Baca lanjut →</a>
+    </article>
+    <article class="blog-article" data-category="hibah">
+      <h3 class="text-lg font-semibold text-rose-700 mb-2">Hibah Sejuta Makna vs Legasi Beyond</h3>
+      <p class="text-gray-600 text-sm mb-4">Pelan hibah mana yang sesuai untuk anda? Fahami perbezaan antara pelan mampu milik dan premium dari AIA.</p>
+      <a href="/hibah-aia-sejuta-makna-vs-legasi-beyond.html" class="text-rose-600 font-medium hover:underline">Baca lanjut →</a>
+    </article>
+    <article class="blog-article" data-category="asas">
+      <h3 class="text-lg font-semibold text-rose-700 mb-2">Simpanan vs Takaful: Mana Betul?</h3>
+      <p class="text-gray-600 text-sm mb-4">Simpanan habis bila diuji, tapi takaful kekal bantu semasa krisis.</p>
+      <a href="/simpanan-vs-takaful.html" class="text-rose-600 font-medium hover:underline">Baca lanjut →</a>
+    </article>
+    <article class="blog-article" data-category="asas">
+      <h3 class="text-lg font-semibold text-rose-700 mb-2">10% Income = 100 Bulan Tenang</h3>
+      <p class="text-gray-600 text-sm mb-4">Formula mudah untuk pastikan hidup terus stabil walau diuji 3D.</p>
+      <a href="/formula-10-peratus-pendapatan-takaful.html" class="text-rose-600 font-medium hover:underline">Baca lanjut →</a>
+    </article>
+    <article class="blog-article" data-category="asas">
+      <h3 class="text-lg font-semibold text-rose-700 mb-2">Kenapa Perlu Rancang Kewangan Awal?</h3>
+      <p class="text-gray-600 text-sm mb-4">Masa adalah aset paling berharga dalam perancangan kewangan anda.</p>
+      <a href="/kenapa-perlu-rancang-kewangan-awal.html" class="text-rose-600 font-medium hover:underline">Baca lanjut →</a>
+    </article>
+    <article class="blog-article" data-category="asas">
+      <h3 class="text-lg font-semibold text-rose-700 mb-2">Umur 50+ Masih Boleh Dapat Takaful?</h3>
+      <p class="text-gray-600 text-sm mb-4">Tak pernah terlambat untuk lindungi diri dan keluarga.</p>
+      <a href="/takaful-umur-50-tahun.html" class="text-rose-600 font-medium hover:underline">Baca lanjut →</a>
+    </article>
+    <article class="blog-article" data-category="medical">
+      <h3 class="text-lg font-semibold text-rose-700 mb-2">Socso vs Takaful</h3>
+      <p class="text-gray-600 text-sm mb-4">Dah Ada SOCSO, Perlu Lagi Ke Takaful CI?</p>
+      <a href="/socso-vs-takaful-penyakit-kritikal.html" class="text-rose-600 font-medium hover:underline">Baca lanjut →</a>
+    </article>
+    <article class="blog-article" data-category="asas">
+      <h3 class="text-lg font-semibold text-rose-700 mb-2">Takaful Untuk Anak: Perlu Start Bila & Kenapa?</h3>
+      <p class="text-gray-600 text-sm mb-4">Gift terbaik untuk anak bukan mainan - tapi perlindungan & masa depan yang terjamin.</p>
+      <a href="/bila-perlu-mula-takaful-anak.html" class="text-rose-600 font-medium hover:underline">Baca lanjut →</a>
+    </article>
+    <article class="blog-article" data-category="medical">
+      <h3 class="text-lg font-semibold text-rose-700 mb-2">PERKESO vs Medical Card</h3>
+      <p class="text-gray-600 text-sm mb-4">Mana satu yang bayar bil hospital anda? Fahami perbezaan besar antara keduanya.</p>
+      <a href="/perkeso-vs-takaful-medical-card.html" class="text-rose-600 font-medium hover:underline">Baca lanjut →</a>
+    </article>
+    <article class="blog-article" data-category="hibah">
+      <h3 class="text-lg font-semibold text-rose-700 mb-2">Kira Hibah</h3>
+      <p class="text-gray-600 text-sm mb-4">Kira berapa hibah yang anda perlukan untuk keluarga survive 100 bulan tanpa anda.</p>
+      <a href="/kalkulator-hibah-takaful.html" class="text-rose-600 font-medium hover:underline">Baca lanjut →</a>
+    </article>
+    <article class="blog-article" data-category="hibah">
+      <h3 class="text-lg font-semibold text-rose-700 mb-2">Hibah Untuk Rakan Kongsi Bisnes</h3>
+      <p class="text-gray-600 text-sm mb-4">Bagaimana hibah silang (cross-hibah) boleh menyelamatkan bisnes anda apabila salah seorang rakan kongsi meninggal dunia.</p>
+      <a href="/hibah-untuk-bisnes.html" class="text-rose-600 font-medium hover:underline">Baca lanjut →</a>
+    </article>
+  </div>
+</section>

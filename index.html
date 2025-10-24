@@ -57,6 +57,42 @@
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFWGX5DS"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+
+  <!-- NAVIGATION BAR -->
+  <header class="bg-white shadow-sm z-50">
+    <nav class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <!-- Logo -->
+      <a href="/" class="text-xl font-bold text-rose-700 hover:text-rose-800 transition">Dr. Takaful</a>
+
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex space-x-8 items-center text-gray-600">
+        <li><a href="#focus-areas" class="hover:text-rose-700 transition">Jenis Perlindungan</a></li>
+        <li><a href="#testimonials" class="hover:text-rose-700 transition">Testimoni</a></li>
+        <li><a href="/kalkulator-hibah-takaful.html" class="hover:text-rose-700 transition">Kalkulator Hibah</a></li>
+      </ul>
+
+      <!-- CTA Button (Desktop) -->
+      <a href="#health-form" class="hidden md:block bg-rose-600 text-white px-5 py-2 rounded-full shadow hover:bg-rose-700 transition">
+        Dapatkan Quotation
+      </a>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-button" class="md:hidden text-rose-700">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+      <a href="#focus-areas" class="block py-3 px-6 text-gray-700 hover:bg-rose-50">Jenis Perlindungan</a>
+      <a href="#testimonials" class="block py-3 px-6 text-gray-700 hover:bg-rose-50">Testimoni</a>
+      <a href="/kalkulator-hibah-takaful.html" class="block py-3 px-6 text-gray-700 hover:bg-rose-50">Kalkulator Hibah</a>
+      <a href="#health-form" class="block py-4 px-6 text-center bg-rose-100 text-rose-700 font-semibold">Dapatkan Quotation</a>
+    </div>
+  </header>
+
   <!-- HERO SECTION --> 
   <section class="text-center py-16 px-4 bg-gradient-to-b from-rose-50 to-white">
     <h1 class="text-4xl md:text-5xl font-bold text-rose-700 mb-4">🩺 Dr. Takaful, bukan Dr. Medic</h1>
@@ -64,8 +100,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       B.Eng (UIA) • M.Eng (UTM) • M.Sc (UB, France) • PhD Eng (UIA)
     </p>
     <p class="text-lg md:text-xl max-w-2xl mx-auto text-gray-700 leading-relaxed">
-      Bina <span class="font-semibold text-rose-700">legasi bermakna</span> dan lindungi keluarga dengan <span class="font-semibold text-rose-700">pelan hibah & takaful patuh syariah</span> bila diuji 3D — <em>death, disease, disability</em>.<br>
-      Saya bantu anda urus <span class="font-semibold text-rose-700">10% income</span> untuk <span class="font-semibold text-rose-700">100 bulan ketenangan keluarga.</span>
+      Saya bantu anda bina <span class="font-semibold text-rose-700">legasi bermakna</span> dan lindungi keluarga dengan pelan hibah & takaful patuh syariah bila diuji 3D — <em>death, disease, disability</em>.<br class="hidden md:block">
+      Formula saya mudah: Urus <span class="font-semibold text-rose-700">10% pendapatan</span> untuk cipta <span class="font-semibold text-rose-700">100 bulan ketenangan</span> buat keluarga.
     </p>
     <div class="flex justify-center gap-4 mt-8">
       <a href="#health-form" class="bg-rose-600 text-white px-6 py-3 rounded-full shadow hover:bg-rose-700 transition animate-pulse">Dapatkan Analisis Pelan Percuma 💬</a>
@@ -83,8 +119,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
 
   <!-- FOCUS AREAS -->
-  <section class="bg-rose-50 py-12 px-6">
-    <h2 class="text-2xl text-center font-semibold mb-8 text-rose-700">Fokus Perancangan Legasi Anda</h2>
+  <section id="focus-areas" class="bg-rose-50 py-16 px-6">
+    <h2 class="text-3xl text-center font-bold mb-10 text-rose-700">Fokus Perancangan Legasi Anda</h2>
     <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
       <a href="/simpanan-vs-takaful.html" class="block bg-white p-6 rounded-2xl shadow hover:shadow-md transition no-underline">
         <h3 class="font-semibold text-lg mb-2 text-rose-700">Kecemasan & Simpanan</h3>
@@ -165,104 +201,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </section>
 
-
-  <!-- BLOG SECTION -->
-  <section id="blog" class="bg-white max-w-5xl mx-auto py-16 px-6">
-    <h2 class="text-3xl font-bold text-center mb-4 text-rose-700">Blog Awareness</h2>
-    <!-- <p class="text-center text-gray-600 mb-12">Bacaan untuk tingkatkan kefahaman takaful anda.</p> -->
-
-
-
-    <!-- Tab Navigation -->
-    <div class="flex justify-center flex-wrap gap-2 mb-8">
-      <button onclick="filterArticles('all')" class="tab-button active-tab">Semua Artikel</button>
-      <button onclick="filterArticles('hibah')" class="tab-button">Hibah & Legasi</button>
-      <button onclick="filterArticles('medical')" class="tab-button">Medical & Kritikal</button>
-      <button onclick="filterArticles('asas')" class="tab-button">Asas Takaful</button>
+  <!-- BLOG SECTION (Loaded dynamically) -->
+  <div id="blog-section-container">
+    <!-- Loading Spinner -->
+    <div id="blog-loader" class="flex justify-center items-center py-20">
+      <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-rose-600"></div>
     </div>
-
-    <!-- Blog Grid -->
-    <div id="article-grid" class="grid md:grid-cols-3 gap-6">
-      <!-- Articles will be populated by JS, but we list them here with data-category -->
-      <article class="blog-article" data-category="medical">
-        <h3 class="text-lg font-semibold text-rose-700 mb-2">Penyakit Kritikal (CI) vs. HUMK: Apa Bezanya?</h3>
-        <p class="text-gray-600 text-sm mb-4">Ramai keliru antara pampasan CI dan Hilang Upaya (HUMK/TPD). Fahami kenapa anda perlukan kedua-duanya.</p>
-        <a href="/penyakit-kritikal-dan-humk.html" class="text-rose-600 font-medium hover:underline">Baca lanjut →</a>
-      </article>
-      <article class="blog-article" data-category="medical">
-        <h3 class="text-lg font-semibold text-rose-700 mb-2">Medical Card ≠ Pelan Penyakit Kritikal</h3>
-        <p class="text-gray-600 text-sm mb-4">Medical card rawat anda, tapi pelan CI bantu teruskan hidup bila tak boleh bekerja.</p>
-        <a href="/beza-medical-card-vs-pelan-penyakit-kritikal.html" class="text-rose-600 font-medium hover:underline">Baca lanjut →</a>
-      </article>
-      <article class="blog-article" data-category="medical">
-        <h3 class="text-lg font-semibold text-rose-700 mb-2">MediFlex-i vs Idaman</h3>
-        <p class="text-gray-600 text-sm mb-4">Pelan asas Takaful Keluarga atau pelan medical card standalone?</p>
-        <a href="/beza-medical-card-mediflex-vs-idaman.html" class="text-rose-600 font-medium hover:underline">Baca lanjut →</a>
-      </article>
-      <article class="blog-article" data-category="hibah">
-        <h3 class="text-lg font-semibold text-rose-700 mb-2">Hibah Sejuta Makna vs Legasi Beyond</h3>
-        <p class="text-gray-600 text-sm mb-4">Pelan hibah mana yang sesuai untuk anda? Fahami perbezaan antara pelan mampu milik dan premium dari AIA.</p>
-        <a href="/hibah-aia-sejuta-makna-vs-legasi-beyond.html" class="text-rose-600 font-medium hover:underline">Baca lanjut →</a>
-      </article>
-      <article class="blog-article" data-category="asas">
-        <h3 class="text-lg font-semibold text-rose-700 mb-2">Simpanan vs Takaful: Mana Betul?</h3>
-        <p class="text-gray-600 text-sm mb-4">Simpanan habis bila diuji, tapi takaful kekal bantu semasa krisis.</p>
-        <a href="/simpanan-vs-takaful.html" class="text-rose-600 font-medium hover:underline">Baca lanjut →</a>
-      </article>
-      <article class="blog-article" data-category="asas">
-        <h3 class="text-lg font-semibold text-rose-700 mb-2">10% Income = 100 Bulan Tenang</h3>
-        <p class="text-gray-600 text-sm mb-4">Formula mudah untuk pastikan hidup terus stabil walau diuji 3D.</p>
-        <a href="/formula-10-peratus-pendapatan-takaful.html" class="text-rose-600 font-medium hover:underline">Baca lanjut →</a>
-      </article>
-      <article class="blog-article" data-category="asas">
-        <h3 class="text-lg font-semibold text-rose-700 mb-2">Kenapa Perlu Rancang Kewangan Awal?</h3>
-        <p class="text-gray-600 text-sm mb-4">Masa adalah aset paling berharga dalam perancangan kewangan anda.</p>
-        <a href="/kenapa-perlu-rancang-kewangan-awal.html" class="text-rose-600 font-medium hover:underline">Baca lanjut →</a>
-      </article>
-      <article class="blog-article" data-category="asas">
-        <h3 class="text-lg font-semibold text-rose-700 mb-2">Umur 50+ Masih Boleh Dapat Takaful?</h3>
-        <p class="text-gray-600 text-sm mb-4">Tak pernah terlambat untuk lindungi diri dan keluarga.</p>
-        <a href="/takaful-umur-50-tahun.html" class="text-rose-600 font-medium hover:underline">Baca lanjut →</a>
-      </article>
-      <article class="blog-article" data-category="medical">
-        <h3 class="text-lg font-semibold text-rose-700 mb-2">Socso vs Takaful</h3>
-        <p class="text-gray-600 text-sm mb-4">Dah Ada SOCSO, Perlu Lagi Ke Takaful CI?</p>
-        <a href="/socso-vs-takaful-penyakit-kritikal.html" class="text-rose-600 font-medium hover:underline">Baca lanjut →</a>
-      </article>
-      <article class="blog-article" data-category="asas">
-        <h3 class="text-lg font-semibold text-rose-700 mb-2">Takaful Untuk Anak: Perlu Start Bila & Kenapa?</h3>
-        <p class="text-gray-600 text-sm mb-4">Gift terbaik untuk anak bukan mainan - tapi perlindungan & masa depan yang terjamin.</p>
-        <a href="/bila-perlu-mula-takaful-anak.html" class="text-rose-600 font-medium hover:underline">Baca lanjut →</a>
-      </article>
-      <article class="blog-article" data-category="medical">
-        <h3 class="text-lg font-semibold text-rose-700 mb-2">PERKESO vs Medical Card</h3>
-        <p class="text-gray-600 text-sm mb-4">Mana satu yang bayar bil hospital anda? Fahami perbezaan besar antara keduanya.</p>
-        <a href="/perkeso-vs-takaful-medical-card.html" class="text-rose-600 font-medium hover:underline">Baca lanjut →</a>
-      </article>
-      <article class="blog-article" data-category="hibah">
-        <h3 class="text-lg font-semibold text-rose-700 mb-2">Kira Hibah</h3>
-        <p class="text-gray-600 text-sm mb-4">Kira berapa hibah yang anda perlukan untuk keluarga survive 100 bulan tanpa anda.</p>
-        <a href="/kalkulator-hibah-takaful.html" class="text-rose-600 font-medium hover:underline">Baca lanjut →</a>
-      </article>
-      <article class="blog-article" data-category="hibah">
-        <h3 class="text-lg font-semibold text-rose-700 mb-2">Hibah Untuk Rakan Kongsi Bisnes</h3>
-        <p class="text-gray-600 text-sm mb-4">Bagaimana hibah silang (cross-hibah) boleh menyelamatkan bisnes anda apabila salah seorang rakan kongsi meninggal dunia.</p>
-        <a href="/hibah-untuk-bisnes.html" class="text-rose-600 font-medium hover:underline">Baca lanjut →</a>
-      </article>
-    </div>
-  </section>
-
-  <!-- CTA FINAL -->
-  <section class="bg-rose-600 text-white text-center py-16 px-6">
-    <h2 class="text-3xl font-semibold mb-4">Nak Tahu Pelan Anda Cukup Tak Bila Diuji 3D?</h2>
-    <p class="max-w-xl mx-auto mb-6 text-rose-100">Saya boleh bantu semak pelan sedia ada secara percuma & tanpa tekanan.</p>
-    <a href="https://wa.me/60132522587" class="bg-white text-rose-600 px-6 py-3 rounded-full font-medium hover:bg-rose-50 transition">Tanya Sekarang 💬</a>
-  </section>
+  </div>
 
     <!-- TESTIMONIALS SECTION -->
-  <section class="bg-gradient-to-b from-rose-50 to-white py-16 px-6">
-    <h2 class="text-2xl text-center font-semibold mb-8 text-rose-700">Apa Kata Klien Saya</h2>
-    <div class="max-w-5xl mx-auto relative">
+  <section id="testimonials" class="bg-gradient-to-b from-rose-50 to-white py-16 px-6">
+    <h2 class="text-3xl text-center font-bold mb-10 text-rose-700">Apa Kata Klien Saya</h2>
+    <div class="max-w-4xl mx-auto relative">
       <!-- Carousel Wrapper -->
       <div class="overflow-hidden">
         <!-- Slides Track -->
@@ -311,20 +261,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </button>
     </div>
   </section>
-<!-- <section class="max-w-3xl mx-auto text-center py-10 px-6">
-  <h2 class="text-xl font-semibold text-rose-700 mb-3">Tentang Dr. Takaful</h2>
-  <p class="text-gray-600 leading-relaxed">
-    Saya Hana, Data Engineer dan penasihat Takaful berdaftar.  
-    Berkelulusan <strong>B.Eng (UIA)</strong>, <strong>M.Eng (UTM)</strong>,  
-    <strong>M.Sc (Université de Bourgogne, France)</strong>,  
-    dan <strong>PhD (UIA)</strong>.  
-    Kini saya bantu masyarakat faham perlindungan kewangan patuh syariah dengan pendekatan profesional dan empati untuk masyarakat.
-  </p>
-</section> -->
+
+  <!-- CTA FINAL -->
+  <section class="bg-rose-600 text-white text-center py-16 px-6">
+    <h2 class="text-3xl font-semibold mb-4">Nak Tahu Pelan Anda Cukup Tak Bila Diuji 3D?</h2>
+    <p class="max-w-xl mx-auto mb-6 text-rose-100">Saya boleh bantu semak pelan sedia ada secara percuma & tanpa tekanan.</p>
+    <a href="https://wa.me/60132522587" class="bg-white text-rose-600 px-6 py-3 rounded-full font-medium hover:bg-rose-50 transition">Tanya Sekarang 💬</a>
+  </section>
 
     <!-- TOOLS & CALCULATORS SECTION -->
-  <section class="py-16 px-6 bg-gray-50">
-    <h2 class="text-2xl text-center font-semibold mb-8 text-rose-700">Lain-lain</h2>
+  <section class="py-16 px-6 bg-gray-50" id="tools">
+    <h2 class="text-3xl text-center font-bold mb-10 text-rose-700">Alat & Rujukan Tambahan</h2>
     <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
       <a href="/kalkulator-hibah-takaful.html#kalkulator-hibah" class="block bg-white p-6 rounded-2xl shadow hover:shadow-md transition no-underline">
         <h3 class="font-semibold text-lg mb-2 text-rose-700">Kalkulator Hibah 100 Bulan 🧮</h3>
@@ -342,153 +289,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </footer>
 
   <!-- Sticky CTA Button -->
-  <a href="#health-form" id="sticky-cta" class="hidden fixed bottom-4 right-4 bg-rose-600 text-white px-5 py-3 rounded-full shadow-lg hover:bg-rose-700 transition-transform transform hover:scale-105 z-50">
+  <a href="#health-form" id="sticky-cta" class="hidden fixed bottom-4 right-4 bg-rose-200 text-white px-5 py-3 rounded-full shadow-lg hover:bg-rose-700 transition-transform transform hover:scale-105 z-50">
     <span>Dapatkan Analisis Percuma 💬</span>
   </a>
 
-
-  <script>
-    function sendWhatsApp() {
-      // Get form values
-      const name = document.getElementById('name').value;
-      const age = document.getElementById('age').value;
-      const gender = document.getElementById('gender').value;
-      const profession = document.getElementById('profession').value;
-      const smoking = document.getElementById('smoking').value;
-      const health = document.getElementById('health').value;
-
-      // Validation
-      if (!name || !age || !gender || !profession || !smoking) {
-        document.getElementById('formMessage').textContent = '❌ Sila isi semua maklumat wajib';
-        document.getElementById('formMessage').className = 'text-center text-sm mt-3 text-red-600';
-        return;
-      }
-      
-      // Create WhatsApp message
-      let message = `*SEMAKAN PELAN TAKAFUL*\n\n`;
-      message += `📝 *Nama:* ${name}\n`;
-      message += `👤 *Umur:* ${age} tahun\n`;
-      message += `🚻 *Jantina:* ${gender}\n`;
-      message += `💼 *Pekerjaan:* ${profession}\n`;
-      message += `🚬 *Status Merokok:* ${smoking}\n`;
-      if (health) {
-        message += `🏥 *Rekod Kesihatan:* ${health}\n`;
-      }
-      message += `\nSaya ingin semak pelan takaful yang sesuai untuk saya. Terima kasih! 🙏`;
-      
-      // Encode message for URL
-      const encodedMessage = encodeURIComponent(message);
-      
-      // Your WhatsApp number (60132522587)
-      const whatsappURL = `https://wa.me/60132522587?text=${encodedMessage}`;
-      
-      // Open WhatsApp
-      window.open(whatsappURL, '_blank');
-      
-      // Show success message
-      document.getElementById('formMessage').textContent = '✅ Membuka WhatsApp...';
-      document.getElementById('formMessage').className = 'text-center text-sm mt-3 text-green-600 font-semibold';
-    }
-
-    // --- Interactive Blog Section Script ---
-    const articles = document.querySelectorAll('.blog-article');
-    const tabButtons = document.querySelectorAll('.tab-button');
-
-    function filterArticles(category) {
-      // Update active tab style
-      tabButtons.forEach(button => {
-        if (button.getAttribute('onclick') === `filterArticles('${category}')`) {
-          button.classList.add('active-tab');
-          button.setAttribute('aria-selected', 'true');
-        } else {
-          button.classList.remove('active-tab');
-          button.setAttribute('aria-selected', 'false');
-        }
-      });
-
-      // Filter articles
-      articles.forEach(article => {
-        if (category === 'all' || article.dataset.category === category) {
-          article.style.display = 'block';
-        } else {
-          article.style.display = 'none';
-        }
-      });
-      document.getElementById('article-grid').style.display = 'grid'; // Ensure grid layout is reapplied
-    }
-
-    // Add some base styles for the new elements
-    const style = document.createElement('style');
-    style.innerHTML = `
-      .blog-article { border: 1px solid #fecdd3; border-radius: 1rem; padding: 1.5rem; transition: all 0.3s; }
-      .dark .blog-article { border-color: #831843; }
-      .blog-article:hover { box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); transform: translateY(-2px); }
-      .tab-button { padding: 0.5rem 1rem; border-radius: 9999px; border: 1px solid #fecdd3; color: #be123c; font-weight: 500; transition: all 0.3s; }
-      .dark .tab-button { border-color: #831843; color: #fda4af; }
-      .tab-button:hover { background-color: #fff1f2; }
-      .dark .tab-button:hover { background-color: #9f1239; }
-      .active-tab { background-color: #be123c; color: white; border-color: #be123c; }
-      .dark .active-tab { background-color: #fda4af; color: #831843; border-color: #fda4af; }
-
-      /* Initial state for filter */
-      document.addEventListener('DOMContentLoaded', () => {
-        filterArticles('all');
-      });
-    `;
-    document.head.appendChild(style);
-
-    // --- Sticky CTA Script ---
-    const stickyCta = document.getElementById('sticky-cta');
-    const formSection = document.getElementById('health-form');
-
-    window.addEventListener('scroll', () => {
-      if (!formSection || !stickyCta) return;
-
-      const formRect = formSection.getBoundingClientRect();
-      
-      // Show button if user has scrolled past the top of the form
-      if (window.scrollY > formSection.offsetTop) {
-        stickyCta.classList.remove('hidden');
-      } else {
-        stickyCta.classList.add('hidden');
-      }
-    });
-
-    // --- Testimonial Carousel Script ---
-    document.addEventListener('DOMContentLoaded', () => {
-      const track = document.getElementById('testimonial-track');
-      if (track) {
-        const slides = Array.from(track.children);
-        const nextButton = document.getElementById('next-testimonial');
-        const prevButton = document.getElementById('prev-testimonial');
-        
-        if (slides.length > 0) {
-          let currentIndex = 0;
-
-          const updateCarousel = () => {
-            const slideWidth = slides[0].getBoundingClientRect().width;
-            track.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
-          };
-
-          nextButton.addEventListener('click', () => {
-            currentIndex = (currentIndex + 1) % slides.length;
-            updateCarousel();
-          });
-
-          prevButton.addEventListener('click', () => {
-            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-            updateCarousel();
-          });
-
-          // Adjust on window resize
-          window.addEventListener('resize', updateCarousel);
-          
-          // Initial position
-          updateCarousel();
-        }
-      }
-    });
-  </script>
+  <script src="/main.js" defer></script>
 
 </body>
 </html>
