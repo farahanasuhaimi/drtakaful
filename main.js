@@ -41,30 +41,48 @@ function sendWhatsApp() {
 }
 
 // Function to initialize blog filtering (will be called after content loads)
-let articles;
-let tabButtons;
+let articles = [];
+let tabButtons = [];
+let currentCategory = 'all';
 
-function filterArticles(category) { // This function needs to be globally accessible
-  // Update active tab style
-  tabButtons.forEach(button => {
-    if (button.getAttribute('onclick') === `filterArticles('${category}')`) {
-      button.classList.add('active-tab');
-      button.setAttribute('aria-selected', 'true');
-    } else {
-      button.classList.remove('active-tab');
-      button.setAttribute('aria-selected', 'false');
-    }
-  });
+function searchArticles() {
+  // This function is now globally accessible and will call filterArticles
+  filterArticles(currentCategory);
+}
 
-  // Filter articles
+function filterArticles(category) {
+  currentCategory = category;
+  const searchInput = document.getElementById('searchInput').value.toLowerCase();
+  const noResults = document.getElementById('no-results');
+  let hasResults = false;
+
   articles.forEach(article => {
-    if (category === 'all' || article.dataset.category === category) {
+    const articleCategory = article.getAttribute('data-category');
+    const articleKeywords = article.getAttribute('data-keywords') || '';
+    const articleText = article.innerText.toLowerCase();
+    const categoryMatch = (category === 'all' || articleCategory === category);
+    // Search in article text OR in keywords
+    const searchMatch = articleText.includes(searchInput) || articleKeywords.toLowerCase().includes(searchInput);
+
+    if (categoryMatch && searchMatch) {
       article.style.display = 'block';
+      hasResults = true;
     } else {
       article.style.display = 'none';
     }
   });
-  document.getElementById('article-grid').style.display = 'grid'; // Ensure grid layout is reapplied
+
+  if (noResults) {
+    noResults.style.display = hasResults ? 'none' : 'block';
+  }
+
+  tabButtons.forEach(button => {
+    if (button.getAttribute('onclick') === `filterArticles('${category}')`) {
+      button.classList.add('active-tab');
+    } else {
+      button.classList.remove('active-tab');
+    }
+  });
 }
 
 // --- Load Blog Section Dynamically ---
@@ -100,20 +118,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       articles = document.querySelectorAll('.blog-article');
       tabButtons = document.querySelectorAll('.tab-button');
 
-      // Add some base styles for the new elements (moved here to ensure it's applied after content)
-      const style = document.createElement('style');
-      style.innerHTML = `
-        .blog-article { border: 1px solid #fecdd3; border-radius: 1rem; padding: 1.5rem; transition: all 0.3s; }
-        .dark .blog-article { border-color: #831843; }
-        .blog-article:hover { box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); transform: translateY(-2px); }
-        .tab-button { padding: 0.5rem 1rem; border-radius: 9999px; border: 1px solid #fecdd3; color: #be123c; font-weight: 500; transition: all 0.3s; }
-        .dark .tab-button { border-color: #831843; color: #fda4af; }
-        .tab-button:hover { background-color: #fff1f2; }
-        .dark .tab-button:hover { background-color: #9f1239; }
-        .active-tab { background-color: #be123c; color: white; border-color: #be123c; }
-        .dark .active-tab { background-color: #fda4af; color: #831843; border-color: #fda4af; }
-      `;
-      document.head.appendChild(style);
+      // The styles are already in blog-section.html, so no need to inject them again.
 
       // Initial state for filter
       filterArticles('all');
@@ -188,15 +193,14 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 // --- Sticky CTA Script ---
 const stickyCta = document.getElementById('sticky-cta');
-const formSection = document.getElementById('health-form');
+const heroSection = document.querySelector('header + section'); // Selects the hero section right after the header
 
 window.addEventListener('scroll', () => {
-  if (!formSection || !stickyCta) return;
-
-  const formRect = formSection.getBoundingClientRect();
+  if (!heroSection || !stickyCta) return;
   
-  // Show button if user has scrolled past the top of the form
-  if (window.scrollY > formSection.offsetTop) {
+  // Show button if user has scrolled past the bottom of the hero section
+  const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+  if (window.scrollY > heroBottom) {
     stickyCta.classList.remove('hidden');
   } else {
     stickyCta.classList.add('hidden');

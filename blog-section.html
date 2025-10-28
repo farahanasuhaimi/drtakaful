@@ -1,98 +1,158 @@
 <section id="blog" class="bg-white max-w-5xl mx-auto py-16 px-6">
-  <h2 class="text-3xl font-bold text-center mb-4 text-rose-700">Blog Awareness</h2>
+  <h2 class="text-3xl font-bold text-center mb-10 text-rose-700">Blog Awareness</h2>
   <!-- <p class="text-center text-gray-600 mb-12">Bacaan untuk tingkatkan kefahaman takaful anda.</p> -->
-
+  
+  <!-- Search Input -->
+  <div class="mb-8 max-w-lg mx-auto">
+    <div class="relative">
+      <input type="text" id="searchInput" onkeyup="searchArticles()" placeholder="Cari artikel... cth: hibah, medical card" class="w-full px-5 py-3 border-2 border-gray-300 rounded-full focus:ring-2 focus:ring-rose-500 focus:border-rose-500 text-base pl-12" autocomplete="off">
+      <svg class="w-5 h-5 text-gray-400 absolute top-1/2 left-4 transform -translate-y-1/2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+    </div>
+  </div>
   <!-- Tab Navigation -->
   <div class="flex justify-center flex-wrap gap-2 mb-8">
     <button onclick="filterArticles('all')" class="tab-button active-tab">Semua Artikel</button>
     <button onclick="filterArticles('hibah')" class="tab-button">Hibah & Legasi</button>
     <button onclick="filterArticles('medical')" class="tab-button">Medical & Kritikal</button>
     <button onclick="filterArticles('asas')" class="tab-button">Asas Takaful</button>
+    <button onclick="filterArticles('pinjaman')" class="tab-button">Pinjaman Perumahan</button>
   </div>
 
   <!-- Blog Grid -->
-  <div id="article-grid" class="grid md:grid-cols-3 gap-6">
+  <div id="article-grid" class="grid md:grid-cols-3 gap-8">
+    <div id="no-results" class="hidden md:col-span-3 text-center py-12">
+      <p class="text-xl text-gray-500">Tiada artikel ditemui untuk carian anda.</p>
+    </div>
     <!-- Kategori: Asas Takaful -->
-    <article class="blog-article" data-category="asas">
+    <article class="blog-article" data-category="asas" data-keywords="kewangan, simpanan, muda, awal, perancangan, gaji">
       <h3 class="text-lg font-semibold text-rose-700 mb-2">Kenapa Perlu Rancang Kewangan Dari Awal?</h3>
       <p class="text-gray-600 text-sm mb-4">Masa adalah aset paling berharga dalam perancangan kewangan anda. Jangan tunggu sampai 'stabil' baru nak mula.</p>
       <a href="/kenapa-perlu-rancang-kewangan-awal.html" class="text-rose-600 font-medium hover:underline">Baca lanjut →</a>
     </article>
-    <article class="blog-article" data-category="asas">
+    <article class="blog-article" data-category="asas" data-keywords="simpanan, takaful, perbezaan, krisis, wang, duit, pelaburan">
       <h3 class="text-lg font-semibold text-rose-700 mb-2">Simpanan vs Takaful: Mana Satu Betul?</h3>
       <p class="text-gray-600 text-sm mb-4">Simpanan habis bila diuji, tapi takaful kekal bantu semasa krisis. Fahami kenapa anda perlukan kedua-duanya.</p>
       <a href="/simpanan-vs-takaful.html" class="text-rose-600 font-medium hover:underline">Baca lanjut →</a>
     </article>
-    <article class="blog-article" data-category="asas">
+    <article class="blog-article" data-category="asas" data-keywords="formula 10, pendapatan, gaji, ketenangan, bajet, kewangan">
       <h3 class="text-lg font-semibold text-rose-700 mb-2">Formula 10% Income Untuk 100 Bulan Tenang</h3>
       <p class="text-gray-600 text-sm mb-4">Formula mudah untuk pastikan hidup terus stabil walau diuji 3D. Urus 10% pendapatan untuk 100 bulan ketenangan.</p>
       <a href="/formula-10-peratus-pendapatan-takaful.html" class="text-rose-600 font-medium hover:underline">Baca lanjut →</a>
     </article>
 
     <!-- Kategori: Medical & Kritikal -->
-    <article class="blog-article" data-category="medical">
+    <article class="blog-article" data-category="medical" data-keywords="medical card, kad perubatan, hospital, bil, panduan, aia, mediflex, idaman">
       <h3 class="text-lg font-semibold text-rose-700 mb-2">Panduan Lengkap Medical Card Takaful (2025)</h3>
       <p class="text-gray-600 text-sm mb-4">Semua yang anda perlu tahu: Apa itu medical card, kenapa ia penting, dan bagaimana memilih pelan terbaik untuk anda & keluarga.</p>
       <a href="/panduan-lengkap-medical-card-takaful.html" class="text-rose-600 font-medium hover:underline">Baca lanjut →</a>
     </article>
-    <article class="blog-article" data-category="medical">
+    <article class="blog-article" data-category="medical" data-keywords="penyakit kritikal, ci, humk, tpd, lumpuh, hilang upaya, pampasan">
       <h3 class="text-lg font-semibold text-rose-700 mb-2">Penyakit Kritikal (CI) vs. HUMK: Apa Bezanya?</h3>
       <p class="text-gray-600 text-sm mb-4">Ramai keliru antara pampasan CI dan Hilang Upaya (HUMK/TPD). Fahami kenapa anda perlukan kedua-duanya.</p>
       <a href="/penyakit-kritikal-dan-humk.html" class="text-rose-600 font-medium hover:underline">Baca lanjut →</a>
     </article>
-    <article class="blog-article" data-category="medical">
+    <article class="blog-article" data-category="medical" data-keywords="medical card, penyakit kritikal, ci, perbezaan, gaji, pendapatan">
       <h3 class="text-lg font-semibold text-rose-700 mb-2">Medical Card vs. Pelan Penyakit Kritikal (CI)</h3>
       <p class="text-gray-600 text-sm mb-4">Medical card bayar bil hospital. Pelan CI bayar gaji anda bila tak boleh kerja. Fahami perbezaan penting ini.</p>
       <a href="/beza-medical-card-vs-pelan-penyakit-kritikal.html" class="text-rose-600 font-medium hover:underline">Baca lanjut →</a>
     </article>
-    <article class="blog-article" data-category="medical">
+    <article class="blog-article" data-category="medical" data-keywords="kos rawatan, gaji, pampasan, penyakit kritikal, ci, derma, sedekah, bantuan">
+      <h3 class="text-lg font-semibold text-rose-700 mb-2">Kos Rawatan vs Gaji: Kenapa Medical Card Saja Tak Cukup?</h3>
+      <p class="text-gray-600 text-sm mb-4">Kisah benar kenapa ramai terpaksa meminta derma walaupun ada medical card. Fahami peranan pampasan CI sebagai pengganti gaji.</p>
+      <a href="/kos-rawatan-vs-gaji.html" class="text-rose-600 font-medium hover:underline">Baca lanjut →</a>
+    </article>
+    <article class="blog-article" data-category="medical" data-keywords="perkeso, socso, medical card, kemalangan, kerja, hospital">
       <h3 class="text-lg font-semibold text-rose-700 mb-2">PERKESO vs Medical Card: Mana Satu Bayar Bil Hospital?</h3>
       <p class="text-gray-600 text-sm mb-4">Jangan salah faham! PERKESO hanya untuk kemalangan kerja. Medical card lindungi anda 24/7. Fahami perbezaannya.</p>
       <a href="/perkeso-vs-takaful-medical-card.html" class="text-rose-600 font-medium hover:underline">Baca lanjut →</a>
     </article>
-    <article class="blog-article" data-category="medical">
+    <article class="blog-article" data-category="medical" data-keywords="mediflex, idaman, aia, medical card, perbandingan, beza">
       <h3 class="text-lg font-semibold text-rose-700 mb-2">A-Life MediFlex-i vs A-Life Idaman: Mana Sesuai?</h3>
       <p class="text-gray-600 text-sm mb-4">Pelan medical card standalone atau pelan Takaful Keluarga yang komprehensif? Perbandingan untuk buat pilihan bijak.</p>
       <a href="/beza-medical-card-mediflex-vs-idaman.html" class="text-rose-600 font-medium hover:underline">Baca lanjut →</a>
     </article>
-    <article class="blog-article" data-category="medical">
+    <article class="blog-article" data-category="medical" data-keywords="polisi syarikat, group insurance, takaful peribadi, medical card, berhenti kerja">
       <h3 class="text-lg font-semibold text-rose-700 mb-2">Polisi Syarikat vs Takaful Peribadi</h3>
       <p class="text-gray-600 text-sm mb-4">Medical card syarikat mungkin tak cukup. Fahami kenapa anda perlukan polisi peribadi sebagai 'tayar spare' kewangan anda.</p>
       <a href="/company-policy-vs-personal-takaful.html" class="text-rose-600 font-medium hover:underline">Baca lanjut →</a>
     </article>
+    <article class="blog-article" data-category="medical" data-keywords="kemalangan peribadi, pa, personal accident, a-life pelindung, mc, cuti sakit, outpatient">
+      <h3 class="text-lg font-semibold text-rose-700 mb-2">Panduan Takaful Kemalangan Peribadi (PA)</h3>
+      <p class="text-gray-600 text-sm mb-4">Medical card tak bayar kos rawatan luar & MC akibat kemalangan. Fahami kenapa Takaful PA adalah pelengkap penting & mampu milik.</p>
+      <a href="/panduan-personal-accident.html" class="text-rose-600 font-medium hover:underline">Baca lanjut →</a>
+    </article>
 
     <!-- Kategori: Hibah & Legasi -->
-    <article class="blog-article" data-category="hibah">
+    <article class="blog-article" data-category="hibah" data-keywords="hibah, panduan, wasiat, faraid, pusaka, keluarga, pampasan">
       <h3 class="text-lg font-semibold text-rose-700 mb-2">Panduan Lengkap Hibah Takaful (2025)</h3>
       <p class="text-gray-600 text-sm mb-4">Apa itu hibah, kenapa ia lebih baik dari wasiat, dan bagaimana ia boleh selamatkan keluarga anda dari perebutan harta.</p>
       <a href="/panduan-lengkap-hibah-takaful.html" class="text-rose-600 font-medium hover:underline">Baca lanjut →</a>
     </article>
-    <article class="blog-article" data-category="hibah">
+    <article class="blog-article" data-category="hibah" data-keywords="kalkulator hibah, kira, perlindungan, 100 bulan, keluarga, pendapatan">
       <h3 class="text-lg font-semibold text-rose-700 mb-2">Kalkulator Hibah: Kira Perlindungan 100 Bulan</h3>
       <p class="text-gray-600 text-sm mb-4">Guna kalkulator interaktif untuk kira berapa hibah yang anda perlu tinggalkan untuk keluarga survive 8+ tahun tanpa anda.</p>
       <a href="/kalkulator-hibah-takaful.html" class="text-rose-600 font-medium hover:underline">Baca lanjut →</a>
     </article>
-    <article class="blog-article" data-category="hibah">
+    <article class="blog-article" data-category="hibah" data-keywords="sejuta makna, legasi beyond, aia, hibah, perbandingan, premium">
       <h3 class="text-lg font-semibold text-rose-700 mb-2">A-Life Sejuta Makna vs A-Life Legasi Beyond</h3>
       <p class="text-gray-600 text-sm mb-4">Pelan hibah mampu milik atau premium? Fahami perbezaan antara dua pelan hibah terbaik dari AIA Takaful.</p>
       <a href="/hibah-aia-sejuta-makna-vs-legasi-beyond.html" class="text-rose-600 font-medium hover:underline">Baca lanjut →</a>
     </article>
-    <article class="blog-article" data-category="hibah">
+    <article class="blog-article" data-category="hibah" data-keywords="hibah bisnes, rakan kongsi, perniagaan, syarikat, cross-hibah, buy-sell">
       <h3 class="text-lg font-semibold text-rose-700 mb-2">Hibah Untuk Rakan Kongsi Bisnes</h3>
       <p class="text-gray-600 text-sm mb-4">Bagaimana hibah silang (cross-hibah) boleh menyelamatkan bisnes anda apabila salah seorang rakan kongsi meninggal dunia.</p>
       <a href="/hibah-untuk-bisnes.html" class="text-rose-600 font-medium hover:underline">Baca lanjut →</a>
     </article>
 
+    <!-- Kategori: Pinjaman Perumahan -->
+    <article class="blog-article" data-category="pinjaman" data-keywords="mltt, mrtt, mlta, mrta, pinjaman perumahan, gadai janji, loan rumah, insurans rumah">
+      <h3 class="text-lg font-semibold text-rose-700 mb-2">Panduan Lengkap MLTT/MRTT: Lindungi Pinjaman Rumah Anda</h3>
+      <p class="text-gray-600 text-sm mb-4">Bank suruh ambil MRTA/MRTT? Fahami apa itu, beza dengan MLTA, dan kenapa ia penting untuk selamatkan rumah anda untuk waris.</p>
+      <a href="/panduan-lengkap-mltt-mrtt.html" class="text-rose-600 font-medium hover:underline">Baca lanjut →</a>
+    </article>
+
     <!-- Kategori Lain -->
-    <article class="blog-article" data-category="asas">
+    <article class="blog-article" data-category="asas" data-keywords="takaful anak, bayi, kanak-kanak, pendidikan, medical card anak">
       <h3 class="text-lg font-semibold text-rose-700 mb-2">Takaful Untuk Anak: Bila & Kenapa Perlu Mula?</h3>
       <p class="text-gray-600 text-sm mb-4">Hadiah terbaik untuk anak bukan mainan, tetapi perlindungan & masa depan yang terjamin. Panduan untuk ibu bapa.</p>
       <a href="/bila-perlu-mula-takaful-anak.html" class="text-rose-600 font-medium hover:underline">Baca lanjut →</a>
     </article>
-    <article class="blog-article" data-category="asas">
+    <article class="blog-article" data-category="asas" data-keywords="umur 50, warga emas, senior, takaful lewat, premium mahal">
       <h3 class="text-lg font-semibold text-rose-700 mb-2">Umur 50+ Masih Boleh Ambil Takaful?</h3>
       <p class="text-gray-600 text-sm mb-4">Tak pernah terlambat untuk lindungi diri dan keluarga. Fahami pilihan dan strategi perlindungan untuk warga emas.</p>
       <a href="/takaful-umur-50-tahun.html" class="text-rose-600 font-medium hover:underline">Baca lanjut →</a>
     </article>
+
+    <style>
+      .blog-article {
+        background-color: white;
+        padding: 1.5rem;
+        border-radius: 1rem;
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        border: 1px solid #f1f5f9;
+      }
+      .blog-article:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -2px rgb(0 0 0 / 0.1);
+      }
+      .tab-button {
+        padding: 0.5rem 1rem;
+        border-radius: 9999px;
+        border: 1px solid #e5e7eb;
+        color: #4b5563;
+        font-weight: 500;
+        transition: all 0.2s ease-in-out;
+      }
+      .tab-button:hover {
+        background-color: #fef2f2;
+        color: #be123c;
+      }
+      .tab-button.active-tab {
+        background-color: #be123c;
+        color: white;
+        border-color: #be123c;
+      }
+    </style>
   </div>
 </section>
