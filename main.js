@@ -6,31 +6,25 @@ function sendWhatsApp() {
   const profession = document.getElementById('profession').value;
   const smoking = document.getElementById('smoking').value;
   const health = document.getElementById('health').value;
-  const planChoice = document.getElementById('planChoice').value;
 
   // Validation
   if (!name || !age || !gender || !profession || !smoking) {
-    const formMessage = document.getElementById('formMessage');
-    formMessage.textContent = '❌ Sila isi semua maklumat yang diperlukan.';
-    formMessage.classList.add('text-red-600', 'font-semibold');
+    document.getElementById('formMessage').textContent = '❌ Sila isi semua maklumat wajib';
+    document.getElementById('formMessage').className = 'text-center text-sm mt-3 text-red-600';
     return;
   }
   
   // Create WhatsApp message
-  let message = `Assalamualaikum Hana, saya ingin dapatkan analisis pelan takaful percuma.\n\n`;
-  message += `*Butiran Saya:*\n`;
-  message += `- Nama: ${name}\n`;
-  message += `- Umur: ${age}\n`;
-  message += `- Jantina: ${gender}\n`;
-  message += `- Pekerjaan: ${profession}\n`;
-  message += `- Status Merokok/Vape: ${smoking}\n`;
+  let message = `*SEMAKAN PELAN TAKAFUL*\n\n`;
+  message += `📝 *Nama:* ${name}\n`;
+  message += `👤 *Umur:* ${age} tahun\n`;
+  message += `🚻 *Jantina:* ${gender}\n`;
+  message += `💼 *Pekerjaan:* ${profession}\n`;
+  message += `🚬 *Status Merokok:* ${smoking}\n`;
   if (health) {
-    message += `- Sejarah Kesihatan: ${health}\n`;
+    message += `🏥 *Rekod Kesihatan:* ${health}\n`;
   }
-  if (planChoice) {
-    message += `- Pilihan Pelan: ${planChoice}\n`;
-  }
-  message += `\nBoleh bantu saya dapatkan sebut harga percuma? Terima kasih.`;
+  message += `\nSaya ingin semak pelan takaful yang sesuai untuk saya. Terima kasih! 🙏`;
   
   // Encode message for URL
   const encodedMessage = encodeURIComponent(message);
@@ -41,51 +35,32 @@ function sendWhatsApp() {
   // Open WhatsApp
   window.open(whatsappURL, '_blank');
   
-  // Reset message
-  const formMessage = document.getElementById('formMessage');
-  formMessage.textContent = 'Membuka WhatsApp...';
-  formMessage.classList.remove('text-red-600', 'font-semibold');
-}
-
-function sendWhatsAppAnalysis() {
-  const income = document.getElementById('income').value;
-  const age = document.getElementById('age').value;
-  const smoking = document.getElementById('smoking').value;
-
-  const formMessage = document.getElementById('formMessage');
-  if (!income || !age) {
-    formMessage.textContent = 'Sila isi pendapatan dan umur anda.';
-    formMessage.classList.add('text-red-600', 'font-semibold');
-    return;
-  }
-
-  const hibahCoverage = income * 100;
-  const ciCoverage = income * 36;
-
-  let message = `Assalamualaikum Hana, saya dah buat Semakan Kesihatan Takaful.\n\n*Butiran Saya:*\n- Pendapatan: RM ${income}\n- Umur: ${age}\n- Status Merokok/Vape: ${smoking}\n\n*Analisis Awal:*\n- Cadangan Hibah (100 bulan gaji): *RM ${hibahCoverage.toLocaleString()}*\n- Cadangan Pampasan CI (36 bulan gaji): *RM ${ciCoverage.toLocaleString()}*\n\nBoleh bantu saya dapatkan quotation percuma berdasarkan maklumat ini? Terima kasih.`;
-
-  const encodedMessage = encodeURIComponent(message);
-  const whatsappURL = `https://wa.me/60132522587?text=${encodedMessage}`;
-  window.open(whatsappURL, '_blank');
-  formMessage.textContent = 'Membuka WhatsApp...';
-  formMessage.classList.remove('text-red-600');
+  // Show success message
+  document.getElementById('formMessage').textContent = '✅ Membuka WhatsApp...';
+  document.getElementById('formMessage').className = 'text-center text-sm mt-3 text-green-600 font-semibold';
 }
 
 // Function to initialize blog filtering (will be called after content loads)
 let articles = [];
 let tabButtons = [];
+let showMoreButton;
 let currentCategory = 'all';
+const articlesToShow = 6;
+let visibleArticlesCount = 0;
 
 function searchArticles() {
   // This function is now globally accessible and will call filterArticles
   filterArticles(currentCategory);
 }
 
-function filterArticles(category) {
-  currentCategory = category;
+function filterArticles(category, isInitialLoad = false) {
+  if (category) {
+    currentCategory = category;
+  }
   const searchInput = document.getElementById('searchInput').value.toLowerCase();
   const noResults = document.getElementById('no-results');
   let hasResults = false;
+  let displayedCount = 0;
 
   articles.forEach(article => {
     const articleCategory = article.getAttribute('data-category');
@@ -95,9 +70,12 @@ function filterArticles(category) {
     // Search in article text OR in keywords
     const searchMatch = articleText.includes(searchInput) || articleKeywords.toLowerCase().includes(searchInput);
 
-    if (categoryMatch && searchMatch) {
+    if (categoryMatch && searchMatch && (!isInitialLoad || displayedCount < articlesToShow)) {
       article.style.display = 'block';
       hasResults = true;
+      if (isInitialLoad) {
+        displayedCount++;
+      }
     } else {
       article.style.display = 'none';
     }
@@ -107,13 +85,21 @@ function filterArticles(category) {
     noResults.style.display = hasResults ? 'none' : 'block';
   }
 
-  tabButtons.forEach(button => {
-    if (button.getAttribute('onclick') === `filterArticles('${category}')`) {
-      button.classList.add('active-tab');
-    } else {
-      button.classList.remove('active-tab');
-    }
-  });
+  if (category) {
+    tabButtons.forEach(button => {
+      if (button.getAttribute('onclick') === `filterArticles('${category}')`) {
+        button.classList.add('active-tab');
+      } else {
+        button.classList.remove('active-tab');
+      }
+    });
+  }
+
+  if (isInitialLoad) {
+    showMoreButton.style.display = articles.length > articlesToShow ? 'inline-block' : 'none';
+  } else {
+    showMoreButton.style.display = 'none';
+  }
 }
 
 // --- Load Blog Section Dynamically ---
@@ -148,11 +134,16 @@ document.addEventListener('DOMContentLoaded', async () => {
       // After content is loaded, initialize blog filtering script
       articles = document.querySelectorAll('.blog-article');
       tabButtons = document.querySelectorAll('.tab-button');
+      showMoreButton = document.getElementById('show-more-button');
 
       // The styles are already in blog-section.html, so no need to inject them again.
 
       // Initial state for filter
-      filterArticles('all');
+      filterArticles('all', true);
+
+      showMoreButton.addEventListener('click', () => {
+        filterArticles('all', false); // Show all articles
+      });
 
     } catch (error) {
       console.error('Failed to load blog section:', error);
@@ -236,36 +227,4 @@ window.addEventListener('scroll', () => {
   } else {
     stickyCta.classList.add('hidden');
   }
-});
-
-// --- Exit-Intent Popup Script (for index.html) ---
-document.addEventListener('DOMContentLoaded', () => {
-  const exitPopup = document.getElementById('exit-popup');
-  if (!exitPopup) return; // Only run if the popup exists on the page
-
-  const popupContent = document.getElementById('popup-content');
-  const closePopupBtn = document.getElementById('close-popup');
-  const popupCta = document.getElementById('popup-cta');
-
-  const showPopup = () => {
-    if (sessionStorage.getItem('popupShown')) return;
-    exitPopup.classList.remove('hidden');
-    setTimeout(() => {
-      popupContent.classList.remove('scale-95', 'opacity-0');
-      popupContent.classList.add('scale-100', 'opacity-100');
-    }, 50);
-    sessionStorage.setItem('popupShown', 'true');
-  };
-
-  const hidePopup = () => {
-    popupContent.classList.add('scale-95', 'opacity-0');
-    setTimeout(() => exitPopup.classList.add('hidden'), 300);
-  };
-
-  document.addEventListener('mouseout', (e) => {
-    if (!e.toElement && !e.relatedTarget) showPopup();
-  });
-
-  closePopupBtn.addEventListener('click', hidePopup);
-  popupCta.addEventListener('click', hidePopup);
 });
