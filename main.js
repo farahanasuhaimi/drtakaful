@@ -45,7 +45,7 @@ let articles = [];
 let tabButtons = [];
 let showMoreButton;
 let currentCategory = 'all';
-const articlesToShow = 6;
+const articlesToShow = 3; // <-- Change this number to your desired amount
 let visibleArticlesCount = 0;
 
 function searchArticles() {
