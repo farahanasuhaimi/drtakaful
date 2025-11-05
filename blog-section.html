@@ -147,13 +147,18 @@
     </article>
 
     <style>
-      .blog-article {
-        background-color: white;
+      #article-grid .blog-article {
         padding: 1.5rem;
         border-radius: 1rem;
         box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
         transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
         border: 1px solid #f1f5f9;
+      }
+      #article-grid .blog-article:nth-child(even) {
+        background-color: white;
+      }
+      #article-grid .blog-article:nth-child(odd) {
+        background-color: #fff1f2; /* rose-50 */
       }
       .blog-article:hover {
         transform: translateY(-4px);
