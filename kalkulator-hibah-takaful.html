@@ -80,28 +80,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <h2 class="text-2xl font-semibold text-rose-700 mt-12 mb-4">Kenapa 100 Bulan?</h2>
 
-      <div class="bg-blue-50 rounded-2xl p-8 my-8 border-2 border-blue-200">
+      <div class="bg-blue-50 rounded-2xl p-8 my-8 border-2 border-blue-200 shadow-lg">
         <p class="text-gray-700 mb-4">
           <strong>100 bulan = 8 tahun 4 bulan.</strong> Ini timeframe yang sufficient untuk:
         </p>
         
         <div class="space-y-4">
-          <div class="bg-white rounded-lg p-4">
+          <div class="bg-white rounded-lg p-4 shadow-sm">
             <p class="font-semibold text-blue-700 mb-2">👶 Anak-anak boleh grow up</p>
             <p class="text-sm text-gray-700">Anak umur 10 jadi 18, boleh kerja part-time. Anak 15 jadi 23, dah grad & cari kerja.</p>
           </div>
           
-          <div class="bg-white rounded-lg p-4">
+          <div class="bg-white rounded-lg p-4 shadow-sm">
             <p class="font-semibold text-blue-700 mb-2">👩‍💼 Pasangan boleh upskill & cari kerja</p>
             <p class="text-sm text-gray-700">8 tahun cukup masa untuk pasangan yang tak bekerja untuk belajar skill baru & start career.</p>
           </div>
           
-          <div class="bg-white rounded-lg p-4">
+          <div class="bg-white rounded-lg p-4 shadow-sm">
             <p class="font-semibold text-blue-700 mb-2">🏠 Settle major commitments</p>
             <p class="text-sm text-gray-700">Loan rumah/kereta mungkin dah dekat habis bayar, atau boleh downsize.</p>
           </div>
           
-          <div class="bg-white rounded-lg p-4">
+          <div class="bg-white rounded-lg p-4 shadow-sm">
             <p class="font-semibold text-blue-700 mb-2">😌 Adjust to new reality</p>
             <p class="text-sm text-gray-700">Family ada masa untuk adapt lifestyle, financial planning, & emotional healing.</p>
           </div>
@@ -111,138 +111,119 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <h2 class="text-2xl font-semibold text-rose-700 mt-12 mb-4">Kalkulator Legasi Anda: Dapatkan Angka Sebenar Dalam 60 Saat</h2>
 
       <!-- CALCULATOR SECTION -->
-      <div id="kalkulator-hibah" class="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 my-8 border border-gray-200 shadow-xl">
-        <h3 class="text-2xl font-bold text-rose-700 mb-2 text-center">Kalkulator Perlindungan Hibah</h3>
-        
-        <div class="bg-white rounded-xl p-6 mb-6">
-          <p class="text-sm text-gray-600 mb-4 text-center">Isi maklumat di bawah untuk kira coverage yang anda perlukan</p>
-          
-          <!-- Input Form -->
-          <div class="space-y-4">
-            
-            <!-- Monthly Expenses -->
-            <div>
-              <label class="block text-sm font-semibold text-gray-700 mb-2">
-                1. Komitmen & Perbelanjaan Bulanan Keluarga (RM)
-              </label>
-              <input 
-                type="number" 
-                id="monthlyExpenses" 
-                class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-rose-500 text-lg" 
-                placeholder="cth: 5000"
-                min="0"
-              >
-              <p class="text-xs text-gray-500 mt-1">Termasuk: Ansuran rumah & kereta, bil, belanja dapur, persekolahan anak, dll.</p>
-            </div>
-
-            <!-- Outstanding Loans -->
-            <div>
-              <label class="block text-sm font-semibold text-gray-700 mb-2">
-                2. Jumlah Baki Hutang Semasa (RM)
-              </label>
-              <input 
-                type="number" 
-                id="outstandingLoans" 
-                class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-rose-500 text-lg" 
-                placeholder="cth: 300000"
-                min="0"
-              >
-              <p class="text-xs text-gray-500 mt-1">Pinjaman perumahan, kereta, peribadi, kad kredit, PTPTN, dll.</p>
-            </div>
-
-            <!-- Children Education -->
-            <div>
-              <label class="block text-sm font-semibold text-gray-700 mb-2">
-                3. Anggaran Dana Pendidikan Anak (RM)
-              </label>
-              <input 
-                type="number" 
-                id="educationCost" 
-                class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-rose-500 text-lg" 
-                placeholder="cth: 100000"
-                min="0"
-              >
-              <p class="text-xs text-gray-500 mt-1">Anggaran jumlah untuk semua anak sehingga tamat pengajian universiti.</p>
-            </div>
-
-            <!-- Emergency Buffer -->
-            <div>
-              <label class="block text-sm font-semibold text-gray-700 mb-2">
-                4. Dana Kecemasan & Inflasi (%)
-              </label>
-              <select 
-                id="bufferPercentage" 
-                class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-rose-500 text-lg"
-              >
-                <option value="10">10% - Minimum</option>
-                <option value="20" selected>20% - Recommended</option>
-                <option value="30">30% - Conservative</option>
-              </select>
-              <p class="text-xs text-gray-500 mt-1">Dana tambahan untuk kos luar jangka, inflasi, dan kos guaman.</p>
-            </div>
-
-            <!-- Calculate Button -->
-            <button 
-              onclick="calculateHibah()" 
-              class="w-full bg-rose-600 text-white py-4 rounded-lg hover:bg-rose-700 transition font-bold text-lg shadow-lg"
-            >
-              Kira Jumlah Perlindungan Saya
-            </button>
-
-          </div>
+      <div id="kalkulator-hibah" class="bg-white rounded-2xl p-6 md:p-8 my-8 border border-gray-200 shadow-2xl">
+        <div class="text-center mb-8">
+            <h3 class="text-2xl font-bold text-rose-700">Kalkulator Perlindungan Hibah</h3>
+            <p class="text-gray-500 text-sm mt-2">Isi maklumat di bawah untuk kira jumlah perlindungan yang ideal untuk keluarga anda.</p>
         </div>
 
-        <!-- Results Section -->
-        <div id="results" class="hidden">
-          
-          <!-- Breakdown -->
-          <div class="bg-white rounded-xl p-6 mb-4">
-            <h4 class="font-bold text-lg text-gray-800 mb-4 text-center">Analisis Keperluan Legasi Anda</h4>
-            
-            <div class="space-y-3">
-              <div class="flex justify-between items-center p-3 bg-blue-50 rounded-lg">
-                <span class="text-gray-700">Perbelanjaan 100 bulan:</span>
-                <strong class="text-blue-700" id="result100Months">RM 0</strong>
-              </div>
-              
-              <div class="flex justify-between items-center p-3 bg-purple-50 rounded-lg">
-                <span class="text-gray-700">Outstanding Loans:</span>
-                <strong class="text-purple-700" id="resultLoans">RM 0</strong>
-              </div>
-              
-              <div class="flex justify-between items-center p-3 bg-green-50 rounded-lg">
-                <span class="text-gray-700">Education Fund:</span>
-                <strong class="text-green-700" id="resultEducation">RM 0</strong>
-              </div>
-              
-              <div class="flex justify-between items-center p-3 bg-amber-50 rounded-lg">
-                <span class="text-gray-700">Emergency Buffer:</span>
-                <strong class="text-amber-700" id="resultBuffer">RM 0</strong>
-              </div>
-              
-              <div class="border-t-2 border-rose-200 pt-3"></div>
-              
-              <div class="flex justify-between items-center p-4 bg-gradient-to-r from-rose-100 to-pink-100 rounded-lg border-2 border-rose-400">
-                <span class="text-gray-800 font-bold text-lg">Jumlah Hibah Dicadangkan:</span>
-                <strong class="text-rose-700 text-2xl" id="resultTotal">RM 0</strong>
-              </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Input Form -->
+            <div class="space-y-5">
+                <!-- Monthly Expenses -->
+                <div>
+                    <label for="monthlyExpenses" class="block text-sm font-semibold text-gray-700 mb-2">1. Komitmen & Perbelanjaan Bulanan Keluarga (RM)</label>
+                    <div class="relative">
+                        <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400">💰</span>
+                        <input type="number" id="monthlyExpenses" class="w-full pl-10 pr-4 py-3 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-rose-500 text-lg" placeholder="cth: 5000" min="0">
+                    </div>
+                    <p class="text-xs text-gray-500 mt-1">Ansuran rumah & kereta, bil, belanja dapur, dll.</p>
+                </div>
+
+                <!-- Outstanding Loans -->
+                <div>
+                    <label for="outstandingLoans" class="block text-sm font-semibold text-gray-700 mb-2">2. Jumlah Baki Hutang Semasa (RM)</label>
+                    <div class="relative">
+                        <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400">🏠</span>
+                        <input type="number" id="outstandingLoans" class="w-full pl-10 pr-4 py-3 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-rose-500 text-lg" placeholder="cth: 300000" min="0">
+                    </div>
+                    <p class="text-xs text-gray-500 mt-1">Pinjaman perumahan, kereta, peribadi, kad kredit, dll.</p>
+                </div>
+
+                <!-- Children Education -->
+                <div>
+                    <label for="educationCost" class="block text-sm font-semibold text-gray-700 mb-2">3. Anggaran Dana Pendidikan Anak (RM)</label>
+                    <div class="relative">
+                        <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400">🎓</span>
+                        <input type="number" id="educationCost" class="w-full pl-10 pr-4 py-3 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-rose-500 text-lg" placeholder="cth: 100000" min="0">
+                    </div>
+                    <p class="text-xs text-gray-500 mt-1">Anggaran jumlah untuk semua anak hingga tamat universiti.</p>
+                </div>
+
+                <!-- Emergency Buffer -->
+                <div>
+                    <label for="bufferPercentage" class="block text-sm font-semibold text-gray-700 mb-2">4. Dana Kecemasan & Inflasi (%)</label>
+                    <div class="relative">
+                        <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400">🛡️</span>
+                        <select id="bufferPercentage" class="w-full pl-10 pr-4 py-3 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-rose-500 text-lg bg-white">
+                            <option value="10">10% - Minimum</option>
+                            <option value="20" selected>20% - Disyorkan</option>
+                            <option value="30">30% - Konservatif</option>
+                        </select>
+                    </div>
+                    <p class="text-xs text-gray-500 mt-1">Dana tambahan untuk kos luar jangka, inflasi, dan kos guaman.</p>
+                </div>
+
+                <!-- Calculate Button -->
+                <button onclick="calculateHibah()" class="w-full bg-rose-600 text-white py-4 rounded-lg hover:bg-rose-700 transition-all duration-300 font-bold text-lg shadow-lg hover:shadow-rose-300">
+                    Kira Jumlah Perlindungan Saya
+                </button>
             </div>
-          </div>
 
-          <!-- Recommendation -->
-          <div class="bg-gradient-to-br from-green-50 to-teal-50 rounded-xl p-6 border-2 border-green-300">
-            <h4 class="font-bold text-lg text-green-800 mb-3 text-center">Cadangan Pelan Untuk Anda</h4>
-            <div id="recommendation" class="text-gray-700"></div>
-          </div>
+            <!-- Results Section -->
+            <div id="results" class="hidden bg-gradient-to-br from-rose-50 to-pink-50 p-6 rounded-xl border-2 border-rose-200">
+                <div class="text-center mb-4">
+                    <h4 class="font-bold text-xl text-rose-800">Analisis Keperluan Legasi Anda</h4>
+                </div>
+                
+                <div class="space-y-3 mb-4">
+                    <div class="flex justify-between items-center p-3 bg-white/50 rounded-lg">
+                        <span class="text-sm text-gray-700">💰 Perbelanjaan 100 bulan:</span>
+                        <strong class="text-gray-800" id="result100Months">RM 0</strong>
+                    </div>
+                    
+                    <div class="flex justify-between items-center p-3 bg-white/50 rounded-lg">
+                        <span class="text-sm text-gray-700">🏠 Baki Hutang:</span>
+                        <strong class="text-gray-800" id="resultLoans">RM 0</strong>
+                    </div>
+                    
+                    <div class="flex justify-between items-center p-3 bg-white/50 rounded-lg">
+                        <span class="text-sm text-gray-700">🎓 Dana Pendidikan:</span>
+                        <strong class="text-gray-800" id="resultEducation">RM 0</strong>
+                    </div>
+                    
+                    <div class="flex justify-between items-center p-3 bg-white/50 rounded-lg">
+                        <span class="text-sm text-gray-700">🛡️ Dana Kecemasan:</span>
+                        <strong class="text-gray-800" id="resultBuffer">RM 0</strong>
+                    </div>
+                </div>
+                
+                <div class="border-t-2 border-rose-200 pt-4"></div>
+                
+                <div class="text-center p-4 bg-white rounded-lg shadow-inner">
+                    <span class="text-gray-600 font-semibold text-sm">Jumlah Hibah Dicadangkan:</span>
+                    <p class="text-rose-700 text-4xl font-bold tracking-tight" id="resultTotal">RM 0</p>
+                </div>
 
-          <!-- Reset Button -->
-          <button 
-            onclick="resetCalculator()" 
-            class="w-full mt-4 bg-gray-500 text-white py-3 rounded-lg hover:bg-gray-600 transition font-semibold"
-          >
-            🔄 Reset & Kira Semula
-          </button>
+                <!-- Recommendation -->
+                <div class="bg-green-100 border border-green-200 rounded-lg p-4 mt-4 text-center">
+                    <h4 class="font-semibold text-sm text-green-800 mb-2">Cadangan Pelan Untuk Anda</h4>
+                    <div id="recommendation" class="text-xs text-green-900"></div>
+                </div>
 
+                <!-- Reset Button -->
+                <button onclick="resetCalculator()" class="w-full mt-4 bg-gray-200 text-gray-600 py-2 rounded-lg hover:bg-gray-300 transition font-semibold text-sm">
+                    Kira Semula
+                </button>
+            </div>
+
+            <!-- Placeholder for results -->
+            <div id="results-placeholder" class="flex items-center justify-center bg-gray-50 p-6 rounded-xl border-2 border-dashed border-gray-300">
+                <div class="text-center text-gray-400">
+                    <div class="text-4xl mb-2">📊</div>
+                    <p class="font-semibold">Hasil pengiraan anda akan dipaparkan di sini.</p>
+                </div>
+            </div>
         </div>
 
       </div>
@@ -261,7 +242,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="space-y-6 my-8">
         
         <!-- Scenario 1 -->
-        <div class="bg-white rounded-xl p-6 border-2 border-blue-300 shadow-sm">
+        <div class="bg-white rounded-xl p-6 border-2 border-blue-300 shadow-lg">
           <div class="flex items-center mb-4">
             <span class="text-3xl mr-3">👨‍👩‍👧</span>
             <div>
@@ -297,7 +278,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
 
         <!-- Scenario 2 -->
-        <div class="bg-white rounded-xl p-6 border-2 border-purple-300 shadow-sm">
+        <div class="bg-white rounded-xl p-6 border-2 border-purple-300 shadow-lg">
           <div class="flex items-center mb-4">
             <span class="text-3xl mr-3">👨‍👩‍👧‍👦</span>
             <div>
@@ -333,7 +314,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
 
         <!-- Scenario 3 -->
-        <div class="bg-white rounded-xl p-6 border-2 border-amber-300 shadow-sm">
+        <div class="bg-white rounded-xl p-6 border-2 border-amber-300 shadow-lg">
           <div class="flex items-center mb-4">
             <span class="text-3xl mr-3">👨‍👦‍👦</span>
             <div>
@@ -421,35 +402,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <div class="space-y-4 my-8">
         
-        <div class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm">
+        <div class="bg-white rounded-xl p-6 border border-gray-200 shadow-lg">
           <p class="font-semibold text-gray-800 mb-2">❓ Q: Coverage sejuta lebih, premium mesti mahal kan?</p>
           <p class="text-gray-700 text-sm">
             <strong>A:</strong> Sebenarnya affordable! Pelan hibah takaful sangat murah. Coverage RM1,000,000 untuk age 30-35 = around RM250-350/bulan je. Age 35-40 = RM350-450/bulan. <strong>Cheaper than your monthly Zus Coffee habit!</strong>
           </p>
         </div>
 
-        <div class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm">
+        <div class="bg-white rounded-xl p-6 border border-gray-200 shadow-lg">
           <p class="font-semibold text-gray-800 mb-2">❓ Q: Kalau dah ada company group life, perlu lagi ke?</p>
           <p class="text-gray-700 text-sm">
             <strong>A:</strong> <strong class="text-rose-600">YES, PERLU!</strong> Company group life biasanya cuma 2-3x annual salary (kalau gaji RM60k/year = coverage RM120k-180k je). Tak cukup langsung! Plus coverage hilang bila resign/retire.
           </p>
         </div>
 
-        <div class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm">
+        <div class="bg-white rounded-xl p-6 border border-gray-200 shadow-lg">
           <p class="font-semibold text-gray-800 mb-2">❓ Q: Hibah vs Wasiat - mana satu perlu?</p>
           <p class="text-gray-700 text-sm">
             <strong>A:</strong> PERLU BOTH! Hibah (takaful nomination) = automatic transfer without waiting. Wasiat = untuk assets lain (rumah, kereta, savings). Jangan confuse - they serve different purposes!
           </p>
         </div>
 
-        <div class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm">
+        <div class="bg-white rounded-xl p-6 border border-gray-200 shadow-lg">
           <p class="font-semibold text-gray-800 mb-2">❓ Q: Berapa kerapkah perlu review coverage?</p>
           <p class="text-gray-700 text-sm">
             <strong>A:</strong> Review setiap 3-5 tahun ATAU bila major life changes: kahwin, dapat anak, beli rumah, gaji naik significantly, etc. Coverage yang cukup 10 tahun lepas mungkin dah insufficient sekarang!
           </p>
         </div>
 
-        <div class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm">
+        <div class="bg-white rounded-xl p-6 border border-gray-200 shadow-lg">
           <p class="font-semibold text-gray-800 mb-2">❓ Q: Kalau single no kids, perlu ke coverage besar ni?</p>
           <p class="text-gray-700 text-sm">
             <strong>A:</strong> Depends. Kalau ada aging parents yang depend on you, atau ada commitments (loan, etc), YES perlu. Kalau truly single dengan no dependents, boleh ambil minimum untuk cover loan & funeral expenses je (RM200k-300k).
@@ -469,7 +450,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <h2 class="text-2xl font-semibold text-rose-700 mt-12 mb-4">Action Steps: Apa Nak Buat Lepas Kira?</h2>
 
-      <div class="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 my-8 border-2 border-gray-200">
+      <div class="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 my-8 border-2 border-gray-200 shadow-lg">
         <div class="space-y-6">
           
           <div class="flex items-start">
@@ -585,6 +566,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       // Show results section
       document.getElementById('results').classList.remove('hidden');
+      document.getElementById('results-placeholder').classList.add('hidden');
+
+      document.getElementById('results').scrollIntoView({ behavior: 'smooth' });
     }
 
     function resetCalculator() {
@@ -593,6 +577,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       document.getElementById('educationCost').value = '';
       document.getElementById('bufferPercentage').value = '20';
       document.getElementById('results').classList.add('hidden');
+      document.getElementById('results-placeholder').classList.remove('hidden');
     }
   </script>
 
