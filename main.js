@@ -211,6 +211,38 @@ document.addEventListener('DOMContentLoaded', async () => {
   document.querySelectorAll('.fade-in-section').forEach(section => {
     observer.observe(section);
   });
+
+  // --- Animated Counter Script ---
+  const counterElement = document.getElementById('families-helped-counter');
+  if (counterElement) {
+    const animateCounter = (element, target) => {
+      let current = 0;
+      const increment = target / 200; // Control animation speed
+      const duration = 2000; // 2 seconds
+      const stepTime = Math.abs(Math.floor(duration / target));
+
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+          clearInterval(timer);
+          current = target;
+        }
+        element.textContent = Math.floor(current).toLocaleString('en-US');
+      }, stepTime > 0 ? stepTime : 1);
+    };
+
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Start animation and unobserve to prevent re-animating
+          animateCounter(counterElement, 12); // Target number
+          counterObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    counterObserver.observe(counterElement);
+  }
 });
 
 // --- Sticky CTA Script ---
