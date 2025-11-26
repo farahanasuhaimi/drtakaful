@@ -1,30 +1,21 @@
 function sendWhatsApp() {
   // Get form values
-  const name = document.getElementById('name').value;
-  const age = document.getElementById('age').value;
-  const gender = document.getElementById('gender').value;
-  const profession = document.getElementById('profession').value;
-  const smoking = document.getElementById('smoking').value;
-  const health = document.getElementById('health').value;
+  const name = document.getElementById('name')?.value;
+  const age = document.getElementById('age')?.value;
 
   // Validation
-  if (!name || !age || !gender || !profession || !smoking) {
-    document.getElementById('formMessage').textContent = '❌ Sila isi semua maklumat wajib';
+  if (!name || !age) {
+    document.getElementById('formMessage').textContent = '❌ Sila isi nama dan umur anda.';
     document.getElementById('formMessage').className = 'text-center text-sm mt-3 text-red-600';
     return;
   }
   
   // Create WhatsApp message
-  let message = `*SEMAKAN PELAN TAKAFUL*\n\n`;
+  let message = `Assalamualaikum Dr. Takaful (Hana),\n\n`;
+  message += `Saya ingin minta anggaran quotation untuk saya.\n\n`;
   message += `📝 *Nama:* ${name}\n`;
-  message += `👤 *Umur:* ${age} tahun\n`;
-  message += `🚻 *Jantina:* ${gender}\n`;
-  message += `💼 *Pekerjaan:* ${profession}\n`;
-  message += `🚬 *Status Merokok:* ${smoking}\n`;
-  if (health) {
-    message += `🏥 *Rekod Kesihatan:* ${health}\n`;
-  }
-  message += `\nSaya ingin semak pelan takaful yang sesuai untuk saya. Terima kasih! 🙏`;
+  message += `👤 *Umur:* ${age}\n\n`;
+  message += `Terima kasih! 🙏`;
   
   // Encode message for URL
   const encodedMessage = encodeURIComponent(message);
@@ -38,6 +29,47 @@ function sendWhatsApp() {
   // Show success message
   document.getElementById('formMessage').textContent = '✅ Membuka WhatsApp...';
   document.getElementById('formMessage').className = 'text-center text-sm mt-3 text-green-600 font-semibold';
+}
+
+function sendDetailedWhatsApp() {
+  // Get form values
+  const name = document.getElementById('name').value;
+  const age = document.getElementById('age').value;
+  const gender = document.getElementById('gender').value;
+  const profession = document.getElementById('profession').value;
+  const smoking = document.getElementById('smoking').value;
+  const health = document.getElementById('health').value;
+  const planChoice = document.getElementById('planChoice').value;
+
+  // Validation
+  if (!name || !age || !gender || !profession) {
+    document.getElementById('formMessage').textContent = '❌ Sila isi semua maklumat wajib (Nama, Umur, Jantina, Pekerjaan).';
+    document.getElementById('formMessage').className = 'text-center text-sm mt-4 text-red-600';
+    return;
+  }
+  
+  // Create WhatsApp message
+  let message = `*ANALISIS KEPERLUAN TAKAFUL*\n\n`;
+  message += `Assalamualaikum Dr. Takaful (Hana),\n\n`;
+  message += `Berikut adalah butiran saya untuk analisis percuma:\n\n`;
+  message += `📝 *Nama:* ${name}\n`;
+  message += `👤 *Umur:* ${age} tahun\n`;
+  message += `🚻 *Jantina:* ${gender}\n`;
+  message += `💼 *Pekerjaan:* ${profession}\n`;
+  message += `🚬 *Status Merokok/Vape:* ${smoking}\n`;
+  if (health) {
+    message += `🏥 *Rekod Kesihatan:* ${health}\n`;
+  }
+  if (planChoice) {
+    message += `💡 *Pilihan Pelan:* ${planChoice}\n`;
+  }
+  message += `\nSaya ingin dapatkan analisis & sebut harga percuma berdasarkan maklumat ini. Terima kasih! 🙏`;
+  
+  const encodedMessage = encodeURIComponent(message);
+  const whatsappURL = `https://wa.me/60132522587?text=${encodedMessage}`;
+  window.open(whatsappURL, '_blank');
+  document.getElementById('formMessage').textContent = '✅ Berjaya! Membuka WhatsApp...';
+  document.getElementById('formMessage').className = 'text-center text-sm mt-4 text-green-600 font-semibold';
 }
 
 // Function to initialize blog filtering (will be called after content loads)
@@ -235,7 +267,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           // Start animation and unobserve to prevent re-animating
-          animateCounter(counterElement, 12); // Target number
+          animateCounter(counterElement, 22); // Target number
           counterObserver.unobserve(entry.target);
         }
       });
