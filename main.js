@@ -9,23 +9,23 @@ function sendWhatsApp() {
     document.getElementById('formMessage').className = 'text-center text-sm mt-3 text-red-600';
     return;
   }
-  
+
   // Create WhatsApp message
   let message = `Assalamualaikum Dr. Takaful (Hana),\n\n`;
   message += `Saya ingin minta anggaran quotation untuk saya.\n\n`;
   message += `📝 *Nama:* ${name}\n`;
   message += `👤 *Umur:* ${age}\n\n`;
   message += `Terima kasih! 🙏`;
-  
+
   // Encode message for URL
   const encodedMessage = encodeURIComponent(message);
-  
+
   // Your WhatsApp number (60132522587)
   const whatsappURL = `https://wa.me/60132522587?text=${encodedMessage}`;
-  
+
   // Open WhatsApp
   window.open(whatsappURL, '_blank');
-  
+
   // Show success message
   document.getElementById('formMessage').textContent = '✅ Membuka WhatsApp...';
   document.getElementById('formMessage').className = 'text-center text-sm mt-3 text-green-600 font-semibold';
@@ -47,7 +47,7 @@ function sendDetailedWhatsApp() {
     document.getElementById('formMessage').className = 'text-center text-sm mt-4 text-red-600';
     return;
   }
-  
+
   // Create WhatsApp message
   let message = `*ANALISIS KEPERLUAN TAKAFUL*\n\n`;
   message += `Assalamualaikum Dr. Takaful (Hana),\n\n`;
@@ -64,7 +64,7 @@ function sendDetailedWhatsApp() {
     message += `💡 *Pilihan Pelan:* ${planChoice}\n`;
   }
   message += `\nSaya ingin dapatkan analisis & sebut harga percuma berdasarkan maklumat ini. Terima kasih! 🙏`;
-  
+
   const encodedMessage = encodeURIComponent(message);
   const whatsappURL = `https://wa.me/60132522587?text=${encodedMessage}`;
   window.open(whatsappURL, '_blank');
@@ -190,7 +190,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const slides = Array.from(track.children);
     const nextButton = document.getElementById('next-testimonial');
     const prevButton = document.getElementById('prev-testimonial');
-    
+
     if (slides.length > 0) {
       let currentIndex = 0;
 
@@ -211,7 +211,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
       // Adjust on window resize
       window.addEventListener('resize', updateCarousel);
-      
+
       // Initial position
       updateCarousel();
     }
@@ -283,7 +283,7 @@ const heroSection = document.querySelector('header + section'); // Selects the h
 
 window.addEventListener('scroll', () => {
   if (!heroSection || !stickyCta) return;
-  
+
   // Show button if user has scrolled past the bottom of the hero section
   const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
   if (window.scrollY > heroBottom) {
