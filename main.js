@@ -136,6 +136,45 @@ function filterArticles(category, isInitialLoad = false) {
 
 // --- Load Blog Section Dynamically ---
 document.addEventListener('DOMContentLoaded', async () => {
+  // --- Countdown Timer Script ---
+  const countdownElement = document.getElementById('countdown-timer');
+  if (countdownElement) {
+    // Set the date for the end of the offer to December 8th, 23:59
+    const offerEndDate = new Date();
+    offerEndDate.setFullYear(offerEndDate.getFullYear(), 11, 8); // Month is 0-indexed, so 11 is December
+    offerEndDate.setHours(23, 59, 59, 0); // End of the day
+
+    // Format the offer end date for display
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    document.getElementById('offer-end-date').textContent = offerEndDate.toLocaleDateString('ms-MY', options);
+
+    const updateCountdown = () => {
+      const now = new Date().getTime();
+      const distance = offerEndDate - now;
+
+      // Time calculations
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Display the result
+      document.getElementById('days').textContent = String(days).padStart(2, '0');
+      document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+      document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+      document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+
+      // If the countdown is over, show some text
+      if (distance < 0) {
+        clearInterval(countdownInterval);
+        countdownElement.innerHTML = "Tawaran Telah Tamat";
+      }
+    };
+
+    const countdownInterval = setInterval(updateCountdown, 1000);
+    updateCountdown(); // Initial call
+  }
+  
   // --- Mobile Menu Script ---
   const mobileMenuButton = document.getElementById('mobile-menu-button');
   const mobileMenu = document.getElementById('mobile-menu');
