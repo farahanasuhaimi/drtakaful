@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   if (countdownElement) {
     // Set the date for the end of the offer to December 8th, 23:59
     const offerEndDate = new Date();
-    offerEndDate.setFullYear(offerEndDate.getFullYear(), 11, 8); // Month is 0-indexed, so 11 is December
+    offerEndDate.setFullYear(offerEndDate.getFullYear(), 11, 31); // Month is 0-indexed, so 11 is December
     offerEndDate.setHours(23, 59, 59, 0); // End of the day
 
     // Format the offer end date for display
@@ -174,7 +174,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const countdownInterval = setInterval(updateCountdown, 1000);
     updateCountdown(); // Initial call
   }
-  
+
   // --- Mobile Menu Script ---
   const mobileMenuButton = document.getElementById('mobile-menu-button');
   const mobileMenu = document.getElementById('mobile-menu');

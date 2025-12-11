@@ -85,8 +85,7 @@
 
       <!-- CTA Buttons (Desktop) -->
       <div class="hidden md:flex items-center space-x-4">
-        <a href="#blog"
-          class="bg-rose-600 text-white px-5 py-2 rounded-full shadow hover:bg-rose-700 transition">
+        <a href="#blog" class="bg-rose-600 text-white px-5 py-2 rounded-full shadow hover:bg-rose-700 transition">
           Blog Awareness
         </a>
         <a href="#borang-konsultasi"
@@ -116,14 +115,62 @@
   <!-- HERO SECTION -->
   <section class="relative bg-gradient-to-b from-rose-50 to-white overflow-hidden">
     <!-- Offer Banner with Countdown -->
-    <div id="offer-banner" class="bg-rose-700 text-white p-4 text-center relative shadow-lg">
-      <div class="max-w-4xl mx-auto">
-        <p class="font-bold text-lg">Tawaran Khas Sehingga <span id="offer-end-date"></span>!</p>
-        <p class="mt-1">Dapatkan <strong class="underline">1 Bulan Pengecualian Bayaran</strong> untuk pelan takaful hayat anda bila anda mohon hari ini.</p>
-        <div id="countdown-timer" class="mt-3 text-2xl font-bold tracking-tight">
-          <span id="days">00</span> Hari : <span id="hours">00</span> Jam : <span id="minutes">00</span> Minit : <span id="seconds">00</span> Saat
+    <div id="offer-banner"
+      class="bg-gradient-to-r from-rose-600 to-rose-800 text-white p-6 text-center relative shadow-xl border-b-4 border-rose-900 overflow-hidden">
+      <!-- Decorative background elements -->
+      <div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10 pointer-events-none">
+        <div class="absolute -top-10 -left-10 w-40 h-40 bg-white rounded-full blur-3xl"></div>
+        <div class="absolute top-10 right-10 w-20 h-20 bg-yellow-300 rounded-full blur-2xl"></div>
+      </div>
+
+      <div class="max-w-5xl mx-auto relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="text-left md:flex-1">
+          <div class="flex items-center justify-center md:justify-start gap-2 mb-2">
+            <span
+              class="bg-yellow-400 text-rose-900 text-xs font-bold px-2 py-1 rounded-full uppercase tracking-wider animate-pulse">Tawaran
+              Khas</span>
+            <p class="text-rose-100 text-sm font-medium">Tamat pada <span id="offer-end-date"
+                class="text-white font-bold"></span></p>
+          </div>
+          <h3 class="text-2xl md:text-3xl font-extrabold leading-tight mb-2 text-center md:text-left">
+            Dapatkan <span class="text-yellow-300">1 Bulan Percuma</span> Perlindungan!
+          </h3>
+          <p class="text-rose-100 text-base md:text-lg text-center md:text-left">
+            Daftar hari ini & kami belanja premium bulan pertama anda. Jimat sehingga RM300!
+          </p>
+        </div>
+
+        <div
+          class="flex flex-col items-center bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 min-w-[300px]">
+          <p class="text-xs text-rose-200 uppercase tracking-widest font-semibold mb-1">Masa Tinggal</p>
+          <div id="countdown-timer" class="text-3xl font-mono font-bold tracking-tight text-white flex gap-2">
+            <div class="flex flex-col items-center">
+              <span id="days">00</span>
+              <span class="text-[10px] font-sans font-normal text-rose-200">Hari</span>
+            </div>
+            <span>:</span>
+            <div class="flex flex-col items-center">
+              <span id="hours">00</span>
+              <span class="text-[10px] font-sans font-normal text-rose-200">Jam</span>
+            </div>
+            <span>:</span>
+            <div class="flex flex-col items-center">
+              <span id="minutes">00</span>
+              <span class="text-[10px] font-sans font-normal text-rose-200">Minit</span>
+            </div>
+            <span>:</span>
+            <div class="flex flex-col items-center">
+              <span id="seconds">00</span>
+              <span class="text-[10px] font-sans font-normal text-rose-200">Saat</span>
+            </div>
+          </div>
+          <a href="#borang-konsultasi"
+            class="mt-3 w-full block bg-yellow-400 hover:bg-yellow-300 text-rose-900 font-bold py-2 rounded-lg shadow-lg transition transform hover:scale-105 text-center text-sm">
+            Tuntut Tawaran Sekarang →
+          </a>
         </div>
       </div>
+
     </div>
 
     <div class="max-w-4xl mx-auto px-6 py-16 text-center">
@@ -133,7 +180,9 @@
         </h1>
       </div>
       <p class="text-lg max-w-3xl mx-auto text-gray-700 leading-relaxed">
-        Gaji bulanan adalah nyawa kewangan kita. Tapi apa akan jadi jika ia terhenti? Kami bantu anda sediakan pelan kewangan kukuh yang melindungi keluarga anda dari 3 punca utama kehilangan pendapatan: Sakit Kritikal, Hilang Upaya, atau Kematian.
+        Gaji bulanan adalah nyawa kewangan kita. Tapi apa akan jadi jika ia terhenti? Kami bantu anda sediakan pelan
+        kewangan kukuh yang melindungi keluarga anda dari 3 punca utama kehilangan pendapatan: Sakit Kritikal, Hilang
+        Upaya, atau Kematian.
       </p>
       <div class="mt-10 flex flex-col md:flex-row items-center justify-center gap-4">
         <a href="#borang-konsultasi"
@@ -145,7 +194,8 @@
           Kira Sendiri Bajet ⟶
         </a>
       </div>
-      <p class="text-sm text-gray-500 mt-6"><span class="font-semibold text-rose-600">37 keluarga</span> telah mendapatkan pelan mereka bulan ini. Jangan bertangguh lagi.</p>
+      <p class="text-sm text-gray-500 mt-6"><span class="font-semibold text-rose-600">37 keluarga</span> telah
+        mendapatkan pelan mereka bulan ini. Jangan bertangguh lagi.</p>
     </div>
   </section>
 
@@ -235,7 +285,8 @@
     <div class="max-w-5xl mx-auto">
       <div class="text-center mb-12">
         <h2 class="text-3xl font-bold text-rose-700 mb-4">4 Langkah Mudah Kami Bantu Anda</h2>
-        <p class="text-gray-600 max-w-2xl mx-auto">Proses kami mudah, telus dan direka untuk memberikan anda ketenangan fikiran sepantas mungkin.</p>
+        <p class="text-gray-600 max-w-2xl mx-auto">Proses kami mudah, telus dan direka untuk memberikan anda ketenangan
+          fikiran sepantas mungkin.</p>
       </div>
 
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -251,7 +302,8 @@
           </div>
           <div class="pb-8">
             <h3 class="text-lg font-bold text-gray-800 mb-2">Analisa Keperluan</h3>
-            <p class="text-gray-600 text-sm">Kami bantu kira bajet & jumlah perlindungan yang anda perlukan untuk gantikan gaji, bayar hutang, dan sara keluarga.</p>
+            <p class="text-gray-600 text-sm">Kami bantu kira bajet & jumlah perlindungan yang anda perlukan untuk
+              gantikan gaji, bayar hutang, dan sara keluarga.</p>
           </div>
         </div>
 
@@ -267,7 +319,8 @@
           </div>
           <div class="pb-8">
             <h3 class="text-lg font-bold text-gray-800 mb-2">Cadangan Pelan</h3>
-            <p class="text-gray-600 text-sm">Berdasarkan keperluan anda, kami cadangkan kombinasi pelan takaful terbaik (Hibah, Medical, CI) yang sesuai dengan matlamat anda.</p>
+            <p class="text-gray-600 text-sm">Berdasarkan keperluan anda, kami cadangkan kombinasi pelan takaful terbaik
+              (Hibah, Medical, CI) yang sesuai dengan matlamat anda.</p>
           </div>
         </div>
 
@@ -283,7 +336,8 @@
           </div>
           <div class="pb-8">
             <h3 class="text-lg font-bold text-gray-800 mb-2">Permohonan Mudah</h3>
-            <p class="text-gray-600 text-sm">Kami uruskan semua proses permohonan dari A-Z. Semuanya boleh dibuat secara online, mudah dan pantas.</p>
+            <p class="text-gray-600 text-sm">Kami uruskan semua proses permohonan dari A-Z. Semuanya boleh dibuat secara
+              online, mudah dan pantas.</p>
           </div>
         </div>
 
@@ -298,7 +352,8 @@
           </div>
           <div class="pb-8">
             <h3 class="text-lg font-bold text-gray-800 mb-2">Servis Berterusan</h3>
-            <p class="text-gray-600 text-sm">Selepas polisi lulus, kami akan terangkan cara buat tuntutan dan sentiasa ada untuk bantu anda & keluarga di masa hadapan.</p>
+            <p class="text-gray-600 text-sm">Selepas polisi lulus, kami akan terangkan cara buat tuntutan dan sentiasa
+              ada untuk bantu anda & keluarga di masa hadapan.</p>
           </div>
         </div>
       </div>
