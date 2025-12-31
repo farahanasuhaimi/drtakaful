@@ -139,14 +139,10 @@ document.addEventListener('DOMContentLoaded', async () => {
   // --- Countdown Timer Script ---
   const countdownElement = document.getElementById('countdown-timer');
   if (countdownElement) {
-    // Set the date for the end of the offer to December 8th, 23:59
+    // Set the date for the end of the offer to December 31st, 23:59
     const offerEndDate = new Date();
     offerEndDate.setFullYear(offerEndDate.getFullYear(), 11, 31); // Month is 0-indexed, so 11 is December
     offerEndDate.setHours(23, 59, 59, 0); // End of the day
-
-    // Format the offer end date for display
-    const options = { year: 'numeric', month: 'long', day: 'numeric' };
-    document.getElementById('offer-end-date').textContent = offerEndDate.toLocaleDateString('ms-MY', options);
 
     const updateCountdown = () => {
       const now = new Date().getTime();
@@ -159,10 +155,15 @@ document.addEventListener('DOMContentLoaded', async () => {
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
       // Display the result
-      document.getElementById('days').textContent = String(days).padStart(2, '0');
-      document.getElementById('hours').textContent = String(hours).padStart(2, '0');
-      document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
-      document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+      const elDays = document.getElementById('days');
+      const elHours = document.getElementById('hours');
+      const elMinutes = document.getElementById('minutes');
+      const elSeconds = document.getElementById('seconds');
+
+      if (elDays) elDays.textContent = String(days).padStart(2, '0');
+      if (elHours) elHours.textContent = String(hours).padStart(2, '0');
+      if (elMinutes) elMinutes.textContent = String(minutes).padStart(2, '0');
+      if (elSeconds) elSeconds.textContent = String(seconds).padStart(2, '0');
 
       // If the countdown is over, show some text
       if (distance < 0) {
@@ -178,81 +179,36 @@ document.addEventListener('DOMContentLoaded', async () => {
   // --- Mobile Menu Script ---
   const mobileMenuButton = document.getElementById('mobile-menu-button');
   const mobileMenu = document.getElementById('mobile-menu');
-  const mobileMenuLinks = mobileMenu.querySelectorAll('a');
 
-  mobileMenuButton.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-  });
+  if (mobileMenuButton && mobileMenu) {
+    const mobileMenuLinks = mobileMenu.querySelectorAll('a');
 
-  // Close menu when a link is clicked
-  mobileMenuLinks.forEach(link => {
-    link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
-  });
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
 
+    // Close menu when a link is clicked
+    mobileMenuLinks.forEach(link => {
+      link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    });
+  }
+
+  // --- Blog Filtering Logic (Now for Static Content) ---
   const blogContainer = document.getElementById('blog-section-container');
-  const blogLoader = document.getElementById('blog-loader');
 
   if (blogContainer) {
-    try {
-      const response = await fetch('/blog-section.html');
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      blogLoader.style.display = 'none'; // Hide loader
-      const blogHtml = await response.text();
-      blogContainer.innerHTML = blogHtml;
+    // Initialize blog filtering script for static content
+    articles = document.querySelectorAll('.blog-article');
+    tabButtons = document.querySelectorAll('.tab-button');
+    showMoreButton = document.getElementById('show-more-button');
 
-      // After content is loaded, initialize blog filtering script
-      articles = document.querySelectorAll('.blog-article');
-      tabButtons = document.querySelectorAll('.tab-button');
-      showMoreButton = document.getElementById('show-more-button');
+    // Initial state for filter
+    filterArticles('all', true);
 
-      // The styles are already in blog-section.html, so no need to inject them again.
-
-      // Initial state for filter
-      filterArticles('all', true);
-
+    if (showMoreButton) {
       showMoreButton.addEventListener('click', () => {
         filterArticles('all', false); // Show all articles
       });
-
-    } catch (error) {
-      console.error('Failed to load blog section:', error);
-      blogLoader.style.display = 'none'; // Hide loader on error too
-      blogContainer.innerHTML = '<p class="text-center text-red-500">Gagal memuatkan bahagian blog. Sila cuba sebentar lagi.</p>';
-    }
-  }
-
-  // --- Testimonial Carousel Script ---
-  const track = document.getElementById('testimonial-track');
-  if (track) {
-    const slides = Array.from(track.children);
-    const nextButton = document.getElementById('next-testimonial');
-    const prevButton = document.getElementById('prev-testimonial');
-
-    if (slides.length > 0) {
-      let currentIndex = 0;
-
-      const updateCarousel = () => {
-        const slideWidth = slides[0].getBoundingClientRect().width;
-        track.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
-      };
-
-      nextButton.addEventListener('click', () => {
-        currentIndex = (currentIndex + 1) % slides.length;
-        updateCarousel();
-      });
-
-      prevButton.addEventListener('click', () => {
-        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-        updateCarousel();
-      });
-
-      // Adjust on window resize
-      window.addEventListener('resize', updateCarousel);
-
-      // Initial position
-      updateCarousel();
     }
   }
 
@@ -282,38 +238,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   document.querySelectorAll('.fade-in-section').forEach(section => {
     observer.observe(section);
   });
-
-  // --- Animated Counter Script ---
-  const counterElement = document.getElementById('families-helped-counter');
-  if (counterElement) {
-    const animateCounter = (element, target) => {
-      let current = 0;
-      const increment = target / 200; // Control animation speed
-      const duration = 2000; // 2 seconds
-      const stepTime = Math.abs(Math.floor(duration / target));
-
-      const timer = setInterval(() => {
-        current += increment;
-        if (current >= target) {
-          clearInterval(timer);
-          current = target;
-        }
-        element.textContent = Math.floor(current).toLocaleString('en-US');
-      }, stepTime > 0 ? stepTime : 1);
-    };
-
-    const counterObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          // Start animation and unobserve to prevent re-animating
-          animateCounter(counterElement, 22); // Target number
-          counterObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.5 });
-
-    counterObserver.observe(counterElement);
-  }
 });
 
 // --- Sticky CTA Script ---

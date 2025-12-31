@@ -60,344 +60,351 @@
   <link rel="manifest" href="https://DrTakaful.com/site.webmanifest">
 
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    .glass-nav {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+    }
+  </style>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            rose: {
+              50: '#fff1f2',
+              100: '#ffe4e6',
+              600: '#e11d48', // Primary Action
+              700: '#be123c',
+              900: '#881337',
+            },
+            gray: {
+              50: '#f9fafb',
+              100: '#f3f4f6',
+              800: '#1f2937', // Primary Text
+              900: '#111827',
+            }
+          }
+        }
+      }
+    }
+  </script>
 </head>
 
-<body class="bg-white text-gray-800"
-  style="background-image: radial-gradient(#f1f5f9 1px, transparent 1px); background-size: 24px 24px;">
+<body class="bg-gray-50 text-gray-800 antialiased selection:bg-rose-100 selection:text-rose-900">
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFWGX5DS" height="0" width="0"
       style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
   <!-- NAVIGATION BAR -->
-  <header class="sticky top-0 bg-white/50 backdrop-blur-lg shadow-lg z-50">
-    <nav class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+  <header class="fixed w-full top-0 glass-nav border-b border-gray-100 z-50">
+    <nav class="max-w-6xl mx-auto px-6 h-20 flex justify-between items-center">
       <!-- Logo -->
-      <a href="#why-dr-takaful" class="text-xl font-bold text-rose-700 hover:text-rose-800 transition">Dr. Takaful</a>
+      <a href="#why-dr-takaful" class="text-xl font-bold tracking-tight text-gray-900 group">
+        Dr. Takaful <span class="text-rose-600">.</span>
+      </a>
 
       <!-- Desktop Menu -->
-      <ul class="hidden md:flex space-x-8 items-center text-gray-600">
-        <li><a href="#punca-gaji-terhenti" class="hover:text-rose-700 transition">Punca Gaji Terhenti</a></li>
-        <li><a href="#testimonials" class="hover:text-rose-700 transition">Testimoni</a></li>
-        <li><a href="/kalkulator-hibah-takaful.html#kalkulator-hibah" class="hover:text-rose-700 transition">Kalkulator
-            Hibah</a></li>
+      <ul class="hidden md:flex space-x-10 items-center text-sm font-medium text-gray-500">
+        <li><a href="#punca-gaji-terhenti" class="hover:text-rose-600 transition-colors">Punca Gaji Terhenti</a></li>
+        <li><a href="#testimonials" class="hover:text-rose-600 transition-colors">Testimoni</a></li>
+        <li><a href="/kalkulator-hibah-takaful.html#kalkulator-hibah"
+            class="hover:text-rose-600 transition-colors">Kalkulator</a></li>
       </ul>
 
       <!-- CTA Buttons (Desktop) -->
-      <div class="hidden md:flex items-center space-x-4">
-        <a href="#blog" class="bg-rose-600 text-white px-5 py-2 rounded-full shadow hover:bg-rose-700 transition">
-          Blog Awareness
+      <div class="hidden md:flex items-center gap-4">
+        <a href="#blog" class="text-sm font-medium text-gray-500 hover:text-gray-900 transition">
+          Blog
         </a>
         <a href="#borang-konsultasi"
-          class="bg-green-500 text-white px-5 py-2 rounded-full shadow hover:bg-green-600 transition">
-          Free Consultation
+          class="bg-gray-900 text-white px-6 py-2.5 rounded-full text-sm font-medium hover:bg-rose-600 transition-all shadow-sm hover:shadow-md">
+          Konsultasi Percuma
         </a>
       </div>
 
       <!-- Mobile Menu Button -->
-      <button id="mobile-menu-button" class="md:hidden text-rose-700">
+      <button id="mobile-menu-button" class="md:hidden text-gray-900">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16m-7 6h7" />
         </svg>
       </button>
     </nav>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
-      <a href="#punca-gaji-terhenti" class="block py-3 px-6 text-gray-700 hover:bg-rose-50">Punca Gaji Terhenti</a>
-      <a href="#testimonials" class="block py-3 px-6 text-gray-700 hover:bg-rose-50">Testimoni</a>
-      <a href="/kalkulator-hibah-takaful.html" class="block py-3 px-6 text-gray-700 hover:bg-rose-50">Kalkulator
-        Hibah</a>
-      <a href="#blog" class="block py-4 px-6 text-center bg-rose-100 text-rose-700 font-semibold">Blog Awareness</a>
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full left-0">
+      <div class="px-6 py-4 space-y-3">
+        <a href="#punca-gaji-terhenti" class="block text-gray-600 hover:text-rose-600 font-medium">Punca Gaji
+          Terhenti</a>
+        <a href="#testimonials" class="block text-gray-600 hover:text-rose-600 font-medium">Testimoni</a>
+        <a href="/kalkulator-hibah-takaful.html"
+          class="block text-gray-600 hover:text-rose-600 font-medium">Kalkulator</a>
+        <a href="#blog" class="block text-gray-600 hover:text-rose-600 font-medium">Blog</a>
+        <a href="#borang-konsultasi"
+          class="block w-full text-center bg-gray-900 text-white py-3 rounded-lg font-medium mt-4">Konsultasi
+          Percuma</a>
+      </div>
     </div>
   </header>
 
   <!-- HERO SECTION -->
-  <section class="relative bg-gradient-to-b from-rose-50 to-white overflow-hidden">
-    <!-- Offer Banner with Countdown -->
-    <div id="offer-banner"
-      class="bg-gradient-to-r from-rose-600 to-rose-800 text-white p-6 text-center relative shadow-xl border-b-4 border-rose-900 overflow-hidden">
-      <!-- Decorative background elements -->
-      <div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10 pointer-events-none">
-        <div class="absolute -top-10 -left-10 w-40 h-40 bg-white rounded-full blur-3xl"></div>
-        <div class="absolute top-10 right-10 w-20 h-20 bg-yellow-300 rounded-full blur-2xl"></div>
-      </div>
-
-      <div class="max-w-5xl mx-auto relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
-        <div class="text-left md:flex-1">
-          <div class="flex items-center justify-center md:justify-start gap-2 mb-2">
-            <span
-              class="bg-yellow-400 text-rose-900 text-xs font-bold px-2 py-1 rounded-full uppercase tracking-wider animate-pulse">Tawaran
-              Khas</span>
-            <p class="text-rose-100 text-sm font-medium">Tamat pada <span id="offer-end-date"
-                class="text-white font-bold"></span></p>
-          </div>
-          <h3 class="text-2xl md:text-3xl font-extrabold leading-tight mb-2 text-center md:text-left">
-            Dapatkan <span class="text-yellow-300">1 Bulan Percuma</span> Perlindungan!
-          </h3>
-          <p class="text-rose-100 text-base md:text-lg text-center md:text-left">
-            Daftar hari ini & kami belanja premium bulan pertama anda. Jimat sehingga RM300!
+  <section class="relative pt-32 pb-20 px-6 overflow-hidden">
+    <!-- Offer Banner (Simplified) -->
+    <div id="offer-banner" class="max-w-4xl mx-auto mb-10">
+      <div
+        class="bg-rose-50 border border-rose-100 rounded-2xl p-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <span class="flex h-2 w-2 relative">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-rose-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-rose-500"></span>
+          </span>
+          <p class="text-sm font-medium text-rose-900">
+            <span class="font-bold">Tawaran Terhad:</span> Dapatkan perlindungan seawal RM50/bulan.
           </p>
         </div>
-
-        <div
-          class="flex flex-col items-center bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 min-w-[300px]">
-          <p class="text-xs text-rose-200 uppercase tracking-widest font-semibold mb-1">Masa Tinggal</p>
-          <div id="countdown-timer" class="text-3xl font-mono font-bold tracking-tight text-white flex gap-2">
-            <div class="flex flex-col items-center">
-              <span id="days">00</span>
-              <span class="text-[10px] font-sans font-normal text-rose-200">Hari</span>
-            </div>
-            <span>:</span>
-            <div class="flex flex-col items-center">
-              <span id="hours">00</span>
-              <span class="text-[10px] font-sans font-normal text-rose-200">Jam</span>
-            </div>
-            <span>:</span>
-            <div class="flex flex-col items-center">
-              <span id="minutes">00</span>
-              <span class="text-[10px] font-sans font-normal text-rose-200">Minit</span>
-            </div>
-            <span>:</span>
-            <div class="flex flex-col items-center">
-              <span id="seconds">00</span>
-              <span class="text-[10px] font-sans font-normal text-rose-200">Saat</span>
-            </div>
+        <div class="flex items-center gap-4">
+          <div id="countdown-timer"
+            class="flex gap-1 text-xs font-mono text-rose-700 bg-white px-2 py-1 rounded border border-rose-100">
+            <span id="days">00</span>d :
+            <span id="hours">00</span>h :
+            <span id="minutes">00</span>m :
+            <span id="seconds">00</span>s
           </div>
-          <a href="#borang-konsultasi"
-            class="mt-3 w-full block bg-yellow-400 hover:bg-yellow-300 text-rose-900 font-bold py-2 rounded-lg shadow-lg transition transform hover:scale-105 text-center text-sm">
-            Tuntut Tawaran Sekarang →
-          </a>
         </div>
       </div>
-
     </div>
 
-    <div class="max-w-4xl mx-auto px-6 py-16 text-center">
-      <div class="mb-8">
-        <h1 class="text-4xl md:text-5xl font-bold text-rose-800 mt-2 leading-tight">
-          Gaji Anda Hilang, Komitmen Berjalan. Lindungi Keluarga Anda Hari Ini.
-        </h1>
-      </div>
-      <p class="text-lg max-w-3xl mx-auto text-gray-700 leading-relaxed">
-        Jangan biarkan sakit kritikal, hilang upaya, atau kematian mengejut meragut masa depan keluarga anda. Dr.
-        Takaful bantu anda sediakan pelan kewangan kukuh dengan mewujudkan 'gaji kedua' yang melindungi mereka.
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-5xl md:text-7xl font-bold text-gray-900 tracking-tight mb-8 leading-tight">
+        Jika Gaji Anda Hilang,<br />
+        <span class="text-rose-600">Siapa Bayar Komitmen?</span>
+      </h1>
+      <p class="text-xl text-gray-500 max-w-2xl mx-auto leading-relaxed mb-10">
+        Jangan ambil risiko. Wujudkan <strong>'Gaji Kedua'</strong> (Income Replacement) untuk pastikan sara hidup
+        isteri & anak-anak kekal terjamin walau apa pun yang terjadi kepada anda.
       </p>
-      <div class="mt-10 flex flex-col md:flex-row items-center justify-center gap-4">
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
         <a href="#borang-konsultasi"
-          class="w-full md:w-auto inline-block bg-rose-600 text-white px-8 py-4 rounded-full shadow-lg hover:bg-rose-700 transition-transform transform hover:scale-105 text-lg font-semibold animate-pulse">
-          ✅ Ya, Saya Nak Lindungi Keluarga
+          class="w-full sm:w-auto px-8 py-4 bg-gray-900 text-white rounded-full font-medium hover:bg-rose-600 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+          Kira Kelayakan Saya (Percuma)
         </a>
         <a href="/formula-10-peratus-pendapatan-takaful.html"
-          class="w-full md:w-auto inline-block bg-gray-200 text-gray-800 px-8 py-4 rounded-full shadow-lg hover:bg-gray-300 transition-transform transform hover:scale-105 text-lg font-semibold">
-          Kira Sendiri Bajet ⟶
+          class="w-full sm:w-auto px-8 py-4 bg-white text-gray-900 border border-gray-200 rounded-full font-medium hover:bg-gray-50 transition-all">
+          Lihat Contoh Bajet
         </a>
       </div>
-      <p class="text-sm text-gray-500 mt-6"><span class="font-semibold text-rose-600">37 keluarga</span> telah
-        mendapatkan pelan mereka bulan ini. Jangan bertangguh lagi.</p>
+
+      <div class="mt-12 flex items-center justify-center gap-2 text-sm text-gray-400">
+        <div class="flex -space-x-2">
+          <div class="w-8 h-8 rounded-full bg-gray-200 border-2 border-white"></div>
+          <div class="w-8 h-8 rounded-full bg-gray-300 border-2 border-white"></div>
+          <div class="w-8 h-8 rounded-full bg-gray-400 border-2 border-white"></div>
+        </div>
+        <p><span class="font-semibold text-gray-900">37 ketua keluarga</span> telah dilindungi bulan ini.</p>
+      </div>
     </div>
   </section>
 
   <!-- COMMITMENTS SECTION -->
-  <section class="bg-white py-16 px-6">
+  <section class="bg-white py-20 px-6 border-b border-gray-100">
     <div class="max-w-5xl mx-auto text-center">
-      <h2 class="text-2xl font-bold text-gray-800 mb-2">Gaji Terhenti. Tapi Ini Semua...</h2>
-      <p class="text-gray-500 mb-10">...tetap perlu dibayar setiap bulan.</p>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-        <div class="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-          <div class="text-4xl mb-3">🏠</div>
-          <p class="font-semibold text-gray-700">Sewa/Loan Rumah</p>
+      <p class="text-rose-600 font-semibold mb-3 tracking-wide text-sm uppercase">Jangan Terlepas Pandang</p>
+      <h2 class="text-3xl font-bold text-gray-900 mb-12">Walau Anda Sakit, Bank Takkan Faham.</h2>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="group cursor-default">
+          <div
+            class="w-16 h-16 mx-auto mb-4 bg-gray-50 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform bg-rose-50 text-rose-600">
+            🏠</div>
+          <p class="font-medium text-gray-900">Housing Loan</p>
         </div>
-        <div class="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-          <div class="text-4xl mb-3">🚗</div>
-          <p class="font-semibold text-gray-700">Ansuran Kereta</p>
+        <div class="group cursor-default">
+          <div
+            class="w-16 h-16 mx-auto mb-4 bg-gray-50 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform group-hover:bg-rose-50 group-hover:text-rose-600">
+            🚗</div>
+          <p class="font-medium text-gray-900">Ansuran Kereta</p>
         </div>
-        <div class="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-          <div class="text-4xl mb-3">🛒</div>
-          <p class="font-semibold text-gray-700">Belanja Dapur</p>
+        <div class="group cursor-default">
+          <div
+            class="w-16 h-16 mx-auto mb-4 bg-gray-50 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform group-hover:bg-rose-50 group-hover:text-rose-600">
+            🛒</div>
+          <p class="font-medium text-gray-900">Nafkah Isteri</p>
         </div>
-        <div class="bg-gray-50 p-6 rounded-2xl border border-gray-200">
-          <div class="text-4xl mb-3">🎓</div>
-          <p class="font-semibold text-gray-700">Pendidikan Anak</p>
+        <div class="group cursor-default">
+          <div
+            class="w-16 h-16 mx-auto mb-4 bg-gray-50 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform group-hover:bg-rose-50 group-hover:text-rose-600">
+            🎓</div>
+          <p class="font-medium text-gray-900">Yuran Sekolah</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- 3 CAUSES SECTION -->
-  <section id="punca-gaji-terhenti" class="bg-gradient-to-b from-white to-rose-50 py-20 px-6">
-    <div class="max-w-5xl mx-auto">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl font-bold text-rose-700 mb-4">3 Punca Utama Gaji Boleh Terhenti Secara Tiba-Tiba</h2>
-        <p class="text-gray-600 max-w-2xl mx-auto">Ini bukan untuk menakutkan, tetapi untuk menyedarkan. Inilah 3
-          realiti kehidupan yang perlu kita rancang.</p>
+  <section id="punca-gaji-terhenti" class="bg-gray-50 py-24 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Kenapa Anda Perlu 'Gaji Kedua'?</h2>
+        <p class="text-gray-500 max-w-2xl mx-auto text-lg">Statistik menunjukkan 1 dari 4 rakyat Malaysia akan
+          menghadapi salah satu risiko ini sebelum bersara.</p>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-8 text-center">
+      <div class="grid md:grid-cols-3 gap-8">
         <!-- Disease Card -->
         <div
-          class="bg-rose-50 border-2 border-rose-200 rounded-2xl p-8 flex flex-col shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-          <div class="text-5xl mb-4">🩺</div>
-          <h3 class="text-xl font-bold text-rose-800 mb-3">Sakit Kritikal</h3>
-          <p class="text-gray-700 text-sm mb-6 flex-grow">
-            Medical card bayar bil hospital. Tapi siapa bayar gaji anda yang hilang bila terpaksa cuti 6-12 bulan untuk
-            pulih dari strok atau kanser?
+          class="bg-white rounded-3xl p-8 hover:shadow-xl transition-shadow duration-300 border border-gray-100 flex flex-col">
+          <div class="w-12 h-12 bg-rose-100 rounded-xl flex items-center justify-center text-2xl mb-6">🩺</div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Hilang Gaji Akibat Sakit</h3>
+          <p class="text-gray-500 mb-8 leading-relaxed flex-grow">
+            Medical card hanya bayar bil hospital. Bagaimana dengan bil rumah & makan minum jika anda terpaksa ambil
+            cuti tanpa gaji selama 2 tahun akibat Kanser?
           </p>
           <a href="/kos-rawatan-vs-gaji.html"
-            class="mt-auto inline-block bg-white text-rose-700 px-5 py-2 rounded-full font-semibold text-sm border border-rose-200 hover:bg-rose-100 transition">Fahami
-            Perlindungan Pendapatan →</a>
+            class="text-rose-600 font-medium hover:text-rose-700 inline-flex items-center gap-2 group">
+            Solusi Income Replacement <span class="group-hover:translate-x-1 transition-transform">→</span>
+          </a>
         </div>
 
         <!-- Disability Card -->
         <div
-          class="bg-blue-50 border-2 border-blue-200 rounded-2xl p-8 flex flex-col shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-          <div class="text-5xl mb-4">♿</div>
-          <h3 class="text-xl font-bold text-blue-800 mb-3">Hilang Upaya Kekal</h3>
-          <p class="text-gray-700 text-sm mb-6 flex-grow">
-            Jika kemalangan menyebabkan anda lumpuh dan tidak boleh bekerja lagi, adakah simpanan anda cukup untuk sara
-            keluarga untuk 20-30 tahun akan datang?
+          class="bg-white rounded-3xl p-8 hover:shadow-xl transition-shadow duration-300 border border-gray-100 flex flex-col">
+          <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center text-2xl mb-6">♿
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Lumpuh Kekal</h3>
+          <p class="text-gray-500 mb-8 leading-relaxed flex-grow">
+            Jika anda lumpuh dan diberhentikan kerja, wang pampasan inilah yang akan menjadi modal untuk anda mulakan
+            bisnes kecil atau sara hidup keluarga.
           </p>
           <a href="/penyakit-kritikal-dan-humk.html"
-            class="mt-auto inline-block bg-white text-blue-700 px-5 py-2 rounded-full font-semibold text-sm border border-blue-200 hover:bg-blue-100 transition">Beza
-            CI & Hilang Upaya →</a>
+            class="text-rose-600 font-medium hover:text-rose-700 inline-flex items-center gap-2 group">
+            Tentang Pampasan Lumpuh <span class="group-hover:translate-x-1 transition-transform">→</span>
+          </a>
         </div>
 
         <!-- Death Card -->
         <div
-          class="bg-gray-100 border-2 border-gray-300 rounded-2xl p-8 flex flex-col shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-          <div class="text-5xl mb-4">💔</div>
-          <h3 class="text-xl font-bold text-gray-800 mb-3">Meninggal Dunia</h3>
-          <p class="text-gray-700 text-sm mb-6 flex-grow">
-            Adakah keluarga anda perlu jual rumah atau kereta untuk selesaikan hutang anda? Adakah mereka ada dana tunai
-            segera untuk teruskan hidup sementara menunggu harta pusaka dicairkan?
+          class="bg-white rounded-3xl p-8 hover:shadow-xl transition-shadow duration-300 border border-gray-100 flex flex-col">
+          <div class="w-12 h-12 bg-gray-100 text-gray-600 rounded-xl flex items-center justify-center text-2xl mb-6">💔
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Meninggal Dunia</h3>
+          <p class="text-gray-500 mb-8 leading-relaxed flex-grow">
+            Aset anda akan beku (faraid). Hibah Takaful adalah satu-satunya 'Cash Segera' (Liquid Asset) yang boleh
+            isteri gunakan untuk teruskan hidup serta merta.
           </p>
           <a href="/panduan-lengkap-hibah-takaful.html"
-            class="mt-auto inline-block bg-white text-gray-700 px-5 py-2 rounded-full font-semibold text-sm border border-gray-200 hover:bg-gray-200 transition">Pentingnya
-            Hibah →</a>
+            class="text-rose-600 font-medium hover:text-rose-700 inline-flex items-center gap-2 group">
+            Info Hibah Takaful <span class="group-hover:translate-x-1 transition-transform">→</span>
+          </a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- 4 STEPS SECTION -->
-  <section class="bg-white py-20 px-6">
-    <div class="max-w-5xl mx-auto">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl font-bold text-rose-700 mb-4">4 Langkah Mudah Kami Bantu Anda</h2>
-        <p class="text-gray-600 max-w-2xl mx-auto">Proses kami mudah, telus dan direka untuk memberikan anda ketenangan
-          fikiran sepantas mungkin.</p>
+  <section class="bg-white py-24 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Langkah Mudah Untuk Dilindungi</h2>
+        <p class="text-gray-500 max-w-2xl mx-auto text-lg">Kami uruskan segalanya. Anda hanya perlu semak & setuju.</p>
       </div>
 
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="grid md:grid-cols-4 gap-8 relative">
+        <!-- Connecting Line (Desktop) -->
+        <div class="hidden md:block absolute top-8 left-0 w-full h-0.5 bg-gray-100 -z-10 transform translate-y-4"></div>
+
         <!-- Step 1 -->
-        <div class="flex">
-          <div class="flex flex-col items-center mr-4">
-            <div>
-              <div class="flex items-center justify-center w-10 h-10 border-2 border-rose-500 rounded-full">
-                <div class="text-xl font-bold text-rose-500">1</div>
-              </div>
-            </div>
-            <div class="w-px h-full bg-rose-200"></div>
-          </div>
-          <div class="pb-8">
-            <h3 class="text-lg font-bold text-gray-800 mb-2">Analisa Keperluan</h3>
-            <p class="text-gray-600 text-sm">Kami bantu kira bajet & jumlah perlindungan yang anda perlukan untuk
-              gantikan gaji, bayar hutang, dan sara keluarga.</p>
-          </div>
+        <div class="relative bg-white pt-4">
+          <div
+            class="w-12 h-12 bg-gray-900 text-white rounded-full flex items-center justify-center text-xl font-bold mb-6 mx-auto md:mx-0 shadow-lg ring-8 ring-white">
+            1</div>
+          <h3 class="text-lg font-bold text-gray-900 mb-3 text-center md:text-left">Semak Kelayakan</h3>
+          <p class="text-gray-500 text-sm leading-relaxed text-center md:text-left">
+            Isi borang ringkas di bawah. Tiada dokumen rumit diperlukan untuk pengiraan awal.
+          </p>
         </div>
 
         <!-- Step 2 -->
-        <div class="flex">
-          <div class="flex flex-col items-center mr-4">
-            <div>
-              <div class="flex items-center justify-center w-10 h-10 border-2 border-rose-500 rounded-full">
-                <div class="text-xl font-bold text-rose-500">2</div>
-              </div>
-            </div>
-            <div class="w-px h-full bg-rose-200"></div>
-          </div>
-          <div class="pb-8">
-            <h3 class="text-lg font-bold text-gray-800 mb-2">Cadangan Pelan</h3>
-            <p class="text-gray-600 text-sm">Berdasarkan keperluan anda, kami cadangkan kombinasi pelan takaful terbaik
-              (Hibah, Medical, CI) yang sesuai dengan matlamat anda.</p>
-          </div>
+        <div class="relative bg-white pt-4">
+          <div
+            class="w-12 h-12 bg-gray-900 text-white rounded-full flex items-center justify-center text-xl font-bold mb-6 mx-auto md:mx-0 shadow-lg ring-8 ring-white">
+            2</div>
+          <h3 class="text-lg font-bold text-gray-900 mb-3 text-center md:text-left">Terima Quotation</h3>
+          <p class="text-gray-500 text-sm leading-relaxed text-center md:text-left">
+            Saya akan hantar 3 pilihan pelan (Basic/Standard/Premium) ke WhatsApp anda.
+          </p>
         </div>
 
         <!-- Step 3 -->
-        <div class="flex">
-          <div class="flex flex-col items-center mr-4">
-            <div>
-              <div class="flex items-center justify-center w-10 h-10 border-2 border-rose-500 rounded-full">
-                <div class="text-xl font-bold text-rose-500">3</div>
-              </div>
-            </div>
-            <div class="w-px h-full bg-rose-200"></div>
-          </div>
-          <div class="pb-8">
-            <h3 class="text-lg font-bold text-gray-800 mb-2">Permohonan Mudah</h3>
-            <p class="text-gray-600 text-sm">Kami uruskan semua proses permohonan dari A-Z. Semuanya boleh dibuat secara
-              online, mudah dan pantas.</p>
-          </div>
+        <div class="relative bg-white pt-4">
+          <div
+            class="w-12 h-12 bg-gray-900 text-white rounded-full flex items-center justify-center text-xl font-bold mb-6 mx-auto md:mx-0 shadow-lg ring-8 ring-white">
+            3</div>
+          <h3 class="text-lg font-bold text-gray-900 mb-3 text-center md:text-left">Submit Online</h3>
+          <p class="text-gray-500 text-sm leading-relaxed text-center md:text-left">
+            Pilih pelan yang sesuai bajet, dan kami proses permohonan secara digital sepenuhnya.
+          </p>
         </div>
 
         <!-- Step 4 -->
-        <div class="flex">
-          <div class="flex flex-col items-center mr-4">
-            <div>
-              <div class="flex items-center justify-center w-10 h-10 border-2 border-rose-500 rounded-full">
-                <div class="text-xl font-bold text-rose-500">4</div>
-              </div>
-            </div>
-          </div>
-          <div class="pb-8">
-            <h3 class="text-lg font-bold text-gray-800 mb-2">Servis Berterusan</h3>
-            <p class="text-gray-600 text-sm">Selepas polisi lulus, kami akan terangkan cara buat tuntutan dan sentiasa
-              ada untuk bantu anda & keluarga di masa hadapan.</p>
-          </div>
+        <div class="relative bg-white pt-4">
+          <div
+            class="w-12 h-12 bg-gray-900 text-white rounded-full flex items-center justify-center text-xl font-bold mb-6 mx-auto md:mx-0 shadow-lg ring-8 ring-white">
+            4</div>
+          <h3 class="text-lg font-bold text-gray-900 mb-3 text-center md:text-left">Dilindungi ✅</h3>
+          <p class="text-gray-500 text-sm leading-relaxed text-center md:text-left">
+            Selesai! Polisi digital akan dihantar ke email anda. Keluarga anda kini selamat.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- WHY DR. TAKAFUL -->
-  <section id="why-dr-takaful" class="bg-rose-50 py-20 px-6">
-    <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-      <div class="text-center md:text-left">
-        <h2 class="text-3xl font-bold text-rose-700 mb-6">Kenali Dr. Hana, Perancang Takaful Anda</h2>
-        <div class="prose prose-lg text-gray-700 leading-relaxed">
-          <p>
-            Nama saya Hana, seorang jurutera dengan kelulusan PhD, tetapi minat mendalam saya adalah membantu keluarga
-            di Malaysia mencapai ketenangan fikiran dari sudut kewangan.
+  <section id="why-dr-takaful" class="py-24 px-6 bg-gray-50">
+    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+      <div class="order-2 md:order-1">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Kenapa Pilih Dr. Hana?</h2>
+        <div class="prose prose-lg text-gray-500 leading-relaxed mb-8">
+          <p class="mb-4">
+            "Saya bukan jurujual yang mengejar komisen. Saya adalah <span class="text-gray-900 font-bold">Jurutera
+              Kewangan</span> anda."
           </p>
-          <p>
-            Saya bukan 'ejen insurans' biasa. Misi saya adalah untuk mendidik dan membimbing anda melalui dunia takaful
-            yang seringkali mengelirukan. Saya percaya setiap keluarga berhak mendapat pelan perlindungan yang jujur,
-            telus, dan benar-benar memenuhi keperluan mereka.
-          </p>
-          <p class="font-semibold text-rose-600">
-            Fokus saya adalah untuk membina 'Gaji Kedua' untuk anda — satu jaring keselamatan kewangan yang akan
-            menyambut anda dan keluarga ketika dugaan datang.
+          <p class="mb-4">
+            Dengan latar belakang PhD in Engineering, saya mendekati Takaful dengan data & fakta. Saya bantu anda kira
+            <strong>berapa pampasan yang TEPAT</strong>—bukan main teka sahaja.
           </p>
         </div>
-        <div class="mt-8 flex justify-center md:justify-start gap-4">
-          <div class="bg-white/60 backdrop-blur-sm border border-rose-200 rounded-xl p-4 shadow-sm">
-            <p class="text-rose-700 font-bold">✅ Patuh Syariah</p>
+
+        <div class="flex flex-wrap gap-4">
+          <div class="px-4 py-2 bg-white rounded-lg border border-gray-200 text-sm font-medium text-gray-700 shadow-sm">
+            ✅ Pengiraan Saintifik
           </div>
-          <div class="bg-white/60 backdrop-blur-sm border border-rose-200 rounded-xl p-4 shadow-sm">
-            <p class="text-rose-700 font-bold">✅ 100% Telus</p>
+          <div class="px-4 py-2 bg-white rounded-lg border border-gray-200 text-sm font-medium text-gray-700 shadow-sm">
+            ✅ Tiada Hard-Selling
+          </div>
+          <div class="px-4 py-2 bg-white rounded-lg border border-gray-200 text-sm font-medium text-gray-700 shadow-sm">
+            ✅ Servis Pantas (WhatsApp)
           </div>
         </div>
       </div>
-      <div class="flex justify-center">
-        <div class="relative">
-          <img src="images/dr-takaful-hana-profile.png" alt="Dr. Takaful Hana"
-            class="rounded-full shadow-2xl w-64 h-64 md:w-80 md:h-80 object-cover border-8 border-white">
+
+      <div class="order-1 md:order-2 flex justify-center">
+        <div class="relative group">
           <div
-            class="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-white px-4 py-2 rounded-lg shadow-lg text-center">
-            <p class="font-bold text-rose-700 text-lg">Dr. Hana</p>
-            <p class="text-gray-500 text-sm"
-              title="Bachelor of Engineering (UIA), Master of Engineering (UTM), Master of Science (UB, France), PhD in Engineering (UIA)">
-              PhD in Engineering</p>
+            class="absolute inset-0 bg-rose-200 rounded-full blur-2xl opacity-20 group-hover:opacity-30 transition-opacity">
+          </div>
+          <img src="images/dr-takaful-hana-profile.png" alt="Dr. Takaful Hana"
+            class="relative rounded-full w-64 h-64 md:w-80 md:h-80 object-cover border-4 border-white shadow-xl">
+          <div class="absolute bottom-6 right-0 bg-white px-5 py-2 rounded-full shadow-lg border border-gray-100">
+            <p class="text-xs font-bold tracking-wider text-rose-600 uppercase">PhD in Engineering</p>
           </div>
         </div>
       </div>
@@ -405,75 +412,53 @@
   </section>
 
   <!-- TESTIMONIALS SECTION -->
-  <section id="testimonials" class="bg-gradient-to-b from-white to-rose-50 py-20 px-6">
-    <h2 class="text-3xl text-center font-bold mb-10 text-rose-700">Apa Kata Klien Hana</h2>
-    <div class="max-w-4xl mx-auto relative">
-      <!-- Testimonials Grid -->
-      <div class="grid md:grid-cols-2 gap-8">
+  <section id="testimonials" class="py-24 px-6 bg-white border-t border-gray-100">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-16 text-center">Mereka Dah Buat Pilihan Bijak</h2>
+
+      <div class="grid md:grid-cols-2 gap-10">
         <!-- Testimonial 1 -->
-        <div
-          class="bg-white p-8 rounded-2xl border border-gray-200 shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
-          <div class="text-rose-500 mb-4 text-2xl">★★★★★</div>
-          <p class="text-gray-600 italic mb-6 flex-grow">"Penjelasan Hana sangat jelas & mudah faham. Dulu saya keliru
-            antara medical card dan CI, sekarang baru nampak kenapa perlu dua-dua. Proses pun cepat. Highly
-            recommended!"</p>
-          <div class="flex items-center gap-4">
-            <div class="w-12 h-12 bg-rose-100 rounded-full flex items-center justify-center text-rose-600 font-bold">EH
-            </div>
+        <div class="flex flex-col h-full bg-gray-50 p-8 rounded-3xl">
+          <div class="mb-6 text-rose-500">
+            <svg class="w-8 h-8 opacity-100" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M14.017 21L14.017 18C14.017 16.896 14.789 15.547 15.86 14.706C16.92 13.856 18.006 13.567 18.006 12.049C18.006 10.519 16.834 9.423 15.344 9.423C13.837 9.423 12.673 10.605 12.673 12.049L12.673 13.856L10.5 13.856L10.5 7L17.75 7L17.75 13.757C17.75 16.592 15.852 19.539 14.017 21ZM5 21L5 18C5 16.896 5.772 15.547 6.843 14.706C7.903 13.856 8.989 13.567 8.989 12.049C8.989 10.519 7.817 9.423 6.327 9.423C4.82 9.423 3.656 10.605 3.656 12.049L3.656 13.856L1.5 13.856L1.5 7L8.75 7L8.75 13.757C8.75 16.592 6.852 19.539 5 21Z" />
+            </svg>
+          </div>
+          <p class="text-lg text-gray-700 leading-relaxed mb-6 italic flex-grow">
+            "Dulu saya ingat Takaful ni mahal. Tapi lepas Hana kira ikut bajet saya, rupanya RM150/bulan dah boleh cover
+            <strong>pampasan RM300,000</strong>. Sangat berbaloi."
+          </p>
+          <div class="flex items-center gap-4 mt-auto">
+            <div
+              class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-gray-900 font-bold border border-gray-200">
+              EH</div>
             <div>
-              <p class="font-bold text-gray-800">Encik Hafizzi</p>
-              <p class="text-sm text-gray-500">Jurutera</p>
+              <p class="font-bold text-gray-900 text-sm">Encik Hafizzi</p>
+              <p class="text-xs text-gray-500">Jurutera, 32 Tahun</p>
             </div>
           </div>
         </div>
 
         <!-- Testimonial 2 -->
-        <div
-          class="bg-white p-8 rounded-2xl border border-gray-200 shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
-          <div class="text-rose-500 mb-4 text-2xl">★★★★★</div>
-          <p class="text-gray-600 italic mb-6 flex-grow">"Hana bantu saya kira bajet yang realistik guna kalkulator
-            hibah beliau untuk anak-anak. Takde paksaan, dan dia betul-betul fokus pada keperluan saya. Rasa lebih
-            tenang sekarang."</p>
-          <div class="flex items-center gap-4">
-            <div class="w-12 h-12 bg-rose-100 rounded-full flex items-center justify-center text-rose-600 font-bold">PS
-            </div>
-            <div>
-              <p class="font-bold text-gray-800">Puan Sarah</p>
-              <p class="text-sm text-gray-500">Guru</p>
-            </div>
+        <div class="flex flex-col h-full bg-gray-50 p-8 rounded-3xl">
+          <div class="mb-6 text-rose-500">
+            <svg class="w-8 h-8 opacity-100" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M14.017 21L14.017 18C14.017 16.896 14.789 15.547 15.86 14.706C16.92 13.856 18.006 13.567 18.006 12.049C18.006 10.519 16.834 9.423 15.344 9.423C13.837 9.423 12.673 10.605 12.673 12.049L12.673 13.856L10.5 13.856L10.5 7L17.75 7L17.75 13.757C17.75 16.592 15.852 19.539 14.017 21ZM5 21L5 18C5 16.896 5.772 15.547 6.843 14.706C7.903 13.856 8.989 13.567 8.989 12.049C8.989 10.519 7.817 9.423 6.327 9.423C4.82 9.423 3.656 10.605 3.656 12.049L3.656 13.856L1.5 13.856L1.5 7L8.75 7L8.75 13.757C8.75 16.592 6.852 19.539 5 21Z" />
+            </svg>
           </div>
-        </div>
-
-        <!-- Testimonial 3 -->
-        <div
-          class="bg-white p-8 rounded-2xl border border-gray-200 shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
-          <div class="text-rose-500 mb-4 text-2xl">★★★★★</div>
-          <p class="text-gray-600 italic mb-6 flex-grow">"Sebagai pemilik bisnes, saya risau apa jadi pada syarikat
-            kalau saya tiada. Dr. Hana cadangkan pelan hibah silang untuk rakan kongsi. Penerangan sangat details &
-            profesional."</p>
-          <div class="flex items-center gap-4">
-            <div class="w-12 h-12 bg-rose-100 rounded-full flex items-center justify-center text-rose-600 font-bold">ER
-            </div>
+          <p class="text-lg text-gray-700 leading-relaxed mb-6 italic flex-grow">
+            "Saya suka cara Hana explain. Takde pusing-pusing. Dia tunjuk terus berapa lompong kewangan saya kalau saya
+            sakit kritikal. Terus sign up on the spot."
+          </p>
+          <div class="flex items-center gap-4 mt-auto">
+            <div
+              class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-gray-900 font-bold border border-gray-200">
+              PS</div>
             <div>
-              <p class="font-bold text-gray-800">En. Rashid</p>
-              <p class="text-sm text-gray-500">Pengarah Syarikat</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Testimonial 4 -->
-        <div
-          class="bg-white p-8 rounded-2xl border border-gray-200 shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
-          <div class="text-rose-500 mb-4 text-2xl">★★★★★</div>
-          <p class="text-gray-600 italic mb-6 flex-grow">"Alhamdulillah, nasib baik ada pelan CI. Bila disahkan kanser
-            tahap awal, saya dapat pampasan RM100k. Duit tu saya guna untuk tampung perbelanjaan harian & rawatan
-            alternatif."</p>
-          <div class="flex items-center gap-4">
-            <div class="w-12 h-12 bg-rose-100 rounded-full flex items-center justify-center text-rose-600 font-bold">PA
-            </div>
-            <div>
-              <p class="font-bold text-gray-800">Puan Aina</p>
-              <p class="text-sm text-gray-500">Eksekutif Pemasaran</p>
+              <p class="font-bold text-gray-900 text-sm">Puan Sarah</p>
+              <p class="text-xs text-gray-500">Guru, 29 Tahun</p>
             </div>
           </div>
         </div>
@@ -482,151 +467,495 @@
   </section>
 
   <!-- FORM CARD SECTION - WHATSAPP -->
-  <section id="borang-konsultasi" class="bg-white py-20 px-6">
-    <div class="max-w-lg mx-auto bg-white p-8 rounded-2xl shadow-2xl border border-rose-100">
-      <div class="text-center">
-        <h2 class="text-3xl font-bold text-rose-700 mb-2">Dapatkan Pelan Penggantian Gaji Anda</h2>
-        <p class="text-gray-600 mb-8">Isi nama dan umur anda. Saya akan hantar quotation percuma melalui WhatsApp kurang
-          60 minit.</p>
+  <section id="borang-konsultasi" class="py-24 px-6 bg-gray-50 border-t border-gray-100">
+    <div class="max-w-2xl mx-auto bg-white p-10 rounded-3xl shadow-xl border border-gray-100">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl font-bold text-gray-900 mb-3">Semak Kelayakan & Harga</h2>
+        <p class="text-gray-500">Tak perlu jumpa ejen. Dapat quotation rasmi dalam masa <strong>30-60 minit</strong> di
+          WhatsApp.</p>
       </div>
 
-      <div class="grid grid-cols-1 gap-6">
+      <div class="space-y-6">
         <!-- Name -->
         <div>
-          <label for="name" class="block text-sm font-medium text-gray-700">Nama Penuh</label>
+          <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Nama Penuh</label>
           <input type="text" id="name"
-            class="w-full mt-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-rose-500 focus:border-rose-500"
+            class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-rose-500 focus:border-rose-500 outline-none transition-all"
             placeholder="cth: Abdul Rahman" />
         </div>
 
         <!-- Age -->
         <div>
-          <label for="age" class="block text-sm font-medium text-gray-700">Umur</label>
+          <label for="age" class="block text-sm font-medium text-gray-700 mb-2">Umur</label>
           <input type="number" id="age"
-            class="w-full mt-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-rose-500 focus:border-rose-500"
+            class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-rose-500 focus:border-rose-500 outline-none transition-all"
             placeholder="cth: 35" />
         </div>
 
+        <div id="formMessage" class="hidden"></div>
+
         <!-- Submit Button -->
-        <div class="text-center pt-4">
+        <div class="pt-4">
           <button onclick="sendWhatsApp()"
-            class="w-full bg-rose-600 text-white py-3 rounded-lg hover:bg-rose-700 transition font-medium text-lg">Hantar
-            & Dapatkan Pelan Percuma 💬</button>
-          <div class="flex items-center justify-center gap-2 mt-3 text-sm text-gray-500">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-green-500" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-            </svg>
-            <span>Data anda selamat & dirahsiakan.</span>
-          </div>
+            class="w-full bg-gray-900 text-white py-4 rounded-xl hover:bg-rose-600 transition-all font-medium text-lg shadow-lg hover:shadow-xl hover:-translate-y-0.5 flex items-center justify-center gap-2">
+            <span>🚀</span> Hantar Quotation ke WhatsApp Saya
+          </button>
+          <p class="text-center text-xs text-gray-400 mt-4">
+            100% Percuma. Tiada caj tersembunyi.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- FEATURED ARTICLE SECTION -->
-  <section class="bg-rose-50 py-20 px-6">
+  <section class="py-24 px-6 bg-white border-t border-gray-100">
     <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-3xl text-center font-bold text-rose-700 mb-6">Medical Card Saja Tak Cukup. Gaji Anda Macam Mana?
-      </h2>
-      <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-8">
-        Kisah benar bagaimana seorang suami terpaksa menanggung beban hutang dan perbelanjaan harian setelah isteri
-        diserang penyakit kritikal, walaupun mempunyai medical card.
+      <h2 class="text-3xl font-bold text-gray-900 mb-6">"Saya Dah Ada Medical Card, Cukup Kan?"</h2>
+      <p class="text-lg text-gray-500 max-w-2xl mx-auto mb-10 leading-relaxed">
+        Ramai yang silap di sini. Medical card bayar hospital, tapi siapa bayar hutang rumah & kereta bila anda hilang
+        upaya? Baca kisah benar ini.
       </p>
       <a href="/kos-rawatan-vs-gaji.html"
-        class="inline-block bg-white text-rose-700 px-8 py-4 rounded-full shadow-lg border border-rose-200 hover:bg-rose-100 hover:border-rose-300 transition-transform transform hover:scale-105 font-semibold">
-        Baca Kisah Penuh & Elak Risiko Sama →
+        class="inline-flex items-center gap-2 text-rose-600 font-medium hover:text-rose-700 transition group">
+        Baca Kisah Benar Penuh <span class="group-hover:translate-x-1 transition-transform">→</span>
       </a>
     </div>
   </section>
 
-  <!-- BLOG SECTION (Loaded dynamically) -->
-  <div id="blog-section-container">
-    <!-- Loading Spinner -->
-    <div id="blog-loader" class="flex justify-center items-center py-20">
-      <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-rose-600"></div>
+  <!-- BLOG SECTION -->
+  <div id="blog-section-container" class="bg-gray-50 py-12">
+    <!-- Inline Blog Content -->
+    <div id="offer-banner" class="bg-rose-600 text-white p-4 text-center relative hidden">
+      <p class="font-semibold">Tawaran Terhad! Dapatkan 1 Bulan Pengecualian Bayaran untuk pelan takaful anda. Mohon
+        sekarang!</p>
+      <button onclick="document.getElementById('offer-banner').style.display='none'"
+        class="absolute top-1 right-1 text-white text-3xl leading-none">&times;</button>
     </div>
+    <section id="blog" class="bg-white max-w-6xl mx-auto py-16 px-6 rounded-3xl shadow-sm border border-gray-100">
+      <h2 class="text-3xl font-bold text-center mb-4 text-gray-900">Pusat Ilmu Takaful</h2>
+      <p class="text-center text-gray-500 mb-12 max-w-2xl mx-auto">Panduan jujur & telus untuk bantu anda buat keputusan
+        bijak.</p>
+
+      <!-- Search Input -->
+      <div class="mb-10 max-w-lg mx-auto">
+        <div class="relative">
+          <input type="text" id="searchInput" onkeyup="searchArticles()"
+            placeholder="Cari artikel... cth: hibah, medical card"
+            class="w-full px-6 py-4 bg-gray-50 border border-gray-200 rounded-full focus:bg-white focus:ring-2 focus:ring-rose-500 focus:border-rose-500 outline-none transition-all pl-12 shadow-sm"
+            autocomplete="off">
+          <svg class="w-5 h-5 text-gray-400 absolute top-1/2 left-4 transform -translate-y-1/2"
+            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Tab Navigation -->
+      <div class="flex justify-center flex-wrap gap-3 mb-12">
+        <button onclick="filterArticles('all')" class="tab-button active-tab">Semua</button>
+        <button onclick="filterArticles('hibah')" class="tab-button">Hibah</button>
+        <button onclick="filterArticles('medical')" class="tab-button">Medical Card</button>
+        <button onclick="filterArticles('asas')" class="tab-button">Asas Takaful</button>
+        <button onclick="filterArticles('pinjaman')" class="tab-button">Rumah</button>
+      </div>
+
+      <!-- Blog Grid -->
+      <div id="article-grid" class="grid md:grid-cols-3 gap-8">
+        <!-- Kategori: Asas Takaful -->
+        <a href="/kenapa-perlu-rancang-kewangan-awal.html" target="_blank" class="blog-article group"
+          data-category="asas" data-keywords="kewangan, simpanan, muda, awal, perancangan, gaji">
+          <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-rose-600 transition-colors">Kenapa Perlu
+            Rancang Kewangan Dari Awal?</h3>
+          <p class="text-gray-500 text-sm mb-4 line-clamp-3">Masa adalah aset paling berharga dalam perancangan kewangan
+            anda. Jangan tunggu sampai 'stabil' baru nak mula.</p>
+          <p class="text-rose-600 font-medium mt-auto text-sm group-hover:underline">Baca lanjut →</p>
+        </a>
+        <a href="/perlindungan-pertama-untuk-orang-muda.html" target="_blank" class="blog-article group"
+          data-category="asas" data-keywords="fresh graduate, orang muda, gaji pertama, perlindungan pertama, bujang">
+          <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-rose-600 transition-colors">Baru Mula Kerja?
+            3 Perlindungan Wajib</h3>
+          <p class="text-gray-500 text-sm mb-4 line-clamp-3">Panduan untuk fresh graduate & orang muda. Fahami 3 jenis
+            takaful paling penting dengan gaji pertama.</p>
+          <p class="text-rose-600 font-medium mt-auto text-sm group-hover:underline">Baca lanjut →</p>
+        </a>
+        <a href="/simpanan-vs-takaful.html" target="_blank" class="blog-article group" data-category="asas"
+          data-keywords="simpanan, takaful, perbezaan, krisis, wang, duit, pelaburan, asb">
+          <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-rose-600 transition-colors">Simpanan vs
+            Takaful: Mana Satu Betul?</h3>
+          <p class="text-gray-500 text-sm mb-4 line-clamp-3">Simpanan habis bila diuji, tapi takaful kekal bantu semasa
+            krisis. Fahami kenapa perlukan kedua-duanya.</p>
+          <p class="text-rose-600 font-medium mt-auto text-sm group-hover:underline">Baca lanjut →</p>
+        </a>
+        <a href="/formula-10-peratus-pendapatan-takaful.html" target="_blank" class="blog-article group"
+          data-category="asas" data-keywords="formula 10, pendapatan, gaji, ketenangan, bajet, kewangan, asb">
+          <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-rose-600 transition-colors">Formula 10%
+            Income Untuk 100 Bulan Tenang</h3>
+          <p class="text-gray-500 text-sm mb-4 line-clamp-3">Formula mudah untuk pastikan hidup terus stabil walau diuji
+            3D. Urus 10% pendapatan untuk 100 bulan ketenangan.</p>
+          <p class="text-rose-600 font-medium mt-auto text-sm group-hover:underline">Baca lanjut →</p>
+        </a>
+        <a href="/kenapa-pilih-aia-takaful.html" target="_blank" class="blog-article group" data-category="asas"
+          data-keywords="kenapa pilih aia, aia public takaful, kelebihan aia, review aia, aia vitality">
+          <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-rose-600 transition-colors">Kenapa Pilih AIA
+            Takaful?</h3>
+          <p class="text-gray-500 text-sm mb-4 line-clamp-3">Fahami 6 sebab kukuh kenapa AIA PUBLIC Takaful menonjol,
+            termasuk kestabilan, inovasi, dan tuntutan cekap.</p>
+          <p class="text-rose-600 font-medium mt-auto text-sm group-hover:underline">Baca lanjut →</p>
+        </a>
+
+        <!-- Kategori: Medical & Kritikal -->
+        <a href="/pelankritikal.html" target="_blank" class="blog-article group" data-category="medical"
+          data-keywords="pelan penggantian gaji, penyakit kritikal, ci, medical card, gaji, pendapatan">
+          <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-rose-600 transition-colors">Kenapa Pelan Gaji
+            (Income Replacement)?</h3>
+          <p class="text-gray-500 text-sm mb-4 line-clamp-3">Fahami kenapa Pelan Penggantian Gaji adalah jaring
+            keselamatan #1 anda apabila ditimpa penyakit kritikal.</p>
+          <p class="text-rose-600 font-medium mt-auto text-sm group-hover:underline">Baca lanjut →</p>
+        </a>
+        <a href="/panduan-lengkap-penyakit-kritikal-takaful.html" target="_blank" class="blog-article group"
+          data-category="medical"
+          data-keywords="penyakit kritikal, ci, takaful, perlindungan pendapatan, kanser, strok, sakit jantung, pampasan, gaji">
+          <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-rose-600 transition-colors">Panduan Lengkap
+            Penyakit Kritikal (CI)</h3>
+          <p class="text-gray-500 text-sm mb-4 line-clamp-3">Apa itu pelan CI, kenapa lebih penting dari medical card,
+            dan cara kira jumlah perlindungan ganti gaji.</p>
+          <p class="text-rose-600 font-medium mt-auto text-sm group-hover:underline">Baca lanjut →</p>
+        </a>
+        <a href="/panduan-lengkap-medical-card-takaful.html" target="_blank" class="blog-article group"
+          data-category="medical"
+          data-keywords="medical card, kad perubatan, hospital, bil, panduan, aia, mediflex, idaman">
+          <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-rose-600 transition-colors">Panduan Lengkap
+            Medical Card (2025)</h3>
+          <p class="text-gray-500 text-sm mb-4 line-clamp-3">Semua yang anda perlu tahu: Apa itu medical card, kenapa
+            penting, dan tips pilih pelan terbaik.</p>
+          <p class="text-rose-600 font-medium mt-auto text-sm group-hover:underline">Baca lanjut →</p>
+        </a>
+        <a href="/medical-card-atau-ci-dulu.html" target="_blank" class="blog-article group"
+          data-category="medical,asas"
+          data-keywords="medical card, penyakit kritikal, ci, prioriti, gaji, pendapatan, penting">
+          <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-rose-600 transition-colors">Medical Card vs
+            CI: Mana Dulu?</h3>
+          <p class="text-gray-500 text-sm mb-4 line-clamp-3">Ramai cari medical card dulu, tapi itu mungkin silap.
+            Fahami kenapa lindungi gaji dengan CI lebih utama.</p>
+          <p class="text-rose-600 font-medium mt-auto text-sm group-hover:underline">Baca lanjut →</p>
+        </a>
+        <a href="/penyakit-kritikal-dan-humk.html" target="_blank" class="blog-article group" data-category="medical"
+          data-keywords="penyakit kritikal, ci, humk, tpd, lumpuh, hilang upaya, pampasan">
+          <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-rose-600 transition-colors">Penyakit Kritikal
+            vs Lumpuh (TPD)</h3>
+          <p class="text-gray-500 text-sm mb-4 line-clamp-3">Ramai keliru antara pampasan CI dan Hilang Upaya
+            (HUMK/TPD). Fahami beza dan kepentingannya.</p>
+          <p class="text-rose-600 font-medium mt-auto text-sm group-hover:underline">Baca lanjut →</p>
+        </a>
+        <a href="/beza-medical-card-vs-pelan-penyakit-kritikal.html" target="_blank" class="blog-article group"
+          data-category="medical" data-keywords="medical card, penyakit kritikal, ci, perbezaan, gaji, pendapatan">
+          <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-rose-600 transition-colors">Medical Card Atau
+            Pelan Gaji?</h3>
+          <p class="text-gray-500 text-sm mb-4 line-clamp-3">Medical card bayar bil hospital. Pelan CI bayar gaji anda
+            bila tak boleh kerja. Fahami beza ini.</p>
+          <p class="text-rose-600 font-medium mt-auto text-sm group-hover:underline">Baca lanjut →</p>
+        </a>
+        <a href="/kos-rawatan-vs-gaji.html" target="_blank" class="blog-article group" data-category="medical"
+          data-keywords="kos rawatan, gaji, pampasan, penyakit kritikal, ci, derma, sedekah, bantuan">
+          <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-rose-600 transition-colors">Kos Rawatan vs
+            Gaji Hilang</h3>
+          <p class="text-gray-500 text-sm mb-4 line-clamp-3">Kisah benar kenapa ramai terpaksa meminta derma walaupun
+            ada medical card. Income replacement adalah kunci.</p>
+          <p class="text-rose-600 font-medium mt-auto text-sm group-hover:underline">Baca lanjut →</p>
+        </a>
+        <a href="/perkeso-vs-takaful-medical-card.html" target="_blank" class="blog-article group"
+          data-category="medical" data-keywords="perkeso, socso, medical card, kemalangan, kerja, hospital">
+          <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-rose-600 transition-colors">PERKESO vs
+            Medical Card</h3>
+          <p class="text-gray-500 text-sm mb-4 line-clamp-3">Jangan salah faham! PERKESO hanya untuk kemalangan kerja.
+            Medical card lindungi anda 24/7.</p>
+          <p class="text-rose-600 font-medium mt-auto text-sm group-hover:underline">Baca lanjut →</p>
+        </a>
+        <a href="/beza-medical-card-mediflex-vs-idaman.html" target="_blank" class="blog-article group"
+          data-category="medical" data-keywords="mediflex, idaman, aia, medical card, perbandingan, beza">
+          <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-rose-600 transition-colors">MediFlex-i vs
+            Idaman: Mana Sesuai?</h3>
+          <p class="text-gray-500 text-sm mb-4 line-clamp-3">Pelan medical card standalone atau pelan Takaful Keluarga
+            komprehensif? Perbandingan untuk pilihan bijak.</p>
+          <p class="text-rose-600 font-medium mt-auto text-sm group-hover:underline">Baca lanjut →</p>
+        </a>
+        <a href="/company-policy-vs-personal-takaful.html" target="_blank" class="blog-article group"
+          data-category="medical"
+          data-keywords="polisi syarikat, group insurance, takaful peribadi, medical card, berhenti kerja">
+          <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-rose-600 transition-colors">Insurans Company
+            vs Personal</h3>
+          <p class="text-gray-500 text-sm mb-4 line-clamp-3">Medical card syarikat mungkin tak cukup. Kenapa anda
+            perlukan polisi peribadi sebagai 'tayar spare'.</p>
+          <p class="text-rose-600 font-medium mt-auto text-sm group-hover:underline">Baca lanjut →</p>
+        </a>
+        <a href="/panduan-personal-accident.html" target="_blank" class="blog-article group" data-category="medical"
+          data-keywords="kemalangan peribadi, pa, personal accident, a-life pelindung, mc, cuti sakit, outpatient">
+          <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-rose-600 transition-colors">Panduan Takaful
+            Kemalangan (PA)</h3>
+          <p class="text-gray-500 text-sm mb-4 line-clamp-3">Medical card tak bayar kos rawatan luar & MC akibat
+            kemalangan. PA adalah pelengkap murah & penting.</p>
+          <p class="text-rose-600 font-medium mt-auto text-sm group-hover:underline">Baca lanjut →</p>
+        </a>
+        <a href="/tempoh-menunggu-medical-card.html" target="_blank" class="blog-article group" data-category="medical"
+          data-keywords="tempoh menunggu, waiting period, medical card, tuntutan, claim, reject, ditolak, 30 hari, 120 hari">
+          <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-rose-600 transition-colors">Tempoh Menunggu
+            Medical Card</h3>
+          <p class="text-gray-500 text-sm mb-4 line-clamp-3">Polisi baru lulus tapi claim reject? Fahami 'waiting
+            period' 24 jam, 30 hari, dan 120 hari.</p>
+          <p class="text-rose-600 font-medium mt-auto text-sm group-hover:underline">Baca lanjut →</p>
+        </a>
+
+        <!-- Kategori: Hibah & Legasi -->
+        <a href="/perancangan-hibah-2026.html" target="_blank" class="blog-article group" data-category="hibah"
+          data-keywords="hibah, 2026, strategi, panduan, perancangan, legasi, keluarga">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="bg-rose-100 text-rose-700 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">Baru
+              2026</span>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-rose-600 transition-colors">Strategi Hibah
+            Takaful 2026</h3>
+          <p class="text-gray-500 text-sm mb-4 line-clamp-3">Jangan tunggu musibah. Bina strategi hibah yang kukuh dan
+            relevan dengan kos sara hidup masa depan.</p>
+          <p class="text-rose-600 font-medium mt-auto text-sm group-hover:underline">Baca lanjut →</p>
+        </a>
+        <a href="/harta-beku-dan-hibah-takaful.html" target="_blank" class="blog-article group" data-category="hibah"
+          data-keywords="harta beku, hibah, takaful, legasi, pusaka, faraid, mahkamah, waris">
+          <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-rose-600 transition-colors">Harta Beku? Hibah
+            Penyelamat</h3>
+          <p class="text-gray-500 text-sm mb-4 line-clamp-3">RM70 bilion harta beku! Fahami punca ia berlaku dan
+            bagaimana Hibah mencairkan masa depan keluarga.</p>
+          <p class="text-rose-600 font-medium mt-auto text-sm group-hover:underline">Baca lanjut →</p>
+        </a>
+        <a href="/panduan-lengkap-hibah-takaful.html" target="_blank" class="blog-article group" data-category="hibah"
+          data-keywords="hibah, panduan, wasiat, faraid, pusaka, keluarga, pampasan">
+          <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-rose-600 transition-colors">Panduan Hubah
+            Takaful (2025)</h3>
+          <p class="text-gray-500 text-sm mb-4 line-clamp-3">Apa itu hibah, kenapa lebih baik dari wasiat, dan bagaimana
+            ia selamatkan keluarga dari perebutan harta.</p>
+          <p class="text-rose-600 font-medium mt-auto text-sm group-hover:underline">Baca lanjut →</p>
+        </a>
+        <a href="/kalkulator-hibah-takaful.html" target="_blank" class="blog-article group" data-category="hibah"
+          data-keywords="kalkulator hibah, kira, perlindungan, 100 bulan, keluarga, pendapatan">
+          <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-rose-600 transition-colors">Kalkulator Hibah:
+            Kira Survival 8 Tahun</h3>
+          <p class="text-gray-500 text-sm mb-4 line-clamp-3">Kalkulator interaktif untuk kira berapa hibah ideal untuk
+            keluarga survive sekurang-kurangnya 8 tahun.</p>
+          <p class="text-rose-600 font-medium mt-auto text-sm group-hover:underline">Baca lanjut →</p>
+        </a>
+        <a href="/bolehkah-claim-hibah-jika-lumpuh.html" target="_blank" class="blog-article group"
+          data-category="hibah,medical" data-keywords="hibah, lumpuh, hilang upaya, humk, tpd, pampasan, kerja">
+          <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-rose-600 transition-colors">Claim Hibah Jika
+            Lumpuh?</h3>
+          <p class="text-gray-500 text-sm mb-4 line-clamp-3">Ramai tak tahu hibah boleh dituntut lebih awal jika hilang
+            upaya kekal (TPD). Fahami caranya.</p>
+          <p class="text-rose-600 font-medium mt-auto text-sm group-hover:underline">Baca lanjut →</p>
+        </a>
+        <a href="/hibah-aia-sejuta-makna-vs-legasi-beyond.html" target="_blank" class="blog-article group"
+          data-category="hibah" data-keywords="sejuta makna, legasi beyond, aia, hibah, perbandingan, premium">
+          <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-rose-600 transition-colors">Sejuta Makna vs
+            Legasi Beyond</h3>
+          <p class="text-gray-500 text-sm mb-4 line-clamp-3">Pelan mampu milik atau premium? Perbandingan dua pelan
+            hibah terbaik dari AIA Takaful.</p>
+          <p class="text-rose-600 font-medium mt-auto text-sm group-hover:underline">Baca lanjut →</p>
+        </a>
+        <a href="/hibah-untuk-bisnes.html" target="_blank" class="blog-article group" data-category="hibah"
+          data-keywords="hibah bisnes, rakan kongsi, perniagaan, syarikat, cross-hibah, buy-sell">
+          <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-rose-600 transition-colors">Hibah Untuk
+            Partner Bisnes</h3>
+          <p class="text-gray-500 text-sm mb-4 line-clamp-3">Bagaimana 'Keyman Insurance' & Cross-Hibah selamatkan
+            bisnes bila partner meninggal dunia.</p>
+          <p class="text-rose-600 font-medium mt-auto text-sm group-hover:underline">Baca lanjut →</p>
+        </a>
+
+        <!-- Kategori: Pinjaman Perumahan -->
+        <a href="/panduan-lengkap-mltt-mrtt.html" target="_blank" class="blog-article group" data-category="pinjaman"
+          data-keywords="mltt, mrtt, mlta, mrta, pinjaman perumahan, gadai janji, loan rumah, insurans rumah">
+          <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-rose-600 transition-colors">MRTT vs MLTT:
+            Lindungi Rumah Anda</h3>
+          <p class="text-gray-500 text-sm mb-4 line-clamp-3">Bank suruh ambil MRTT? Kenapa MLTT mungkin pilihan lebih
+            bijak untuk pewarisan rumah.</p>
+          <p class="text-rose-600 font-medium mt-auto text-sm group-hover:underline">Baca lanjut →</p>
+        </a>
+
+        <!-- Kategori Lain -->
+        <a href="/bila-perlu-mula-takaful-anak.html" target="_blank" class="blog-article group" data-category="asas"
+          data-keywords="takaful anak, bayi, kanak-kanak, pendidikan, medical card anak, asb">
+          <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-rose-600 transition-colors">Takaful Anak:
+            Bila Perlu Mula?</h3>
+          <p class="text-gray-500 text-sm mb-4 line-clamp-3">Kenapa tindakan awal untuk 'lock' kelulusan anak adalah
+            lebih penting dari harga premium.</p>
+          <p class="text-rose-600 font-medium mt-auto text-sm group-hover:underline">Baca lanjut →</p>
+        </a>
+        <a href="/takaful-umur-50-tahun.html" target="_blank" class="blog-article group" data-category="asas"
+          data-keywords="umur 50, warga emas, senior, takaful lewat, premium mahal">
+          <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-rose-600 transition-colors">Umur 50+ Masih
+            Boleh Ambil Takaful?</h3>
+          <p class="text-gray-500 text-sm mb-4 line-clamp-3">Tak pernah terlambat. Strategi perlindungan & pilihan plan
+            untuk warga emas.</p>
+          <p class="text-rose-600 font-medium mt-auto text-sm group-hover:underline">Baca lanjut →</p>
+        </a>
+        <!-- Kategori: Pelaburan -->
+        <a href="/pelaburan-aia-enrich-rezeki.html" target="_blank" class="blog-article group" data-category="asas"
+          data-keywords="pelaburan, investment, aia, enrich rezeki, simpanan, unit trust, ilp, asb">
+          <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-rose-600 transition-colors">Panduan A-Life
+            Enrich Rezeki</h3>
+          <p class="text-gray-500 text-sm mb-4 line-clamp-3">Nak melabur tapi takut rugi? Fahami bagaimana Takaful
+            Investment-Linked (ILP) berfungsi.</p>
+          <p class="text-rose-600 font-medium mt-auto text-sm group-hover:underline">Baca lanjut →</p>
+        </a>
+        <!-- Kategori: Hibah -->
+        <a href="/hibah-untuk-ibu-bapa.html" target="_blank" class="blog-article group" data-category="hibah"
+          data-keywords="hibah ibu bapa, ibu, ayah, parents, adik beradik, kongsi, hadiah, bakti">
+          <h3 class="text-lg font-semibold text-rose-700 mb-2">Hibah Untuk Ibu Bapa</h3>
+          <p class="text-gray-600 text-sm mb-4 line-clamp-3">Panduan adik-beradik berkongsi caruman untuk jaminan
+            kewangan ibu bapa.</p>
+          <p class="text-rose-600 font-medium mt-auto text-sm group-hover:underline">Baca lanjut →</p>
+        </a>
+        <div id="no-results" class="hidden md:col-span-3 text-center py-12">
+          <p class="text-xl text-gray-500">Tiada artikel ditemui untuk carian anda.</p>
+        </div>
+
+        <style>
+          .blog-article {
+            padding: 1.5rem;
+            border-radius: 1.5rem;
+            background-color: white;
+            border: 1px solid #f3f4f6;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.2s ease-in-out;
+          }
+
+          .blog-article:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            border-color: #ffe4e6;
+          }
+
+          .tab-button {
+            padding: 0.5rem 1.25rem;
+            border-radius: 9999px;
+            border: 1px solid #e5e7eb;
+            color: #4b5563;
+            font-weight: 500;
+            background-color: white;
+            transition: all 0.2s ease-in-out;
+          }
+
+          .tab-button:hover {
+            border-color: #be123c;
+            color: #be123c;
+            background-color: #fff1f2;
+          }
+
+          .tab-button.active-tab {
+            background-color: #111827;
+            /* gray-900 */
+            color: white;
+            border-color: #111827;
+          }
+        </style>
+      </div>
+
+      <!-- Show More Button -->
+      <div id="show-more-container" class="text-center mt-12">
+        <button id="show-more-button"
+          class="bg-white text-gray-900 border border-gray-200 px-8 py-3 rounded-full font-medium hover:bg-gray-50 transition shadow-sm">
+          Tunjukkan Lagi
+        </button>
+      </div>
+    </section>
   </div>
 
   <!-- TOOLS & CALCULATORS SECTION -->
-  <section class="py-20 px-6 bg-white" id="tools">
+  <section class="py-24 px-6 bg-white" id="tools">
     <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl font-bold text-rose-700 mb-4">Alatan & Rujukan Berguna</h2>
-        <p class="text-gray-600 max-w-2xl mx-auto">Gunakan alatan percuma kami untuk merancang kewangan anda dengan lebih
-          bijak.</p>
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Alatan Berguna</h2>
+        <p class="text-gray-500 max-w-2xl mx-auto">Rancang kewangan anda dengan lebih bijak secara percuma.</p>
       </div>
-      <div class="grid md:grid-cols-3 gap-8 text-left">
+      <div class="grid md:grid-cols-3 gap-8">
         <!-- Tool 1 -->
         <a href="/kalkulator-hibah-takaful.html#kalkulator-hibah"
-          class="block bg-rose-50 p-8 rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 no-underline border-2 border-rose-100 hover:border-rose-200">
-          <div class="text-4xl mb-4">🧮</div>
-          <h3 class="font-bold text-lg mb-2 text-rose-800">Kalkulator Hibah</h3>
-          <p class="text-gray-600 text-sm">Kira jumlah perlindungan yang ideal untuk keluarga anda jika berlaku kematian.
-          </p>
+          class="block group p-8 rounded-3xl bg-gray-50 border border-gray-100 hover:border-rose-100 hover:shadow-lg transition-all">
+          <div class="text-3xl mb-4 group-hover:scale-110 transition-transform origin-left">🧮</div>
+          <h3 class="font-bold text-lg mb-2 text-gray-900 group-hover:text-rose-600 transition-colors">Kalkulator Hibah
+          </h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Kira jumlah perlindungan yang ideal untuk keluarga anda jika
+            berlaku kematian.</p>
         </a>
         <!-- Tool 2 -->
         <a href="/borang-permohonan.html"
-          class="block bg-blue-50 p-8 rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 no-underline border-2 border-blue-100 hover:border-blue-200">
-          <div class="text-4xl mb-4">🚀</div>
-          <h3 class="font-bold text-lg mb-2 text-blue-800">Borang Permohonan Online</h3>
-          <p class="text-gray-600 text-sm">Sedia untuk dilindungi? Mulakan permohonan anda secara online untuk proses
-            yang pantas dan mudah.</p>
+          class="block group p-8 rounded-3xl bg-gray-50 border border-gray-100 hover:border-rose-100 hover:shadow-lg transition-all">
+          <div class="text-3xl mb-4 group-hover:scale-110 transition-transform origin-left">🚀</div>
+          <h3 class="font-bold text-lg mb-2 text-gray-900 group-hover:text-rose-600 transition-colors">Permohonan Online
+          </h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Sedia untuk dilindungi? Mulakan permohonan anda secara
+            online.</p>
         </a>
         <!-- Tool 3 -->
         <a href="/analisis-keperluan.html"
-          class="block bg-green-50 p-8 rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 no-underline border-2 border-green-100 hover:border-green-200">
-          <div class="text-4xl mb-4">📝</div>
-          <h3 class="font-bold text-lg mb-2 text-green-800">Analisis Kewangan Lengkap</h3>
-          <p class="text-gray-600 text-sm">Isi borang ini untuk sesi analisa kewangan 1-dengan-1 bersama Dr. Hana,
-            percuma!</p>
+          class="block group p-8 rounded-3xl bg-gray-50 border border-gray-100 hover:border-rose-100 hover:shadow-lg transition-all">
+          <div class="text-3xl mb-4 group-hover:scale-110 transition-transform origin-left">📝</div>
+          <h3 class="font-bold text-lg mb-2 text-gray-900 group-hover:text-rose-600 transition-colors">Analisis Kewangan
+          </h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Sesi analisa kewangan 1-dengan-1 bersama Dr. Hana secara
+            percuma.</p>
         </a>
       </div>
     </div>
   </section>
 
   <!-- FINAL CTA -->
-  <section class="bg-gradient-to-b from-white to-rose-50 py-20 px-6">
-    <div class="max-w-3xl mx-auto text-center">
-      <h2 class="text-3xl font-bold text-rose-700 mb-4">Sedia Untuk Pastikan Gaji Anda Terlindung?</h2>
-      <p class="text-gray-600 text-lg mb-8">Jangan biarkan musibah meragut kestabilan kewangan keluarga anda. Ambil
-        langkah pertama hari ini dengan mendapatkan sebut harga percuma dan tanpa komitmen.</p>
+  <section class="py-24 px-6 bg-gray-900 text-white text-center">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">Lindungi Gaji & Keluarga Anda.</h2>
+      <p class="text-gray-400 text-lg mb-10 max-w-2xl mx-auto">
+        Jaringan keselamatan terbaik adalah yang anda sediakan hari ini.
+      </p>
       <a href="#borang-konsultasi"
-        class="w-full sm:w-auto inline-block bg-rose-600 text-white px-10 py-4 rounded-full shadow-lg hover:bg-rose-700 transition-transform transform hover:scale-105 text-lg font-semibold">
-        💬 Dapatkan Pelan Penggantian Gaji Percuma
+        class="inline-block bg-white text-gray-900 px-10 py-4 rounded-full font-medium hover:bg-rose-50 transition-all shadow-lg hover:scale-105">
+        Dapatkan Pelan Percuma
       </a>
-      <p class="text-sm text-gray-500 mt-4">100% Sulit & Tanpa Paksaan</p>
     </div>
   </section>
 
-  <footer class="bg-gray-100 text-center py-8 text-gray-500 text-sm">
-    © 2025 Takaful by Hana | Semua Hak Terpelihara
+  <footer class="bg-white border-t border-gray-100 py-12 text-center">
+    <p class="text-gray-400 text-sm font-medium">
+      © 2025 Dr. Takaful. Semua Hak Terpelihara.
+    </p>
   </footer>
 
   <!-- Sticky CTA Button -->
   <a href="#borang-konsultasi" id="sticky-cta"
-    class="hidden fixed bottom-4 right-4 bg-rose-600 text-white px-5 py-3 rounded-full shadow-lg hover:bg-rose-700 transition-transform transform hover:scale-105 z-50">
-    <span>Minta Pelan Percuma 💬</span>
+    class="hidden fixed bottom-6 right-6 bg-gray-900 text-white px-6 py-3 rounded-full shadow-2xl hover:bg-rose-600 transition-all z-50 font-medium flex items-center gap-2">
+    <span>Minta Quotation</span>
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+    </svg>
   </a>
 
   <!-- Exit-Intent Popup -->
-  <div id="exit-popup" class="hidden fixed inset-0 bg-black bg-opacity-60 z-50 flex items-center justify-center p-4">
+  <div id="exit-popup"
+    class="hidden fixed inset-0 bg-gray-900/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
     <div
-      class="bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 text-center relative transform transition-all scale-95 opacity-0"
+      class="bg-white rounded-3xl shadow-2xl max-w-md w-full p-8 text-center relative transform transition-all scale-95 opacity-0"
       id="popup-content">
-      <button id="close-popup" class="absolute top-3 right-3 text-gray-400 hover:text-gray-600">
+      <button id="close-popup" class="absolute top-4 right-4 text-gray-300 hover:text-gray-500">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
         </svg>
       </button>
-      <div class="text-5xl mb-4">👋</div>
-      <h3 class="text-2xl font-bold text-rose-700 mb-3">Tunggu! Jangan Tinggalkan Peluang Ini.</h3>
-      <p class="text-gray-600 mb-6">Setiap tahun anda bertangguh, premium takaful boleh naik <strong>3-8%</strong>.
-        Kunci harga rendah anda hari ini.</p>
+      <div class="text-4xl mb-4">👋</div>
+      <h3 class="text-2xl font-bold text-gray-900 mb-2">Nanti Dulu!</h3>
+      <p class="text-gray-500 mb-8 leading-relaxed">Setiap tahun anda bertangguh, premium takaful boleh naik
+        <strong>3-8%</strong>. Kunci harga rendah anda hari ini.
+      </p>
       <a href="#borang-konsultasi" id="popup-cta"
-        class="inline-block bg-rose-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-rose-700 transition shadow-lg">
-        Dapatkan Pelan Percuma Sekarang
+        class="block w-full bg-gray-900 text-white px-6 py-3 rounded-xl font-medium hover:bg-rose-600 transition shadow-lg">
+        Dapatkan Pelan Percuma
       </a>
     </div>
   </div>
