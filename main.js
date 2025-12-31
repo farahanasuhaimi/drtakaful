@@ -11,11 +11,11 @@ function sendWhatsApp() {
   }
 
   // Create WhatsApp message
-  let message = `Assalamualaikum Dr. Takaful (Hana),\n\n`;
+  let message = `Assalamualaikum,\n\n`;
   message += `Saya ingin minta anggaran quotation untuk saya.\n\n`;
-  message += `📝 *Nama:* ${name}\n`;
-  message += `👤 *Umur:* ${age}\n\n`;
-  message += `Terima kasih! 🙏`;
+  message += `*Nama:* ${name}\n`;
+  message += `*Umur:* ${age}\n\n`;
+  message += `Terima kasih!`;
 
   // Encode message for URL
   const encodedMessage = encodeURIComponent(message);
@@ -52,16 +52,16 @@ function sendDetailedWhatsApp() {
   let message = `*ANALISIS KEPERLUAN TAKAFUL*\n\n`;
   message += `Assalamualaikum Dr. Takaful (Hana),\n\n`;
   message += `Berikut adalah butiran saya untuk analisis percuma:\n\n`;
-  message += `📝 *Nama:* ${name}\n`;
-  message += `👤 *Umur:* ${age} tahun\n`;
-  message += `🚻 *Jantina:* ${gender}\n`;
-  message += `💼 *Pekerjaan:* ${profession}\n`;
-  message += `🚬 *Status Merokok/Vape:* ${smoking}\n`;
+  message += `*Nama:* ${name}\n`;
+  message += `*Umur:* ${age} tahun\n`;
+  message += `*Jantina:* ${gender}\n`;
+  message += `*Pekerjaan:* ${profession}\n`;
+  message += `*Status Merokok/Vape:* ${smoking}\n`;
   if (health) {
-    message += `🏥 *Rekod Kesihatan:* ${health}\n`;
+    message += `*Rekod Kesihatan:* ${health}\n`;
   }
   if (planChoice) {
-    message += `💡 *Pilihan Pelan:* ${planChoice}\n`;
+    message += `*Pilihan Pelan:* ${planChoice}\n`;
   }
   message += `\nSaya ingin dapatkan analisis & sebut harga percuma berdasarkan maklumat ini. Terima kasih! 🙏`;
 
@@ -77,36 +77,38 @@ let articles = [];
 let tabButtons = [];
 let showMoreButton;
 let currentCategory = 'all';
-const articlesToShow = 3; // <-- Change this number to your desired amount
+const articlesToShow = 6;
 let visibleArticlesCount = 0;
 
 function searchArticles() {
-  // This function is now globally accessible and will call filterArticles
-  filterArticles(currentCategory);
+  filterArticles(currentCategory, true); // Reset to show limited on search
 }
 
 function filterArticles(category, isInitialLoad = false) {
   if (category) {
     currentCategory = category;
   }
-  const searchInput = document.getElementById('searchInput').value.toLowerCase();
+  const searchInput = document.getElementById('searchInput')?.value.toLowerCase() || '';
   const noResults = document.getElementById('no-results');
   let hasResults = false;
+  let matchesCount = 0;
   let displayedCount = 0;
 
   articles.forEach(article => {
     const articleCategory = article.getAttribute('data-category');
     const articleKeywords = article.getAttribute('data-keywords') || '';
     const articleText = article.innerText.toLowerCase();
-    const categoryMatch = (category === 'all' || articleCategory === category);
-    // Search in article text OR in keywords
+    const categoryMatch = (currentCategory === 'all' || articleCategory === currentCategory);
     const searchMatch = articleText.includes(searchInput) || articleKeywords.toLowerCase().includes(searchInput);
 
-    if (categoryMatch && searchMatch && (!isInitialLoad || displayedCount < articlesToShow)) {
-      article.style.display = 'block';
-      hasResults = true;
-      if (isInitialLoad) {
+    if (categoryMatch && searchMatch) {
+      matchesCount++;
+      if (!isInitialLoad || displayedCount < articlesToShow) {
+        article.style.display = 'block';
+        hasResults = true;
         displayedCount++;
+      } else {
+        article.style.display = 'none';
       }
     } else {
       article.style.display = 'none';
@@ -117,20 +119,18 @@ function filterArticles(category, isInitialLoad = false) {
     noResults.style.display = hasResults ? 'none' : 'block';
   }
 
-  if (category) {
-    tabButtons.forEach(button => {
-      if (button.getAttribute('onclick') === `filterArticles('${category}')`) {
-        button.classList.add('active-tab');
-      } else {
-        button.classList.remove('active-tab');
-      }
-    });
-  }
+  // Update tabs
+  tabButtons.forEach(button => {
+    if (button.getAttribute('onclick')?.includes(`'${currentCategory}'`)) {
+      button.classList.add('active-tab');
+    } else {
+      button.classList.remove('active-tab');
+    }
+  });
 
-  if (isInitialLoad) {
-    showMoreButton.style.display = articles.length > articlesToShow ? 'inline-block' : 'none';
-  } else {
-    showMoreButton.style.display = 'none';
+  // Handle Show More visibility
+  if (showMoreButton) {
+    showMoreButton.style.display = (isInitialLoad && matchesCount > articlesToShow) ? 'inline-block' : 'none';
   }
 }
 
@@ -207,7 +207,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     if (showMoreButton) {
       showMoreButton.addEventListener('click', () => {
-        filterArticles('all', false); // Show all articles
+        filterArticles(currentCategory, false); // Show all articles in current category
       });
     }
   }

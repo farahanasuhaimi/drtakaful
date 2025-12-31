@@ -60,41 +60,8 @@
   <link rel="manifest" href="https://DrTakaful.com/site.webmanifest">
 
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
-    body {
-      font-family: 'Inter', sans-serif;
-    }
-
-    .glass-nav {
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(10px);
-    }
-  </style>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            rose: {
-              50: '#fff1f2',
-              100: '#ffe4e6',
-              600: '#e11d48', // Primary Action
-              700: '#be123c',
-              900: '#881337',
-            },
-            gray: {
-              50: '#f9fafb',
-              100: '#f3f4f6',
-              800: '#1f2937', // Primary Text
-              900: '#111827',
-            }
-          }
-        }
-      }
-    }
-  </script>
+  <script src="src/tailwind-config.js"></script>
+  <link rel="stylesheet" href="src/global.css">
 </head>
 
 <body class="bg-gray-50 text-gray-800 antialiased selection:bg-rose-100 selection:text-rose-900">
@@ -730,7 +697,7 @@
         </a>
         <a href="/panduan-lengkap-hibah-takaful.html" target="_blank" class="blog-article group" data-category="hibah"
           data-keywords="hibah, panduan, wasiat, faraid, pusaka, keluarga, pampasan">
-          <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-rose-600 transition-colors">Panduan Hubah
+          <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-rose-600 transition-colors">Panduan Hibah
             Takaful (2025)</h3>
           <p class="text-gray-500 text-sm mb-4 line-clamp-3">Apa itu hibah, kenapa lebih baik dari wasiat, dan bagaimana
             ia selamatkan keluarga dari perebutan harta.</p>
@@ -960,7 +927,7 @@
     </div>
   </div>
 
-  <script src="/main.js" defer></script>
+  <script src="main.js" defer></script>
 </body>
 
 </html>
