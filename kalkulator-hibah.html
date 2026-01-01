@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ms">
+
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-KFWGX5DS');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Hibah Wizard: Kira Legasi Anda Dalam 30 Saat | Dr. Takaful</title>
+    <meta name="description"
+        content="Gunakan Smart Hibah Wizard untuk mengira jumlah perlindungan legasi yang tepat untuk keluarga anda. Cepat, tepat, dan dioptimumkan untuk mobile.">
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="16x16" href="src/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="src/android-chrome-512x512.png">
+    <link rel="manifest" href="https://DrTakaful.com/site.webmanifest">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="src/tailwind-config.js"></script>
+    <link rel="stylesheet" href="src/global.css">
+    <style>
+        .step {
+            display: none;
+        }
+
+        .step.active {
+            display: block;
+            animation: slideIn 0.3s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .progress-bar {
+            transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-gray-50 text-gray-800 antialiased selection:bg-rose-100 selection:text-rose-900 min-h-screen flex flex-col">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFWGX5DS" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
+        <div class="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="/" class="brand-logo">DR.<span class="text-rose-600">TAKAFUL</span></a>
+            <a href="/" class="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors">← Kembali</a>
+        </div>
+    </header>
+
+    <main class="flex-grow pt-24 pb-12 px-4 flex items-center justify-center">
+        <div class="max-w-xl w-full">
+
+            <!-- Progress Tracker -->
+            <div class="mb-10 text-center">
+                <div
+                    class="flex justify-between text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-3 px-2">
+                    <span>Mula</span>
+                    <span id="step-label">Langkah 1 dari 4</span>
+                    <span>Selesai</span>
+                </div>
+                <div class="h-1.5 w-full bg-gray-200 rounded-full overflow-hidden">
+                    <div id="progress" class="progress-bar h-full bg-rose-600 rounded-full" style="width: 25%;"></div>
+                </div>
+            </div>
+
+            <!-- Wizard Card -->
+            <div class="glass-card rounded-[2.5rem] p-8 md:p-12 shadow-2xl shadow-rose-900/5 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-rose-50 rounded-full -mr-16 -mt-16 opacity-50"></div>
+
+                <form id="hibah-wizard" onsubmit="return false">
+
+                    <!-- STEP 1: Monthly Expenses -->
+                    <div class="step active" data-step="1">
+                        <div class="mb-8">
+                            <span class="text-4xl mb-6 block">🏠</span>
+                            <h2 class="text-2xl md:text-3xl font-black text-gray-900 leading-tight mb-4">
+                                Berapa belanja bulanan keluarga anda?
+                            </h2>
+                            <p class="text-gray-500">Kira semua: Ansuran rumah, kereta, bil, dan belanja dapur.</p>
+                        </div>
+                        <div class="relative">
+                            <span
+                                class="absolute left-6 top-1/2 -translate-y-1/2 text-xl font-bold text-gray-400">RM</span>
+                            <input type="number" id="input-expenses"
+                                class="w-full pl-16 pr-6 py-6 bg-gray-50 border-2 border-transparent focus:border-rose-500 focus:bg-white rounded-2xl text-2xl font-bold transition-all outline-none"
+                                placeholder="cth: 5000" autofocus>
+                        </div>
+                        <p class="mt-4 text-xs text-rose-500 font-medium">Langkah ini akan mengira keperluan 'Gaji 100
+                            Bulan'.</p>
+                    </div>
+
+                    <!-- STEP 2: Outstanding Loans -->
+                    <div class="step" data-step="2">
+                        <div class="mb-8">
+                            <span class="text-4xl mb-6 block">💳</span>
+                            <h2 class="text-2xl md:text-3xl font-black text-gray-900 leading-tight mb-4">
+                                Berapa jumlah hutang aktif anda?
+                            </h2>
+                            <p class="text-gray-500">Jumlah baki loan rumah, kereta, dan personal loan.</p>
+                        </div>
+                        <div class="relative">
+                            <span
+                                class="absolute left-6 top-1/2 -translate-y-1/2 text-xl font-bold text-gray-400">RM</span>
+                            <input type="number" id="input-loans"
+                                class="w-full pl-16 pr-6 py-6 bg-gray-50 border-2 border-transparent focus:border-rose-500 focus:bg-white rounded-2xl text-2xl font-bold transition-all outline-none"
+                                placeholder="cth: 300000">
+                        </div>
+                    </div>
+
+                    <!-- STEP 3: Education/Legacy -->
+                    <div class="step" data-step="3">
+                        <div class="mb-8">
+                            <span class="text-4xl mb-6 block">🎓</span>
+                            <h2 class="text-2xl md:text-3xl font-black text-gray-900 leading-tight mb-4">
+                                Dana pendidikan anak-anak?
+                            </h2>
+                            <p class="text-gray-500">Anggaran dana untuk persediaan anak ke Universiti.</p>
+                        </div>
+                        <div class="relative">
+                            <span
+                                class="absolute left-6 top-1/2 -translate-y-1/2 text-xl font-bold text-gray-400">RM</span>
+                            <input type="number" id="input-education"
+                                class="w-full pl-16 pr-6 py-6 bg-gray-50 border-2 border-transparent focus:border-rose-500 focus:bg-white rounded-2xl text-2xl font-bold transition-all outline-none"
+                                placeholder="cth: 100000">
+                        </div>
+                    </div>
+
+                    <!-- STEP 4: Summary -->
+                    <div class="step" data-step="4">
+                        <div class="text-center">
+                            <span class="text-5xl mb-6 block">🎯</span>
+                            <h2 class="text-xl font-bold text-gray-500 uppercase tracking-widest mb-2">
+                                Legasi Goal Anda
+                            </h2>
+                            <div id="final-total"
+                                class="text-4xl md:text-6xl font-black text-rose-600 mb-6 tabular-nums">RM 0</div>
+
+                            <div class="bg-gray-50 rounded-2xl p-6 text-left space-y-3 mb-8">
+                                <div class="flex justify-between text-sm">
+                                    <span class="text-gray-500">Gaji 100 Bulan</span>
+                                    <span id="summary-expenses" class="font-bold">RM 0</span>
+                                </div>
+                                <div class="flex justify-between text-sm">
+                                    <span class="text-gray-500">Baki Hutang</span>
+                                    <span id="summary-loans" class="font-bold">RM 0</span>
+                                </div>
+                                <div class="flex justify-between text-sm">
+                                    <span class="text-gray-500">Dana Pendidikan</span>
+                                    <span id="summary-education" class="font-bold">RM 0</span>
+                                </div>
+                                <div
+                                    class="border-t border-gray-200 pt-3 flex justify-between text-xs text-rose-600 font-bold">
+                                    <span>Dana Kecemasan (20%)</span>
+                                    <span id="summary-buffer">RM 0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Navigation Buttons -->
+                    <div class="mt-12 flex gap-4">
+                        <button id="prev-btn" onclick="moveStep(-1)"
+                            class="hidden flex-1 py-5 rounded-2xl font-bold text-gray-400 hover:text-gray-900 transition-colors uppercase tracking-widest text-xs">
+                            ← Kembali
+                        </button>
+                        <button id="next-btn" onclick="moveStep(1)"
+                            class="flex-[2] bg-gray-900 text-white py-5 rounded-2xl font-bold hover:bg-gray-800 transition shadow-lg shadow-gray-200 uppercase tracking-widest text-xs">
+                            Seterusnya
+                        </button>
+                        <a id="whatsapp-btn" href="#" target="_blank"
+                            class="hidden flex-[2] bg-rose-600 text-white py-5 rounded-2xl font-bold hover:bg-rose-700 transition shadow-lg shadow-rose-200 text-center uppercase tracking-widest text-xs">
+                            Tanya Hana Je 👋
+                        </a>
+                    </div>
+                </form>
+            </div>
+
+            <p class="text-center mt-10 text-gray-400 text-[10px] font-bold uppercase tracking-[0.2em] leading-relaxed">
+                Data anda diproses secara selamat & private. <br />Dr. Takaful Strategy © 2026
+            </p>
+        </div>
+    </main>
+
+    <script>
+        let currentStep = 1;
+        const totalSteps = 4;
+
+        function moveStep(delta) {
+            const nextStep = currentStep + delta;
+            if (nextStep < 1 || nextStep > totalSteps) return;
+
+            // Validate current step before moving forward
+            if (delta > 0 && !validateStep(currentStep)) {
+                alert("Sila masukkan nilai yang sah.");
+                return;
+            }
+
+            document.querySelector(`.step[data-step="${currentStep}"]`).classList.remove('active');
+            currentStep = nextStep;
+            document.querySelector(`.step[data-step="${currentStep}"]`).classList.add('active');
+
+            updateUI();
+        }
+
+        function validateStep(step) {
+            if (step === 4) return true;
+            const inputs = {
+                1: 'input-expenses',
+                2: 'input-loans',
+                3: 'input-education'
+            };
+            const val = document.getElementById(inputs[step]).value;
+            return val !== "" && parseFloat(val) >= 0;
+        }
+
+        function updateUI() {
+            // Update Progress
+            const progressPercent = (currentStep / totalSteps) * 100;
+            document.getElementById('progress').style.width = `${progressPercent}%`;
+            document.getElementById('step-label').textContent = `Langkah ${currentStep} dari ${totalSteps}`;
+
+            // Update Buttons
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            const waBtn = document.getElementById('whatsapp-btn');
+
+            prevBtn.classList.toggle('hidden', currentStep === 1 || currentStep === 4);
+
+            if (currentStep === totalSteps) {
+                nextBtn.classList.add('hidden');
+                waBtn.classList.remove('hidden');
+                calculateResults();
+            } else {
+                nextBtn.classList.remove('hidden');
+                waBtn.classList.add('hidden');
+            }
+
+            // Focus input
+            const currentInput = document.querySelector(`.step[data-step="${currentStep}"] input`);
+            if (currentInput) currentInput.focus();
+        }
+
+        function calculateResults() {
+            const expenses = parseFloat(document.getElementById('input-expenses').value) || 0;
+            const loans = parseFloat(document.getElementById('input-loans').value) || 0;
+            const education = parseFloat(document.getElementById('input-education').value) || 0;
+
+            const expenses100 = expenses * 100;
+            const subtotal = expenses100 + loans + education;
+            const buffer = subtotal * 0.20;
+            const total = subtotal + buffer;
+
+            const format = (num) => new Intl.NumberFormat('ms-MY', { style: 'currency', currency: 'MYR', maximumFractionDigits: 0 }).format(num);
+
+            animateValue('final-total', 0, total, 1000);
+            document.getElementById('summary-expenses').textContent = format(expenses100);
+            document.getElementById('summary-loans').textContent = format(loans);
+            document.getElementById('summary-education').textContent = format(education);
+            document.getElementById('summary-buffer').textContent = format(buffer);
+
+            // Update WhatsApp Link
+            const casualTotal = format(total);
+            const message = `Hai Hana! Saya dah guna Smart Hibah Wizard tadi.\n\nHasil pengiraan saya:\n📍 Keperluan: ${casualTotal}\n(Belanja: ${format(expenses100)} | Hutang: ${format(loans)})\n\nBoleh Hana bantu kongsikan plan yang sesuai untuk bajet saya? Terima kasih!`;
+            document.getElementById('whatsapp-btn').href = `https://wa.me/60132522587?text=${encodeURIComponent(message)}`;
+        }
+
+        function animateValue(id, start, end, duration) {
+            const obj = document.getElementById(id);
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                const currentVal = Math.floor(progress * (end - start) + start);
+                obj.textContent = new Intl.NumberFormat('ms-MY', { style: 'currency', currency: 'MYR', maximumFractionDigits: 0 }).format(currentVal);
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                }
+            };
+            window.requestAnimationFrame(step);
+        }
+
+        // Handle Enter key
+        document.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                moveStep(1);
+            }
+        });
+    </script>
+</body>
+
+</html>
