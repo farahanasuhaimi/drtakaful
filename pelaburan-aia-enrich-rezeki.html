@@ -39,6 +39,8 @@
   <link rel="manifest" href="https://DrTakaful.com/site.webmanifest">
 
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="src/tailwind-config.js"></script>
+  <link rel="stylesheet" href="src/global.css">
 </head>
 
 <body class="bg-white text-gray-800">
@@ -46,31 +48,58 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFWGX5DS" height="0" width="0"
       style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
-  <!-- Header -->
-  <header class="bg-rose-600 text-white py-4 px-6">
-    <div class="max-w-4xl mx-auto">
-      <a href="/" class="text-sm hover:underline">← Kembali ke Laman Utama</a>
-    </div>
+  <header class="fixed w-full top-0 glass-nav border-b border-gray-100 z-50">
+    <nav class="max-w-4xl mx-auto px-6 h-16 flex justify-between items-center">
+      <a href="/" class="brand-logo text-lg">
+        DR.<span class="text-rose-600">TAKAFUL</span>
+      </a>
+      <a href="/"
+        class="text-xs font-bold uppercase tracking-widest text-gray-400 hover:text-gray-900 transition-colors sans-font">
+        ← Laman Utama
+      </a>
+    </nav>
   </header>
 
   <!-- Blog Article -->
   <article class="max-w-4xl mx-auto py-12 px-6">
 
+    <!-- Breadcrumbs -->
+    <div class="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400 mb-8">
+      <a href="/" class="hover:text-rose-600">Home</a>
+      <span class="text-gray-300">/</span>
+      <a href="/#blog" class="hover:text-rose-600">Blog</a>
+      <span class="text-gray-300">/</span>
+      <span class="text-gray-900">Pelaburan</span>
+    </div>
+
     <!-- Title Section -->
-    <div class="text-center mb-12">
-      <h1 class="text-3xl md:text-4xl font-bold text-rose-700 mb-4">Pelaburan Takaful AIA: Panduan A-Life Enrich Rezeki
+    <div class="mb-12">
+      <h1 class="text-4xl md:text-6xl font-black text-gray-900 tracking-tight leading-tight mb-6">
+        Pelaburan Takaful: Panduan <span class="text-rose-600">Enrich Rezeki</span>
       </h1>
-      <p class="text-gray-600 text-lg">Simpanan + Perlindungan + Pelaburan dalam satu pelan. Berbaloi ke?</p>
-      <div class="flex justify-center items-center gap-4 mt-6 text-sm text-gray-500">
-        <span>📅 1 November 2025</span>
+      <p class="text-xl text-gray-500 max-w-2xl leading-relaxed mb-8">
+        Simpanan + Perlindungan + Pelaburan dalam satu pelan. Berbaloi ke? Jom bedah siasat instrumen hibrid ini.
+      </p>
+      <div class="flex items-center gap-4 text-xs font-bold uppercase tracking-widest text-gray-400">
+        <span class="flex items-center gap-2">
+          <span class="w-8 h-[1px] bg-gray-200"></span>
+          1 November 2025
+        </span>
         <span>•</span>
-        <span>⏱️ 9 minit bacaan</span>
+        <span>9 minit bacaan</span>
       </div>
     </div>
 
-    <!-- Featured Image Placeholder -->
-    <div class="bg-gradient-to-br from-rose-100 to-blue-50 rounded-2xl h-64 flex items-center justify-center mb-12">
-      <span class="text-6xl">📈💰🛡️</span>
+    <!-- Featured Image -->
+    <div
+      class="aspect-[16/9] bg-gradient-to-br from-rose-50 to-blue-50 rounded-[2.5rem] border border-gray-100 flex items-center justify-center mb-16 overflow-hidden relative group">
+      <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+      <span class="text-8xl transform group-hover:scale-110 transition-transform duration-500 ease-out z-10">📈</span>
+      <div
+        class="absolute bottom-8 left-8 bg-white/90 backdrop-blur-md px-6 py-3 rounded-2xl border border-white/50 shadow-sm z-10">
+        <p class="text-[10px] font-black uppercase tracking-widest text-gray-400 mb-1">Strategi</p>
+        <p class="text-sm font-bold text-gray-900">AIA A-Life Enrich Rezeki</p>
+      </div>
     </div>
 
     <!-- Content -->
@@ -449,21 +478,31 @@
 
     <!-- Final CTA Section -->
     <!-- Author Box -->
-    <div class="bg-gray-100 rounded-2xl p-8 my-12 border border-gray-200">
-      <div class="flex flex-col sm:flex-row items-center text-center sm:text-left">
-        <img src="/images/dr-takaful-hana-profile.png" alt="Hana (Dr. Takaful)"
-          class="w-24 h-24 rounded-full mb-4 sm:mb-0 sm:mr-6 flex-shrink-0 object-cover border-4 border-white shadow-lg">
+    <div class="mt-24 pt-16 border-t border-gray-100">
+      <div
+        class="bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-sm flex flex-col md:flex-row items-center md:items-start gap-10 text-center md:text-left transition-all hover:shadow-xl hover:border-rose-100">
+        <div
+          class="w-32 h-32 rounded-3xl bg-rose-50 overflow-hidden flex-shrink-0 border-4 border-rose-50 rotate-3 transition-transform hover:rotate-0">
+          <img src="images/dr-takaful-hana-profile.png" alt="Dr. Hana" class="w-full h-full object-cover">
+        </div>
         <div>
-          <h3 class="text-xl font-bold text-rose-700 m-0">Hai, Saya Hana! 👋</h3>
-          <p class="text-sm text-gray-500 mt-1 mb-3">Founder, Dr. Takaful | AIA Life Planner</p>
-          <p class="text-base text-gray-700 leading-relaxed mt-0">
-            Dulu saya Engineer (PhD), sekarang saya guna skill analitikal tu untuk 'bedah' polisi Takaful supaya anda
-            senang faham. Misi saya simple: Pastikan famili anda ada 'Gaji Kedua' bila yang tak dijangka berlaku. No
-            jargon, no drama.
+          <div class="flex flex-col md:flex-row md:items-center gap-3 mb-4">
+            <h4 class="text-2xl font-black text-gray-900">Dr. Hana</h4>
+            <span
+              class="bg-gray-900 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest text-center">PhD
+              Engineering</span>
+          </div>
+          <p class="text-gray-500 leading-relaxed mb-6">
+            Pakar Strategi Takaful yang menggunakan pendekatan data & kejuruteraan untuk membantu keluarga Malaysia
+            membina 'Financial Fortress' yang mampan. Beliau percaya perancangan kewangan adalah 10% nombor, and 90%
+            disiplin.
           </p>
-          <a href="https://wa.me/60132522587?text=Assalamualaikum%20Hana,%20saya%20nak%20sembang%20santai%20pasal%20takaful."
-            class="inline-block mt-3 text-sm text-rose-600 font-semibold hover:underline">Jom Sembang Santai (Free)
-            →</a>
+          <div class="flex justify-center md:justify-start gap-6">
+            <a href="https://wa.me/60132522587?text=Hai%20Hana!%20Saya%20nak%20tanya%20tentang%20A-Life%20Enrich%20Rezeki."
+              class="text-rose-600 font-black text-xs uppercase tracking-widest hover:underline flex items-center gap-2 group">
+              WhatsApp Hana Je <span class="group-hover:translate-x-1 transition-transform">→</span>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -484,14 +523,10 @@
 
   </article>
 
-  <!-- Footer -->
-  <footer class="bg-gray-50 py-8 px-6 mt-16">
-    <div class="max-w-4xl mx-auto text-center">
-      <p class="text-gray-600 mb-4">
-        <a href="/" class="text-rose-600 hover:underline">← Kembali ke Laman Utama</a>
-      </p>
-      <p class="text-gray-500 text-sm">© 2025 Takaful by Hana — Dr. Takaful | Semua Hak Terpelihara</p>
-    </div>
+  <footer class="py-12 border-t border-gray-100 text-center sans-font">
+    <p class="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-400">
+      &copy; <span id="current-year">2026</span> Dr. Takaful Strategy. Engineered for Legacy.
+    </p>
   </footer>
 
 </body>
