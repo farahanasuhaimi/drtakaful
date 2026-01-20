@@ -1,0 +1,15 @@
+# Enable URL Rewriting
+RewriteEngine On
+
+# Short URL Handler
+# Redirects /go/[code] to redirect.php
+RewriteRule ^go/([a-zA-Z0-9-]+)/?$ redirect.php?code=$1 [L,QSA]
+
+# Force HTTPS (optional, uncomment if needed)
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Remove .html extension (optional, uncomment if needed)
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteRule ^([^\.]+)$ $1.html [NC,L]
