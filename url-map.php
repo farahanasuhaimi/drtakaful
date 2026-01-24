@@ -58,4 +58,5 @@ return [
     'analisis' => 'analisis-keperluan.html',
     'borang' => 'borang-permohonan.html',
     'konsultasi' => 'konsultasi-percuma.html',
+    'fact-find' => 'borang-fact-finding-medical-card.html',
 ];

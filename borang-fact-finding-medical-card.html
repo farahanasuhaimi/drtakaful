@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="ms">
+
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-KFWGX5DS');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fact Finding: Medical Card Takaful | Dr. Takaful</title>
+    <meta name="description"
+        content="Borang fact-finding untuk quotation medical card. Bantu kami fahami tahap pengetahuan anda supaya konsultasi lebih efektif.">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#fb7185">
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="16x16" href="src/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="src/android-chrome-512x512.png">
+    <link rel="manifest" href="https://DrTakaful.com/site.webmanifest">
+
+    <!-- Styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="src/tailwind-config.js"></script>
+    <link rel="stylesheet" href="src/global.css">
+</head>
+
+<body class="bg-gray-50 text-gray-800 antialiased selection:bg-rose-100 selection:text-rose-900 font-sans">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFWGX5DS" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- NAVIGATION BAR -->
+    <header class="fixed w-full top-0 glass-nav border-b border-gray-100 z-50">
+        <nav class="max-w-4xl mx-auto px-6 h-20 flex justify-between items-center">
+            <a href="/" class="brand-logo flex items-center gap-2 group">
+                <span class="text-gray-500 group-hover:text-rose-600 transition-colors">←</span>
+                <span>DR.<span class="text-rose-600">TAKAFUL</span></span>
+            </a>
+            <a href="/" class="text-sm font-medium text-gray-500 hover:text-rose-600 transition-colors">
+                Kembali ke Laman Utama
+            </a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-3xl mx-auto py-32 px-6">
+
+        <!-- Title Section -->
+        <div class="text-center mb-10">
+            <div
+                class="inline-block bg-rose-100 text-rose-600 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider mb-4">
+                📋 Fact Finding Form
+            </div>
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 tracking-tight">
+                Borang Maklumat Awal:<br>
+                <span class="text-rose-600">Medical Card Takaful</span>
+            </h1>
+            <p class="text-gray-500 text-lg max-w-2xl mx-auto">
+                Bantu saya fahami tahap pengetahuan anda supaya konsultasi kita lebih fokus dan efektif. Tick sahaja
+                yang anda dah faham! 😊
+            </p>
+        </div>
+
+        <div class="bg-blue-50 border border-blue-100 p-4 mb-8 rounded-xl flex gap-3 items-start">
+            <div class="text-blue-600 mt-0.5">💡</div>
+            <p class="text-sm text-blue-800 leading-relaxed">
+                <strong>Tujuan Borang Ini:</strong> Supaya saya tahu apa yang anda dah faham, dan fokus terangkan yang
+                anda belum tahu sahaja. Jimat masa kita berdua!
+            </p>
+        </div>
+
+        <!-- Form Section -->
+        <div class="bg-white rounded-3xl p-8 sm:p-12 shadow-xl border border-gray-100 mb-16">
+
+            <!-- Section 1: Basic Info -->
+            <section id="maklumat-asas">
+                <div class="flex items-center gap-3 mb-8 pb-4 border-b border-gray-100">
+                    <div
+                        class="w-8 h-8 rounded-full bg-rose-100 text-rose-600 flex items-center justify-center font-bold text-sm">
+                        1</div>
+                    <h2 class="text-xl font-bold text-gray-900">Maklumat Asas Anda</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-6">
+                    <div class="md:col-span-2">
+                        <label for="nama" class="block text-sm font-semibold text-gray-700 mb-2">Nama Penuh</label>
+                        <input type="text" id="nama"
+                            class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-rose-500 focus:border-rose-500 outline-none transition-all"
+                            placeholder="cth: Ahmad Bin Ali">
+                    </div>
+
+                    <div>
+                        <label for="umur" class="block text-sm font-semibold text-gray-700 mb-2">Umur</label>
+                        <input type="number" id="umur"
+                            class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-rose-500 focus:border-rose-500 outline-none transition-all"
+                            placeholder="cth: 32">
+                    </div>
+
+                    <div>
+                        <label for="telefon" class="block text-sm font-semibold text-gray-700 mb-2">No. Telefon</label>
+                        <input type="tel" id="telefon"
+                            class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-rose-500 focus:border-rose-500 outline-none transition-all"
+                            placeholder="cth: 012-3456789">
+                    </div>
+
+                    <div class="md:col-span-2">
+                        <label for="pekerjaan" class="block text-sm font-semibold text-gray-700 mb-2">Pekerjaan /
+                            Industri</label>
+                        <input type="text" id="pekerjaan"
+                            class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-rose-500 focus:border-rose-500 outline-none transition-all"
+                            placeholder="cth: Jurutera / IT">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 2: Knowledge Check -->
+            <section id="tahap-pengetahuan" class="mt-16">
+                <div class="flex items-center gap-3 mb-8 pb-4 border-b border-gray-100">
+                    <div
+                        class="w-8 h-8 rounded-full bg-rose-100 text-rose-600 flex items-center justify-center font-bold text-sm">
+                        2</div>
+                    <h2 class="text-xl font-bold text-gray-900">Tahap Pengetahuan Anda</h2>
+                </div>
+
+                <p class="text-sm text-gray-500 mb-6 bg-gray-50 p-4 rounded-lg">
+                    ✅ <strong>Tick yang anda dah faham</strong> supaya saya tak perlu terangkan lagi. Saya akan fokus
+                    pada yang anda belum tahu sahaja.
+                </p>
+
+                <div class="space-y-4">
+
+                    <!-- Item 1 -->
+                    <div class="bg-gray-50 rounded-xl p-5 hover:bg-gray-100 transition-colors">
+                        <label class="flex items-start gap-4 cursor-pointer">
+                            <input type="checkbox" id="check1"
+                                class="w-5 h-5 mt-1 text-rose-600 bg-white border-gray-300 rounded focus:ring-2 focus:ring-rose-500">
+                            <div class="flex-1">
+                                <p class="font-semibold text-gray-900 mb-1">Beza Takaful dan Insurans Konvensional</p>
+                                <p class="text-sm text-gray-600">Saya faham konsep takaful berasaskan tabarru'
+                                    (sumbangan) dan prinsip syariah, berbanding insurans konvensional.</p>
+                            </div>
+                        </label>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="bg-gray-50 rounded-xl p-5 hover:bg-gray-100 transition-colors">
+                        <label class="flex items-start gap-4 cursor-pointer">
+                            <input type="checkbox" id="check2"
+                                class="w-5 h-5 mt-1 text-rose-600 bg-white border-gray-300 rounded focus:ring-2 focus:ring-rose-500">
+                            <div class="flex-1">
+                                <p class="font-semibold text-gray-900 mb-1">Pelan Stand-Alone vs Comprehensive
+                                    (Investment-Linked)</p>
+                                <p class="text-sm text-gray-600">Saya faham beza antara pelan medical card sahaja
+                                    (stand-alone) dengan pelan yang ada komponen pelaburan (comprehensive/ILP).</p>
+                            </div>
+                        </label>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="bg-gray-50 rounded-xl p-5 hover:bg-gray-100 transition-colors">
+                        <label class="flex items-start gap-4 cursor-pointer">
+                            <input type="checkbox" id="check3"
+                                class="w-5 h-5 mt-1 text-rose-600 bg-white border-gray-300 rounded focus:ring-2 focus:ring-rose-500">
+                            <div class="flex-1">
+                                <p class="font-semibold text-gray-900 mb-1">Waiting Period (Tempoh Menunggu)</p>
+                                <p class="text-sm text-gray-600">Saya faham konsep tempoh menunggu 30 hari untuk
+                                    penyakit biasa dan 120 hari untuk penyakit kritikal tertentu.</p>
+                            </div>
+                        </label>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="bg-gray-50 rounded-xl p-5 hover:bg-gray-100 transition-colors">
+                        <label class="flex items-start gap-4 cursor-pointer">
+                            <input type="checkbox" id="check4"
+                                class="w-5 h-5 mt-1 text-rose-600 bg-white border-gray-300 rounded focus:ring-2 focus:ring-rose-500">
+                            <div class="flex-1">
+                                <p class="font-semibold text-gray-900 mb-1">Contestable Period (Tempoh Boleh
+                                    Dipertikaikan)</p>
+                                <p class="text-sm text-gray-600">Saya faham bahawa dalam 2 tahun pertama, syarikat
+                                    takaful boleh menyiasat dan menolak tuntutan jika ada maklumat tidak benar semasa
+                                    permohonan.</p>
+                            </div>
+                        </label>
+                    </div>
+
+                    <!-- Item 5 -->
+                    <div class="bg-gray-50 rounded-xl p-5 hover:bg-gray-100 transition-colors">
+                        <label class="flex items-start gap-4 cursor-pointer">
+                            <input type="checkbox" id="check5"
+                                class="w-5 h-5 mt-1 text-rose-600 bg-white border-gray-300 rounded focus:ring-2 focus:ring-rose-500">
+                            <div class="flex-1">
+                                <p class="font-semibold text-gray-900 mb-1">Pre-Existing Condition (Penyakit Sedia Ada)
+                                </p>
+                                <p class="text-sm text-gray-600">Saya faham bahawa penyakit yang sedia ada sebelum
+                                    permohonan tidak akan dilindungi, kecuali diisytiharkan dan diluluskan dengan syarat
+                                    khas.</p>
+                            </div>
+                        </label>
+                    </div>
+
+                    <!-- Item 6 -->
+                    <div class="bg-gray-50 rounded-xl p-5 hover:bg-gray-100 transition-colors">
+                        <label class="flex items-start gap-4 cursor-pointer">
+                            <input type="checkbox" id="check6"
+                                class="w-5 h-5 mt-1 text-rose-600 bg-white border-gray-300 rounded focus:ring-2 focus:ring-rose-500">
+                            <div class="flex-1">
+                                <p class="font-semibold text-gray-900 mb-1">Annual Limit vs Lifetime Limit</p>
+                                <p class="text-sm text-gray-600">Saya faham beza antara had tahunan (annual limit) dan
+                                    had seumur hidup (lifetime limit) untuk medical card.</p>
+                            </div>
+                        </label>
+                    </div>
+
+                    <!-- Item 7 -->
+                    <div class="bg-gray-50 rounded-xl p-5 hover:bg-gray-100 transition-colors">
+                        <label class="flex items-start gap-4 cursor-pointer">
+                            <input type="checkbox" id="check7"
+                                class="w-5 h-5 mt-1 text-rose-600 bg-white border-gray-300 rounded focus:ring-2 focus:ring-rose-500">
+                            <div class="flex-1">
+                                <p class="font-semibold text-gray-900 mb-1">Co-Payment / Deductible</p>
+                                <p class="text-sm text-gray-600">Saya faham konsep co-payment (bayar bersama) dan
+                                    deductible (potongan) yang boleh kurangkan premium.</p>
+                            </div>
+                        </label>
+                    </div>
+
+                    <!-- Item 8 -->
+                    <div class="bg-gray-50 rounded-xl p-5 hover:bg-gray-100 transition-colors">
+                        <label class="flex items-start gap-4 cursor-pointer">
+                            <input type="checkbox" id="check8"
+                                class="w-5 h-5 mt-1 text-rose-600 bg-white border-gray-300 rounded focus:ring-2 focus:ring-rose-500">
+                            <div class="flex-1">
+                                <p class="font-semibold text-gray-900 mb-1">Guaranteed Renewal vs Non-Guaranteed</p>
+                                <p class="text-sm text-gray-600">Saya faham beza antara pelan yang jamin boleh renew
+                                    setiap tahun vs pelan yang syarikat boleh tolak pembaharuan.</p>
+                            </div>
+                        </label>
+                    </div>
+
+                    <!-- Item 9 -->
+                    <div class="bg-gray-50 rounded-xl p-5 hover:bg-gray-100 transition-colors">
+                        <label class="flex items-start gap-4 cursor-pointer">
+                            <input type="checkbox" id="check9"
+                                class="w-5 h-5 mt-1 text-rose-600 bg-white border-gray-300 rounded focus:ring-2 focus:ring-rose-500">
+                            <div class="flex-1">
+                                <p class="font-semibold text-gray-900 mb-1">Panel Hospital vs Non-Panel Hospital</p>
+                                <p class="text-sm text-gray-600">Saya faham beza antara rawatan di hospital panel
+                                    (cashless) dan hospital bukan panel (perlu claim balik).</p>
+                            </div>
+                        </label>
+                    </div>
+
+                    <!-- Item 10 -->
+                    <div class="bg-gray-50 rounded-xl p-5 hover:bg-gray-100 transition-colors">
+                        <label class="flex items-start gap-4 cursor-pointer">
+                            <input type="checkbox" id="check10"
+                                class="w-5 h-5 mt-1 text-rose-600 bg-white border-gray-300 rounded focus:ring-2 focus:ring-rose-500">
+                            <div class="flex-1">
+                                <p class="font-semibold text-gray-900 mb-1">Beza Medical Card dan Critical Illness (CI)
+                                </p>
+                                <p class="text-sm text-gray-600">Saya faham bahawa medical card cover kos rawatan,
+                                    manakala CI bagi pampasan lump sum bila diagnos penyakit kritikal.</p>
+                            </div>
+                        </label>
+                    </div>
+
+                    <!-- Item 11 -->
+                    <div class="bg-gray-50 rounded-xl p-5 hover:bg-gray-100 transition-colors">
+                        <label class="flex items-start gap-4 cursor-pointer">
+                            <input type="checkbox" id="check11"
+                                class="w-5 h-5 mt-1 text-rose-600 bg-white border-gray-300 rounded focus:ring-2 focus:ring-rose-500">
+                            <div class="flex-1">
+                                <p class="font-semibold text-gray-900 mb-1">Kenapa Perlu Medical Card Walaupun Ada
+                                    SOCSO/PERKESO</p>
+                                <p class="text-sm text-gray-600">Saya faham bahawa SOCSO/PERKESO hanya cover hospital
+                                    kerajaan, dan medical card perlu untuk akses hospital swasta.</p>
+                            </div>
+                        </label>
+                    </div>
+
+                    <!-- Item 12 -->
+                    <div class="bg-gray-50 rounded-xl p-5 hover:bg-gray-100 transition-colors">
+                        <label class="flex items-start gap-4 cursor-pointer">
+                            <input type="checkbox" id="check12"
+                                class="w-5 h-5 mt-1 text-rose-600 bg-white border-gray-300 rounded focus:ring-2 focus:ring-rose-500">
+                            <div class="flex-1">
+                                <p class="font-semibold text-gray-900 mb-1">Kenapa Premium Medical Card Naik Setiap
+                                    Tahun</p>
+                                <p class="text-sm text-gray-600">Saya faham bahawa premium naik disebabkan umur
+                                    bertambah, inflasi kos perubatan, dan claim ratio industri.</p>
+                            </div>
+                        </label>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Section 3: Current Situation -->
+            <section id="situasi-semasa" class="mt-16">
+                <div class="flex items-center gap-3 mb-8 pb-4 border-b border-gray-100">
+                    <div
+                        class="w-8 h-8 rounded-full bg-rose-100 text-rose-600 flex items-center justify-center font-bold text-sm">
+                        3</div>
+                    <h2 class="text-xl font-bold text-gray-900">Situasi Semasa Anda</h2>
+                </div>
+
+                <div class="space-y-6">
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-3">Adakah anda sudah ada medical card
+                            sekarang?</label>
+                        <div class="space-y-2">
+                            <label class="flex items-center gap-3 cursor-pointer">
+                                <input type="radio" name="adaMC" value="tidak"
+                                    class="w-4 h-4 text-rose-600 focus:ring-2 focus:ring-rose-500">
+                                <span class="text-gray-700">Tidak, saya belum ada langsung</span>
+                            </label>
+                            <label class="flex items-center gap-3 cursor-pointer">
+                                <input type="radio" name="adaMC" value="company"
+                                    class="w-4 h-4 text-rose-600 focus:ring-2 focus:ring-rose-500">
+                                <span class="text-gray-700">Ya, ada dari company sahaja</span>
+                            </label>
+                            <label class="flex items-center gap-3 cursor-pointer">
+                                <input type="radio" name="adaMC" value="personal"
+                                    class="w-4 h-4 text-rose-600 focus:ring-2 focus:ring-rose-500">
+                                <span class="text-gray-700">Ya, ada medical card personal sendiri</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="kenapa" class="block text-sm font-semibold text-gray-700 mb-2">Kenapa anda nak
+                            ambil/tambah medical card sekarang?</label>
+                        <textarea id="kenapa" rows="4"
+                            class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-rose-500 focus:border-rose-500 outline-none transition-all placeholder-gray-400"
+                            placeholder="cth: Nak ada backup selain company medical card, atau nak coverage lebih tinggi untuk keluarga..."></textarea>
+                    </div>
+
+                    <div>
+                        <label for="budget" class="block text-sm font-semibold text-gray-700 mb-2">Budget premium
+                            bulanan yang anda selesa (RM)</label>
+                        <input type="number" id="budget"
+                            class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-rose-500 focus:border-rose-500 outline-none transition-all"
+                            placeholder="cth: 300">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-3">Siapa yang nak dilindungi?</label>
+                        <div class="space-y-2">
+                            <label class="flex items-center gap-3 cursor-pointer">
+                                <input type="checkbox" id="diriSendiri"
+                                    class="w-4 h-4 text-rose-600 rounded focus:ring-2 focus:ring-rose-500">
+                                <span class="text-gray-700">Diri sendiri</span>
+                            </label>
+                            <label class="flex items-center gap-3 cursor-pointer">
+                                <input type="checkbox" id="pasangan"
+                                    class="w-4 h-4 text-rose-600 rounded focus:ring-2 focus:ring-rose-500">
+                                <span class="text-gray-700">Pasangan</span>
+                            </label>
+                            <label class="flex items-center gap-3 cursor-pointer">
+                                <input type="checkbox" id="anakAnak"
+                                    class="w-4 h-4 text-rose-600 rounded focus:ring-2 focus:ring-rose-500">
+                                <span class="text-gray-700">Anak-anak</span>
+                            </label>
+                            <label class="flex items-center gap-3 cursor-pointer">
+                                <input type="checkbox" id="ibuBapa"
+                                    class="w-4 h-4 text-rose-600 rounded focus:ring-2 focus:ring-rose-500">
+                                <span class="text-gray-700">Ibu bapa</span>
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Section 4: Additional Notes -->
+            <section id="nota-tambahan" class="mt-16">
+                <div class="flex items-center gap-3 mb-8 pb-4 border-b border-gray-100">
+                    <div
+                        class="w-8 h-8 rounded-full bg-rose-100 text-rose-600 flex items-center justify-center font-bold text-sm">
+                        4</div>
+                    <h2 class="text-xl font-bold text-gray-900">Soalan atau Nota Tambahan</h2>
+                </div>
+
+                <div>
+                    <label for="soalan" class="block text-sm font-semibold text-gray-700 mb-2">Ada apa-apa soalan atau
+                        perkara yang anda nak saya terangkan lebih detail?</label>
+                    <textarea id="soalan" rows="5"
+                        class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-rose-500 focus:border-rose-500 outline-none transition-all placeholder-gray-400"
+                        placeholder="Tulis soalan atau concern anda di sini..."></textarea>
+                </div>
+            </section>
+
+            <!-- Submit Button -->
+            <div class="mt-12 text-center">
+                <button onclick="sendWhatsApp()"
+                    class="w-full bg-[#25D366] text-white px-8 py-5 rounded-xl hover:bg-[#20BA5A] active:scale-95 transition-all font-bold text-lg shadow-lg hover:shadow-xl flex items-center justify-center gap-3">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+                    </svg>
+                    Hantar ke WhatsApp Hana
+                </button>
+                <p id="formMessage" class="text-center text-sm mt-4 text-gray-500 font-medium"></p>
+            </div>
+
+        </div>
+
+        <!-- Bottom CTA -->
+        <div class="max-w-3xl mx-auto bg-white p-8 rounded-3xl shadow-xl border border-gray-100 text-center">
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Lebih Selesa Chat Terus?</h3>
+            <p class="text-gray-500 mb-8 max-w-lg mx-auto">
+                Tak nak isi borang? Terus WhatsApp saya untuk berbual santai tentang medical card yang sesuai untuk
+                anda.
+            </p>
+
+            <a href="https://wa.me/60132522587?text=Assalamualaikum%20Hana%2C%20saya%20nak%20tanya%20tentang%20medical%20card%20takaful."
+                target="_blank"
+                class="w-full sm:w-auto bg-rose-600 text-white px-8 py-4 rounded-xl hover:bg-rose-700 active:scale-95 transition-all font-bold text-lg shadow-lg hover:shadow-xl inline-flex items-center justify-center gap-3">
+                💬 Chat Terus Dengan Hana
+            </a>
+
+            <p class="text-center text-xs text-gray-400 mt-6">
+                Tiada komitmen. Chat santai untuk tanya apa sahaja.
+            </p>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white py-12 px-6 border-t border-gray-100">
+        <div class="max-w-4xl mx-auto text-center">
+            <p class="text-gray-500 mb-4">
+                <a href="/" class="text-rose-600 hover:underline font-semibold">← Kembali ke Laman Utama</a>
+            </p>
+            <p class="text-gray-400 text-sm">© 2026 Dr. Takaful | Rancang Kewangan Anda</p>
+        </div>
+    </footer>
+
+    <script>
+        function sendWhatsApp() {
+            // Helper function to get value
+            const getVal = (id) => {
+                const el = document.getElementById(id);
+                return el ? el.value.trim() : '';
+            };
+
+            // Get checkbox values
+            const getChecked = (id) => {
+                const el = document.getElementById(id);
+                return el ? el.checked : false;
+            };
+
+            // Get radio value
+            const getRadio = (name) => {
+                const el = document.querySelector(`input[name="${name}"]:checked`);
+                return el ? el.value : '';
+            };
+
+            // Validation
+            const nama = getVal('nama');
+            const telefon = getVal('telefon');
+
+            if (!nama || !telefon) {
+                const msgEl = document.getElementById('formMessage');
+                msgEl.innerHTML = '<span class="text-red-600">❌ Sila isi nama dan nombor telefon anda.</span>';
+                return;
+            }
+
+            // Build knowledge checklist
+            let knowledgeList = [];
+            const checks = [
+                { id: 'check1', label: 'Beza Takaful dan Insurans' },
+                { id: 'check2', label: 'Pelan Stand-Alone vs Comprehensive' },
+                { id: 'check3', label: 'Waiting Period' },
+                { id: 'check4', label: 'Contestable Period' },
+                { id: 'check5', label: 'Pre-Existing Condition' },
+                { id: 'check6', label: 'Annual Limit vs Lifetime Limit' },
+                { id: 'check7', label: 'Co-Payment / Deductible' },
+                { id: 'check8', label: 'Guaranteed Renewal' },
+                { id: 'check9', label: 'Panel vs Non-Panel Hospital' },
+                { id: 'check10', label: 'Beza Medical Card dan CI' },
+                { id: 'check11', label: 'Kenapa Perlu MC Walaupun Ada SOCSO' },
+                { id: 'check12', label: 'Kenapa Premium Naik' }
+            ];
+
+            checks.forEach(check => {
+                if (getChecked(check.id)) {
+                    knowledgeList.push(`✅ ${check.label}`);
+                }
+            });
+
+            // Build coverage list
+            let coverageList = [];
+            if (getChecked('diriSendiri')) coverageList.push('Diri sendiri');
+            if (getChecked('pasangan')) coverageList.push('Pasangan');
+            if (getChecked('anakAnak')) coverageList.push('Anak-anak');
+            if (getChecked('ibuBapa')) coverageList.push('Ibu bapa');
+
+            // Build the message
+            let message = `*FACT FINDING: MEDICAL CARD TAKAFUL*\n\n`;
+            message += `Assalamualaikum Hana, berikut adalah maklumat saya:\n\n`;
+
+            message += `*MAKLUMAT ASAS*\n`;
+            message += `-----------------------------------\n`;
+            message += `Nama: *${nama}*\n`;
+            message += `Umur: *${getVal('umur') || '-'}*\n`;
+            message += `Telefon: *${telefon}*\n`;
+            message += `Pekerjaan: *${getVal('pekerjaan') || '-'}*\n\n`;
+
+            message += `*APA YANG SAYA DAH FAHAM*\n`;
+            message += `-----------------------------------\n`;
+            if (knowledgeList.length > 0) {
+                message += knowledgeList.join('\n') + '\n\n';
+            } else {
+                message += `(Saya belum tick apa-apa - sila terangkan semua)\n\n`;
+            }
+
+            message += `*SITUASI SEMASA*\n`;
+            message += `-----------------------------------\n`;
+            message += `Ada MC sekarang: *${getRadio('adaMC') || 'Tidak dinyatakan'}*\n`;
+            message += `Kenapa nak ambil MC: *${getVal('kenapa') || '-'}*\n`;
+            message += `Budget bulanan: *RM ${getVal('budget') || '-'}*\n`;
+            message += `Nak lindungi: *${coverageList.length > 0 ? coverageList.join(', ') : '-'}*\n\n`;
+
+            const soalan = getVal('soalan');
+            if (soalan) {
+                message += `*SOALAN/NOTA TAMBAHAN*\n`;
+                message += `-----------------------------------\n`;
+                message += `${soalan}\n\n`;
+            }
+
+            message += `Terima kasih! 😊`;
+
+            // Encode and open WhatsApp
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappURL = `https://wa.me/60132522587?text=${encodedMessage}`;
+
+            const msgEl = document.getElementById('formMessage');
+            msgEl.innerHTML = '<span class="text-green-600 flex items-center justify-center gap-2">✅ Berjaya! Membuka WhatsApp...</span>';
+
+            setTimeout(() => {
+                window.open(whatsappURL, '_blank');
+            }, 500);
+        }
+    </script>
+
+</body>
+
+</html>
