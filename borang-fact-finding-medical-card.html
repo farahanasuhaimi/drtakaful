@@ -32,21 +32,20 @@
     <link rel="stylesheet" href="src/global.css">
 </head>
 
-<body class="bg-gray-50 text-gray-800 antialiased selection:bg-rose-100 selection:text-rose-900 font-sans">
+<body class="bg-gray-50 text-gray-800 antialiased selection:bg-gray-100 selection:text-gray-900 font-sans">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFWGX5DS" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <!-- NAVIGATION BAR -->
     <header class="fixed w-full top-0 glass-nav border-b border-gray-100 z-50">
-        <nav class="max-w-4xl mx-auto px-6 h-20 flex justify-between items-center">
-            <a href="/" class="brand-logo flex items-center gap-2 group">
-                <span class="text-gray-500 group-hover:text-rose-600 transition-colors">←</span>
-                <span>DR.<span class="text-rose-600">TAKAFUL</span></span>
+        <nav class="max-w-4xl mx-auto px-6 h-16 flex justify-between items-center">
+            <a href="/" class="brand-logo text-lg">
+                DR.<span class="text-rose-600">TAKAFUL</span>
             </a>
-            <a href="/" class="text-sm font-medium text-gray-500 hover:text-rose-600 transition-colors">
-                Kembali ke Laman Utama
+            <a href="/"
+                class="text-xs font-bold uppercase tracking-widest text-gray-400 hover:text-gray-900 transition-colors sans-font">
+                ← Laman Utama
             </a>
         </nav>
     </header>
@@ -54,32 +53,29 @@
     <!-- Main Content -->
     <main class="max-w-3xl mx-auto py-32 px-6">
 
-        <!-- Title Section -->
         <div class="text-center mb-10">
             <div
-                class="inline-block bg-rose-100 text-rose-600 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider mb-4">
-                📋 Fact Finding Form
+                class="inline-block bg-gray-900 text-white px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-[0.2em] mb-4">
+                📋 Fact Finding
             </div>
-            <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 tracking-tight">
-                Borang Maklumat Awal:<br>
-                <span class="text-rose-600">Medical Card Takaful</span>
+            <h1 class="text-4xl md:text-6xl font-black text-gray-900 mb-4 tracking-tight leading-tight">
+                Borang Maklumat <span class="text-gray-500">Awal</span>
             </h1>
-            <p class="text-gray-500 text-lg max-w-2xl mx-auto">
-                Bantu saya fahami tahap pengetahuan anda supaya konsultasi kita lebih fokus dan efektif. Tick sahaja
-                yang anda dah faham! 😊
+            <p class="text-xl text-gray-500 max-w-2xl mx-auto leading-relaxed">
+                Bantu saya fahami tahap pengetahuan anda secara analitikal supaya konsultasi lebih fokus.
             </p>
         </div>
 
-        <div class="bg-blue-50 border border-blue-100 p-4 mb-8 rounded-xl flex gap-3 items-start">
-            <div class="text-blue-600 mt-0.5">💡</div>
-            <p class="text-sm text-blue-800 leading-relaxed">
-                <strong>Tujuan Borang Ini:</strong> Supaya saya tahu apa yang anda dah faham, dan fokus terangkan yang
-                anda belum tahu sahaja. Jimat masa kita berdua!
+        <div class="bg-white border-l-4 border-gray-900 p-6 mb-8 rounded-r-xl shadow-sm flex gap-4 items-start">
+            <div class="text-gray-400 mt-1">💡</div>
+            <p class="text-gray-600 leading-relaxed text-sm">
+                <strong class="text-gray-900">Tujuan Borang:</strong> Supaya saya fokus terangkan yang anda belum tahu
+                sahaja. Pendekatan data yang menjimatkan masa kita berdua.
             </p>
         </div>
 
         <!-- Form Section -->
-        <div class="bg-white rounded-3xl p-8 sm:p-12 shadow-xl border border-gray-100 mb-16">
+        <div class="bg-white rounded-[2.5rem] p-8 sm:p-12 shadow-2xl border border-gray-50 mb-16">
 
             <!-- Section 1: Basic Info -->
             <section id="maklumat-asas">
@@ -415,35 +411,32 @@
 
         </div>
 
-        <!-- Bottom CTA -->
-        <div class="max-w-3xl mx-auto bg-white p-8 rounded-3xl shadow-xl border border-gray-100 text-center">
-            <h3 class="text-2xl font-bold text-gray-900 mb-4">Lebih Selesa Chat Terus?</h3>
-            <p class="text-gray-500 mb-8 max-w-lg mx-auto">
+        <div
+            class="max-w-3xl mx-auto bg-gray-900 text-white p-12 rounded-[2.5rem] shadow-2xl relative overflow-hidden text-center group">
+            <div class="absolute inset-0 bg-gradient-to-br from-rose-600/10 to-transparent"></div>
+            <h3 class="text-3xl font-black mb-6 relative z-10">Lebih Selesa Chat Terus?</h3>
+            <p class="text-gray-400 mb-10 max-w-lg mx-auto relative z-10 leading-relaxed">
                 Tak nak isi borang? Terus WhatsApp saya untuk berbual santai tentang medical card yang sesuai untuk
-                anda.
+                keperluan anda secara analitikal.
             </p>
 
             <a href="https://wa.me/60132522587?text=Assalamualaikum%20Hana%2C%20saya%20nak%20tanya%20tentang%20medical%20card%20takaful."
                 target="_blank"
-                class="w-full sm:w-auto bg-rose-600 text-white px-8 py-4 rounded-xl hover:bg-rose-700 active:scale-95 transition-all font-bold text-lg shadow-lg hover:shadow-xl inline-flex items-center justify-center gap-3">
-                💬 Chat Terus Dengan Hana
+                class="inline-block bg-white text-gray-900 px-10 py-5 rounded-2xl font-bold uppercase tracking-widest text-sm transition-all shadow-xl hover:bg-gray-100 relative z-10">
+                💬 Chat Pro-Consult
             </a>
 
-            <p class="text-center text-xs text-gray-400 mt-6">
-                Tiada komitmen. Chat santai untuk tanya apa sahaja.
+            <p class="text-gray-500 text-[10px] font-bold uppercase tracking-[0.2em] mt-8 relative z-10">
+                Tiada komitmen. Data-driven advice.
             </p>
         </div>
 
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-white py-12 px-6 border-t border-gray-100">
-        <div class="max-w-4xl mx-auto text-center">
-            <p class="text-gray-500 mb-4">
-                <a href="/" class="text-rose-600 hover:underline font-semibold">← Kembali ke Laman Utama</a>
-            </p>
-            <p class="text-gray-400 text-sm">© 2026 Dr. Takaful | Rancang Kewangan Anda</p>
-        </div>
+    <footer class="py-12 border-t border-gray-100 text-center sans-font">
+        <p class="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-400">
+            &copy; <span id="current-year">2026</span> Dr. Takaful Strategy. Engineered for Legacy.
+        </p>
     </footer>
 
     <script>

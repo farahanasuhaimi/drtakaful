@@ -39,27 +39,41 @@
   <link rel="stylesheet" href="src/global.css">
 </head>
 
-<body class="bg-gray-50 text-gray-800 antialiased selection:bg-rose-100 selection:text-rose-900">
+<body class="bg-gray-50 text-gray-800 antialiased selection:bg-gray-100 selection:text-gray-900">
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFWGX5DS" height="0" width="0"
       style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
   <!-- Simple Header -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
-    <div class="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
-      <a href="/" class="brand-logo">DR.<span class="text-rose-600">TAKAFUL</span></a>
-      <a href="/" class="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors">← Kembali</a>
-    </div>
+  <header class="fixed w-full top-0 glass-nav border-b border-gray-100 z-50">
+    <nav class="max-w-4xl mx-auto px-6 h-16 flex justify-between items-center">
+      <a href="/" class="brand-logo text-lg">
+        DR.<span class="text-rose-600">TAKAFUL</span>
+      </a>
+      <a href="/"
+        class="text-xs font-bold uppercase tracking-widest text-gray-400 hover:text-gray-900 transition-colors sans-font">
+        ← Laman Utama
+      </a>
+    </nav>
   </header>
 
   <!-- Blog Article -->
   <article class="max-w-3xl mx-auto pt-32 pb-20 px-6">
 
+    <!-- Breadcrumbs -->
+    <div class="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400 mb-8">
+      <a href="/" class="hover:text-gray-900 transition-colors">Home</a>
+      <span class="text-gray-300">/</span>
+      <a href="/#blog" class="hover:text-gray-900 transition-colors">Blog</a>
+      <span class="text-gray-300">/</span>
+      <span class="text-gray-900">MediFlex vs Idaman</span>
+    </div>
+
     <!-- Title Section -->
     <div class="mb-12">
       <h1 class="text-3xl md:text-5xl font-black text-gray-900 tracking-tight leading-tight mb-6">
-        A-Life MediFlex-i vs A-Life Idaman: Medical Card Mana <span class="text-rose-600">Sesuai Untuk Anda?</span>
+        A-Life MediFlex-i vs A-Life Idaman: Medical Card Mana <span class="text-gray-500">Sesuai Untuk Anda?</span>
       </h1>
       <div class="flex items-center gap-4 text-sm text-gray-500 font-medium">
         <span class="bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Medical
@@ -73,7 +87,7 @@
 
     <!-- Featured Image -->
     <div
-      class="aspect-video bg-gradient-to-br from-rose-50 to-blue-50 border border-gray-100 rounded-3xl overflow-hidden shadow-sm flex items-center justify-center mb-16">
+      class="aspect-video bg-gray-50 border border-gray-100 rounded-3xl overflow-hidden shadow-sm flex items-center justify-center mb-16">
       <div class="text-center">
         <span class="text-7xl block mb-4">🤔💳🆚</span>
         <p class="text-gray-400 font-medium text-sm">Standalone vs Comprehensive</p>
@@ -86,13 +100,13 @@
 
       <h2 class="text-2xl mt-8 mb-4">"Nak medical card je, boleh tak?"</h2>
 
-      <div class="bg-white border border-gray-100 rounded-3xl p-8 my-8 shadow-sm">
+      <div class="bg-white border-l-4 border-gray-900 rounded-xl p-8 my-8 shadow-sm">
         <p class="text-gray-700 text-lg italic mb-4">
           Ini soalan yang sangat kerap saya dapat. Jawapannya: <strong>YA, BOLEH!</strong> AIA Takaful menawarkan dua
           pendekatan utama untuk perlindungan perubatan, dan penting untuk anda faham perbezaannya sebelum membuat
           keputusan.
         </p>
-        <p class="text-rose-600 font-bold text-lg text-center mt-4">
+        <p class="text-gray-900 font-black text-xl text-center mt-4">
           Pilihan anda antara: Medical Card Standalone vs Pelan Komprehensif.
         </p>
       </div>
@@ -103,9 +117,9 @@
         <!-- A-Life MediFlex-i -->
         <div
           class="bg-white border border-gray-200 rounded-[2rem] p-8 text-center shadow-sm hover:shadow-md transition">
-          <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mx-auto mb-6 text-3xl">🚗</div>
+          <div class="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center mx-auto mb-6 text-3xl">🚗</div>
           <h3 class="text-xl font-black text-gray-900 mb-2">A-Life MediFlex-i</h3>
-          <p class="text-blue-600 font-bold text-xs uppercase tracking-widest mb-4">Standalone Plan</p>
+          <p class="text-gray-900 font-bold text-[10px] uppercase tracking-widest mb-4">Standalone Plan</p>
           <p class="text-gray-600 text-sm leading-relaxed mb-4">
             Ini adalah pelan perubatan tulen. Bayar hanya untuk manfaat perubatan. Praktikal dan fokus.
           </p>
@@ -114,13 +128,13 @@
 
         <!-- A-Life Idaman -->
         <div
-          class="bg-white border-2 border-rose-100 rounded-[2rem] p-8 text-center shadow-sm hover:shadow-md transition relative overflow-hidden">
+          class="bg-white border-2 border-gray-200 rounded-[2rem] p-8 text-center shadow-sm hover:shadow-md transition relative overflow-hidden">
           <div
-            class="absolute top-0 right-0 bg-rose-500 text-white text-[10px] uppercase font-bold px-3 py-1 rounded-bl-xl">
+            class="absolute top-0 right-0 bg-gray-900 text-white text-[10px] uppercase font-bold px-3 py-1 rounded-bl-xl">
             Popular</div>
-          <div class="w-16 h-16 bg-rose-50 rounded-2xl flex items-center justify-center mx-auto mb-6 text-3xl">🏠</div>
+          <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-6 text-3xl">🏠</div>
           <h3 class="text-xl font-black text-gray-900 mb-2">A-Life Idaman</h3>
-          <p class="text-rose-600 font-bold text-xs uppercase tracking-widest mb-4">Comprehensive Plan</p>
+          <p class="text-gray-900 font-bold text-xs uppercase tracking-widest mb-4">Comprehensive Plan</p>
           <p class="text-gray-600 text-sm leading-relaxed mb-4">
             Pelan lengkap: Hibah + Penyakit Kritikal + Medical Card. Perlindungan menyeluruh untuk keluarga.
           </p>
@@ -132,18 +146,18 @@
 
       <div class="overflow-x-auto my-8 rounded-3xl border border-gray-200 shadow-sm">
         <table class="w-full bg-white">
-          <thead class="bg-gray-900 text-white">
+          <thead class="bg-gray-900 text-white text-[10px] uppercase tracking-widest font-black">
             <tr>
-              <th class="p-5 text-left text-sm font-bold uppercase tracking-wider">Ciri</th>
-              <th class="p-5 text-center text-sm font-bold uppercase tracking-wider bg-gray-800">MediFlex-i</th>
-              <th class="p-5 text-center text-sm font-bold uppercase tracking-wider bg-rose-600">Idaman</th>
+              <th class="p-5 text-left">Ciri</th>
+              <th class="p-5 text-center bg-gray-800">MediFlex-i</th>
+              <th class="p-5 text-center bg-gray-900">Idaman</th>
             </tr>
           </thead>
           <tbody class="text-sm divide-y divide-gray-100">
             <tr>
               <td class="p-5 font-bold text-gray-900">Fokus Utama</td>
               <td class="p-5 text-center text-gray-600">Bil Hospital Sahaja</td>
-              <td class="p-5 text-center font-bold text-rose-600">Hayat + Pendapatan + Hospital</td>
+              <td class="p-5 text-center font-bold text-gray-900">Hayat + Pendapatan + Hospital</td>
             </tr>
             <tr class="bg-gray-50/50">
               <td class="p-5 font-bold text-gray-900">Manfaat Lain</td>
@@ -153,7 +167,7 @@
             <tr>
               <td class="p-5 font-bold text-gray-900">Fleksibiliti</td>
               <td class="p-5 text-center text-green-600 font-medium">Fixed</td>
-              <td class="p-5 text-center text-gray-600">Sangat Tinggi</td>
+              <td class="p-5 text-center text-gray-900 font-bold">Sangat Tinggi</td>
             </tr>
             <tr class="bg-gray-50/50">
               <td class="p-5 font-bold text-gray-900">Nilai Tunai</td>
@@ -163,7 +177,7 @@
             <tr>
               <td class="p-5 font-bold text-gray-900">Sesuai Untuk</td>
               <td class="p-5 text-center font-medium">Top-up coverage sedia ada</td>
-              <td class="p-5 text-center font-bold text-rose-600">Perlindungan pertama & lengkap</td>
+              <td class="p-5 text-center font-bold text-gray-900">Perlindungan pertama & lengkap</td>
             </tr>
           </tbody>
         </table>
@@ -181,8 +195,8 @@
           </div>
           <div class="flex-grow">
             <p class="text-gray-600 text-sm mb-4">Gaji RM2,800. Bajet terhad. Baru nak mula hidup.</p>
-            <div class="bg-rose-50 rounded-xl p-4 border border-rose-100">
-              <p class="text-xs uppercase font-bold text-rose-600 mb-1">Pilihan Terbaik:</p>
+            <div class="bg-white border-l-4 border-gray-900 rounded-xl p-4">
+              <p class="text-xs uppercase font-bold text-gray-900 mb-1">Pilihan Terbaik:</p>
               <p class="font-bold text-gray-900 text-lg mb-1">A-Life Idaman</p>
               <p class="text-sm text-gray-700">Pakej "Starter Pack" lengkap. Dapat Hibah RM50k + CI + Medical Card
                 sekaligus. Lindungi income & kesihatan serentak.</p>
@@ -228,61 +242,68 @@
       </div>
 
       <h2 class="text-2xl mt-16 mb-4">Kesimpulan</h2>
-      <div class="bg-slate-900 text-white rounded-[2.5rem] p-10 text-center shadow-xl">
+      <div class="bg-gray-900 text-white rounded-[2.5rem] p-10 text-center shadow-xl">
         <p class="text-xl font-medium mb-6 leading-relaxed">
           "A-Life MediFlex-i adalah <strong>benefit-based strategy</strong>. A-Life Idaman pula adalah
           <strong>all-in-one protection</strong>."
         </p>
-        <p class="text-slate-400 mb-8 max-w-lg mx-auto">
+        <p class="text-gray-400 mb-8 max-w-lg mx-auto italic text-sm">
           Jika anda baru bermula, belilah kereta lengkap. Jika garaj anda dah penuh, beli enjin tambahan sahaja.
         </p>
       </div>
 
     </div>
 
-    <!-- Author Box -->
-    <div
-      class="bg-white rounded-3xl p-10 my-20 border border-gray-100 shadow-sm flex flex-col md:flex-row items-center gap-8">
-      <img src="/images/dr-takaful-hana-profile.png" alt="Dr. Takaful (Hana)"
-        class="w-24 h-24 rounded-full object-cover border-4 border-gray-50 shadow-sm">
-      <div class="text-center md:text-left">
-        <h3 class="text-xl font-black text-gray-900 mb-2">Dr. Takaful (Hana)</h3>
-        <p class="text-gray-500 text-sm mb-4">PhD in Engineering & Certified Takaful Specialist</p>
-        <p class="text-gray-600 text-sm leading-relaxed mb-6">
-          "Misi saya adalah membantu anda memilih instrumen yang TEPAT, bukan yang paling mahal. Jom kita bedah siasat
-          polisi mana yang ngam dengan slip gaji anda."
-        </p>
-        <a href="https://wa.me/60132522587?text=Assalamualaikum%20Hana,%20saya%20nak%20tanya%20pasal%20MediFlex%20vs%20Idaman."
-          class="inline-block text-rose-600 font-bold hover:text-rose-700 transition-colors">
-          Bincang Dengan Hana ↗
-        </a>
+    <div class="mt-24 pt-16 border-t border-gray-100">
+      <div
+        class="bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-sm flex flex-col md:flex-row items-center md:items-start gap-10 text-center md:text-left transition-all hover:shadow-xl hover:border-rose-100">
+        <div class="w-32 h-32 rounded-3xl bg-rose-50 overflow-hidden flex-shrink-0 border-4 border-rose-50">
+          <img src="images/dr-takaful-hana-profile.png" alt="Dr. Takaful Hana" class="w-full h-full object-cover">
+        </div>
+        <div>
+          <div class="flex flex-col md:flex-row md:items-center gap-3 mb-4 sans-font">
+            <h4 class="text-2xl font-black text-gray-900">Dr. Hana</h4>
+            <span
+              class="bg-gray-900 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">PhD
+              Engineering</span>
+          </div>
+          <p class="text-gray-500 leading-relaxed mb-6">
+            Menggunakan pendekatan data & analisis risiko untuk membantu keluarga membina struktur kewangan yang tahan
+            lasak. Misi Hana: 0% Harta Beku, 100% Ketenangan.
+          </p>
+          <div class="flex justify-center md:justify-start gap-6">
+            <a href="https://wa.me/60132522587?text=Hai%20Hana!%20Saya%20nak%20tanya%20tentang%20perbandingan%20MediFlex%20dan%20Idaman."
+              class="text-rose-600 font-black text-xs uppercase tracking-widest hover:underline flex items-center gap-2 group sans-font">
+              WhatsApp Consult <span class="group-hover:translate-x-1 transition-transform">→</span>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
 
-    <!-- Final CTA -->
-    <div class="bg-rose-600 rounded-3xl p-10 md:p-16 text-center text-white shadow-2xl shadow-rose-200">
-      <h3 class="text-2xl md:text-4xl font-black mb-6">Masih Dilema?</h3>
-      <p class="text-rose-100 mb-10 max-w-xl mx-auto text-lg">
-        Biar saya buatkan satu <strong>Quotation Perbandingan</strong> untuk anda. Tengok harga kiri kanan, baru puas
-        hati buat keputusan.
-      </p>
-      <a href="https://wa.me/60132522587?text=Assalamualaikum%20Hana,%20tolong%20buatkan%20quote%20perbandingan%20MediFlex%20vs%20Idaman%20untuk%20saya."
-        class="inline-block bg-white text-rose-600 px-10 py-5 rounded-full font-bold hover:bg-rose-50 transition shadow-lg"
-        target="_blank" rel="noopener noreferrer">
-        Dapatkan Quote Perbandingan Percuma 💬
-      </a>
+    <div
+      class="bg-gray-900 rounded-[2.5rem] p-12 mt-16 text-center text-white shadow-2xl relative overflow-hidden group">
+      <div class="relative z-10">
+        <h3 class="text-2xl md:text-4xl font-black mb-6">Masih Dilema?</h3>
+        <p class="text-gray-400 mb-10 max-w-xl mx-auto text-lg leading-relaxed">
+          Biar saya buatkan satu <strong>Quotation Perbandingan</strong> untuk anda secara analitikal. Tengok data kiri
+          kanan, baru puas
+          hati buat keputusan.
+        </p>
+        <a href="https://wa.me/60132522587?text=Assalamualaikum%20Hana,%20tolong%20buatkan%20quote%20perbandingan%20MediFlex%20vs%20Idaman%20untuk%20saya."
+          class="inline-block bg-white text-gray-900 px-10 py-5 rounded-2xl font-bold uppercase tracking-widest text-sm transition-all shadow-xl hover:bg-gray-100">
+          Dapatkan Quote Perbandingan Percuma 💬
+        </a>
+      </div>
     </div>
 
   </article>
 
   <!-- Footer -->
-  <footer class="bg-white py-12 px-6 border-t border-gray-100">
-    <div class="max-w-4xl mx-auto text-center">
-      <a href="/" class="text-gray-900 font-black tracking-tighter text-2xl mb-8 block">DR.<span
-          class="text-rose-600">TAKAFUL</span></a>
-      <p class="text-gray-400 text-sm">© <span id="current-year">2026</span> Takaful by Hana — Dr. Takaful | Semua Hak
-        Terpelihara</p>
-    </div>
+  <footer class="py-12 border-t border-gray-100 text-center sans-font">
+    <p class="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-400">
+      &copy; <span id="current-year">2026</span> Dr. Takaful Strategy. Engineered for Legacy.
+    </p>
   </footer>
 
   <script>

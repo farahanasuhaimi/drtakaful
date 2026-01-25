@@ -37,16 +37,22 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-white text-gray-800">
+<body class="bg-gray-50 text-gray-800 antialiased selection:bg-gray-100 selection:text-gray-900">
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFWGX5DS" height="0" width="0"
       style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
   <!-- Header -->
-  <header class="bg-rose-600 text-white py-4 px-6">
-    <div class="max-w-4xl mx-auto">
-      <a href="/" class="text-sm hover:underline">← Kembali ke Laman Utama</a>
-    </div>
+  <header class="fixed w-full top-0 glass-nav border-b border-gray-100 z-50">
+    <nav class="max-w-4xl mx-auto px-6 h-16 flex justify-between items-center">
+      <a href="/" class="brand-logo text-lg">
+        DR.<span class="text-rose-600">TAKAFUL</span>
+      </a>
+      <a href="/"
+        class="text-xs font-bold uppercase tracking-widest text-gray-400 hover:text-gray-900 transition-colors sans-font">
+        ← Laman Utama
+      </a>
+    </nav>
   </header>
 
   <!-- Blog Article -->
@@ -54,7 +60,8 @@
 
     <!-- Title Section -->
     <div class="text-center mb-12">
-      <h1 class="text-3xl md:text-4xl font-bold text-rose-700 mb-4">Medical Card ≠ Pelan Penyakit Kritikal</h1>
+      <h1 class="text-4xl md:text-6xl font-black text-gray-900 tracking-tight leading-tight mb-4">Medical Card <span
+          class="text-gray-500">≠</span> Pelan Penyakit Kritikal</h1>
       <p class="text-gray-600 text-lg">Kenapa dua-dua pelan ini penting untuk anda?</p>
       <div class="flex justify-center items-center gap-4 mt-6 text-sm text-gray-500">
         <span>📅 10 Oktober 2025</span>
@@ -64,14 +71,14 @@
     </div>
 
     <!-- Featured Image Placeholder -->
-    <div class="bg-rose-50 rounded-2xl h-64 flex items-center justify-center mb-12">
+    <div class="bg-gray-50 rounded-2xl h-64 flex items-center justify-center mb-12">
       <span class="text-6xl">🏥💳</span>
     </div>
 
     <!-- Content -->
     <div class="prose prose-lg max-w-none">
 
-      <h2 class="text-2xl font-semibold text-rose-700 mt-8 mb-4">Situasi Yang Ramai Hadapi</h2>
+      <h2 class="text-2xl font-semibold text-gray-900 mt-8 mb-4">Situasi Yang Ramai Hadapi</h2>
       <p class="text-gray-700 leading-relaxed mb-6">
         "Dah ada medical card, cukup la tu." — Ayat yang selalu saya dengar dari ramai orang.
       </p>
@@ -80,18 +87,18 @@
         — mula lah senyap.
       </p>
 
-      <div class="bg-rose-50 border-l-4 border-rose-600 p-6 my-8 rounded-r-lg">
-        <p class="text-rose-900 font-semibold mb-2">💡 Fakta Penting:</p>
+      <div class="bg-white border-l-4 border-gray-900 p-6 my-8 rounded-r-lg">
+        <p class="text-gray-900 font-semibold mb-2">💡 Fakta Penting:</p>
         <p class="text-gray-700">Medical card HANYA cover kos rawatan hospital. Bila anda discharge, medical card dah
           settle tugasnya. Tapi hidup anda? Masih perlu diteruskan.</p>
       </div>
 
-      <h2 class="text-2xl font-semibold text-rose-700 mt-12 mb-4">Apa Beza Medical Card & Pelan Penyakit Kritikal?</h2>
+      <h2 class="text-2xl font-semibold text-gray-900 mt-12 mb-4">Apa Beza Medical Card & Pelan Penyakit Kritikal?</h2>
 
       <div class="grid md:grid-cols-2 gap-6 my-8">
         <!-- Medical Card -->
         <div class="bg-white border border-gray-100 rounded-2xl p-6">
-          <h3 class="text-xl font-semibold text-rose-700 mb-4">🏥 Medical Card</h3>
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">🏥 Medical Card</h3>
           <ul class="space-y-3 text-gray-700">
             <li class="flex items-start">
               <span class="text-gray-900 mr-2">✓</span>
@@ -117,8 +124,8 @@
         </div>
 
         <!-- Critical Illness -->
-        <div class="bg-rose-50 border-2 border-rose-600 rounded-2xl p-6">
-          <h3 class="text-xl font-semibold text-rose-700 mb-4">💰 Pelan Penyakit Kritikal (CI)</h3>
+        <div class="bg-white border-l-4 border-gray-900 rounded-2xl p-6">
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">💰 Pelan Penyakit Kritikal (CI)</h3>
           <ul class="space-y-3 text-gray-700">
             <li class="flex items-start">
               <span class="text-gray-900 mr-2">✓</span>
@@ -144,7 +151,7 @@
         </div>
       </div>
 
-      <h2 class="text-2xl font-semibold text-rose-700 mt-12 mb-4">Cerita Encik Ahmad</h2>
+      <h2 class="text-2xl font-semibold text-gray-900 mt-12 mb-4">Cerita Encik Ahmad</h2>
       <div class="bg-gray-50 rounded-2xl p-8 my-8">
         <p class="text-gray-700 leading-relaxed mb-4">
           Encik Ahmad, 38 tahun, seorang jurutera. Ada medical card RM500k.
@@ -159,7 +166,7 @@
         <p class="text-gray-700 leading-relaxed mb-4">
           Loan rumah RM2,500/bulan masih kena bayar. Anak sekolah. Makan minum. Duit simpanan habis dalam 3 bulan.
         </p>
-        <p class="text-rose-700 font-semibold text-lg">
+        <p class="text-gray-900 font-semibold text-lg">
           Medical card rawat dia. Tapi siapa nak rawat keluarga dia?
         </p>
       </div>
@@ -170,63 +177,63 @@
           makan minum, dan fokus recovery tanpa stress kewangan.</p>
       </div>
 
-      <h2 class="text-2xl font-semibold text-rose-700 mt-12 mb-4">Penyakit Kritikal Yang Biasa Dicovered</h2>
+      <h2 class="text-2xl font-semibold text-gray-900 mt-12 mb-4">Penyakit Kritikal Yang Biasa Dicovered</h2>
       <div class="grid md:grid-cols-2 gap-4 my-6">
-        <div class="flex items-center p-4 bg-rose-50 rounded-lg">
+        <div class="flex items-center p-4 bg-gray-50 rounded-lg">
           <span class="text-2xl mr-3">🫀</span>
           <span class="text-gray-700">Serangan Jantung</span>
         </div>
-        <div class="flex items-center p-4 bg-rose-50 rounded-lg">
+        <div class="flex items-center p-4 bg-gray-50 rounded-lg">
           <span class="text-2xl mr-3">🧠</span>
           <span class="text-gray-700">Strok</span>
         </div>
-        <div class="flex items-center p-4 bg-rose-50 rounded-lg">
+        <div class="flex items-center p-4 bg-gray-50 rounded-lg">
           <span class="text-2xl mr-3">🎗️</span>
           <span class="text-gray-700">Kanser</span>
         </div>
-        <div class="flex items-center p-4 bg-rose-50 rounded-lg">
+        <div class="flex items-center p-4 bg-gray-50 rounded-lg">
           <span class="text-2xl mr-3">🫁</span>
           <span class="text-gray-700">Kegagalan Buah Pinggang</span>
         </div>
-        <div class="flex items-center p-4 bg-rose-50 rounded-lg">
+        <div class="flex items-center p-4 bg-gray-50 rounded-lg">
           <span class="text-2xl mr-3">🦴</span>
           <span class="text-gray-700">Lumpuh (Paralysis)</span>
         </div>
-        <div class="flex items-center p-4 bg-rose-50 rounded-lg">
+        <div class="flex items-center p-4 bg-gray-50 rounded-lg">
           <span class="text-2xl mr-3">💉</span>
           <span class="text-gray-700">Kencing Manis Teruk</span>
         </div>
       </div>
 
-      <h2 class="text-2xl font-semibold text-rose-700 mt-12 mb-4">Jadi, Apa Yang Anda Perlu?</h2>
-      <div class="bg-rose-600 text-white rounded-2xl p-8 my-8">
+      <h2 class="text-2xl font-semibold text-gray-900 mt-12 mb-4">Jadi, Apa Yang Anda Perlu?</h2>
+      <div class="bg-gray-900 text-white rounded-2xl p-8 my-8 shadow-xl">
         <h3 class="text-2xl font-bold mb-4">📋 Checklist Perlindungan Lengkap</h3>
         <ul class="space-y-4">
           <li class="flex items-start">
             <span class="text-yellow-300 text-2xl mr-3">✓</span>
             <div>
               <strong class="block">Medical Card / Takaful Medical</strong>
-              <span class="text-rose-100">Untuk bayar bil hospital</span>
+              <span class="text-gray-300">Untuk bayar bil hospital</span>
             </div>
           </li>
           <li class="flex items-start">
             <span class="text-yellow-300 text-2xl mr-3">✓</span>
             <div>
               <strong class="block">Pelan Penyakit Kritikal (CI)</strong>
-              <span class="text-rose-100">Untuk ganti pendapatan & teruskan hidup</span>
+              <span class="text-gray-300">Untuk ganti pendapatan & teruskan hidup</span>
             </div>
           </li>
           <li class="flex items-start">
             <span class="text-yellow-300 text-2xl mr-3">✓</span>
             <div>
               <strong class="block">Simpanan Kecemasan</strong>
-              <span class="text-rose-100">6-12 bulan perbelanjaan</span>
+              <span class="text-gray-300">6-12 bulan perbelanjaan</span>
             </div>
           </li>
         </ul>
       </div>
 
-      <h2 class="text-2xl font-semibold text-rose-700 mt-12 mb-4">Bagaimana AIA Vitality Membantu?</h2>
+      <h2 class="text-2xl font-semibold text-gray-900 mt-12 mb-4">Bagaimana AIA Vitality Membantu?</h2>
       <div class="bg-green-50 border-l-4 border-green-500 p-6 my-8 rounded-r-lg">
         <p class="text-gray-700 mb-4">
           AIA Vitality adalah program yang menggalakkan gaya hidup sihat. Ia relevan untuk kedua-dua pelan:
@@ -237,14 +244,14 @@
           <li><strong>Ganjaran Medical Card:</strong> Jika anda sihat, anda mendapat ganjaran seperti 'Health Wallet'
             dan naik taraf bilik, menjadikan medical card anda lebih bernilai.</li>
         </ul>
-        <p class="text-green-800 font-semibold mt-4">Ia adalah 'gam' yang mengikat perlindungan dan amalan kesihatan
+        <p class="text-gray-900 font-bold mt-4">Ia adalah 'gam' yang mengikat perlindungan dan amalan kesihatan
           anda menjadi satu.</p>
       </div>
 
 
-      <h2 class="text-2xl font-semibold text-rose-700 mt-12 mb-4">Berapa Coverage CI Yang Sesuai?</h2>
+      <h2 class="text-2xl font-semibold text-gray-900 mt-12 mb-4">Berapa Coverage CI Yang Sesuai?</h2>
       <p class="text-gray-700 leading-relaxed mb-6">
-        Formula mudah: <strong class="text-rose-700">Komitmen sebulan × 36 bulan (3 tahun)</strong>
+        Formula mudah: <strong class="text-gray-900">Komitmen sebulan × 36 bulan (3 tahun)</strong>
       </p>
       <div class="bg-gray-50 rounded-xl p-6 my-6">
         <p class="text-gray-700 mb-2">Contoh:</p>
@@ -254,67 +261,72 @@
           <li>• Komitmen RM8,000 → CI coverage RM192,000</li>
         </ul>
       </div>
-      <p class="bg-rose-50 mt-12 text-gray-700 leading-relaxed mb-6">
+      <p class="bg-gray-50 mt-12 text-gray-700 leading-relaxed mb-6">
         Kenapa 3 tahun? Sebab kebanyakan penyakit kritikal perlukan masa recovery 1-2 tahun sebelum boleh kerja balik
         dengan normal dan 1 tahun buffer untuk elak tekanan kewangan.
       </p>
 
-      <h2 class="text-2xl font-semibold text-rose-700 mt-12 mb-4">Kesimpulan</h2>
+      <h2 class="text-2xl font-semibold text-gray-900 mt-12 mb-4">Kesimpulan</h2>
       <p class="text-gray-700 leading-relaxed mb-6">
         Medical card dan pelan CI bukan saingan — <strong>mereka saling lengkapi</strong>.
       </p>
       <p class="text-gray-700 leading-relaxed mb-6">
         Medical card jaga kos rawatan. Pelan CI jaga kehidupan anda selepas rawatan.
       </p>
-      <p class="text-rose-700 font-semibold text-lg">
+      <p class="text-gray-900 font-semibold text-lg">
         Jangan tunggu sampai diuji, baru nak susun. Susun sekarang, tenang kemudian.
       </p>
 
     </div>
 
-    <!-- CTA Section -->
-    <!-- Author Box -->
-    <div class="bg-gray-100 rounded-2xl p-8 my-12 border border-gray-200">
-      <div class="flex flex-col sm:flex-row items-center text-center sm:text-left">
-        <img src="/images/dr-takaful-hana-profile.png" alt="Dr. Takaful (Hana)"
-          class="w-24 h-24 rounded-full mb-4 sm:mb-0 sm:mr-6 flex-shrink-0 object-cover border-4 border-white shadow-lg">
+    <div class="mt-24 pt-16 border-t border-gray-100">
+      <div
+        class="bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-sm flex flex-col md:flex-row items-center md:items-start gap-10 text-center md:text-left transition-all hover:shadow-xl hover:border-rose-100">
+        <div class="w-32 h-32 rounded-3xl bg-rose-50 overflow-hidden flex-shrink-0 border-4 border-rose-50">
+          <img src="images/dr-takaful-hana-profile.png" alt="Dr. Takaful Hana" class="w-full h-full object-cover">
+        </div>
         <div>
-          <h3 class="text-xl font-bold text-rose-700 m-0">Tentang Penulis: Dr. Takaful (Hana)</h3>
-          <p class="text-sm text-gray-500 mt-1 mb-3">Perancang Takaful Profesional AIA</p>
-          <p class="text-base text-gray-700 leading-relaxed mt-0">
-            Dengan latar belakang PhD dalam Kejuruteraan, saya membawa pendekatan analitikal dan berstruktur dalam
-            perancangan kewangan. Misi saya bukan sekadar menjual polisi, tetapi untuk mendidik dan memperkasa klien
-            saya untuk membuat keputusan kewangan yang bijak demi masa depan keluarga mereka.
+          <div class="flex flex-col md:flex-row md:items-center gap-3 mb-4 sans-font">
+            <h4 class="text-2xl font-black text-gray-900">Dr. Hana</h4>
+            <span
+              class="bg-gray-900 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">PhD
+              Engineering</span>
+          </div>
+          <p class="text-gray-500 leading-relaxed mb-6">
+            Menggunakan pendekatan data & analisis risiko untuk membantu keluarga membina struktur kewangan yang tahan
+            lasak. Misi Hana: 0% Harta Beku, 100% Ketenangan.
           </p>
-          <a href="https://wa.me/60132522587?text=Assalamualaikum%20Hana,%20saya%20telah%20baca%20artikel%20blog%20dan%20ingin%20bertanya%20lebih%20lanjut."
-            class="inline-block mt-3 text-sm text-rose-600 font-semibold hover:underline">Hubungi Saya untuk Sesi
-            Percuma →</a>
+          <div class="flex justify-center md:justify-start gap-6">
+            <a href="https://wa.me/60132522587?text=Hai%20Hana!%20Saya%20nak%20tanya%20tentang%20perbezaan%20medical%20card%20dan%20CI."
+              class="text-rose-600 font-black text-xs uppercase tracking-widest hover:underline flex items-center gap-2 group sans-font">
+              WhatsApp Consult <span class="group-hover:translate-x-1 transition-transform">→</span>
+            </a>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="bg-rose-600 text-white rounded-2xl p-8 mt-16 text-center">
-      <h3 class="text-2xl font-bold mb-4">Nak Semak Pelan Anda Cukup Ke Tidak?</h3>
-      <p class="text-rose-100 mb-6 max-w-2xl mx-auto">
-        Saya boleh bantu anda review pelan sedia ada & buat analisis perlindungan secara PERCUMA. Tanpa tekanan, tanpa
-        komitmen.
-      </p>
-      <a href="https://wa.me/60132522587?text=Assalamualaikum,%20saya%20nak%20tanya%20tentang%20perbezaan%20medical%20card%20dan%20CI%20plan"
-        class="inline-block bg-white text-rose-600 px-8 py-4 rounded-full font-semibold hover:bg-rose-50 transition">
-        WhatsApp Saya Sekarang 💬
-      </a>
+    <div
+      class="bg-gray-900 text-white rounded-[2.5rem] p-12 mt-16 text-center shadow-2xl relative overflow-hidden group">
+      <div class="relative z-10">
+        <h3 class="text-3xl font-black mb-6">Nak Semak Pelan Anda Cukup Ke Tidak?</h3>
+        <p class="text-gray-400 mb-10 max-w-2xl mx-auto text-lg">
+          Saya boleh bantu anda review pelan sedia ada & buat analisis perlindungan secara PERCUMA. Tanpa tekanan, tanpa
+          komitmen.
+        </p>
+        <a href="https://wa.me/60132522587?text=Assalamualaikum,%20saya%20nak%20tanya%20tentang%20perbezaan%20medical%20card%20dan%20CI%20plan"
+          class="inline-block bg-white text-gray-900 px-10 py-5 rounded-2xl font-bold uppercase tracking-widest text-sm transition-all shadow-xl hover:bg-gray-100">
+          WhatsApp Saya Sekarang 💬
+        </a>
+      </div>
     </div>
 
   </article>
 
-  <!-- Footer -->
-  <footer class="bg-gray-50 py-8 px-6 mt-16">
-    <div class="max-w-4xl mx-auto text-center">
-      <p class="text-gray-600 mb-4">
-        <a href="/" class="text-rose-600 hover:underline">← Kembali ke Laman Utama</a>
-      </p>
-      <p class="text-gray-500 text-sm">© 2025 Takaful by Hana — Dr. Takaful | Semua Hak Terpelihara</p>
-    </div>
+  <footer class="py-12 border-t border-gray-100 text-center sans-font mt-24">
+    <p class="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-400">
+      &copy; <span id="current-year">2026</span> Dr. Takaful Strategy. Engineered for Legacy.
+    </p>
   </footer>
 
 </body>

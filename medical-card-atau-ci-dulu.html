@@ -29,18 +29,23 @@
   <link rel="stylesheet" href="src/global.css">
 </head>
 
-<body class="bg-gray-50 text-gray-800 antialiased selection:bg-rose-100 selection:text-rose-900">
+<body class="bg-gray-50 text-gray-800 antialiased selection:bg-gray-100 selection:text-gray-900">
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFWGX5DS" height="0" width="0"
       style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
   <!-- Simple Header -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
-    <div class="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
-      <a href="/" class="brand-logo">DR.<span class="text-rose-600">TAKAFUL</span></a>
-      <a href="/" class="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors">← Kembali</a>
-    </div>
+  <header class="fixed w-full top-0 glass-nav border-b border-gray-100 z-50">
+    <nav class="max-w-4xl mx-auto px-6 h-16 flex justify-between items-center">
+      <a href="/" class="brand-logo text-lg">
+        DR.<span class="text-rose-600">TAKAFUL</span>
+      </a>
+      <a href="/"
+        class="text-xs font-bold uppercase tracking-widest text-gray-400 hover:text-gray-900 transition-colors sans-font">
+        ← Laman Utama
+      </a>
+    </nav>
   </header>
 
   <article class="max-w-3xl mx-auto pt-32 pb-20 px-6">
@@ -52,7 +57,7 @@
       </h1>
       <div class="flex items-center gap-4 text-sm text-gray-500 font-medium">
         <span
-          class="bg-rose-50 text-rose-600 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Prioriti</span>
+          class="bg-gray-100 text-gray-900 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Prioriti</span>
         <span>•</span>
         <span>11 November 2025</span>
         <span>•</span>
@@ -73,7 +78,7 @@
     <div
       class="prose prose-lg max-w-none prose-headings:text-gray-900 prose-headings:font-black prose-p:text-gray-600 prose-p:leading-relaxed">
 
-      <div class="bg-white border-l-4 border-rose-600 p-8 my-10 rounded-r-3xl shadow-sm bg-rose-50/30">
+      <div class="bg-white border-l-4 border-gray-900 p-8 my-10 rounded-r-3xl shadow-sm">
         <p class="text-gray-800 text-lg italic m-0">
           "Jika anda sedang mencari Kad Perubatan sekarang, tahniah! Anda sudah sedar tentang kepentingan perlindungan
           kewangan. TAPI... ada satu perlindungan lain yang <strong>10 KALI LEBIH PENTING</strong> sebagai langkah
@@ -104,7 +109,7 @@
                 syarikat.</strong></span></li>
             <li class="flex items-start gap-2"><span>⚠️</span> <span>Doktor minta rehat 12-24 bulan untuk
                 pemulihan.</span></li>
-            <li class="flex items-start gap-2 text-rose-600 font-bold"><span>❌</span> <span>Gaji RM5,000 sebulan HILANG.
+            <li class="flex items-start gap-2 text-gray-900 font-bold"><span>❌</span> <span>Gaji RM5,000 sebulan HILANG.
                 Tiada sumber sara hidup.</span></li>
             <li class="flex items-start gap-2"><span>⚠️</span> <span>Simpanan habis untuk bayar komitmen bulanan (rumah,
                 kereta, susu anak).</span></li>
@@ -112,17 +117,17 @@
         </div>
 
         <!-- Senario B -->
-        <div class="bg-white p-8 rounded-3xl border-2 border-rose-100 shadow-sm relative overflow-hidden group">
-          <div class="absolute top-0 right-0 w-2 h-full bg-rose-600 transition-all group-hover:w-4"></div>
+        <div class="bg-white p-8 rounded-3xl border-2 border-gray-200 shadow-sm relative overflow-hidden group">
+          <div class="absolute top-0 right-0 w-2 h-full bg-gray-900 transition-all group-hover:w-4"></div>
           <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-3">
             <span
-              class="w-8 h-8 rounded-full bg-rose-600 text-white flex items-center justify-center text-sm font-bold">B</span>
+              class="w-8 h-8 rounded-full bg-gray-900 text-white flex items-center justify-center text-sm font-bold">B</span>
             Ada Pelan Penyakit Kritikal (CI)
           </h3>
           <ul class="space-y-3 text-sm text-gray-600 list-none p-0 m-0">
             <li class="flex items-start gap-2"><span>⚠️</span> <span>Berlaku musibah, rawatan dilakukan di hospital
                 kerajaan atau swasta.</span></li>
-            <li class="flex items-start gap-2 text-rose-600 font-bold"><span>✅</span> <span>Pampasan tunai RM120,000
+            <li class="flex items-start gap-2 text-gray-900 font-bold"><span>✅</span> <span>Pampasan tunai RM120,000
                 masuk terus ke akaun bank anda.</span></li>
             <li class="flex items-start gap-2"><span>✅</span> <span>Gaji hilang? Tak mengapa. Anda ada RM120,000 sebagai
                 "Gaji Kecemasan" untuk 2 tahun.</span></li>
@@ -132,7 +137,7 @@
         </div>
       </div>
 
-      <div class="bg-gray-900 text-white p-10 rounded-3xl text-center my-12 shadow-xl shadow-rose-100">
+      <div class="bg-gray-900 text-white p-10 rounded-3xl text-center my-12 shadow-xl shadow-gray-200">
         <p class="text-xl md:text-2xl font-bold m-0 leading-tight">
           Tanpa pendapatan, simpanan anda akan habis juga. Melindungi gaji adalah asas perancangan kewangan yang paling
           kukuh.
@@ -179,14 +184,14 @@
         </div>
       </div>
 
-      <div class="bg-rose-50 border-2 border-rose-100 p-8 rounded-3xl my-12">
-        <h3 class="text-xl font-bold text-rose-600 mb-4 text-center">Pilihan Paling Popular: Pelan Komprehensif</h3>
+      <div class="bg-white border-l-4 border-gray-900 p-8 rounded-3xl my-12">
+        <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">Pilihan Paling Popular: Pelan Komprehensif</h3>
         <p class="text-gray-600 text-sm mb-6 text-center">Anda sebenarnya boleh gabungkan KESEMUA perlindungan di atas
           dalam satu polisi mampu milik (cth: A-Life Idaman). Dengan RM250-RM350 sebulan, anda boleh dapat perlindungan
           lengkap.</p>
         <div class="flex justify-center">
           <a href="https://wa.me/60132522587?text=Assalamualaikum%20Hana,%20saya%20nak%20tahu%20tentang%20pelan%20komprehensif%20Idaman"
-            class="bg-rose-600 text-white px-8 py-4 rounded-full font-bold hover:bg-rose-700 transition" target="_blank"
+            class="bg-gray-900 text-white px-8 py-4 rounded-full font-bold hover:bg-black transition" target="_blank"
             rel="noopener noreferrer">
             Tanya Hana Sekarang 💬
           </a>
@@ -206,23 +211,28 @@
     </div>
 
     <!-- Author Section -->
-    <div class="mt-20 pt-16 border-t border-gray-100">
+    <div class="mt-24 pt-16 border-t border-gray-100">
       <div
-        class="bg-white p-10 rounded-3xl border border-gray-100 shadow-sm flex flex-col md:flex-row items-center md:items-start gap-8 text-center md:text-left">
-        <div class="w-24 h-24 rounded-full bg-gray-100 overflow-hidden flex-shrink-0">
-          <img src="images/hana-profile.png" alt="Dr. Takaful Hana"
-            class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-500">
+        class="bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-sm flex flex-col md:flex-row items-center md:items-start gap-10 text-center md:text-left transition-all hover:shadow-xl hover:border-rose-100">
+        <div class="w-32 h-32 rounded-3xl bg-rose-50 overflow-hidden flex-shrink-0 border-4 border-rose-50">
+          <img src="images/dr-takaful-hana-profile.png" alt="Dr. Takaful Hana" class="w-full h-full object-cover">
         </div>
         <div>
-          <h4 class="text-xl font-bold text-gray-900 mb-2">Penulis: Hana Dr. Takaful</h4>
-          <p class="text-gray-500 text-sm mb-4 leading-relaxed">
-            Perunding Takaful bertauliah dengan pengalaman lebih 5 tahun membantu rakyat Malaysia membina perlindungan
-            gaji dan hibah keluarga secara profesional.
+          <div class="flex flex-col md:flex-row md:items-center gap-3 mb-4 sans-font">
+            <h4 class="text-2xl font-black text-gray-900">Dr. Hana</h4>
+            <span
+              class="bg-gray-900 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">PhD
+              Engineering</span>
+          </div>
+          <p class="text-gray-500 leading-relaxed mb-6">
+            Menggunakan pendekatan data & analisis risiko untuk membantu keluarga membina struktur kewangan yang tahan
+            lasak. Misi Hana: 0% Harta Beku, 100% Ketenangan.
           </p>
-          <div class="flex justify-center md:justify-start gap-4">
-            <a href="https://wa.me/60132522587" class="text-rose-600 font-bold text-sm hover:underline">WhatsApp Kita
-              ↗</a>
-            <a href="/" class="text-gray-400 font-bold text-sm hover:underline">Laman Utama ↗</a>
+          <div class="flex justify-center md:justify-start gap-6">
+            <a href="https://wa.me/60132522587?text=Hai%20Hana!%20Saya%20nak%20bedah%20siasat%20Medical%20Card%20saya."
+              class="text-rose-600 font-black text-xs uppercase tracking-widest hover:underline flex items-center gap-2 group sans-font">
+              WhatsApp Consult <span class="group-hover:translate-x-1 transition-transform">→</span>
+            </a>
           </div>
         </div>
       </div>
@@ -230,11 +240,15 @@
   </article>
 
   <!-- Simple Footer -->
-  <footer class="py-12 border-t border-gray-100 text-center">
-    <p class="text-gray-400 text-xs font-medium uppercase tracking-widest">
-      &copy; 2025 DR. TAKAFUL MALAYSIA. SEMUA HAK TERPELIHARA.
+  <footer class="py-12 border-t border-gray-100 text-center sans-font">
+    <p class="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-400">
+      &copy; <span id="current-year">2026</span> Dr. Takaful Strategy. Engineered for Legacy.
     </p>
   </footer>
+
+  <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
 
 </body>
 

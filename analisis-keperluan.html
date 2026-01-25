@@ -42,7 +42,7 @@
   <link rel="stylesheet" href="src/global.css">
 </head>
 
-<body class="bg-gray-50 text-gray-800 antialiased selection:bg-rose-100 selection:text-rose-900">
+<body class="bg-gray-50 text-gray-800 antialiased selection:bg-gray-100 selection:text-gray-900">
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFWGX5DS" height="0" width="0"
       style="display:none;visibility:hidden"></iframe></noscript>
@@ -50,44 +50,33 @@
 
   <!-- NAVIGATION BAR -->
   <header class="fixed w-full top-0 glass-nav border-b border-gray-100 z-50">
-    <nav class="max-w-6xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex justify-between items-center">
-      <!-- Logo -->
-      <a href="/" class="brand-logo text-lg sm:text-xl">
+    <nav class="max-w-4xl mx-auto px-6 h-16 flex justify-between items-center">
+      <a href="/" class="brand-logo text-lg">
         DR.<span class="text-rose-600">TAKAFUL</span>
       </a>
-
-      <!-- Back Link -->
       <a href="/"
-        class="text-xs sm:text-sm font-medium text-gray-500 hover:text-rose-600 transition-colors flex items-center gap-1">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-        </svg>
-        <span class="hidden sm:inline">Kembali ke Laman Utama</span>
-        <span class="sm:hidden">Kembali</span>
+        class="text-xs font-bold uppercase tracking-widest text-gray-400 hover:text-gray-900 transition-colors sans-font">
+        ← Laman Utama
       </a>
     </nav>
   </header>
 
   <!-- HERO SECTION -->
-  <section class="relative pt-24 sm:pt-32 pb-12 sm:pb-16 px-4 sm:px-6 bg-gradient-to-b from-rose-50 to-white">
+  <section class="relative pt-32 pb-16 px-6">
     <div class="max-w-3xl mx-auto text-center">
-      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 tracking-tight mb-4 sm:mb-6 leading-tight">
-        Analisis Keperluan <span class="text-rose-600">Terperinci</span>
+      <h1 class="text-4xl md:text-6xl font-black text-gray-900 tracking-tight leading-tight mb-6">
+        Analisis Keperluan <span class="text-gray-400">Terperinci</span>
       </h1>
-      <p class="text-sm sm:text-base md:text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed mb-6 sm:mb-8">
-        Lengkapkan maklumat di bawah untuk saya bantu anda kira pelan terbaik mengikut bajet & keperluan anda. Dapat
-        quotation dalam <strong>30-60 minit</strong>.
+      <p class="text-xl text-gray-500 max-w-2xl mx-auto leading-relaxed mb-10">
+        Lengkapkan maklumat di bawah untuk saya bantu anda kira pelan terbaik secara analitikal mengikut bajet &
+        keperluan anda.
       </p>
 
       <!-- Trust Badge -->
       <div
-        class="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm border border-gray-100 text-xs sm:text-sm text-gray-600">
-        <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-          <path fill-rule="evenodd"
-            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-            clip-rule="evenodd" />
-        </svg>
-        <span class="font-medium">100% Percuma • Tiada Komitmen</span>
+        class="inline-flex items-center gap-2 bg-white px-6 py-3 rounded-full shadow-sm border border-gray-100 text-xs font-bold uppercase tracking-widest text-gray-400">
+        <span class="w-2 h-2 rounded-full bg-green-500"></span>
+        <span>100% Percuma • Tiada Komitmen</span>
       </div>
     </div>
   </section>
@@ -110,7 +99,7 @@
 
   <!-- FORM SECTION -->
   <section class="py-12 sm:py-16 px-4 sm:px-6">
-    <div class="max-w-3xl mx-auto bg-white p-6 sm:p-8 md:p-10 rounded-3xl shadow-xl border border-gray-100">
+    <div class="max-w-3xl mx-auto bg-white p-6 sm:p-8 md:p-12 rounded-[2.5rem] shadow-2xl border border-gray-50">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
         <!-- Name -->
         <div class="md:col-span-2">
@@ -228,10 +217,9 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="bg-white border-t border-gray-100 py-8 sm:py-12 text-center px-4">
-    <p class="text-gray-400 text-xs sm:text-sm font-medium">
-      © <span id="current-year">2026</span> Dr. Takaful. Semua Hak Terpelihara.
+  <footer class="py-12 border-t border-gray-100 text-center sans-font">
+    <p class="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-400">
+      &copy; <span id="current-year">2026</span> Dr. Takaful Strategy. Engineered for Legacy.
     </p>
   </footer>
 

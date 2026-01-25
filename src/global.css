@@ -22,8 +22,8 @@ h6,
     backdrop-filter: blur(10px);
 }
 
-.selection\:bg-rose-100 ::selection {
-    background-color: #ffe4e6;
+.selection\:bg-gray-100 ::selection {
+    background-color: #f3f4f6;
 }
 
 .brand-logo {
@@ -35,6 +35,6 @@ h6,
     /* text-xl */
 }
 
-.selection\:text-rose-900 ::selection {
-    color: #881337;
+.selection\:text-gray-900 ::selection {
+    color: #111827;
 }

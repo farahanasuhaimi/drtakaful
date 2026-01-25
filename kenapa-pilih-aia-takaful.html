@@ -49,19 +49,23 @@
     </style>
 </head>
 
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gray-50 text-gray-800 antialiased selection:bg-gray-100 selection:text-gray-900">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFWGX5DS" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
     <!-- Header -->
-    <header class="sticky top-0 bg-white/80 backdrop-blur-md shadow-sm z-50 border-b border-gray-100">
-        <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="/" class="text-rose-600 font-bold text-lg hover:text-rose-700 transition">Dr. Takaful</a>
-            <a href="/" class="text-sm text-gray-500 hover:text-rose-600 transition font-medium">← Kembali ke Laman
-                Utama</a>
-        </div>
+    <header class="fixed w-full top-0 glass-nav border-b border-gray-100 z-50">
+        <nav class="max-w-4xl mx-auto px-6 h-16 flex justify-between items-center">
+            <a href="/" class="brand-logo text-lg">
+                DR.<span class="text-rose-600">TAKAFUL</span>
+            </a>
+            <a href="/"
+                class="text-xs font-bold uppercase tracking-widest text-gray-400 hover:text-gray-900 transition-colors sans-font">
+                ← Laman Utama
+            </a>
+        </nav>
     </header>
 
     <!-- Hero Section -->
@@ -71,13 +75,12 @@
         <div class="absolute bottom-0 left-0 -mb-20 -ml-20 w-80 h-80 bg-gray-100 rounded-full blur-3xl opacity-50">
         </div>
 
-        <div class="max-w-4xl mx-auto pt-16 pb-12 px-6 relative z-10 text-center">
+        <div class="max-w-4xl mx-auto pt-32 pb-12 px-6 relative z-10 text-center">
             <span
-                class="inline-block py-1 px-3 rounded-full bg-rose-100 text-rose-700 text-xs font-bold tracking-wide uppercase mb-4">Pilihan
+                class="inline-block py-1 px-3 rounded-full bg-gray-100 text-gray-900 text-[10px] font-bold tracking-widest uppercase mb-4 sans-font">Pilihan
                 #1 Rakyat Malaysia</span>
             <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 mb-6 leading-tight tracking-tight">
-                Kenapa Perlu Pilih <span
-                    class="text-transparent bg-clip-text bg-gradient-to-r from-rose-600 to-red-600">AIA PUBLIC
+                Kenapa Perlu Pilih <span class="text-gray-500">AIA PUBLIC
                     Takaful?</span>
             </h1>
             <p class="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
@@ -97,13 +100,13 @@
     <article class="max-w-5xl mx-auto py-12 px-6">
 
         <!-- Intro Card -->
-        <div class="bg-white rounded-3xl p-8 md:p-10 shadow-xl border border-gray-100 mb-16 relative overflow-hidden">
-            <div class="absolute top-0 left-0 w-2 h-full bg-rose-600"></div>
+        <div class="bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-gray-100 mb-16 relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-2 h-full bg-gray-900"></div>
             <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">"Semua Takaful Sama Je..." <span
                     class="text-gray-400 font-normal text-xl block md:inline mt-2 md:mt-0">- Mitos Popular</span></h2>
             <p class="text-gray-600 text-lg leading-relaxed mb-6">
                 Betul ke? Dari segi konsep asas tolong-menolong, ya. Tapi dari segi <strong
-                    class="text-rose-700">pengurusan dana, inovasi produk, dan kecekapan servis</strong>, perbezaannya
+                    class="text-gray-900">pengurusan dana, inovasi produk, dan kecekapan servis</strong>, perbezaannya
                 ibarat langit dan bumi.
             </p>
             <p class="text-gray-600 text-lg leading-relaxed">
@@ -115,7 +118,7 @@
 
         <div class="text-center mb-12">
             <h2 class="text-3xl font-bold text-gray-900">6 Sebab Utama AIA Menjadi Pilihan</h2>
-            <div class="w-20 h-1 bg-rose-500 mx-auto mt-4 rounded-full"></div>
+            <div class="w-12 h-1 bg-gray-900 mx-auto mt-4 rounded-full"></div>
         </div>
 
         <!-- 6 Points Grid -->
@@ -125,7 +128,7 @@
             <div
                 class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 group">
                 <div
-                    class="w-14 h-14 bg-rose-100 rounded-xl flex items-center justify-center text-3xl mb-6 group-hover:bg-rose-600 group-hover:text-white transition-colors">
+                    class="w-14 h-14 bg-gray-50 rounded-xl flex items-center justify-center text-3xl mb-6 group-hover:bg-gray-900 group-hover:text-white transition-colors">
                     🏛️
                 </div>
                 <h3 class="font-bold text-xl text-gray-900 mb-3">Kestabilan Kewangan</h3>
@@ -139,7 +142,7 @@
             <div
                 class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 group">
                 <div
-                    class="w-14 h-14 bg-gray-100 rounded-xl flex items-center justify-center text-3xl mb-6 group-hover:bg-gray-900 group-hover:text-white transition-colors">
+                    class="w-14 h-14 bg-gray-50 rounded-xl flex items-center justify-center text-3xl mb-6 group-hover:bg-gray-900 group-hover:text-white transition-colors">
                     🚀
                 </div>
                 <h3 class="font-bold text-xl text-gray-900 mb-3">Inovasi Produk</h3>
@@ -155,7 +158,7 @@
                 <div class="absolute top-0 right-0 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">
                     Eksklusif</div>
                 <div
-                    class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center text-3xl mb-6 group-hover:bg-green-600 group-hover:text-white transition-colors">
+                    class="w-14 h-14 bg-gray-50 rounded-xl flex items-center justify-center text-3xl mb-6 group-hover:bg-gray-900 group-hover:text-white transition-colors">
                     🏃‍♂️
                 </div>
                 <h3 class="font-bold text-xl text-gray-900 mb-3">AIA Vitality</h3>
@@ -169,7 +172,7 @@
             <div
                 class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 group">
                 <div
-                    class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center text-3xl mb-6 group-hover:bg-purple-600 group-hover:text-white transition-colors">
+                    class="w-14 h-14 bg-gray-50 rounded-xl flex items-center justify-center text-3xl mb-6 group-hover:bg-gray-900 group-hover:text-white transition-colors">
                     ⚡
                 </div>
                 <h3 class="font-bold text-xl text-gray-900 mb-3">Tuntutan Pantas</h3>
@@ -183,7 +186,7 @@
             <div
                 class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 group">
                 <div
-                    class="w-14 h-14 bg-yellow-100 rounded-xl flex items-center justify-center text-3xl mb-6 group-hover:bg-yellow-600 group-hover:text-white transition-colors">
+                    class="w-14 h-14 bg-gray-50 rounded-xl flex items-center justify-center text-3xl mb-6 group-hover:bg-gray-900 group-hover:text-white transition-colors">
                     🏥
                 </div>
                 <h3 class="font-bold text-xl text-gray-900 mb-3">Panel Hospital Luas</h3>
@@ -197,7 +200,7 @@
             <div
                 class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 group">
                 <div
-                    class="w-14 h-14 bg-indigo-100 rounded-xl flex items-center justify-center text-3xl mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                    class="w-14 h-14 bg-gray-50 rounded-xl flex items-center justify-center text-3xl mb-6 group-hover:bg-gray-900 group-hover:text-white transition-colors">
                     👩‍💼
                 </div>
                 <h3 class="font-bold text-xl text-gray-900 mb-3">Servis Profesional</h3>
@@ -212,7 +215,7 @@
         <div class="relative rounded-3xl overflow-hidden bg-gray-900 text-white shadow-2xl">
             <div class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]">
             </div>
-            <div class="absolute top-0 right-0 w-64 h-64 bg-rose-600 rounded-full blur-3xl opacity-20 -mr-16 -mt-16">
+            <div class="absolute top-0 right-0 w-64 h-64 bg-gray-800 rounded-full blur-3xl opacity-20 -mr-16 -mt-16">
             </div>
 
             <div class="relative z-10 px-8 py-16 md:px-16 text-center">
@@ -223,7 +226,7 @@
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
                     <a href="https://wa.me/60132522587?text=Assalamualaikum%20Hana,%20saya%20berminat%20nak%20tahu%20lebih%20lanjut%20tentang%20produk%20AIA."
-                        class="inline-flex items-center justify-center bg-rose-600 text-white px-8 py-4 rounded-full font-bold hover:bg-rose-700 transition transform hover:scale-105 shadow-lg text-lg group"
+                        class="inline-flex items-center justify-center bg-white text-gray-900 px-8 py-4 rounded-2xl font-bold uppercase tracking-widest text-sm transition-all shadow-xl hover:bg-gray-100 group"
                         target="_blank" rel="noopener noreferrer">
                         Dapatkan Quotation Percuma
                         <svg xmlns="http://www.w3.org/2000/svg"
@@ -241,32 +244,33 @@
             </div>
         </div>
 
-        <!-- Author Box -->
-        <div
-            class="mt-16 bg-white rounded-2xl p-8 border border-gray-200 flex flex-col md:flex-row items-center gap-8 shadow-sm">
-            <div class="relative">
-                <div class="w-24 h-24 rounded-full overflow-hidden border-4 border-rose-100 shadow-md">
-                    <img src="/images/dr-takaful-hana-profile.png" alt="Dr. Takaful (Hana)"
+        <div class="mt-24 pt-16 border-t border-gray-100">
+            <div
+                class="bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-sm flex flex-col md:flex-row items-center md:items-start gap-10 text-center md:text-left transition-all hover:shadow-xl hover:border-rose-100">
+                <div class="w-32 h-32 rounded-3xl bg-rose-50 overflow-hidden flex-shrink-0 border-4 border-rose-50">
+                    <img src="images/dr-takaful-hana-profile.png" alt="Dr. Takaful Hana"
                         class="w-full h-full object-cover">
                 </div>
-                <div
-                    class="absolute bottom-0 right-0 bg-green-500 w-6 h-6 rounded-full border-2 border-white flex items-center justify-center text-white text-xs">
-                    ✓</div>
+                <div>
+                    <div class="flex flex-col md:flex-row md:items-center gap-3 mb-4 sans-font">
+                        <h4 class="text-2xl font-black text-gray-900">Dr. Hana</h4>
+                        <span
+                            class="bg-gray-900 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">PhD
+                            Engineering</span>
+                    </div>
+                    <p class="text-gray-500 leading-relaxed mb-6">
+                        Menggunakan pendekatan data & analisis risiko untuk membantu keluarga membina struktur kewangan
+                        yang tahan
+                        lasak. Misi Hana: 0% Harta Beku, 100% Ketenangan.
+                    </p>
+                    <div class="flex justify-center md:justify-start gap-6">
+                        <a href="https://wa.me/60132522587?text=Hai%20Hana!%20Saya%20nak%20tanya%20tentang%20kenapa%20pilih%20AIA."
+                            class="text-rose-600 font-black text-xs uppercase tracking-widest hover:underline flex items-center gap-2 group sans-font">
+                            WhatsApp Consult <span class="group-hover:translate-x-1 transition-transform">→</span>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="text-center md:text-left flex-1">
-                <h3 class="text-xl font-bold text-gray-900">Dr. Takaful (Hana)</h3>
-                <p class="text-rose-600 font-medium text-sm mb-3">Perancang Takaful Profesional AIA</p>
-                <p class="text-gray-600 leading-relaxed text-sm">
-                    PhD dalam Kejuruteraan. Misi saya adalah membawa pendekatan analitikal dalam perancangan kewangan
-                    anda. Tiada 'hard sell', hanya fakta dan solusi yang tepat.
-                </p>
-            </div>
-            <a href="https://wa.me/60132522587" class="text-gray-400 hover:text-rose-600 transition">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
-                    <path
-                        d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
-                </svg>
-            </a>
         </div>
 
         <!-- Disclaimer -->
@@ -279,15 +283,10 @@
 
     </article>
 
-    <!-- Footer -->
-    <footer class="bg-white border-t border-gray-100 py-12 px-6 mt-12">
-        <div class="max-w-4xl mx-auto text-center">
-            <p class="text-gray-600 mb-4 font-medium">
-                <a href="/" class="hover:text-rose-600 transition">Laman Utama</a> •
-                <a href="/#borang-konsultasi" class="hover:text-rose-600 transition">Hubungi Kami</a>
-            </p>
-            <p class="text-gray-400 text-sm">© 2025 Takaful by Hana — Dr. Takaful | Semua Hak Terpelihara</p>
-        </div>
+    <footer class="py-12 border-t border-gray-100 text-center sans-font">
+        <p class="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-400">
+            &copy; <span id="current-year">2026</span> Dr. Takaful Strategy. Engineered for Legacy.
+        </p>
     </footer>
 
 </body>
