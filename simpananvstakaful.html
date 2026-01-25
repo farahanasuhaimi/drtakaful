@@ -26,44 +26,61 @@
   <title>Simpanan vs Takaful: Mana Betul? | Dr. Takaful</title>
   <meta name="description"
     content="Banyak orang fikir simpanan sudah cukup. Tapi bila diuji 3D, baru tahu simpanan cepat habis. Takaful kekal bantu bila krisis.">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="src/tailwind-config.js"></script>
+  <link rel="stylesheet" href="src/global.css">
 </head>
 
-<body class="bg-white text-gray-800">
+<body class="bg-gray-50 text-gray-800 antialiased selection:bg-gray-100 selection:text-gray-900">
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFWGX5DS" height="0" width="0"
       style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
-  <!-- Header -->
-  <header class="bg-rose-600 text-white py-4 px-6">
-    <div class="max-w-4xl mx-auto">
-      <a href="/" class="text-sm hover:underline">← Kembali ke Laman Utama</a>
-    </div>
+  <header class="fixed w-full top-0 glass-nav border-b border-gray-100 z-50">
+    <nav class="max-w-4xl mx-auto px-6 h-16 flex justify-between items-center">
+      <a href="/" class="brand-logo text-lg">
+        DR.<span class="text-rose-600">TAKAFUL</span>
+      </a>
+      <a href="/"
+        class="text-xs font-bold uppercase tracking-widest text-gray-400 hover:text-gray-900 transition-colors sans-font">
+        ← Laman Utama
+      </a>
+    </nav>
   </header>
 
   <!-- Blog Article -->
   <article class="max-w-4xl mx-auto py-12 px-6">
 
-    <!-- Title Section -->
-    <div class="text-center mb-12">
-      <h1 class="text-3xl md:text-4xl font-bold text-rose-700 mb-4">Simpanan vs Takaful: Mana Betul?</h1>
-      <p class="text-gray-600 text-lg">Kenapa dua-dua penting, dan tak boleh ganti satu sama lain</p>
-      <div class="flex justify-center items-center gap-4 mt-6 text-sm text-gray-500">
-        <span>📅 10 Oktober 2025</span>
-        <span>•</span>
-        <span>⏱️ 6 minit bacaan</span>
-      </div>
+    <!-- Breadcrumbs -->
+    <div class="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400 mb-8">
+      <a href="/" class="hover:text-gray-900 transition-colors">Home</a>
+      <span class="text-gray-300">/</span>
+      <a href="/#blog" class="hover:text-gray-900 transition-colors">Blog</a>
+      <span class="text-gray-300">/</span>
+      <span class="text-gray-900">Optimization</span>
     </div>
 
-    <!-- Featured Image Placeholder -->
-    <div class="bg-rose-50 rounded-2xl h-64 flex items-center justify-center mb-12">
-      <span class="text-6xl">💰🛡️</span>
+    <!-- Title Section -->
+    <div class="mb-12">
+      <h1 class="text-4xl md:text-6xl font-black text-gray-900 tracking-tight leading-tight mb-6">
+        Simpanan vs <span class="text-gray-500">Takaful</span>
+      </h1>
+      <p class="text-xl text-gray-500 max-w-2xl leading-relaxed">Menganalisis keseimbangan antara kecairan tunai
+        (Liquidity) dan perlindungan risiko sistemik keluarga.</p>
+    </div>
+
+    <!-- Featured Image -->
+    <div
+      class="aspect-video bg-white border border-gray-100 rounded-[2.5rem] overflow-hidden shadow-sm flex items-center justify-center mb-16">
+      <div class="text-center">
+        <span class="text-7xl block mb-4">💰🛡️</span>
+        <p class="text-gray-400 font-bold uppercase tracking-widest text-[10px]">Financial Architecture Analysis</p>
+      </div>
     </div>
 
     <!-- Content -->
     <div class="prose prose-lg max-w-none">
 
-      <h2 class="text-2xl font-semibold text-rose-700 mt-8 mb-4">Soalan Yang Selalu Saya Dengar</h2>
+      <h2 class="text-2xl md:text-3xl font-black text-gray-900 mt-16 mb-4">Premis Perdebatan Teknikal:</h2>
       <div class="bg-gray-50 rounded-xl p-6 my-6">
         <p class="text-gray-700 italic mb-4">
           "Hana, saya dah ada simpanan RM50k. Cukup kan tu? Tak payah takaful la..."
@@ -80,110 +97,98 @@
         Saya faham. Nampak macam masuk akal. <strong>Tapi...</strong> ada perkara penting yang ramai terlepas pandang.
       </p>
 
-      <h2 class="text-2xl font-semibold text-rose-700 mt-12 mb-4">Mari Kita Bandingkan Dengan Jujur</h2>
+      <h2 class="text-2xl md:text-3xl font-black text-gray-900 mt-16 mb-4">Analisis Komparatif (Jujur):</h2>
 
       <div class="grid md:grid-cols-2 gap-8 my-8">
         <!-- Simpanan -->
-        <div class="bg-white border-2 border-gray-300 rounded-2xl p-6">
-          <div class="flex items-center mb-4">
+        <div class="bg-white border border-gray-100 rounded-[2.5rem] p-8 shadow-sm">
+          <div class="flex items-center mb-6 border-b border-gray-50 pb-4">
             <span class="text-4xl mr-3">💰</span>
-            <h3 class="text-2xl font-semibold text-gray-800">Simpanan</h3>
+            <h3 class="text-xl font-black text-gray-900 uppercase tracking-widest text-xs">Aset Simpanan (Liquidity)
+            </h3>
           </div>
 
-          <div class="space-y-4">
+          <div class="space-y-6">
             <div>
-              <p class="font-semibold text-green-700 mb-2">✓ Kelebihan:</p>
-              <ul class="text-sm text-gray-700 space-y-1 ml-4">
-                <li>• Duit anda, boleh guna bila-bila</li>
-                <li>• Ada faedah/dividen (sikit)</li>
-                <li>• Rasa "selamat" sebab nampak</li>
-                <li>• Boleh akses segera</li>
+              <p class="text-[10px] text-gray-400 font-black uppercase tracking-widest mb-3">Kelebihan Struktur:</p>
+              <ul class="text-sm text-gray-600 space-y-2">
+                <li>• Kecairan mutlak bagi kegunaan segera</li>
+                <li>• Potensi dividen/pertumbuhan (Rendah)</li>
+                <li>• Kawalan penuh ke atas aset</li>
               </ul>
             </div>
 
-            <div class="border-t pt-4">
-              <p class="font-semibold text-red-700 mb-2">✗ Kelemahan:</p>
-              <ul class="text-sm text-gray-700 space-y-1 ml-4">
-                <li>• Cepat habis bila krisis</li>
-                <li>• Tak cukup untuk penyakit kritikal</li>
-                <li>• Ambil masa bertahun-tahun nak kumpul balik</li>
-                <li>• Kalau meninggal awal, waris dapat sikit je</li>
+            <div class="border-t border-gray-50 pt-6">
+              <p class="text-[10px] text-gray-400 font-black uppercase tracking-widest mb-3">Limitasi Sistem:</p>
+              <ul class="text-sm text-gray-600 space-y-2">
+                <li>• Kadar susutan pantas semasa krisis</li>
+                <li>• Memerlukan fasa pengumpulan yang lama</li>
+                <li>• Tiada penggandaan pampasan bagi risiko 3D</li>
               </ul>
             </div>
           </div>
         </div>
 
         <!-- Takaful -->
-        <div class="bg-rose-50 border-2 border-rose-600 rounded-2xl p-6">
-          <div class="flex items-center mb-4">
+        <div class="bg-white border border-gray-900 rounded-[2.5rem] p-8 shadow-xl relative overflow-hidden group">
+          <div
+            class="absolute top-0 right-0 bg-gray-900 text-white px-4 py-1 text-[10px] font-black uppercase tracking-widest leading-relaxed">
+            Risk Offset</div>
+          <div class="flex items-center mb-6 border-b border-gray-50 pb-4">
             <span class="text-4xl mr-3">🛡️</span>
-            <h3 class="text-2xl font-semibold text-rose-700">Takaful</h3>
+            <h3 class="text-xl font-black text-gray-900 uppercase tracking-widest text-xs">Arsitektur Takaful
+              (Protection)</h3>
           </div>
 
-          <div class="space-y-4">
+          <div class="space-y-6">
             <div>
-              <p class="font-semibold text-green-700 mb-2">✓ Kelebihan:</p>
-              <ul class="text-sm text-gray-700 space-y-1 ml-4">
-                <li>• Coverage tinggi dengan bayaran rendah</li>
-                <li>• Kekal melindungi bertahun-tahun</li>
-                <li>• Bila diuji, dapat lump sum besar</li>
-                <li>• Patuh syariah (tolong-menolong)</li>
-                <li>• Waris terjaga kalau berlaku 3D</li>
+              <p class="text-[10px] text-gray-400 font-black uppercase tracking-widest mb-3">Kecekapan Leverage:</p>
+              <ul class="text-sm text-gray-600 space-y-2">
+                <li>• Gandaan perlindungan tinggi (Low Input)</li>
+                <li>• Perlindungan kekal dalam fasa akumulasi</li>
+                <li>• Suntikan modal segera bagi risiko 3D</li>
               </ul>
             </div>
 
-            <div class="border-t pt-4">
-              <p class="font-semibold text-red-700 mb-2">✗ Kelemahan:</p>
-              <ul class="text-sm text-gray-700 space-y-1 ml-4">
-                <li>• Kena bayar commitment bulanan</li>
-                <li>• Tak boleh guna untuk beli barang</li>
-                <li>• Kalau tak claim, rasa "rugi"</li>
-                <li>• Perlu faham terms & conditions</li>
+            <div class="border-t border-gray-50 pt-6">
+              <p class="text-[10px] text-gray-400 font-black uppercase tracking-widest mb-3">Komitmen Operasi:</p>
+              <ul class="text-sm text-gray-600 space-y-2">
+                <li>• Keperluan caruman bulanan tetap</li>
+                <li>• Tiada fungsi kecairan (non-liquid asset)</li>
+                <li>• Terikat kepada terma & syarat teknikal</li>
               </ul>
             </div>
           </div>
         </div>
       </div>
 
-      <h2 class="text-2xl font-semibold text-rose-700 mt-12 mb-4">Cerita Benar: Puan Siti</h2>
-      <div class="bg-rose-50 border-l-4 border-rose-600 p-8 rounded-r-2xl my-8">
-        <p class="text-gray-700 leading-relaxed mb-4">
-          Puan Siti, 35 tahun, seorang guru. Rajin simpan. Ada RM80k dalam ASB & FD.
+      <h2 class="text-2xl md:text-3xl font-black text-gray-900 mt-16 mb-4">Kajian Kes Mikro: Puan Siti</h2>
+      <div class="bg-white border-l-4 border-gray-900 p-8 rounded-r-[2rem] my-8 shadow-sm">
+        <p class="text-gray-700 leading-relaxed mb-6">
+          Siti (35), mengumpul RM80,000 sebagai rizab tunai keluarga.
         </p>
-        <p class="text-gray-700 leading-relaxed mb-4">
-          <strong>2022:</strong> Suami kena stroke. Bill hospital RM45k (guna medical card).
-        </p>
-        <p class="text-gray-700 leading-relaxed mb-4">
-          <strong>Masalah sebenar:</strong> Suami tak boleh kerja 10 bulan. Gaji suami RM5,500 × 10 bulan = <span
-            class="text-rose-700 font-semibold">RM55,000 hilang</span>.
-        </p>
-        <p class="text-gray-700 leading-relaxed mb-4">
-          Loan rumah RM2,000/bulan masih jalan. Anak 2 orang sekolah. Makan minum. Ubat follow-up.
-        </p>
-        <p class="text-rose-700 font-bold text-lg mb-4">
-          Simpanan RM80k habis dalam 8 bulan. 😔
-        </p>
-        <p class="text-gray-700 leading-relaxed">
-          Sekarang Puan Siti kena pinjam duit family, potong EPF. Stress level tinggi. Recovery suami pun slow sebab
-          tension masalah duit.
+        <div class="bg-gray-50 p-6 rounded-2xl mb-6 border border-gray-100 italic text-gray-500 text-sm">
+          "2022: Pasangan mengalami kegagalan sistem (strok). Biarpun bil hospital selesai (Medical Card), ketandusan
+          pendapatan sebanyak RM55,000 mula menghakis simpanan."
+        </div>
+        <p class="text-gray-900 font-black text-xl mb-0">
+          Analisis: Rizab RM80k lenyap 100% dalam masa 8 bulan bagi mengekalkan komitmen kehidupan.
         </p>
       </div>
 
-      <div class="bg-green-50 border-l-4 border-green-600 p-8 rounded-r-2xl my-8">
-        <p class="font-semibold text-green-900 mb-3">🤔 Bayangkan Kalau Ada Takaful CI...</p>
-        <p class="text-gray-700 leading-relaxed mb-3">
-          Suami dapat lump sum RM150k. Simpanan RM80k tak perlu sentuh. Boleh fokus recovery tanpa stress kewangan.
-        </p>
-        <p class="text-gray-700 leading-relaxed">
-          <strong>Cost takaful?</strong> Lebih kurang RM200/bulan untuk coverage RM150k. Setahun RM2,400. 10 tahun
-          RM24k.
-        </p>
-        <p class="text-green-700 font-semibold mt-3">
-          Bayar RM24k untuk dapat RM150k bila diuji. Worth it ke tidak? 🤔
-        </p>
+      <div class="bg-white border-l-4 border-gray-900 p-8 rounded-r-[2rem] my-8 shadow-sm flex gap-6 items-start">
+        <div class="text-gray-400">💡</div>
+        <div>
+          <p class="text-gray-900 font-black mb-2 uppercase tracking-widest text-xs">Pilihan Fail-Safe:</p>
+          <p class="text-gray-600 leading-relaxed m-0 text-sm">
+            Jika arsitektur kewangan Siti dilengkapi Pelan CI (RM150k), pampasan tersebut akan bertindak sebagai
+            <strong>Injeksi Aliran Tunai</strong>, memastikan simpanan RM80k kekal utuh bagi fasa pertumbuhan masa
+            depan.
+          </p>
+        </div>
       </div>
 
-      <h2 class="text-2xl font-semibold text-rose-700 mt-12 mb-4">Matematik Mudah: Simpanan vs Takaful</h2>
+      <h2 class="text-2xl md:text-3xl font-black text-gray-900 mt-16 mb-4">Algoritma Pertumbuhan vs Perlindungan:</h2>
 
       <div class="bg-gray-50 rounded-2xl p-8 my-8">
         <h3 class="font-semibold text-lg mb-4 text-gray-800">Senario: Encik Rahman, 30 tahun, gaji RM4,000</h3>
@@ -211,67 +216,78 @@
           </div>
         </div>
 
-        <div class="bg-rose-600 text-white rounded-xl p-6 mt-6">
-          <p class="font-semibold text-lg mb-2">🎯 Kesimpulan Matematik:</p>
-          <p>Takaful bagi perlindungan SEGERA dengan bayaran kecil. Simpanan ambil masa lama untuk grow.</p>
+        <div class="bg-gray-900 text-white rounded-2xl p-8 mt-10 text-center relative overflow-hidden group">
+          <div class="absolute inset-0 bg-gradient-to-br from-rose-600/10 to-transparent"></div>
+          <p class="text-sm font-bold uppercase tracking-widest mb-2 relative z-10 text-rose-500">Analisis Output:</p>
+          <p class="text-lg relative z-10 leading-relaxed">Takaful menyediakan perlindungan <strong>Instant
+              Liquid</strong> dari fasa awal. Simpanan memerlukan trajektori masa yang sangat panjang untuk mencapai
+            nilai yang sama.</p>
         </div>
       </div>
 
-      <h2 class="text-2xl font-semibold text-rose-700 mt-12 mb-4">Jadi, Mana Yang Betul?</h2>
+      <h2 class="text-2xl md:text-3xl font-black text-gray-900 mt-16 mb-4">Integrasi Arsitektur (Mana Yang Betul?):</h2>
 
-      <div class="bg-rose-600 text-white rounded-2xl p-8 my-8">
-        <h3 class="text-2xl font-bold mb-6 text-center">✨ KEDUA-DUANYA! ✨</h3>
+      <div class="bg-gray-900 text-white rounded-[2.5rem] p-12 my-12 shadow-2xl relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-rose-600/10 to-transparent"></div>
+        <h3 class="text-2xl font-black mb-10 text-center relative z-10 uppercase tracking-widest text-xs text-rose-500">
+          Simbiosis Kewangan:</h3>
 
-        <div class="space-y-6">
-          <div class="bg-white/10 rounded-xl p-6">
-            <p class="font-semibold text-xl mb-3">🛡️ Takaful untuk:</p>
-            <ul class="space-y-2">
-              <li>✓ Krisis besar (penyakit kritikal, kematian)</li>
-              <li>✓ Perlindungan keluarga jangka panjang</li>
-              <li>✓ Ganti pendapatan bila tak boleh kerja</li>
-              <li>✓ Pastikan waris terjaga bila kita tiada</li>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 relative z-10">
+          <div class="bg-white/10 backdrop-blur-md p-8 rounded-[2rem] border border-white/10">
+            <p class="text-xl font-black mb-6 flex items-center gap-3">
+              <span class="w-8 h-8 rounded-xl bg-white/20 flex items-center justify-center text-sm">🛡️</span>
+              Role: Takaful
+            </p>
+            <ul class="space-y-3 text-sm text-gray-400">
+              <li>✓ Menguruskan Impak Krisis Besar (3D)</li>
+              <li>✓ Menjamin Penggantian Pendapatan</li>
+              <li>✓ Memfungsikan Leverage Aliran Tunai</li>
             </ul>
           </div>
-          <p p class="font-semibold text-xl mb-3">💰 Simpanan untuk:</p>
-          <ul class="space-y-2">
-            <li>✓ Kecemasan kecil (kereta rosak, laptop pecah)</li>
-            <li>✓ Peluang baik (investment, bisnes)</li>
-            <li>✓ Impian jangka pendek (honeymoon, renovate rumah)</li>
-            <li>✓ Emergency fund 6 bulan expenses</li>
-          </ul>
+          <div class="bg-white/10 backdrop-blur-md p-8 rounded-[2rem] border border-white/10">
+            <p class="text-xl font-black mb-6 flex items-center gap-3">
+              <span class="w-8 h-8 rounded-xl bg-white/20 flex items-center justify-center text-sm">💰</span>
+              Role: Simpanan
+            </p>
+            <ul class="space-y-3 text-sm text-gray-400">
+              <li>✓ Membiayai Kecemasan Mikroskopik</li>
+              <li>✓ Peluang Pelaburan & Pertumbuhan</li>
+              <li>✓ Memenuhi Aspirasi Jangka Pendek</li>
+            </ul>
+          </div>
         </div>
-
       </div>
 
-      <div class="bg-white/10 rounded-xl p-6">
-        <p class="font-
-        <p class=" text-center text-xl font-semibold mt-6 text-yellow-300">
-          Simpanan = Sprint 🏃<br>
-          Takaful = Marathon 🏃‍♂️💨
+      <div class="text-center my-10 border-y border-gray-100 py-10">
+        <p class="text-lg font-bold text-gray-400 uppercase tracking-[0.3em]">
+          Simpanan = <span class="text-gray-900">Sprint</span> 🏃<br>
+          Takaful = <span class="text-gray-900">Marathon</span> 🏃‍♂️💨
         </p>
       </div>
 
-      <h2 class="text-2xl font-semibold text-rose-700 mt-12 mb-4">Formula Seimbang Yang Saya Syorkan</h2>
+      <h2 class="text-2xl md:text-3xl font-black text-gray-900 mt-16 mb-4">SOP Penyeimbangan (Framework 50/50):</h2>
 
       <div class="bg-white border border-gray-100 rounded-2xl p-8 my-8">
         <h3 class="text-xl font-semibold text-rose-700 mb-6 text-center">💡 Formula 10% - 50/50</h3>
 
         <div class="space-y-6">
-          <div class="flex items-start">
-            <span class="text-3xl mr-4">1️⃣</span>
+          <div class="flex items-start gap-6">
+            <span
+              class="w-10 h-10 rounded-2xl bg-gray-900 text-white flex items-center justify-center font-black text-xs flex-shrink-0">01.</span>
             <div>
-              <p class="font-semibold text-gray-800 mb-2">Ambil 10% dari pendapatan bulanan</p>
-              <p class="text-gray-600 text-sm">Contoh: Gaji RM5,000 → RM500/bulan untuk perlindungan & simpanan</p>
+              <p class="font-bold text-gray-900 mb-2">Pecahan Aras 10% Pendapatan</p>
+              <p class="text-gray-500 text-sm italic">Example: RM500/mth bagi perancangan holistik.</p>
             </div>
           </div>
 
-          <div class="flex items-start">
-            <span class="text-3xl mr-4">2️⃣</span>
+          <div class="flex items-start gap-6">
+            <span
+              class="w-10 h-10 rounded-2xl bg-gray-900 text-white flex items-center justify-center font-black text-xs flex-shrink-0">02.</span>
             <div>
-              <p class="font-semibold text-gray-800 mb-2">Bahagi 50/50</p>
-              <ul class="text-gray-600 text-sm space-y-1 ml-4">
-                <li>• 50% untuk Takaful (RM250) = Perlindungan jangka panjang</li>
-                <li>• 50% untuk Simpanan (RM250) = Emergency fund & growth</li>
+              <p class="font-bold text-gray-900 mb-2">Simetri Alokasi 50/50</p>
+              <ul class="text-gray-600 text-sm space-y-2">
+                <li>• 50% Takaful (Perlindungan Struktur Jangka Panjang)</li>
+                <li>• 50% Simpanan (Pertumbuhan & Kecairan Peribadi)</li>
               </ul>
             </div>
           </div>
@@ -285,17 +301,17 @@
           </div>
         </div>
 
-        <div class="bg-rose-600 text-white rounded-xl p-6 mt-8">
-          <p class="text-center font-semibold">
-            Dengan cara ini, anda dapat perlindungan SEGERA & simpanan yang BERKEMBANG! 🎯
+        <div class="mt-10 bg-gray-900 text-white rounded-2xl p-6 text-center shadow-lg">
+          <p class="font-black text-sm uppercase tracking-widest">
+            Sinergi: Perlindungan Segera (Offset) & Aset Yang Progresif
           </p>
         </div>
       </div>
 
-      <h2 class="text-2xl font-semibold text-rose-700 mt-12 mb-4">Mitos Yang Perlu Dibetulkan</h2>
+      <h2 class="text-2xl md:text-3xl font-black text-gray-900 mt-16 mb-4">Pembersihan Mitos (Busting Myths):</h2>
 
       <div class="space-y-6 my-8">
-        <div class="bg-red-50 border-l-4 border-red-500 p-6 rounded-r-xl">
+        <div class="bg-white border-l-4 border-gray-900 p-6 rounded-r-xl shadow-sm">
           <p class="font-semibold text-red-800 mb-2">❌ Mitos 1: "Takaful rugi kalau tak claim"</p>
           <p class="text-gray-700">
             <strong>Fakta:</strong> Rumah anda pernah terbakar ke? Tak kan. Tapi anda bayar insurans rumah kan? Sama
@@ -303,7 +319,7 @@
           </p>
         </div>
 
-        <div class="bg-red-50 border-l-4 border-red-500 p-6 rounded-r-xl">
+        <div class="bg-white border-l-4 border-gray-900 p-6 rounded-r-xl shadow-sm">
           <p class="font-semibold text-red-800 mb-2">❌ Mitos 2: "Simpanan lagi baik, duit sendiri"</p>
           <p class="text-gray-700">
             <strong>Fakta:</strong> Betul duit sendiri. Tapi bila diuji besar (stroke, kanser), simpanan RM50k habis
@@ -311,7 +327,7 @@
           </p>
         </div>
 
-        <div class="bg-red-50 border-l-4 border-red-500 p-6 rounded-r-xl">
+        <div class="bg-white border-l-4 border-gray-900 p-6 rounded-r-xl shadow-sm">
           <p class="font-semibold text-red-800 mb-2">❌ Mitos 3: "Muda lagi, nanti la buat"</p>
           <p class="text-gray-700">
             <strong>Fakta:</strong> Premium takaful MURAH bila muda & sihat. Umur 25 vs 35 beza RM50-100/bulan! Plus,
@@ -319,7 +335,7 @@
           </p>
         </div>
 
-        <div class="bg-red-50 border-l-4 border-red-500 p-6 rounded-r-xl">
+        <div class="bg-white border-l-4 border-gray-900 p-6 rounded-r-xl shadow-sm">
           <p class="font-semibold text-red-800 mb-2">❌ Mitos 4: "Takaful susah claim"</p>
           <p class="text-gray-700">
             <strong>Fakta:</strong> Kalau ada proper documentation & ikut terms, claim OK je. Yang susah tu bila beli
@@ -332,23 +348,23 @@
 
       <div class="bg-gray-50 rounded-2xl p-8 my-8">
         <div class="space-y-6">
-          <div class="flex items-start">
+          <div class="flex items-start gap-6">
             <div
-              class="bg-rose-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold mr-4 flex-shrink-0">
-              1</div>
+              class="bg-gray-900 text-white rounded-2xl w-10 h-10 flex items-center justify-center font-black text-xs flex-shrink-0">
+              01.</div>
             <div>
-              <p class="font-semibold text-gray-800 mb-1">Kira berapa simpanan anda ada sekarang</p>
-              <p class="text-gray-600 text-sm">Cukup ke untuk cover 6 bulan expenses?</p>
+              <p class="font-bold text-gray-900 mb-1">Audit Aras Liquidity Semasa</p>
+              <p class="text-gray-500 text-sm">Validasi ketahanan bagi 6 bulan komitmen.</p>
             </div>
           </div>
 
-          <div class="flex items-start">
+          <div class="flex items-start gap-6">
             <div
-              class="bg-rose-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold mr-4 flex-shrink-0">
-              2</div>
+              class="bg-gray-900 text-white rounded-2xl w-10 h-10 flex items-center justify-center font-black text-xs flex-shrink-0">
+              02.</div>
             <div>
-              <p class="font-semibold text-gray-800 mb-1">Check pelan takaful/insurans yang ada</p>
-              <p class="text-gray-600 text-sm">Ada CI coverage ke? Berapa coverage nya? Cukup ke?</p>
+              <p class="font-bold text-gray-900 mb-1">Audit Integriti Perlindungan (CI)</p>
+              <p class="text-gray-500 text-sm">Validasi gandaan pampasan mengikut keperluan sistem keluarga.</p>
             </div>
           </div>
 
@@ -384,27 +400,23 @@
         </div>
       </div>
 
-      <h2 class="text-2xl font-semibold text-rose-700 mt-12 mb-4">Kesimpulan</h2>
+      <h2 class="text-2xl md:text-3xl font-black text-gray-900 mt-16 mb-4">Sintesis Akhir:</h2>
 
-      <div class="bg-rose-600 text-white rounded-2xl p-8 my-8">
-        <p class="text-xl leading-relaxed mb-4">
-          Simpanan & Takaful bukan musuh. <strong>Mereka best friends yang jaga anda dari sudut berbeza.</strong>
+      <div class="bg-gray-900 text-white rounded-[2.5rem] p-12 my-12 shadow-2xl relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-rose-600/10 to-transparent"></div>
+        <p class="text-xl leading-relaxed mb-6 relative z-10">
+          Simpanan & Takaful bukanlah entiti yang bersaing. <strong>Mereka adalah komponen simbiosis dalam arsitektur
+            kewangan anda.</strong>
         </p>
-        <p class="text-rose-100 leading-relaxed mb-4">
-          Simpanan = Untuk hari-hari biasa & impian<br>
-          Takaful = Untuk bila diuji 3D (death, disease, disability)
-        </p>
-        <p class="text-xl font-semibold text-yellow-300">
-          Dua-dua penting. Dua-dua perlu. Jangan pilih satu je. 🎯
+        <p class="text-gray-400 text-lg font-black relative z-10 uppercase tracking-widest text-xs text-rose-500">
+          Logic: Simpanan (Liquidity) | Takaful (Solvency)
         </p>
       </div>
 
-      <div class="bg-rose-50 border border-gray-100 rounded-2xl p-8 my-8 text-center">
-        <p class="text-2xl font-bold text-rose-700 mb-4">💭 Ingat Ini:</p>
-        <p class="text-gray-700 text-lg leading-relaxed italic">
-          "Simpanan boleh habis bila diuji.<br>
-          Takaful kekal bantu bila krisis.<br>
-          <strong class="text-rose-700">Yang bijak, ada kedua-duanya.</strong>"
+      <div class="bg-white border rounded-[2.5rem] p-12 my-12 text-center shadow-sm">
+        <p class="text-3xl font-black text-gray-900 mb-6">Prinsip Mekanikal:</p>
+        <p class="text-gray-500 text-xl leading-relaxed italic max-w-lg mx-auto">
+          "Simpanan melindungi impian, Takaful melindungi simpanan."
         </p>
       </div>
 
@@ -412,46 +424,55 @@
 
     <!-- CTA Section -->
     <!-- Author Box -->
-    <div class="bg-gray-100 rounded-2xl p-8 my-12 border border-gray-200">
-      <div class="flex flex-col sm:flex-row items-center text-center sm:text-left">
-        <img src="/images/dr-takaful-hana-profile.png" alt="Dr. Takaful (Hana)"
-          class="w-24 h-24 rounded-full mb-4 sm:mb-0 sm:mr-6 flex-shrink-0 object-cover border-4 border-white shadow-lg">
+    <div class="mt-24 pt-16 border-t border-gray-100">
+      <div
+        class="bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-sm flex flex-col md:flex-row items-center md:items-start gap-10 text-center md:text-left transition-all hover:shadow-xl hover:border-rose-100">
+        <div class="w-32 h-32 rounded-3xl bg-rose-50 overflow-hidden flex-shrink-0 border-4 border-rose-50">
+          <img src="images/dr-takaful-hana-profile.png" alt="Dr. Takaful Hana" class="w-full h-full object-cover">
+        </div>
         <div>
-          <h3 class="text-xl font-bold text-rose-700 m-0">Tentang Penulis: Dr. Takaful (Hana)</h3>
-          <p class="text-sm text-gray-500 mt-1 mb-3">Perancang Takaful Profesional AIA</p>
-          <p class="text-base text-gray-700 leading-relaxed mt-0">
-            Dengan latar belakang PhD dalam Kejuruteraan, saya membawa pendekatan analitikal dan berstruktur dalam
-            perancangan kewangan. Misi saya bukan sekadar menjual polisi, tetapi untuk mendidik dan memperkasa klien
-            saya untuk membuat keputusan kewangan yang bijak demi masa depan keluarga mereka.
+          <div class="flex flex-col md:flex-row md:items-center gap-3 mb-4 sans-font">
+            <h4 class="text-2xl font-black text-gray-900">Dr. Hana</h4>
+            <span
+              class="bg-gray-900 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">PhD
+              Engineering</span>
+          </div>
+          <p class="text-gray-500 leading-relaxed mb-6">
+            Menggunakan pendekatan data & analisis risiko untuk membantu keluarga membina struktur kewangan yang tahan
+            lasak. Misi Hana: 0% Harta Beku, 100% Ketenangan.
           </p>
-          <a href="https://wa.me/60132522587?text=Assalamualaikum%20Hana,%20saya%20telah%20baca%20artikel%20blog%20dan%20ingin%20bertanya%20lebih%20lanjut."
-            class="inline-block mt-3 text-sm text-rose-600 font-semibold hover:underline">Hubungi Saya untuk Sesi
-            Percuma →</a>
+          <div class="flex justify-center md:justify-start gap-6">
+            <a href="https://wa.me/60132522587?text=Assalamualaikum%20Hana,%20saya%20telah%20baca%20artikel%20blog%20dan%20ingin%20bertanya%20lebih%20lanjut."
+              class="text-rose-600 font-black text-xs uppercase tracking-widest hover:underline flex items-center gap-2 group sans-font">
+              WhatsApp Consult <span class="group-hover:translate-x-1 transition-transform">→</span>
+            </a>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="bg-rose-600 text-white rounded-2xl p-8 mt-16 text-center">
-      <h3 class="text-2xl font-bold mb-4">Nak Tahu Berapa Coverage Yang Anda Perlukan?</h3>
-      <p class="text-rose-100 mb-6 max-w-2xl mx-auto">
-        Saya boleh bantu anda buat planning yang sesuai dengan pendapatan & tanggungan anda. PERCUMA, tanpa tekanan.
-      </p>
-      <a href="https://wa.me/60132522587?text=Assalamualaikum,%20saya%20nak%20tahu%20macam%20mana%20nak%20balance%20simpanan%20dan%20takaful"
-        class="inline-block bg-white text-rose-600 px-8 py-4 rounded-full font-semibold hover:bg-rose-50 transition">
-        WhatsApp Saya Sekarang 💬
-      </a>
+    <div
+      class="bg-gray-900 text-white rounded-[2.5rem] p-12 mt-16 text-center shadow-2xl relative overflow-hidden group">
+      <div class="relative z-10">
+        <h3 class="text-3xl font-black mb-6">Optimasi Arsitektur Anda?</h3>
+        <p class="text-gray-400 mb-10 max-w-2xl mx-auto text-lg leading-relaxed">
+          Biar Hana bantu anda bina keseimbangan teknikal antara simpanan kecairan dan dana perlindungan risiko.
+        </p>
+        <a href="https://wa.me/60132522587?text=Assalamualaikum,%20saya%20nak%20tahu%20macam%20mana%20nak%20balance%20simpanan%20dan%20takaful"
+          class="inline-block bg-white text-gray-900 px-10 py-5 rounded-2xl font-bold uppercase tracking-widest text-sm transition-all shadow-xl hover:bg-gray-100">
+          WhatsApp Saya Sekarang 💬
+        </a>
+        <p class="text-gray-400 text-[10px] font-bold uppercase tracking-widest mt-8">🤝 Konsultasi Percuma | 📊
+          Analisis Data | 🏢 Financial Strategy</p>
+      </div>
     </div>
 
   </article>
 
-  <!-- Footer -->
-  <footer class="bg-gray-50 py-8 px-6 mt-16">
-    <div class="max-w-4xl mx-auto text-center">
-      <p class="text-gray-600 mb-4">
-        <a href="/" class="text-rose-600 hover:underline">← Kembali ke Laman Utama</a>
-      </p>
-      <p class="text-gray-500 text-sm">© 2025 Takaful by Hana — Dr. Takaful | Semua Hak Terpelihara</p>
-    </div>
+  <footer class="py-12 border-t border-gray-100 text-center sans-font">
+    <p class="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-400">
+      &copy; <span id="current-year">2026</span> Dr. Takaful Strategy. Engineered for Legacy.
+    </p>
   </footer>
 
 </body>

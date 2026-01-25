@@ -62,17 +62,18 @@
 </head>
 
 <body
-    class="bg-gray-50 text-gray-800 antialiased selection:bg-rose-100 selection:text-rose-900 min-h-screen flex flex-col">
+    class="bg-gray-50 text-gray-800 antialiased selection:bg-gray-100 selection:text-gray-900 min-h-screen flex flex-col">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFWGX5DS" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <!-- Header -->
-    <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
+    <header class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-gray-100">
         <div class="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
             <a href="/" class="brand-logo">DR.<span class="text-rose-600">TAKAFUL</span></a>
-            <a href="/" class="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors">← Kembali</a>
+            <a href="/"
+                class="text-xs font-bold uppercase tracking-widest text-gray-400 hover:text-gray-900 transition-colors sans-font">←
+                Kembali</a>
         </div>
     </header>
 
@@ -88,13 +89,13 @@
                     <span>Selesai</span>
                 </div>
                 <div class="h-1.5 w-full bg-gray-200 rounded-full overflow-hidden">
-                    <div id="progress" class="progress-bar h-full bg-rose-600 rounded-full" style="width: 25%;"></div>
+                    <div id="progress" class="progress-bar h-full bg-gray-900 rounded-full" style="width: 25%;"></div>
                 </div>
             </div>
 
             <!-- Wizard Card -->
-            <div class="glass-card rounded-[2.5rem] p-8 md:p-12 shadow-2xl shadow-rose-900/5 relative overflow-hidden">
-                <div class="absolute top-0 right-0 w-32 h-32 bg-rose-50 rounded-full -mr-16 -mt-16 opacity-50"></div>
+            <div class="glass-card rounded-[2.5rem] p-8 md:p-12 shadow-2xl shadow-gray-900/5 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-gray-50 rounded-full -mr-16 -mt-16 opacity-50"></div>
 
                 <form id="hibah-wizard" onsubmit="return false">
 
@@ -111,10 +112,11 @@
                             <span
                                 class="absolute left-6 top-1/2 -translate-y-1/2 text-xl font-bold text-gray-400">RM</span>
                             <input type="number" id="input-expenses"
-                                class="w-full pl-16 pr-6 py-6 bg-gray-50 border-2 border-transparent focus:border-rose-500 focus:bg-white rounded-2xl text-2xl font-bold transition-all outline-none"
+                                class="w-full pl-16 pr-6 py-6 bg-gray-50 border-2 border-transparent focus:border-gray-900 focus:bg-white rounded-2xl text-2xl font-bold transition-all outline-none"
                                 placeholder="cth: 5000" autofocus>
                         </div>
-                        <p class="mt-4 text-xs text-rose-500 font-medium">Langkah ini akan mengira keperluan 'Gaji 100
+                        <p class="mt-4 text-[10px] text-gray-400 font-bold uppercase tracking-widest">Langkah ini akan
+                            mengira keperluan 'Gaji 100
                             Bulan'.</p>
                     </div>
 
@@ -131,7 +133,7 @@
                             <span
                                 class="absolute left-6 top-1/2 -translate-y-1/2 text-xl font-bold text-gray-400">RM</span>
                             <input type="number" id="input-loans"
-                                class="w-full pl-16 pr-6 py-6 bg-gray-50 border-2 border-transparent focus:border-rose-500 focus:bg-white rounded-2xl text-2xl font-bold transition-all outline-none"
+                                class="w-full pl-16 pr-6 py-6 bg-gray-50 border-2 border-transparent focus:border-gray-900 focus:bg-white rounded-2xl text-2xl font-bold transition-all outline-none"
                                 placeholder="cth: 300000">
                         </div>
                     </div>
@@ -149,7 +151,7 @@
                             <span
                                 class="absolute left-6 top-1/2 -translate-y-1/2 text-xl font-bold text-gray-400">RM</span>
                             <input type="number" id="input-education"
-                                class="w-full pl-16 pr-6 py-6 bg-gray-50 border-2 border-transparent focus:border-rose-500 focus:bg-white rounded-2xl text-2xl font-bold transition-all outline-none"
+                                class="w-full pl-16 pr-6 py-6 bg-gray-50 border-2 border-transparent focus:border-gray-900 focus:bg-white rounded-2xl text-2xl font-bold transition-all outline-none"
                                 placeholder="cth: 100000">
                         </div>
                     </div>
@@ -162,7 +164,7 @@
                                 Legasi Goal Anda
                             </h2>
                             <div id="final-total"
-                                class="text-4xl md:text-6xl font-black text-rose-600 mb-6 tabular-nums">RM 0</div>
+                                class="text-4xl md:text-6xl font-black text-gray-900 mb-6 tabular-nums">RM 0</div>
 
                             <div class="bg-gray-50 rounded-2xl p-6 text-left space-y-3 mb-8">
                                 <div class="flex justify-between text-sm">
@@ -178,7 +180,7 @@
                                     <span id="summary-education" class="font-bold">RM 0</span>
                                 </div>
                                 <div
-                                    class="border-t border-gray-200 pt-3 flex justify-between text-xs text-rose-600 font-bold">
+                                    class="border-t border-gray-200 pt-3 flex justify-between text-[10px] text-gray-900 font-black uppercase tracking-widest">
                                     <span>Dana Kecemasan (20%)</span>
                                     <span id="summary-buffer">RM 0</span>
                                 </div>
@@ -197,15 +199,15 @@
                             Seterusnya
                         </button>
                         <a id="whatsapp-btn" href="#" target="_blank"
-                            class="hidden flex-[2] bg-rose-600 text-white py-5 rounded-2xl font-bold hover:bg-rose-700 transition shadow-lg shadow-rose-200 text-center uppercase tracking-widest text-xs">
-                            Tanya Hana Je 👋
+                            class="hidden flex-[2] bg-rose-600 text-white py-5 rounded-2xl font-bold hover:bg-rose-700 transition shadow-lg shadow-rose-100 text-center uppercase tracking-widest text-xs">
+                            WhatsApp Hana Je 👋
                         </a>
                     </div>
                 </form>
             </div>
 
             <p class="text-center mt-10 text-gray-400 text-[10px] font-bold uppercase tracking-[0.2em] leading-relaxed">
-                Data anda diproses secara selamat & private. <br />Dr. Takaful Strategy © 2026
+                Data anda diproses secara selamat & private. <br />Dr. Takaful Strategy. Engineered for Legacy.
             </p>
         </div>
     </main>

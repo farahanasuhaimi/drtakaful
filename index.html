@@ -64,7 +64,7 @@
   <link rel="stylesheet" href="src/global.css">
 </head>
 
-<body class="bg-gray-50 text-gray-800 antialiased selection:bg-rose-100 selection:text-rose-900">
+<body class="bg-gray-50 text-gray-800 antialiased selection:bg-gray-100 selection:text-gray-900">
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFWGX5DS" height="0" width="0"
       style="display:none;visibility:hidden"></iframe></noscript>
@@ -120,11 +120,11 @@
   </header>
 
   <!-- HERO SECTION -->
-  <section class="relative pt-24 sm:pt-32 pb-12 sm:pb-20 px-4 sm:px-6 overflow-hidden">
+  <section class="relative pt-24 sm:pt-32 pb-12 sm:pb-20 px-4 sm:px-6 overflow-hidden grid-bg">
     <!-- Offer Banner (Simplified) -->
-    <div id="offer-banner" class="max-w-4xl mx-auto mb-10 px-4">
+    <div id="offer-banner" class="max-w-4xl mx-auto mb-10 px-4 relative z-10">
       <div
-        class="bg-white border-l-4 border-gray-900 rounded-xl p-4 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-sm">
+        class="bg-white border border-gray-100 rounded-2xl p-4 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-xl shadow-gray-200/50">
         <div class="flex items-center gap-3">
           <span class="flex h-3 w-3 relative">
             <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
@@ -145,22 +145,22 @@
 
     <div class="max-w-4xl mx-auto text-center">
       <h1 class="text-4xl sm:text-5xl md:text-7xl font-bold text-gray-900 tracking-tight mb-6 leading-tight">
-        Jika Gaji Anda Hilang,<br />
-        <span class="text-gray-500">Siapa Bayar Komitmen?</span>
+        Jika Gaji Anda Terhenti,<br />
+        <span class="text-gray-400">Siapa Bayar Komitmen?</span>
       </h1>
-      <p class="text-base sm:text-lg md:text-xl text-gray-500 max-w-2xl mx-auto leading-relaxed mb-8">
-        Jangan ambil risiko. Wujudkan <strong>'Gaji Kedua'</strong> (Income Replacement) untuk pastikan sara hidup
-        isteri & anak-anak kekal terjamin walau apa pun yang terjadi kepada anda.
+      <p class="text-base sm:text-lg md:text-xl text-gray-500 max-w-2xl mx-auto leading-relaxed mb-10">
+        Jangan biarkan struktur kewangan keluarga anda lumpuh. Bangunkan sistem <strong>'Gaji Kedua'</strong> secara
+        strategik bagi menjamin kelangsungan legasi anda.
       </p>
 
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
         <a href="#borang-konsultasi"
-          class="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 bg-gray-900 text-white rounded-full font-medium text-sm sm:text-base hover:bg-gray-800 transition-all shadow-lg hover:shadow-xl active:scale-95">
-          Kira Kelayakan Saya (Percuma)
+          class="w-full sm:w-auto px-10 py-5 bg-gray-900 text-white rounded-2xl font-bold uppercase tracking-widest text-xs hover:bg-gray-800 transition-all shadow-xl active:scale-95">
+          Analisis Kelayakan
         </a>
         <a href="/formula-10-peratus-pendapatan-takaful.html"
-          class="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 bg-white text-gray-900 border border-gray-200 rounded-full font-medium text-sm sm:text-base hover:bg-gray-50 transition-all active:scale-95">
-          Lihat Contoh Bajet
+          class="w-full sm:w-auto px-10 py-5 bg-white text-gray-900 border border-gray-100 rounded-2xl font-bold uppercase tracking-widest text-xs hover:bg-gray-50 transition-all active:scale-95 shadow-sm">
+          Simulasi Bajet
         </a>
       </div>
 
@@ -221,11 +221,12 @@
           menghadapi salah satu risiko ini sebelum bersara.</p>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-8">
+      <div class="grid md:grid-cols-3 gap-8 relative z-10">
         <!-- Disease Card -->
-        <div
-          class="bg-white rounded-3xl p-8 hover:shadow-xl transition-shadow duration-300 border border-gray-100 flex flex-col">
-          <div class="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center text-2xl mb-6">🩺</div>
+        <div class="premium-card p-8 group">
+          <div
+            class="w-12 h-12 bg-gray-50 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-gray-900 group-hover:text-white transition-colors">
+            🩺</div>
           <h3 class="text-xl font-bold text-gray-900 mb-3">Hilang Gaji Akibat Sakit</h3>
           <p class="text-gray-500 mb-8 leading-relaxed flex-grow">
             Medical card hanya bayar bil hospital. Bagaimana dengan bil rumah & makan minum jika anda terpaksa ambil
@@ -238,9 +239,10 @@
         </div>
 
         <!-- Disability Card -->
-        <div
-          class="bg-white rounded-3xl p-8 hover:shadow-xl transition-shadow duration-300 border border-gray-100 flex flex-col">
-          <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center text-2xl mb-6">♿
+        <div class="premium-card p-8 group">
+          <div
+            class="w-12 h-12 bg-gray-50 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-gray-900 group-hover:text-white transition-colors">
+            ♿
           </div>
           <h3 class="text-xl font-bold text-gray-900 mb-3">Lumpuh Kekal</h3>
           <p class="text-gray-500 mb-8 leading-relaxed flex-grow">
@@ -254,9 +256,10 @@
         </div>
 
         <!-- Death Card -->
-        <div
-          class="bg-white rounded-3xl p-8 hover:shadow-xl transition-shadow duration-300 border border-gray-100 flex flex-col">
-          <div class="w-12 h-12 bg-gray-100 text-gray-600 rounded-xl flex items-center justify-center text-2xl mb-6">💔
+        <div class="premium-card p-8 group">
+          <div
+            class="w-12 h-12 bg-gray-50 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-gray-900 group-hover:text-white transition-colors">
+            💔
           </div>
           <h3 class="text-xl font-bold text-gray-900 mb-3">Meninggal Dunia</h3>
           <p class="text-gray-500 mb-8 leading-relaxed flex-grow">
@@ -363,12 +366,14 @@
       <div class="order-1 md:order-2 flex justify-center">
         <div class="relative group">
           <div
-            class="absolute inset-0 bg-rose-200 rounded-full blur-2xl opacity-20 group-hover:opacity-30 transition-opacity">
+            class="absolute inset-0 bg-gray-200 rounded-[3rem] blur-3xl opacity-10 group-hover:opacity-20 transition-opacity">
           </div>
-          <img src="images/dr-takaful-hana-profile.png" alt="Dr. Takaful Hana"
-            class="relative rounded-full w-64 h-64 md:w-80 md:h-80 object-cover border-4 border-white shadow-xl">
-          <div class="absolute bottom-6 right-0 bg-white px-5 py-2 rounded-full shadow-lg border border-gray-100">
-            <p class="text-xs font-bold tracking-wider text-gray-900 uppercase">PhD in Engineering</p>
+          <div
+            class="relative w-64 h-64 md:w-80 md:h-80 rounded-[3rem] bg-rose-50 overflow-hidden border-4 border-white shadow-2xl">
+            <img src="images/dr-takaful-hana-profile.png" alt="Dr. Takaful Hana" class="w-full h-full object-cover">
+          </div>
+          <div class="absolute -bottom-4 -right-4 bg-white px-6 py-3 rounded-2xl shadow-xl border border-gray-50">
+            <p class="text-[10px] font-black tracking-[0.2em] text-gray-900 uppercase sans-font">PhD Engineering</p>
           </div>
         </div>
       </div>
@@ -870,42 +875,56 @@
         <h2 class="text-3xl font-bold text-gray-900 mb-4">Link Berguna</h2>
         <p class="text-gray-500 max-w-2xl mx-auto">Rancang kewangan anda dengan lebih bijak secara percuma.</p>
       </div>
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
         <!-- Tool 1 -->
-        <a href="/kalkulator-hibah.html"
-          class="block group p-8 rounded-3xl bg-gray-50 border border-gray-100 hover:border-gray-900 hover:shadow-lg transition-all">
-          <div class="text-3xl mb-4 group-hover:scale-110 transition-transform origin-left">🧮</div>
-          <h3 class="font-bold text-lg mb-2 text-gray-900 group-hover:text-gray-900 transition-colors">Kalkulator Hibah
+        <a href="/kalkulator-hibah.html" class="premium-card p-10 group block">
+          <div
+            class="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center text-3xl mb-8 group-hover:bg-gray-900 group-hover:text-white transition-all group-hover:scale-110">
+            🧮</div>
+          <h3 class="font-black text-xl mb-4 text-gray-900">Kalkulator Hibah
           </h3>
-          <p class="text-gray-500 text-sm leading-relaxed">Kira jumlah perlindungan yang ideal untuk keluarga anda jika
+          <p class="text-gray-500 text-sm leading-relaxed mb-6">Kira jumlah perlindungan yang ideal untuk keluarga anda
+            jika
             berlaku kematian.</p>
+          <p class="text-rose-600 font-black text-[10px] uppercase tracking-widest flex items-center gap-2">Launch Tool
+            <span class="group-hover:translate-x-1 transition-transform">→</span></p>
         </a>
         <!-- Tool 2 -->
-        <a href="/borang-fact-finding-medical-card.html"
-          class="block group p-8 rounded-3xl bg-gray-50 border border-gray-100 hover:border-gray-900 hover:shadow-lg transition-all">
-          <div class="text-3xl mb-4 group-hover:scale-110 transition-transform origin-left">📋</div>
-          <h3 class="font-bold text-lg mb-2 text-gray-900 group-hover:text-gray-900 transition-colors">Fact-Finding MC
+        <a href="/borang-fact-finding-medical-card.html" class="premium-card p-10 group block">
+          <div
+            class="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center text-3xl mb-8 group-hover:bg-gray-900 group-hover:text-white transition-all group-hover:scale-110">
+            📋</div>
+          <h3 class="font-black text-xl mb-4 text-gray-900">Fact-Finding MC
           </h3>
-          <p class="text-gray-500 text-sm leading-relaxed">Nak quotation medical card? Isi borang ini untuk konsultasi
+          <p class="text-gray-500 text-sm leading-relaxed mb-6">Nak quotation medical card? Isi borang ini untuk
+            konsultasi
             lebih fokus.</p>
+          <p class="text-rose-600 font-black text-[10px] uppercase tracking-widest flex items-center gap-2">Start Form
+            <span class="group-hover:translate-x-1 transition-transform">→</span></p>
         </a>
         <!-- Tool 3 -->
-        <a href="/borang-permohonan.html"
-          class="block group p-8 rounded-3xl bg-gray-50 border border-gray-100 hover:border-gray-900 hover:shadow-lg transition-all">
-          <div class="text-3xl mb-4 group-hover:scale-110 transition-transform origin-left">🚀</div>
-          <h3 class="font-bold text-lg mb-2 text-gray-900 group-hover:text-gray-900 transition-colors">Permohonan Online
+        <a href="/borang-permohonan.html" class="premium-card p-10 group block">
+          <div
+            class="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center text-3xl mb-8 group-hover:bg-gray-900 group-hover:text-white transition-all group-hover:scale-110">
+            🚀</div>
+          <h3 class="font-black text-xl mb-4 text-gray-900">Permohonan Online
           </h3>
-          <p class="text-gray-500 text-sm leading-relaxed">Sedia untuk dilindungi? Mulakan permohonan anda secara
+          <p class="text-gray-500 text-sm leading-relaxed mb-6">Sedia untuk dilindungi? Mulakan permohonan anda secara
             online.</p>
+          <p class="text-rose-600 font-black text-[10px] uppercase tracking-widest flex items-center gap-2">Apply Now
+            <span class="group-hover:translate-x-1 transition-transform">→</span></p>
         </a>
         <!-- Tool 4 -->
-        <a href="/analisis-keperluan.html"
-          class="block group p-8 rounded-3xl bg-gray-50 border border-gray-100 hover:border-gray-900 hover:shadow-lg transition-all">
-          <div class="text-3xl mb-4 group-hover:scale-110 transition-transform origin-left">📝</div>
-          <h3 class="font-bold text-lg mb-2 text-gray-900 group-hover:text-gray-900 transition-colors">Analisis Kewangan
+        <a href="/analisis-keperluan.html" class="premium-card p-10 group block">
+          <div
+            class="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center text-3xl mb-8 group-hover:bg-gray-900 group-hover:text-white transition-all group-hover:scale-110">
+            📝</div>
+          <h3 class="font-black text-xl mb-4 text-gray-900">Analisis Kewangan
           </h3>
-          <p class="text-gray-500 text-sm leading-relaxed">Sesi analisa kewangan 1-dengan-1 bersama Dr. Hana secara
+          <p class="text-gray-500 text-sm leading-relaxed mb-6">Sesi analisa kewangan 1-dengan-1 bersama Dr. Hana secara
             percuma.</p>
+          <p class="text-rose-600 font-black text-[10px] uppercase tracking-widest flex items-center gap-2">Book Session
+            <span class="group-hover:translate-x-1 transition-transform">→</span></p>
         </a>
       </div>
     </div>
@@ -913,21 +932,21 @@
 
   <!-- FINAL CTA -->
   <section class="py-24 px-6 bg-gray-900 text-white text-center">
-    <div class="max-w-3xl mx-auto">
-      <h2 class="text-3xl md:text-4xl font-bold mb-6">Lindungi Gaji & Keluarga Anda.</h2>
-      <p class="text-gray-400 text-lg mb-10 max-w-2xl mx-auto">
-        Jaringan keselamatan terbaik adalah yang anda sediakan hari ini.
+    <div class="max-w-3xl mx-auto py-12">
+      <h2 class="text-4xl font-black mb-8">Lindungi Gaji & Keluarga Anda.</h2>
+      <p class="text-gray-400 text-lg mb-12 max-w-xl mx-auto leading-relaxed">
+        Satu-satunya sistem perlindungan terbaik adalah sistem yang dipasang sebelum ianya diperlukan.
       </p>
       <a href="#borang-konsultasi"
-        class="inline-block bg-white text-gray-900 px-10 py-4 rounded-full font-medium hover:bg-gray-100 transition-all shadow-lg hover:scale-105">
-        Dapatkan Pelan Percuma
+        class="inline-block bg-white text-gray-900 px-12 py-5 rounded-2xl font-bold uppercase tracking-widest text-xs transition-all shadow-xl hover:bg-gray-100 hover:scale-105">
+        Bina Pelan Strategik
       </a>
     </div>
   </section>
 
-  <footer class="bg-white border-t border-gray-100 py-12 text-center">
-    <p class="text-gray-400 text-sm font-medium">
-      © <span id="current-year">2026</span> Dr. Takaful. Semua Hak Terpelihara.
+  <footer class="py-12 border-t border-gray-100 text-center sans-font">
+    <p class="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-400">
+      &copy; <span id="current-year">2026</span> Dr. Takaful Strategy. Engineered for Legacy.
     </p>
   </footer>
 

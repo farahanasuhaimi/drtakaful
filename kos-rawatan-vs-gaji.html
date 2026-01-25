@@ -29,36 +29,42 @@
   <link rel="stylesheet" href="src/global.css">
 </head>
 
-<body class="bg-gray-50 text-gray-800 antialiased selection:bg-rose-100 selection:text-rose-900">
+<body class="bg-gray-50 text-gray-800 antialiased selection:bg-gray-100 selection:text-gray-900">
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFWGX5DS" height="0" width="0"
       style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-  <!-- Simple Header -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
-    <div class="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
-      <a href="/" class="brand-logo">DR.<span class="text-rose-600">TAKAFUL</span></a>
-      <a href="/" class="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors">← Kembali</a>
-    </div>
+  <header class="fixed w-full top-0 glass-nav border-b border-gray-100 z-50">
+    <nav class="max-w-4xl mx-auto px-6 h-16 flex justify-between items-center">
+      <a href="/" class="brand-logo text-lg">
+        DR.<span class="text-rose-600">TAKAFUL</span>
+      </a>
+      <a href="/"
+        class="text-xs font-bold uppercase tracking-widest text-gray-400 hover:text-gray-900 transition-colors sans-font">
+        ← Laman Utama
+      </a>
+    </nav>
   </header>
 
   <!-- Blog Article -->
   <article class="max-w-3xl mx-auto pt-32 pb-20 px-6">
 
-    <!-- Title Section -->
+    <!-- Breadcrumbs -->
+    <div class="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400 mb-8">
+      <a href="/" class="hover:text-gray-900 transition-colors">Home</a>
+      <span class="text-gray-300">/</span>
+      <a href="/#blog" class="hover:text-gray-900 transition-colors">Blog</a>
+      <span class="text-gray-300">/</span>
+      <span class="text-gray-900">Risk Analysis</span>
+    </div>
+
     <div class="mb-12">
-      <h1 class="text-3xl md:text-5xl font-black text-gray-900 tracking-tight leading-tight mb-6">
-        Strategi 2026: Lindungi Gaji & Simpanan, Bukan Sekadar Bil Hospital
+      <h1 class="text-4xl md:text-6xl font-black text-gray-900 tracking-tight leading-tight mb-6">
+        Strategi <span class="text-gray-500">Gaji & Simpanan</span>
       </h1>
-      <div class="flex items-center gap-4 text-sm text-gray-500 font-medium">
-        <span
-          class="bg-gray-50 text-gray-600 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Kewangan</span>
-        <span>•</span>
-        <span>1 Januari 2026</span>
-        <span>•</span>
-        <span>6 minit bacaan</span>
-      </div>
+      <p class="text-xl text-gray-500 max-w-2xl leading-relaxed">Lindungi punca pendapatan, bukan sekadar membayar bil
+        hospital secara reaktif.</p>
     </div>
 
     <!-- Featured Image -->
@@ -74,12 +80,12 @@
     <div
       class="prose prose-lg max-w-none prose-headings:text-gray-900 prose-headings:font-black prose-p:text-gray-600 prose-p:leading-relaxed">
 
-      <p class="lead text-xl text-slate-700 mb-8 italic border-l-4 border-rose-500 pl-6">
+      <p class="lead text-xl text-slate-700 mb-8 italic border-l-4 border-gray-900 pl-6">
         "Tahukah anda? Ramai rakyat Malaysia muflis bukan kerana bil hospital (kerana ada hospital kerajaan), tetapi
         kerana hutang rumah & kereta yang terbehenti bayarannya semasa mereka sakit."
       </p>
 
-      <h2 class="text-2xl md:text-3xl mt-12 mb-6 text-rose-600">Mitos "Asalkan Ada Medical Card"</h2>
+      <h2 class="text-2xl md:text-3xl mt-12 mb-6 text-gray-900">Mitos "Asalkan Ada Medical Card"</h2>
       <p>
         Kebanyakan kita trauma dengan <strong>repricing</strong> medical card yang naik setiap tahun. Malah, ramai yang
         mula rasa terbeban. Tapi realitinya, medical card hanyalah 'tiket' masuk hospital swasta. Ia tidak melindungi
@@ -104,17 +110,17 @@
             <tr class="border-b border-gray-50">
               <td class="p-5 font-semibold">Ansuran Rumah/Sewa</td>
               <td class="p-5">RM1,500</td>
-              <td class="p-5 text-rose-600 font-bold">Wajib Bayar</td>
+              <td class="p-5 text-gray-900 font-bold uppercase text-[10px] tracking-widest">Wajib Bayar</td>
             </tr>
             <tr class="border-b border-gray-50">
               <td class="p-5 font-semibold">Ansuran Kereta</td>
               <td class="p-5">RM700</td>
-              <td class="p-5 text-rose-600 font-bold">Wajib Bayar</td>
+              <td class="p-5 text-gray-900 font-bold uppercase text-[10px] tracking-widest">Wajib Bayar</td>
             </tr>
             <tr class="border-b border-gray-50">
               <td class="p-5 font-semibold">Barang Dapur & Sekolah</td>
               <td class="p-5">RM1,000</td>
-              <td class="p-5 text-rose-600 font-bold">Wajib Bayar</td>
+              <td class="p-5 text-gray-900 font-bold uppercase text-[10px] tracking-widest">Wajib Bayar</td>
             </tr>
             <tr class="bg-gray-50/50 font-bold">
               <td class="p-5 text-gray-900 text-lg">Total Komitmen</td>
@@ -131,25 +137,29 @@
         hospital!
       </p>
 
-      <div class="bg-rose-600 text-white p-10 rounded-3xl text-center my-12 shadow-xl shadow-rose-100">
-        <p class="text-2xl md:text-3xl font-black m-0 leading-tight">
+      <div class="bg-gray-900 text-white p-10 rounded-[2.5rem] text-center my-12 shadow-2xl relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-rose-600/10 to-transparent"></div>
+        <p class="text-2xl md:text-3xl font-black m-0 leading-tight relative z-10">
           TETAPI... Siapa yang akan bayar RM3,200 sebulan komitmen anda di rumah sementara anda berehat?
         </p>
       </div>
 
       <h2 class="text-2xl md:text-3xl mt-16 mb-6">Statistik Kewangan (2024-2025)</h2>
       <ul class="space-y-6 my-10 list-none pl-0">
-        <li class="flex gap-4 items-start bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
-          <span class="text-rose-600 text-2xl">📊</span>
-          <p class="m-0"><span class="font-bold text-gray-900">Repricing Alert:</span> Caruman medical card naik 10-30%
+        <li class="flex gap-4 items-start bg-white p-8 rounded-3xl border border-gray-100 shadow-sm">
+          <span class="text-gray-400 text-2xl">📊</span>
+          <p class="m-0 text-sm leading-relaxed"><span class="font-bold text-gray-900">Repricing Alert:</span> Caruman
+            medical card naik 10-30%
             secara purata. Fokus kepada <strong>Pelan CI</strong> yang lebih stabil untuk perlindungan jangka panjang.
           </p>
         </li>
-        <li class="flex gap-4 items-start bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
-          <span class="text-rose-600 text-2xl">💰</span>
-          <p class="m-0"><span class="font-bold text-gray-900">Rawatan Percuma vs Bill Rumah:</span> Walaupun rawatan di
-            Gov percuma, <span class="text-rose-600 font-bold">Gaji anda pula terhenti</span>. Tanpa pampasan CI, isteri
-            terpaksa mengorek simpanan untuk survive.</p>
+        <li class="flex gap-4 items-start bg-white p-8 rounded-3xl border border-gray-100 shadow-sm">
+          <span class="text-gray-400 text-2xl">💰</span>
+          <p class="m-0 text-sm leading-relaxed"><span class="font-bold text-gray-900">Rawatan Percuma vs Bill
+              Rumah:</span> Walaupun rawatan di
+            kerajaan percuma, <span class="text-gray-900 font-black">Gaji anda pula terhenti</span>. Tanpa pampasan CI,
+            waris
+            terpaksa mengorek simpanan untuk survival.</p>
         </li>
       </ul>
 
@@ -160,43 +170,46 @@
       </p>
 
       <div class="space-y-8 my-10">
-        <div class="bg-white p-8 rounded-3xl border-2 border-rose-600 shadow-xl relative overflow-hidden">
+        <div class="bg-white p-10 rounded-[2.5rem] border border-gray-900 shadow-xl relative overflow-hidden">
           <div
-            class="absolute top-0 right-0 bg-rose-600 text-white px-6 py-1 text-xs font-bold uppercase tracking-widest">
+            class="absolute top-0 right-0 bg-gray-900 text-white px-6 py-2 text-[10px] font-black uppercase tracking-widest">
             Utama (Priority #1)</div>
-          <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-3">
+          <h3 class="text-xl font-black text-gray-900 mb-6 flex items-center gap-3">
             <span
-              class="w-8 h-8 rounded-full bg-rose-600 text-white flex items-center justify-center text-sm font-bold">1</span>
+              class="w-10 h-10 rounded-2xl bg-gray-900 text-white flex items-center justify-center text-sm font-bold">1</span>
             Pampasan Penyakit Kritikal (CI) — Income Protector
           </h3>
-          <p class="text-gray-600 mb-0">
-            Fokus utama adalah <strong>ganti gaji</strong>. Wang ini masuk terus ke akaun anda. Gunakan untuk bayar
-            installment rumah, kereta, dan belanja dapur. CI juga lebih stabil harganya berbanding medical card.
-          </p>
-        </div>
-
-        <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm transition-all hover:shadow-md">
-          <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-3">
-            <span
-              class="w-8 h-8 rounded-full bg-rose-50 text-rose-600 flex items-center justify-center text-sm font-bold">2</span>
-            Hibah Takaful — Asset Protector
-          </h3>
-          <p class="text-gray-600 mb-0">
-            Melindungi masa depan waris. Pastikan harta beku (faraid) tidak menyusahkan keluarga. Hibah adalah dana
-            'survival' isteri dan anak-anak sekiranya kita tiada.
+          <p class="text-gray-600 mb-0 leading-relaxed">
+            Fokus utama adalah <strong>ganti gaji</strong>. Wang ini masuk terus ke akaun anda secara liquid. Gunakan
+            untuk bayar
+            komitmen tetap rumah, kereta, dan survival harian. CI lebih stabil harganya secara teknikal berbanding
+            medical card.
           </p>
         </div>
 
         <div
-          class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm transition-all hover:shadow-md opacity-75">
-          <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-3">
+          class="bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-sm transition-all hover:shadow-xl group">
+          <h3 class="text-xl font-black text-gray-900 mb-6 flex items-center gap-3">
             <span
-              class="w-8 h-8 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center text-sm font-bold">3</span>
+              class="w-10 h-10 rounded-2xl bg-gray-100 text-gray-400 group-hover:bg-gray-900 group-hover:text-white transition-colors flex items-center justify-center text-sm font-bold">2</span>
+            Hibah Takaful — Asset Protector
+          </h3>
+          <p class="text-gray-600 mb-0 leading-relaxed">
+            Melindungi masa depan waris. Pastikan harta beku (faraid) tidak menyusahkan keluarga. Hibah adalah dana
+            'survival' isteri dan anak-anak sekiranya punca pendapatan utama terpadam.
+          </p>
+        </div>
+
+        <div
+          class="bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-sm transition-all hover:shadow-xl group opacity-80">
+          <h3 class="text-xl font-black text-gray-900 mb-6 flex items-center gap-3">
+            <span
+              class="w-10 h-10 rounded-2xl bg-gray-100 text-gray-400 transition-colors flex items-center justify-center text-sm font-bold">3</span>
             Medical Card — Choice Protector
           </h3>
-          <p class="text-gray-600 mb-0">
-            Untuk keselesaan dan kepantasan di hospital swasta. Bagus untuk dimiliki, tetapi <strong>jangan sampai
-              korbankan CI/Hibah</strong> semata-mata nak bayar medical card yang mahal dan sentiasa naik harga.
+          <p class="text-gray-600 mb-0 leading-relaxed">
+            Untuk keselesaan dan kepantasan akses hospital swasta. Bagus untuk dimiliki, tetapi <strong>jangan sampai
+              menjejaskan CI/Hibah</strong> semata-mata untuk membayar premium yang sentiasa mengalami inflasi.
           </p>
         </div>
       </div>
@@ -207,63 +220,64 @@
           rumah..."</em>. Kebanyakan mereka ada medical card, tapi tiada <strong>Income Replacement</strong>.
       </p>
 
-      <p class="mb-16">
-        Jangan biarkan keluarga anda berada dalam posisi itu. Lindungi <strong>gaji</strong> anda dahulu, kerana itulah
-        yang menanggung segalanya di luar hospital.
+      <p class="mb-16 text-gray-500">
+        Jangan biarkan keluarga anda berada dalam posisi itu. Lindungi <strong>gaji</strong> anda dahulu secara
+        analitikal, kerana itulah
+        struktur yang menanggung segalanya di luar hospital.
       </p>
 
     </div>
 
-    <!-- Author Box -->
-    <div
-      class="bg-white rounded-3xl p-10 my-20 border border-gray-100 shadow-sm flex flex-col md:flex-row items-center gap-8">
-      <img src="/images/dr-takaful-hana-profile.png" alt="Dr. Takaful (Hana)"
-        class="w-24 h-24 rounded-full object-cover border-4 border-gray-50 shadow-sm">
-      <div class="text-center md:text-left">
-        <h3 class="text-xl font-black text-gray-900 mb-2">Dr. Takaful (Hana)</h3>
-        <p class="text-gray-500 text-sm mb-4">PhD in Engineering & Certified Takaful Specialist</p>
-        <p class="text-gray-600 text-sm leading-relaxed mb-6">
-          "Saya percaya kepada strategi yang mampan. Ramai client saya gembira bila saya tunjukkan bagaimana 'lock'
-          pampasan ganti gaji dahulu supaya simpanan mereka tak hangus bila musibah melanda."
-        </p>
-        <a href="https://wa.me/60132522587?text=Assalamualaikum%20Hana,%20saya%20ingin%20tahu%20strategi%20lindungi%20gaji%20dan%20simpanan%20saya."
-          class="inline-block text-rose-600 font-bold hover:text-rose-700 transition-colors">
-          Lindungi Gaji Saya ↗
-        </a>
+    <div class="mt-24 pt-16 border-t border-gray-100">
+      <div
+        class="bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-sm flex flex-col md:flex-row items-center md:items-start gap-10 text-center md:text-left transition-all hover:shadow-xl hover:border-rose-100">
+        <div class="w-32 h-32 rounded-3xl bg-rose-50 overflow-hidden flex-shrink-0 border-4 border-rose-50">
+          <img src="images/dr-takaful-hana-profile.png" alt="Dr. Takaful Hana" class="w-full h-full object-cover">
+        </div>
+        <div>
+          <div class="flex flex-col md:flex-row md:items-center gap-3 mb-4 sans-font">
+            <h4 class="text-2xl font-black text-gray-900">Dr. Hana</h4>
+            <span
+              class="bg-gray-900 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">PhD
+              Engineering</span>
+          </div>
+          <p class="text-gray-500 leading-relaxed mb-6">
+            Menggunakan pendekatan data & analisis risiko untuk membantu keluarga membina struktur kewangan yang tahan
+            lasak. Misi Hana: 0% Harta Beku, 100% Ketenangan.
+          </p>
+          <div class="flex justify-center md:justify-start gap-6">
+            <a href="https://wa.me/60132522587?text=Assalamualaikum%20Hana,%20saya%20ingin%20tahu%20strategi%20lindungi%20gaji%20dan%20simpanan%20saya."
+              class="text-rose-600 font-black text-xs uppercase tracking-widest hover:underline flex items-center gap-2 group sans-font">
+              WhatsApp Consult <span class="group-hover:translate-x-1 transition-transform">→</span>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
 
-    <!-- Final CTA -->
-    <div class="bg-gray-900 rounded-3xl p-10 md:p-16 text-center text-white shadow-2xl">
-      <h3 class="text-2xl md:text-4xl font-black mb-6">Kunci Gaji & Simpanan Anda Sekarang</h3>
-      <p class="text-gray-400 mb-10 max-w-xl mx-auto text-lg">
-        Jangan biarkan ketidakpastian memusnahkan apa yang anda bina bertahun-tahun. Biar saya bantu anda bina 'Gaji
-        Kedua' yang kukuh.
-      </p>
-      <a href="https://wa.me/60132522587?text=Assalamualaikum%20Hana,%20saya%20nak%20kira%20jumlah%20pampasan%20ganti%20gaji%20yang%20saya%20perlukan."
-        class="inline-block bg-rose-600 text-white px-10 py-5 rounded-full font-bold hover:bg-rose-700 transition shadow-lg shadow-rose-900/20"
-        target="_blank" rel="noopener noreferrer">
-        Kira Ganti Gaji Saya 💬
-      </a>
-      <div class="flex flex-wrap justify-center gap-6 mt-10 text-xs font-bold text-gray-500 uppercase tracking-widest">
-        <span>AIA Miliki CI Plan</span>
-        <span>•</span>
-        <span>Income Replacement</span>
-        <span>•</span>
-        <span>No Repricing for CI</span>
+    <div
+      class="bg-gray-900 text-white rounded-[2.5rem] p-12 mt-16 text-center shadow-2xl relative overflow-hidden group">
+      <div class="relative z-10">
+        <h3 class="text-3xl font-black mb-6">Kunci Gaji & Simpanan Anda Sekarang</h3>
+        <p class="text-gray-400 mb-10 max-w-2xl mx-auto text-lg leading-relaxed">
+          Jangan biarkan ketidakpastian memusnahkan apa yang anda bina bertahun-tahun. Biar Hana bantu anda bina 'Gaji
+          Kedua' yang kukuh secara strategik.
+        </p>
+        <a href="https://wa.me/60132522587?text=Assalamualaikum%20Hana,%20saya%20nak%20kira%20jumlah%20pampasan%20ganti%20gaji%20yang%20saya%20perlukan."
+          class="inline-block bg-white text-gray-900 px-10 py-5 rounded-2xl font-bold uppercase tracking-widest text-sm transition-all shadow-xl hover:bg-gray-100">
+          Kira Ganti Gaji Saya 💬
+        </a>
+        <p class="text-gray-400 text-[10px] font-bold uppercase tracking-widest mt-8">🤝 Konsultasi Percuma | 📊
+          Analisis Data | 🏢 AIA Specialist</p>
       </div>
     </div>
 
   </article>
 
-  <!-- Footer -->
-  <footer class="bg-white py-12 px-6 border-t border-gray-100">
-    <div class="max-w-4xl mx-auto text-center">
-      <a href="/" class="text-gray-900 font-black tracking-tighter text-2xl mb-8 block">DR.<span
-          class="text-rose-600">TAKAFUL</span></a>
-      <p class="text-gray-400 text-sm">© <span id="current-year">2026</span> Takaful by Hana — Dr. Takaful | Semua Hak
-        Terpelihara</p>
-    </div>
+  <footer class="py-12 border-t border-gray-100 text-center sans-font">
+    <p class="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-400">
+      &copy; <span id="current-year">2026</span> Dr. Takaful Strategy. Engineered for Legacy.
+    </p>
   </footer>
 
   <script>

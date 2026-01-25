@@ -17,44 +17,62 @@
   <title>10% Income = 100 Bulan Tenang | Dr. Takaful</title>
   <meta name="description"
     content="Formula mudah untuk pastikan hidup terus stabil walau diuji 3D. Urus 10% pendapatan untuk 100 bulan ketenangan.">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="src/tailwind-config.js"></script>
+  <link rel="stylesheet" href="src/global.css">
 </head>
 
-<body class="bg-white text-gray-800">
+<body class="bg-gray-50 text-gray-800 antialiased selection:bg-gray-100 selection:text-gray-900">
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFWGX5DS" height="0" width="0"
       style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
-  <!-- Header -->
-  <header class="bg-rose-600 text-white py-4 px-6">
-    <div class="max-w-4xl mx-auto">
-      <a href="/" class="text-sm hover:underline">← Kembali ke Laman Utama</a>
-    </div>
+  <header class="fixed w-full top-0 glass-nav border-b border-gray-100 z-50">
+    <nav class="max-w-4xl mx-auto px-6 h-16 flex justify-between items-center">
+      <a href="/" class="brand-logo text-lg">
+        DR.<span class="text-rose-600">TAKAFUL</span>
+      </a>
+      <a href="/"
+        class="text-xs font-bold uppercase tracking-widest text-gray-400 hover:text-gray-900 transition-colors sans-font">
+        ← Laman Utama
+      </a>
+    </nav>
   </header>
 
   <!-- Blog Article -->
   <article class="max-w-4xl mx-auto py-12 px-6">
 
-    <!-- Title Section -->
-    <div class="text-center mb-12">
-      <h1 class="text-3xl md:text-4xl font-bold text-rose-700 mb-4">10% Income = 100 Bulan Tenang</h1>
-      <p class="text-gray-600 text-lg">Formula paling simple untuk susun perlindungan & simpanan anda</p>
-      <div class="flex justify-center items-center gap-4 mt-6 text-sm text-gray-500">
-        <span>📅 10 Oktober 2025</span>
-        <span>•</span>
-        <span>⏱️ 7 minit bacaan</span>
-      </div>
+    <!-- Breadcrumbs -->
+    <div class="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400 mb-8">
+      <a href="/" class="hover:text-gray-900 transition-colors">Home</a>
+      <span class="text-gray-300">/</span>
+      <a href="/#blog" class="hover:text-gray-900 transition-colors">Blog</a>
+      <span class="text-gray-300">/</span>
+      <span class="text-gray-900">Financial Strategy</span>
     </div>
 
-    <!-- Featured Image Placeholder -->
-    <div class="bg-rose-50 rounded-2xl h-64 flex items-center justify-center mb-12">
-      <span class="text-6xl">📊💯</span>
+    <!-- Title Section -->
+    <div class="mb-12">
+      <h1 class="text-4xl md:text-6xl font-black text-gray-900 tracking-tight leading-tight mb-6">
+        Formula <span class="text-gray-500">10% Pendapatan</span>
+      </h1>
+      <p class="text-xl text-gray-500 max-w-2xl leading-relaxed">Mekanisme paling efisien untuk menyusun perlindungan
+        dan simpanan keluarga anda secara analitikal.</p>
+    </div>
+
+    <!-- Featured Image -->
+    <div
+      class="aspect-video bg-white border border-gray-100 rounded-[2.5rem] overflow-hidden shadow-sm flex items-center justify-center mb-16">
+      <div class="text-center">
+        <span class="text-7xl block mb-4">📊💯</span>
+        <p class="text-gray-400 font-bold uppercase tracking-widest text-[10px]">Income Allocation Logic</p>
+      </div>
     </div>
 
     <!-- Content -->
     <div class="prose prose-lg max-w-none">
 
-      <h2 class="text-2xl font-semibold text-rose-700 mt-8 mb-4">Kenapa Ramai Tak Start Langsung?</h2>
+      <h2 class="text-2xl md:text-3xl font-black text-gray-900 mt-16 mb-4">Kenapa Ramai Mencapai Titik Pegun (Inertia)?
+      </h2>
 
       <div class="bg-gray-50 rounded-xl p-6 my-6">
         <p class="text-gray-700 italic mb-3">"Susah la nak fikir pasal takaful ni..."</p>
@@ -68,63 +86,86 @@
         paling simple yang saya guna dengan semua clients saya:
       </p>
 
-      <div class="bg-rose-600 text-white rounded-2xl p-8 my-8 text-center">
-        <p class="text-4xl font-bold mb-4">10% = 100</p>
-        <p class="text-xl mb-2">Urus 10% dari pendapatan bulanan</p>
-        <p class="text-rose-100 text-lg">Untuk 100 bulan (8+ tahun) ketenangan</p>
+      <div
+        class="bg-gray-900 text-white rounded-[2.5rem] p-12 my-12 text-center shadow-2xl relative overflow-hidden group">
+        <div class="absolute inset-0 bg-gradient-to-br from-rose-600/10 to-transparent"></div>
+        <p class="text-5xl font-black mb-6 relative z-10">10% = 100</p>
+        <p class="text-xl font-bold mb-2 relative z-10">Urus 10% dari pendapatan bulanan</p>
+        <p class="text-gray-400 text-lg relative z-10 leading-relaxed max-w-sm mx-auto">Menjana 100 bulan (8+ tahun)
+          ketahanan aliran tunai keluarga.</p>
       </div>
 
-      <h2 class="text-2xl font-semibold text-rose-700 mt-12 mb-4">Apa Maksud 10% - 100 Bulan?</h2>
+      <h2 class="text-2xl md:text-3xl font-black text-gray-900 mt-16 mb-4">Dekomposisi Formula:</h2>
 
-      <div class="bg-white border border-gray-100 rounded-2xl p-8 my-8">
-        <h3 class="text-xl font-semibold text-rose-700 mb-6">🎯 Breakdown Formula:</h3>
+      <div class="bg-white border border-gray-100 rounded-[2.5rem] p-10 my-8 shadow-sm">
+        <h3
+          class="text-xl font-black text-gray-900 mb-8 uppercase tracking-widest text-xs border-b border-gray-50 pb-4">
+          Arsitektur Aliran:</h3>
 
         <div class="space-y-6">
-          <div class="flex items-start">
-            <span class="text-3xl mr-4">10%</span>
+          <div class="flex items-start gap-6">
+            <span class="text-3xl font-black text-gray-900">10%</span>
             <div class="flex-1">
-              <p class="font-semibold text-gray-800 mb-2">Ambil 10% dari gaji bulanan anda</p>
-              <div class="bg-white rounded-lg p-4 space-y-2 text-sm">
-                <p class="text-gray-700">• Gaji RM3,000 → <strong class="text-rose-600">RM300/bulan</strong></p>
-                <p class="text-gray-700">• Gaji RM5,000 → <strong class="text-rose-600">RM500/bulan</strong></p>
-                <p class="text-gray-700">• Gaji RM8,000 → <strong class="text-rose-600">RM800/bulan</strong></p>
+              <p class="font-bold text-gray-900 mb-4">Peruntukan Input Pendapatan</p>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div class="bg-gray-50 p-4 rounded-xl border border-gray-100">
+                  <p class="text-[10px] text-gray-400 font-bold uppercase mb-1">Gaji RM3k</p>
+                  <p class="font-black text-gray-900">RM300</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-xl border border-gray-100">
+                  <p class="text-[10px] text-gray-400 font-bold uppercase mb-1">Gaji RM5k</p>
+                  <p class="font-black text-gray-900">RM500</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-xl border border-gray-100">
+                  <p class="text-[10px] text-gray-400 font-bold uppercase mb-1">Gaji RM8k</p>
+                  <p class="font-black text-gray-900">RM800</p>
+                </div>
               </div>
             </div>
           </div>
 
-          <div class="border-t-2 border-rose-200 pt-6"></div>
+          <div class="border-t border-gray-100"></div>
 
-          <div class="flex items-start">
-            <span class="text-3xl mr-4">100</span>
+          <div class="flex items-start gap-6">
+            <span class="text-3xl font-black text-gray-900">100</span>
             <div class="flex-1">
-              <p class="font-semibold text-gray-800 mb-2">Dapat perlindungan untuk 100 bulan expenses</p>
-              <p class="text-gray-600 text-sm mb-3">100 bulan = <strong>8 tahun 4 bulan</strong> ketenangan bila diuji
-                3D</p>
-              <div class="bg-white rounded-lg p-4 space-y-2 text-sm">
-                <p class="text-gray-700">• Expenses RM3,000/bulan → Coverage <strong
-                    class="text-rose-600">RM300,000</strong></p>
-                <p class="text-gray-700">• Expenses RM5,000/bulan → Coverage <strong
-                    class="text-rose-600">RM500,000</strong></p>
-                <p class="text-gray-700">• Expenses RM8,000/bulan → Coverage <strong
-                    class="text-rose-600">RM800,000</strong></p>
+              <p class="font-bold text-gray-900 mb-2">Output Perlindungan (Safety Net)</p>
+              <p class="text-gray-500 text-sm mb-6">Mewujudkan fasa transisi selama <strong>100 bulan</strong> sekiranya
+                berlaku risiko 3D.</p>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div class="bg-gray-900 p-4 rounded-xl">
+                  <p class="text-[10px] text-gray-500 font-bold uppercase mb-1">Coverage</p>
+                  <p class="font-black text-white">RM300k</p>
+                </div>
+                <div class="bg-gray-900 p-4 rounded-xl">
+                  <p class="text-[10px] text-gray-500 font-bold uppercase mb-1">Coverage</p>
+                  <p class="font-black text-white">RM500k</p>
+                </div>
+                <div class="bg-gray-900 p-4 rounded-xl">
+                  <p class="text-[10px] text-gray-500 font-bold uppercase mb-1">Coverage</p>
+                  <p class="font-black text-white">RM800k</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <h2 class="text-2xl font-semibold text-rose-700 mt-12 mb-4">Macam Mana Nak Bahagi 10% Tu?</h2>
+      <h2 class="text-2xl md:text-3xl font-black text-gray-900 mt-16 mb-4">Optimasi Pembedahan Bajet (Allocation):</h2>
 
       <div class="bg-gray-50 rounded-2xl p-8 my-8">
         <h3 class="text-xl font-semibold text-gray-800 mb-6 text-center">📊 Allocation Formula 10%</h3>
 
         <div class="grid md:grid-cols-3 gap-6">
           <!-- Protection -->
-          <div class="bg-white rounded-xl p-6 border-2 border-rose-600">
-            <div class="text-center mb-4">
+          <div class="bg-white rounded-[2rem] p-8 border border-gray-900 shadow-xl relative overflow-hidden group">
+            <div
+              class="absolute top-0 right-0 bg-gray-900 text-white px-4 py-1 text-[10px] font-black uppercase tracking-widest">
+              Priority 01</div>
+            <div class="text-center mb-6">
               <div class="text-4xl mb-2">🛡️</div>
-              <p class="text-2xl font-bold text-rose-600">50%</p>
-              <p class="text-sm text-gray-600 font-semibold">PERLINDUNGAN</p>
+              <p class="text-3xl font-black text-gray-900">50%</p>
+              <p class="text-[10px] text-gray-400 font-black uppercase tracking-widest">PERLINDUNGAN</p>
             </div>
             <ul class="text-sm text-gray-700 space-y-2">
               <li>✓ Takaful Keluarga (Death)</li>
@@ -135,11 +176,11 @@
           </div>
 
           <!-- Emergency Fund -->
-          <div class="bg-white rounded-xl p-6 border-2 border-blue-600">
-            <div class="text-center mb-4">
+          <div class="bg-white rounded-[2rem] p-8 border border-gray-100 shadow-sm hover:shadow-md transition-all">
+            <div class="text-center mb-6">
               <div class="text-4xl mb-2">💰</div>
-              <p class="text-2xl font-bold text-gray-600">30%</p>
-              <p class="text-sm text-gray-600 font-semibold">SIMPANAN KECEMASAN</p>
+              <p class="text-3xl font-black text-gray-900">30%</p>
+              <p class="text-[10px] text-gray-400 font-black uppercase tracking-widest">RESERVE FUND</p>
             </div>
             <ul class="text-sm text-gray-700 space-y-2">
               <li>✓ Tabung ASB/FD</li>
@@ -150,11 +191,11 @@
           </div>
 
           <!-- Investment -->
-          <div class="bg-white rounded-xl p-6 border-2 border-green-600">
-            <div class="text-center mb-4">
+          <div class="bg-white rounded-[2rem] p-8 border border-gray-100 shadow-sm hover:shadow-md transition-all">
+            <div class="text-center mb-6">
               <div class="text-4xl mb-2">📈</div>
-              <p class="text-2xl font-bold text-gray-900">20%</p>
-              <p class="text-sm text-gray-600 font-semibold">PELABURAN</p>
+              <p class="text-3xl font-black text-gray-900">20%</p>
+              <p class="text-[10px] text-gray-400 font-black uppercase tracking-widest">PELABURAN</p>
             </div>
             <ul class="text-sm text-gray-700 space-y-2">
               <li>✓ Unit trust / Saham</li>
@@ -165,60 +206,64 @@
           </div>
         </div>
 
-        <div class="mt-8 bg-rose-600 text-white rounded-xl p-6 text-center">
-          <p class="font-semibold text-lg">
-            💡 Mula dengan Perlindungan dulu (50%), baru grow Simpanan & Pelaburan
+        <div class="mt-10 bg-gray-900 text-white rounded-2xl p-6 text-center">
+          <p class="font-bold text-sm uppercase tracking-widest">
+            💡 Strategi: Kukuhkan Struktur Perlindungan (50%) Sebelum Membina Aset
           </p>
         </div>
       </div>
 
-      <h2 class="text-2xl font-semibold text-rose-700 mt-12 mb-4">Contoh Praktikal: 3 Level Pendapatan</h2>
+      <h2 class="text-2xl md:text-3xl font-black text-gray-900 mt-16 mb-4">Matematik Praktikal: 3 Aras Aliran Tunai</h2>
 
       <div class="space-y-8 my-8">
 
         <!-- Level 1 -->
-        <div class="bg-white border-2 border-gray-300 rounded-2xl p-6">
-          <div class="flex items-center justify-between mb-4 pb-4 border-b">
+        <div class="bg-white border border-gray-200 rounded-[2.5rem] p-10 shadow-sm">
+          <div class="flex items-center justify-between mb-8 pb-4 border-b border-gray-50">
             <div>
-              <p class="text-sm text-gray-600">Level Gaji:</p>
-              <p class="text-2xl font-bold text-gray-800">RM3,000 / bulan</p>
+              <p class="text-[10px] text-gray-400 font-black uppercase tracking-widest mb-1">Benchmark Aras 01:</p>
+              <p class="text-3xl font-black text-gray-900">RM3,000 / mth</p>
             </div>
-            <div class="bg-rose-100 text-rose-700 px-4 py-2 rounded-full font-semibold">
-              10% = RM300
+            <div class="bg-gray-100 text-gray-900 px-6 py-3 rounded-2xl font-black text-xs uppercase tracking-widest">
+              Input: RM300
             </div>
           </div>
 
           <div class="grid md:grid-cols-2 gap-6">
             <div>
-              <p class="font-semibold text-rose-700 mb-3">💰 Allocation:</p>
-              <ul class="space-y-2 text-sm text-gray-700">
-                <li>• Takaful CI RM100k: <strong>RM100</strong></li>
-                <li>• Takaful Keluarga RM200k: <strong>RM50</strong></li>
-                <li>• Simpanan Kecemasan: <strong>RM100</strong></li>
-                <li>• Pelaburan ASB: <strong>RM50</strong></li>
+              <p class="text-[10px] text-gray-400 font-black uppercase tracking-widest mb-4">Allocation Breakdown:</p>
+              <ul class="space-y-4 text-sm text-gray-600">
+                <li class="flex justify-between"><span>CI RM100k:</span> <strong class="text-gray-900">RM100</strong>
+                </li>
+                <li class="flex justify-between"><span>Death RM200k:</span> <strong class="text-gray-900">RM50</strong>
+                </li>
+                <li class="flex justify-between"><span>Emergency Fund:</span> <strong
+                    class="text-gray-900">RM100</strong></li>
+                <li class="flex justify-between"><span>Pelaburan:</span> <strong class="text-gray-900">RM50</strong>
+                </li>
               </ul>
             </div>
             <div>
-              <p class="font-semibold text-green-700 mb-3">✅ Protection Dapat:</p>
-              <ul class="space-y-2 text-sm text-gray-700">
-                <li>• CI: RM100,000 (33 bulan gaji)</li>
-                <li>• Death: RM200,000 (66 bulan)</li>
-                <li>• Emergency fund tumbuh</li>
-                <li>• Future investment ready</li>
+              <p class="text-[10px] text-green-600 font-black uppercase tracking-widest mb-4">Engineering Assets:</p>
+              <ul class="space-y-4 text-sm text-gray-600">
+                <li>• Aliran Tunai CI: 33 Bulan</li>
+                <li>• Dana Legasi: 66 Bulan</li>
+                <li>• Modal Rizab Kian Tumbuh</li>
+                <li>• Integrasi Pelaburan Jangka Panjang</li>
               </ul>
             </div>
           </div>
         </div>
 
         <!-- Level 2 -->
-        <div class="bg-white border border-gray-100 rounded-2xl p-6">
-          <div class="flex items-center justify-between mb-4 pb-4 border-b">
+        <div class="bg-white border border-gray-200 rounded-[2.5rem] p-10 shadow-sm">
+          <div class="flex items-center justify-between mb-8 pb-4 border-b border-gray-50">
             <div>
-              <p class="text-sm text-gray-600">Level Gaji:</p>
-              <p class="text-2xl font-bold text-gray-800">RM5,000 / bulan</p>
+              <p class="text-[10px] text-gray-400 font-black uppercase tracking-widest mb-1">Benchmark Aras 02:</p>
+              <p class="text-3xl font-black text-gray-900">RM5,000 / mth</p>
             </div>
-            <div class="bg-rose-200 text-rose-800 px-4 py-2 rounded-full font-semibold">
-              10% = RM500
+            <div class="bg-gray-100 text-gray-900 px-6 py-3 rounded-2xl font-black text-xs uppercase tracking-widest">
+              Input: RM500
             </div>
           </div>
 
@@ -245,14 +290,17 @@
         </div>
 
         <!-- Level 3 -->
-        <div class="bg-white border-2 border-rose-600 rounded-2xl p-6">
-          <div class="flex items-center justify-between mb-4 pb-4 border-b">
+        <div class="bg-white border-2 border-gray-900 rounded-[2.5rem] p-10 shadow-xl relative overflow-hidden">
+          <div
+            class="absolute top-0 right-0 bg-gray-900 text-white px-6 py-2 text-[10px] font-black uppercase tracking-widest">
+            High Impact</div>
+          <div class="flex items-center justify-between mb-8 pb-4 border-b border-gray-50">
             <div>
-              <p class="text-sm text-gray-600">Level Gaji:</p>
-              <p class="text-2xl font-bold text-gray-800">RM8,000 / bulan</p>
+              <p class="text-[10px] text-gray-400 font-black uppercase tracking-widest mb-1">Benchmark Aras 03:</p>
+              <p class="text-3xl font-black text-gray-900">RM8,000 / mth</p>
             </div>
-            <div class="bg-rose-600 text-white px-4 py-2 rounded-full font-semibold">
-              10% = RM800
+            <div class="bg-gray-900 text-white px-6 py-3 rounded-2xl font-black text-xs uppercase tracking-widest">
+              Input: RM800
             </div>
           </div>
 
@@ -280,18 +328,19 @@
 
       </div>
 
-      <div class="bg-gray-50 border-l-4 border-blue-600 p-6 my-8 rounded-r-lg">
-        <p class="font-semibold text-blue-900 mb-2">💡 Perhatikan Pola:</p>
-        <p class="text-gray-700">Tak kira level gaji, formula 10% ni bagi coverage yang sesuai dengan lifestyle &
-          expenses anda. Scalable!</p>
+      <div class="bg-white border-l-4 border-gray-900 p-6 my-8 rounded-r-xl shadow-sm flex gap-4 items-start">
+        <div class="text-gray-400">💡</div>
+        <p class="text-gray-600 text-sm leading-relaxed m-0">
+          <strong class="text-gray-900">Analisis Pola:</strong> Formula 10% ini bersifat <em>scalable</em>. Ia
+          melaraskan perlindungan mengikut gaya hidup dan komitmen semasa anda secara automatik.
+        </p>
       </div>
 
-      <h2 class="text-2xl font-semibold text-rose-700 mt-12 mb-4">Kenapa 100 Bulan (8+ Tahun)?</h2>
+      <h2 class="text-2xl md:text-3xl font-black text-gray-900 mt-16 mb-4">Signifikasi 100 Bulan (Fasa Transisi):</h2>
 
-      <div class="bg-rose-50 rounded-2xl p-8 my-8">
-        <p class="text-gray-700 leading-relaxed mb-6">
-          Saya pilih angka <strong class="text-rose-700">100 bulan</strong> sebab based on research & pengalaman
-          clients:
+      <div class="bg-white border border-gray-100 rounded-[2.5rem] p-10 my-8 shadow-sm">
+        <p class="text-gray-500 leading-relaxed mb-10 text-center max-w-sm mx-auto">
+          Kenapa angka <strong class="text-gray-900 font-black">100 bulan</strong> menjadi tanda aras teknikal kami?
         </p>
 
         <div class="space-y-6">
@@ -321,7 +370,7 @@
         </div>
       </div>
 
-      <h2 class="text-2xl font-semibold text-rose-700 mt-12 mb-4">Step-by-Step: Macam Mana Nak Mula?</h2>
+      <h2 class="text-2xl md:text-3xl font-black text-gray-900 mt-16 mb-4">SOP Pelaksanaan (Step-by-Step):</h2>
 
       <div class="bg-white rounded-2xl p-8 my-8 border border-gray-100">
 
@@ -330,7 +379,7 @@
           <!-- Step 1 -->
           <div class="flex items-start">
             <div
-              class="bg-rose-600 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-xl mr-6 flex-shrink-0">
+              class="bg-gray-900 text-white rounded-2xl w-12 h-12 flex items-center justify-center font-black text-xl mr-6 flex-shrink-0">
               1</div>
             <div class="flex-1">
               <h3 class="text-xl font-semibold text-gray-800 mb-3">Kira Expenses Bulanan Sebenar Anda</h3>
@@ -346,7 +395,8 @@
                   <li>• Insurance/takaful sedia ada</li>
                 </ul>
               </div>
-              <p class="text-rose-600 font-semibold text-sm">Contoh total: RM4,500/bulan</p>
+              <p class="text-gray-900 font-bold uppercase tracking-widest text-[10px]">Benchmark Total: RM4,500/bulan
+              </p>
             </div>
           </div>
 
@@ -355,7 +405,7 @@
           <!-- Step 2 -->
           <div class="flex items-start">
             <div
-              class="bg-rose-600 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-xl mr-6 flex-shrink-0">
+              class="bg-gray-900 text-white rounded-2xl w-12 h-12 flex items-center justify-center font-black text-xl mr-6 flex-shrink-0">
               2</div>
             <div class="flex-1">
               <h3 class="text-xl font-semibold text-gray-800 mb-3">Kira 10% Dari Total Income Keluarga</h3>
@@ -364,8 +414,8 @@
                 <ul class="text-sm text-gray-600 space-y-1">
                   <li>• Suami: RM5,000</li>
                   <li>• Isteri: RM3,500</li>
-                  <li>• <strong class="text-gray-800">Total: RM8,500</strong></li>
-                  <li>• <strong class="text-rose-600">10% = RM850/bulan</strong></li>
+                  <li>• <strong class="text-gray-900 font-black">Total Family Income: RM8,500</strong></li>
+                  <li>• <strong class="text-gray-900 font-black">10% Allocation = RM850/mth</strong></li>
                 </ul>
               </div>
             </div>
@@ -376,14 +426,14 @@
           <!-- Step 3 -->
           <div class="flex items-start">
             <div
-              class="bg-rose-600 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-xl mr-6 flex-shrink-0">
+              class="bg-gray-900 text-white rounded-2xl w-12 h-12 flex items-center justify-center font-black text-xl mr-6 flex-shrink-0">
               3</div>
             <div class="flex-1">
               <h3 class="text-xl font-semibold text-gray-800 mb-3">Tentukan Coverage Yang Diperlukan</h3>
               <div class="bg-white rounded-lg p-4 mb-3">
                 <p class="text-sm font-semibold text-gray-800 mb-2">Formula: Expenses × 100 bulan</p>
                 <p class="text-sm text-gray-700 mb-3">RM4,500 × 100 = <strong
-                    class="text-rose-600 text-lg">RM450,000</strong></p>
+                    class="text-gray-900 text-xl font-black">RM450,000</strong></p>
                 <p class="text-xs text-gray-600 italic">Ini coverage minimum untuk family anda maintain lifestyle 8+
                   tahun bila diuji</p>
               </div>
@@ -395,23 +445,23 @@
           <!-- Step 4 -->
           <div class="flex items-start">
             <div
-              class="bg-rose-600 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-xl mr-6 flex-shrink-0">
+              class="bg-gray-900 text-white rounded-2xl w-12 h-12 flex items-center justify-center font-black text-xl mr-6 flex-shrink-0">
               4</div>
             <div class="flex-1">
               <h3 class="text-xl font-semibold text-gray-800 mb-3">Bahagi RM850 Mengikut Priority</h3>
               <div class="bg-rose-50 rounded-lg p-4">
                 <div class="space-y-3 text-sm">
                   <div class="flex justify-between items-center">
-                    <span class="text-gray-700">🛡️ Takaful CI (RM200k):</span>
-                    <strong class="text-rose-600">RM300</strong>
+                    <span class="text-gray-600">🛡️ Takaful CI (RM200k):</span>
+                    <strong class="text-gray-900">RM300</strong>
                   </div>
                   <div class="flex justify-between items-center">
-                    <span class="text-gray-700">👨‍👩‍👧 Takaful Keluarga (RM300k):</span>
-                    <strong class="text-rose-600">RM150</strong>
+                    <span class="text-gray-600">👨‍👩‍👧 Takaful Keluarga (RM300k):</span>
+                    <strong class="text-gray-900">RM150</strong>
                   </div>
                   <div class="flex justify-between items-center">
-                    <span class="text-gray-700">🏥 Medical Card upgrade:</span>
-                    <strong class="text-rose-600">RM100</strong>
+                    <span class="text-gray-600">🏥 Medical Card upgrade:</span>
+                    <strong class="text-gray-900">RM100</strong>
                   </div>
                   <div class="flex justify-between items-center">
                     <span class="text-gray-700">💰 Simpanan Kecemasan:</span>
@@ -435,7 +485,7 @@
           <!-- Step 5 -->
           <div class="flex items-start">
             <div
-              class="bg-rose-600 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-xl mr-6 flex-shrink-0">
+              class="bg-gray-900 text-white rounded-2xl w-12 h-12 flex items-center justify-center font-black text-xl mr-6 flex-shrink-0">
               5</div>
             <div class="flex-1">
               <h3 class="text-xl font-semibold text-gray-800 mb-3">Review & Adjust Setiap Tahun</h3>
@@ -451,27 +501,30 @@
         </div>
       </div>
 
-      <h2 class="text-2xl font-semibold text-rose-700 mt-12 mb-4">Common Mistakes Yang Perlu Elak</h2>
+      <h2 class="text-2xl md:text-3xl font-black text-gray-900 mt-16 mb-4">Analisis Ralat (Common Mistakes):</h2>
 
       <div class="space-y-6 my-8">
 
-        <div class="bg-rose-50 border-l-4 border-rose-600 p-6 rounded-r-xl">
-          <p class="font-semibold text-red-800 mb-2">❌ Mistake 1: Beli Takaful Tapi Coverage Tak Cukup</p>
-          <p class="text-gray-700 text-sm mb-2">
-            "Dah ada takaful RM50k" — tapi expenses RM5k/bulan. Coverage cuma 10 bulan je! Tak cukup langsung.
+        <div class="bg-white border-l-4 border-gray-900 p-6 rounded-r-xl shadow-sm">
+          <p class="font-bold text-gray-900 mb-2">❌ Ralat 1: Perlindungan Tanpa Skala</p>
+          <p class="text-gray-500 text-sm mb-2 leading-relaxed">
+            "Dah ada takaful RM50k" — tetapi expenses RM5k sebulan. Struktur ini hanya bertahan 10 bulan sahaja. Tidak
+            memadai bagi transisi jangka panjang.
           </p>
-          <p class="text-green-700 text-sm font-semibold">✅ Betul: Coverage minimum = 100 bulan expenses (RM500k)</p>
+          <p class="text-gray-900 text-[10px] font-black uppercase tracking-widest">Peadah: Minimum 100 Bulan Expenses
+          </p>
         </div>
 
-        <div class="bg-rose-50 border-l-4 border-rose-600 p-6 rounded-r-xl">
-          <p class="font-semibold text-red-800 mb-2">❌ Mistake 2: Focus Medical Card Je, Tak Ada CI</p>
-          <p class="text-gray-700 text-sm mb-2">
-            Medical card bayar hospital. Tapi siapa bayar gaji yang hilang 2 tahun masa recovery?
+        <div class="bg-white border-l-4 border-gray-900 p-6 rounded-r-xl shadow-sm">
+          <p class="font-bold text-gray-900 mb-2">❌ Ralat 2: Ketidakseimbangan Komponen</p>
+          <p class="text-gray-500 text-sm mb-2 leading-relaxed">
+            Berfokus 100% pada Medical Card tanpa CI. Medical card tidak membayar komitmen luaran hospital.
           </p>
-          <p class="text-green-700 text-sm font-semibold">✅ Betul: Kena ada BOTH - Medical Card + CI Plan</p>
+          <p class="text-gray-900 text-[10px] font-black uppercase tracking-widest">Faedah: Hibrid Medical Card + CI
+            Plan</p>
         </div>
 
-        <div class="bg-rose-50 border-l-4 border-rose-600 p-6 rounded-r-xl">
+        <div class="bg-white border-l-4 border-gray-900 p-6 rounded-r-xl shadow-sm">
           <p class="font-semibold text-red-800 mb-2">❌ Mistake 3: Tunggu "Stable" Dulu Baru Nak Buat</p>
           <p class="text-gray-700 text-sm mb-2">
             Umur 25, premium RM150. Tunggu sampai 35, premium dah RM280. Rugi RM130/bulan = RM15,600 setahun!
@@ -479,7 +532,7 @@
           <p class="text-green-700 text-sm font-semibold">✅ Betul: Start awal, premium murah, coverage lama</p>
         </div>
 
-        <div class="bg-rose-50 border-l-4 border-rose-600 p-6 rounded-r-xl">
+        <div class="bg-white border-l-4 border-gray-900 p-6 rounded-r-xl shadow-sm">
           <p class="font-semibold text-red-800 mb-2">❌ Mistake 4: Protect Diri Je, Tak Protect Pasangan</p>
           <p class="text-gray-700 text-sm mb-2">
             Husband ada coverage RM500k. Wife housewife, takde coverage. Bila wife kena stroke, siapa jaga anak?
@@ -488,7 +541,7 @@
             housewife</p>
         </div>
 
-        <div class="bg-rose-50 border-l-4 border-rose-600 p-6 rounded-r-xl">
+        <div class="bg-white border-l-4 border-gray-900 p-6 rounded-r-xl shadow-sm">
           <p class="font-semibold text-red-800 mb-2">❌ Mistake 5: Buy & Forget, Tak Pernah Review</p>
           <p class="text-gray-700 text-sm mb-2">
             Buat plan umur 25, single. Sekarang 35, dah kahwin, 2 anak. Coverage sama je - TAK CUKUP DAH!
@@ -499,7 +552,7 @@
 
       </div>
 
-      <h2 class="text-2xl font-semibold text-rose-700 mt-12 mb-4">Real Talk: Kenapa Ramai Tak Buat?</h2>
+      <h2 class="text-2xl md:text-3xl font-black text-gray-900 mt-16 mb-4">Analisis Kekangan (Real Talk):</h2>
 
       <div class="bg-gray-50 rounded-2xl p-8 my-8">
         <div class="space-y-6">
@@ -531,19 +584,20 @@
         </div>
       </div>
 
-      <h2 class="text-2xl font-semibold text-rose-700 mt-12 mb-4">Kesimpulan: Start Simple, Tapi Start NOW</h2>
+      <h2 class="text-2xl md:text-3xl font-black text-gray-900 mt-16 mb-4">Kesimpulan: Strukturkan Sekarang</h2>
 
-      <div class="bg-rose-600 text-white rounded-2xl p-8 my-8">
+      <div class="bg-gray-900 text-white rounded-[2.5rem] p-12 my-12 shadow-2xl relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-rose-600/10 to-transparent"></div>
+        <h3 class="text-2xl font-black mb-10 text-center relative z-10 uppercase tracking-widest text-xs text-rose-500">
+          Master Algorithm:</h3>
 
-        <h3 class="text-2xl font-bold mb-6 text-center">🎯 Ingat Formula Ini</h3>
-
-        <div class="bg-white/10 rounded-xl p-6 mb-6">
-          <div class="text-center space-y-3">
-            <p class="text-3xl font-bold">10%</p>
-            <p class="text-rose-100">dari pendapatan bulanan</p>
-            <p class="text-4xl font-bold my-4">↓</p>
-            <p class="text-3xl font-bold">100 bulan</p>
-            <p class="text-rose-100">ketenangan untuk keluarga</p>
+        <div class="bg-white/10 backdrop-blur-md rounded-2xl p-8 mb-10 relative z-10 border border-white/10">
+          <div class="text-center space-y-4">
+            <p class="text-4xl font-black">10%</p>
+            <p class="text-gray-400 font-bold uppercase tracking-widest text-[10px]">Benchmark Gaji</p>
+            <div class="h-8 w-px bg-white/20 mx-auto"></div>
+            <p class="text-4xl font-black">100 Bulan</p>
+            <p class="text-gray-400 font-bold uppercase tracking-widest text-[10px]">Ketahanan Aliran Tunai</p>
           </div>
         </div>
 
@@ -561,28 +615,26 @@
 
       </div>
 
-      <div class="bg-rose-50 border border-gray-100 rounded-2xl p-8 my-8">
-        <h3 class="text-xl font-semibold text-rose-700 mb-4 text-center">📝 Action Plan Minggu Ini</h3>
-        <div class="space-y-3 text-gray-700">
-          <div class="flex items-start">
-            <span class="text-rose-600 font-bold mr-3">☐</span>
-            <p>Kira expenses bulanan sebenar (jujur!)</p>
+      <div class="bg-white border border-gray-100 rounded-[2.5rem] p-10 my-12 shadow-sm">
+        <h3
+          class="text-xl font-black text-gray-900 mb-8 border-b border-gray-50 pb-4 uppercase tracking-widest text-xs text-center">
+          Action Plan Minggu Ini:</h3>
+        <div class="space-y-4 text-gray-600">
+          <div class="flex items-start gap-4">
+            <span class="text-gray-300">01.</span>
+            <p class="text-sm font-bold">Audit Aliran Tunai Bulanan (Telus & Jujur)</p>
           </div>
-          <div class="flex items-start">
-            <span class="text-rose-600 font-bold mr-3">☐</span>
-            <p>Kira 10% dari total income</p>
+          <div class="flex items-start gap-4">
+            <span class="text-gray-300">02.</span>
+            <p class="text-sm font-bold">Laras Benchmark 10% Pendapatan Isirumah</p>
           </div>
-          <div class="flex items-start">
-            <span class="text-rose-600 font-bold mr-3">☐</span>
-            <p>Check pelan sedia ada - cukup ke tak?</p>
+          <div class="flex items-start gap-4">
+            <span class="text-gray-300">03.</span>
+            <p class="text-sm font-bold">Review Status Perlindungan Sedia Ada</p>
           </div>
-          <div class="flex items-start">
-            <span class="text-rose-600 font-bold mr-3">☐</span>
-            <p>WhatsApp Dr. Takaful untuk free consultation</p>
-          </div>
-          <div class="flex items-start">
-            <span class="text-rose-600 font-bold mr-3">☐</span>
-            <p>Setup auto-debit untuk takaful & simpanan</p>
+          <div class="flex items-start gap-4">
+            <span class="text-gray-300">04.</span>
+            <p class="text-sm font-bold">WhatsApp Dr. Hana Untuk Analisis Teknikal</p>
           </div>
         </div>
       </div>
@@ -591,48 +643,56 @@
 
     <!-- CTA Section -->
     <!-- Author Box -->
-    <div class="bg-gray-100 rounded-2xl p-8 my-12 border border-gray-200">
-      <div class="flex flex-col sm:flex-row items-center text-center sm:text-left">
-        <img src="/images/dr-takaful-hana-profile.png" alt="Dr. Takaful (Hana)"
-          class="w-24 h-24 rounded-full mb-4 sm:mb-0 sm:mr-6 flex-shrink-0 object-cover border-4 border-white shadow-lg">
+    <div class="mt-24 pt-16 border-t border-gray-100">
+      <div
+        class="bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-sm flex flex-col md:flex-row items-center md:items-start gap-10 text-center md:text-left transition-all hover:shadow-xl hover:border-rose-100">
+        <div class="w-32 h-32 rounded-3xl bg-rose-50 overflow-hidden flex-shrink-0 border-4 border-rose-50">
+          <img src="images/dr-takaful-hana-profile.png" alt="Dr. Takaful Hana" class="w-full h-full object-cover">
+        </div>
         <div>
-          <h3 class="text-xl font-bold text-rose-700 m-0">Tentang Penulis: Dr. Takaful (Hana)</h3>
-          <p class="text-sm text-gray-500 mt-1 mb-3">Perancang Takaful Profesional AIA</p>
-          <p class="text-base text-gray-700 leading-relaxed mt-0">
-            Dengan latar belakang PhD dalam Kejuruteraan, saya membawa pendekatan analitikal dan berstruktur dalam
-            perancangan kewangan. Misi saya bukan sekadar menjual polisi, tetapi untuk mendidik dan memperkasa klien
-            saya untuk membuat keputusan kewangan yang bijak demi masa depan keluarga mereka.
+          <div class="flex flex-col md:flex-row md:items-center gap-3 mb-4 sans-font">
+            <h4 class="text-2xl font-black text-gray-900">Dr. Hana</h4>
+            <span
+              class="bg-gray-900 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">PhD
+              Engineering</span>
+          </div>
+          <p class="text-gray-500 leading-relaxed mb-6">
+            Menggunakan pendekatan data & analisis risiko untuk membantu keluarga membina struktur kewangan yang tahan
+            lasak. Misi Hana: 0% Harta Beku, 100% Ketenangan.
           </p>
-          <a href="https://wa.me/60132522587?text=Assalamualaikum%20Hana,%20saya%20telah%20baca%20artikel%20blog%20dan%20ingin%20bertanya%20lebih%20lanjut."
-            class="inline-block mt-3 text-sm text-rose-600 font-semibold hover:underline">Hubungi Saya untuk Sesi
-            Percuma →</a>
+          <div class="flex justify-center md:justify-start gap-6">
+            <a href="https://wa.me/60132522587?text=Assalamualaikum%20Hana,%20saya%20telah%20baca%20artikel%20blog%20dan%20ingin%20bertanya%20lebih%20lanjut."
+              class="text-rose-600 font-black text-xs uppercase tracking-widest hover:underline flex items-center gap-2 group sans-font">
+              WhatsApp Consult <span class="group-hover:translate-x-1 transition-transform">→</span>
+            </a>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="bg-rose-600 text-white rounded-2xl p-8 mt-16 text-center">
-      <h3 class="text-2xl font-bold mb-4">Nak Tahu Berapa 10% Anda Patut Digunakan?</h3>
-      <p class="text-rose-100 mb-6 max-w-2xl mx-auto">
-        Saya boleh bantu anda buat customized plan mengikut income, expenses & tanggungan anda. FREE consultation, no
-        pressure.
-      </p>
-      <a href="https://wa.me/60132522587?text=Assalamualaikum,%20saya%20nak%20apply%20formula%2010%25%20untuk%20pelan%20saya"
-        class="inline-block bg-white text-rose-600 px-8 py-4 rounded-full font-semibold hover:bg-rose-50 transition">
-        WhatsApp Saya Sekarang 💬
-      </a>
-      <p class="text-rose-100 text-sm mt-4">Reply dalam 24 jam ✓</p>
+    <div
+      class="bg-gray-900 text-white rounded-[2.5rem] p-12 mt-16 text-center shadow-2xl relative overflow-hidden group">
+      <div class="relative z-10">
+        <h3 class="text-3xl font-black mb-6">Optimasi 10% Pendapatan Anda?</h3>
+        <p class="text-gray-400 mb-10 max-w-2xl mx-auto text-lg leading-relaxed">
+          Biar Hana bantu anda rekapasti pelan yang bersifat analitikal mengikut aras pendapatan dan tanggungan semasa
+          keluarga anda.
+        </p>
+        <a href="https://wa.me/60132522587?text=Assalamualaikum,%20saya%20nak%20apply%20formula%2010%25%20untuk%20pelan%20saya"
+          class="inline-block bg-white text-gray-900 px-10 py-5 rounded-2xl font-bold uppercase tracking-widest text-sm transition-all shadow-xl hover:bg-gray-100">
+          WhatsApp Saya Sekarang 💬
+        </a>
+        <p class="text-gray-400 text-[10px] font-bold uppercase tracking-widest mt-8">🤝 Konsultasi Percuma | 📊
+          Analisis Data | 🏢 Arsitektur Kewangan</p>
+      </div>
     </div>
 
   </article>
 
-  <!-- Footer -->
-  <footer class="bg-gray-50 py-8 px-6 mt-16">
-    <div class="max-w-4xl mx-auto text-center">
-      <p class="text-gray-600 mb-4">
-        <a href="/" class="text-rose-600 hover:underline">← Kembali ke Laman Utama</a>
-      </p>
-      <p class="text-gray-500 text-sm">© 2025 Takaful by Hana — Dr. Takaful | Semua Hak Terpelihara</p>
-    </div>
+  <footer class="py-12 border-t border-gray-100 text-center sans-font">
+    <p class="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-400">
+      &copy; <span id="current-year">2026</span> Dr. Takaful Strategy. Engineered for Legacy.
+    </p>
   </footer>
 
 </body>
