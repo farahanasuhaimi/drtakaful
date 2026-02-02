@@ -17,14 +17,16 @@ return [
     'hibah-sejuta' => 'hibah-aia-sejuta-makna-vs-legasi-beyond.html',
     'kalkulator' => 'kalkulator-hibah.html',
     'kalkulator-hibah' => 'kalkulator-hibah-takaful.html',
-    
+
     // === MEDICAL CARD ===
-    'mc' => 'panduan-lengkap-medical-card-takaful.html',
+    'mc' => 'panduan-lengkap-medical-card-2026.html',
+    'mc-2026' => 'panduan-lengkap-medical-card-2026.html',
+    'mc-2025' => 'panduan-lengkap-medical-card-takaful.html',
     'mediflex' => 'beza-medical-card-mediflex-vs-idaman.html',
     'mc-waiting' => 'tempoh-menunggu-medical-card.html',
     'perkeso-mc' => 'perkeso-vs-takaful-medical-card.html',
     'company-mc' => 'company-policy-vs-personal-takaful.html',
-    
+
     // === PENYAKIT KRITIKAL (CI) ===
     'ci' => 'panduan-lengkap-penyakit-kritikal-takaful.html',
     'mc-ci' => 'medical-card-atau-ci-dulu.html',
@@ -33,7 +35,7 @@ return [
     'gaji' => 'pelankritikal.html',
     'kos-rawatan' => 'kos-rawatan-vs-gaji.html',
     'socso-ci' => 'socso-vs-takaful-penyakit-kritikal.html',
-    
+
     // === ASAS TAKAFUL ===
     'mula-awal' => 'kenapa-perlu-rancang-kewangan-awal.html',
     'fresh-grad' => 'perlindungan-pertama-untuk-orang-muda.html',
@@ -42,18 +44,18 @@ return [
     'formula-10' => 'formula-10-peratus-pendapatan-takaful.html',
     'sepuluh-persen' => 'sepuluhpercentincome.html',
     'kenapa-aia' => 'kenapa-pilih-aia-takaful.html',
-    
+
     // === PINJAMAN PERUMAHAN ===
     'mltt' => 'panduan-lengkap-mltt-mrtt.html',
     'mrtt' => 'panduan-lengkap-mltt-mrtt.html',
-    
+
     // === KEMALANGAN & LAIN-LAIN ===
     'pa' => 'panduan-personal-accident.html',
     'anak' => 'bila-perlu-mula-takaful-anak.html',
     'umur-50' => 'takaful-umur-50-tahun.html',
     'pelaburan' => 'pelaburan-aia-enrich-rezeki.html',
     'enrich' => 'pelaburan-aia-enrich-rezeki.html',
-    
+
     // === TOOLS & FORMS ===
     'analisis' => 'analisis-keperluan.html',
     'borang' => 'borang-permohonan.html',

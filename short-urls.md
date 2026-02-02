@@ -63,7 +63,9 @@ http://localhost:8000/go/your-code
 - `/go/kalkulator-hibah` → Kalkulator Hibah Takaful
 
 ### Medical Card
-- `/go/mc` → Panduan Lengkap Medical Card
+- `/go/mc` → Panduan Lengkap Medical Card (2026)
+- `/go/mc-2026` → Panduan Lengkap Medical Card 2026
+- `/go/mc-2025` → Panduan Lengkap Medical Card 2025
 - `/go/mediflex` → MediFlex vs Idaman
 - `/go/mc-waiting` → Tempoh Menunggu Medical Card
 - `/go/perkeso-mc` → PERKESO vs Medical Card
