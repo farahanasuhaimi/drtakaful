@@ -121,93 +121,176 @@
 
   <!-- HERO SECTION -->
   <section class="relative pt-24 sm:pt-32 pb-12 sm:pb-20 px-4 sm:px-6 overflow-hidden grid-bg">
-    <!-- Offer Banner (Simplified) -->
-    <div id="offer-banner" class="max-w-4xl mx-auto mb-10 px-4 relative z-10">
+    <!-- Live Status Banner -->
+    <div id="offer-banner" class="max-w-6xl mx-auto mb-10 px-4 relative z-10">
       <div
-        class="bg-white border border-gray-100 rounded-2xl p-4 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-xl shadow-gray-200/50">
-        <div class="flex items-center gap-3">
-          <span class="flex h-3 w-3 relative">
-            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-            <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
-          </span>
-          <p class="text-xs sm:text-sm font-medium text-gray-900 leading-tight text-center sm:text-left">
-            <span class="font-bold">LIVE:</span> Dr. Hana sedia bantu anda sekarang.
+        class="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm border border-gray-100 rounded-full px-4 py-2 shadow-sm">
+        <span class="flex h-2 w-2 relative">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+        </span>
+        <p class="text-[10px] sm:text-xs font-bold text-gray-900 uppercase tracking-widest">
+          Analisis Gaji Kedua: <span class="text-green-600">Terbuka Sekarang</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="max-w-6xl mx-auto">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <!-- Hero Content -->
+        <div class="text-left">
+          <h1
+            class="text-3xl sm:text-5xl md:text-6xl font-black text-gray-900 tracking-tight mb-4 sm:mb-6 leading-[1.2] sm:leading-[1.1]">
+            Bina Pelan <span class="text-rose-600">"Gaji Kedua"</span> Untuk Ketenangan Keluarga.
+          </h1>
+          <p class="text-base sm:text-lg md:text-xl text-gray-500 max-w-xl leading-relaxed mb-8 sm:mb-10">
+            Saya bantu anda <span class="text-gray-900 font-bold italic">mengoptimumkan</span> bajet takaful untuk
+            perlindungan gaji, hibah, dan medical card tanpa pembaziran.
           </p>
-        </div>
-        <div class="hidden sm:flex items-center gap-4">
+
+          <div class="flex flex-col sm:flex-row items-center gap-3 sm:gap-4">
+            <a href="https://wa.me/60132522587?text=Assalamualaikum%20Dr.%20Hana%2C%0A%0ASaya%20nak%20tahu%20lebih%20lanjut%20tentang%20Takaful%20untuk%20lindungi%20gaji%20%26%20keluarga%20saya.%20Boleh%20bantu%20saya%20semak%20kelayakan%20%26%20harga%3F%0A%0ATerima%20kasih%21%20%F0%9F%99%8F"
+              target="_blank"
+              class="w-full sm:w-auto px-8 py-4 sm:py-5 bg-gray-900 text-white rounded-2xl font-bold uppercase tracking-widest text-[10px] sm:text-xs hover:bg-gray-800 transition-all shadow-xl hover:shadow-gray-900/20 active:scale-95 flex items-center justify-center gap-3">
+
+              Quotation Percuma
+            </a>
+            <a href="#solutions"
+              class="w-full sm:w-auto px-8 py-4 sm:py-5 bg-white text-gray-900 border border-gray-100 rounded-2xl font-bold uppercase tracking-widest text-[10px] hover:bg-gray-50 transition-all active:scale-95 shadow-sm flex items-center justify-center gap-3">
+              Lihat Solusi
+            </a>
+          </div>
+
+          <!-- Trust Indicators -->
           <div
-            class="px-4 py-1.5 bg-gray-50 rounded-full border border-gray-200 shadow-sm text-[10px] font-bold text-gray-600 uppercase tracking-widest">
-            Respons: <span class="text-green-600">~15-30 Minit</span>
+            class="mt-8 sm:mt-12 flex items-center gap-4 sm:gap-6 opacity-60 grayscale hover:grayscale-0 transition-all">
+            <p class="text-[8px] sm:text-[10px] font-black tracking-widest text-gray-400 uppercase">Trusted Expertise:
+            </p>
+            <div class="flex items-center gap-3 sm:gap-4">
+              <span class="text-xs sm:text-sm font-bold text-gray-900 border-r border-gray-200 pr-3 sm:pr-4">AIA Public
+                Takaful</span>
+              <span class="text-xs sm:text-sm font-bold text-gray-900">MQA Qualified</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Image / Profile -->
+        <div class="relative hidden lg:block">
+          <div class="absolute -inset-4 bg-rose-50 rounded-[4rem] blur-2xl opacity-50 animate-pulse"></div>
+          <div
+            class="relative rounded-[3rem] overflow-hidden border-8 border-white shadow-2xl bg-gray-100 rotate-2 hover:rotate-0 transition-transform duration-500">
+            <img src="images/dr-takaful-hana-profile.png" alt="Dr. Takaful Hana" class="w-full h-auto">
+            <div class="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-md p-6 rounded-2xl shadow-xl">
+              <p class="text-[10px] font-black tracking-[0.2em] text-rose-600 uppercase mb-1">Expert Profile</p>
+              <h3 class="text-xl font-black text-gray-900">Dr. Hana, PhD</h3>
+              <p class="text-sm text-gray-500">Jurutera Kewangan Takaful</p>
+            </div>
+          </div>
+          <!-- Experience Badge -->
+          <div class="absolute -top-6 -right-6 bg-gray-900 text-white p-6 rounded-3xl shadow-2xl rotate-12">
+            <p class="text-3xl font-black mb-0 leading-none">500+</p>
+            <p class="text-[10px] uppercase font-bold tracking-widest opacity-70">Client Happy</p>
           </div>
         </div>
       </div>
     </div>
+  </section>
 
-    <div class="max-w-4xl mx-auto text-center">
-      <h1 class="text-4xl sm:text-5xl md:text-7xl font-bold text-gray-900 tracking-tight mb-6 leading-tight">
-        Jika Gaji Anda Terhenti,<br />
-        <span class="text-gray-400">Siapa Bayar Komitmen?</span>
-      </h1>
-      <p class="text-base sm:text-lg md:text-xl text-gray-500 max-w-2xl mx-auto leading-relaxed mb-10">
-        Jangan biarkan struktur kewangan keluarga anda lumpuh. Bangunkan sistem <strong>'Gaji Kedua'</strong> secara
-        strategik bagi menjamin kelangsungan legasi anda.
-      </p>
-
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="#borang-konsultasi"
-          class="w-full sm:w-auto px-10 py-5 bg-gray-900 text-white rounded-2xl font-bold uppercase tracking-widest text-xs hover:bg-gray-800 transition-all shadow-xl active:scale-95">
-          Analisis Kelayakan
-        </a>
-        <a href="/formula-10-peratus-pendapatan-takaful.html"
-          class="w-full sm:w-auto px-10 py-5 bg-white text-gray-900 border border-gray-100 rounded-2xl font-bold uppercase tracking-widest text-xs hover:bg-gray-50 transition-all active:scale-95 shadow-sm">
-          Simulasi Bajet
-        </a>
+  <!-- SOLUTIONS SELECTOR (Interactive) -->
+  <section id="solutions" class="py-12 sm:py-24 px-4 sm:px-6 bg-white overflow-hidden">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-10 sm:mb-20">
+        <p class="text-rose-600 font-black text-[10px] uppercase tracking-[0.3em] mb-4">Start Here</p>
+        <h2 class="text-2xl md:text-5xl font-black text-gray-900 mb-4 sm:mb-6 px-2">Apa Matlamat Utama Anda?</h2>
+        <p class="text-sm sm:text-base text-gray-500 max-w-xl mx-auto px-4">Pilih satu untuk melihat bagaimana
+          pendekatan 'engineering' kami membantu anda.</p>
       </div>
 
-      <div
-        class="mt-8 sm:mt-12 flex flex-col sm:flex-row items-center justify-center gap-2 text-xs sm:text-sm text-gray-400">
-        <div class="flex -space-x-2">
-          <div class="w-8 h-8 rounded-full bg-gray-200 border-2 border-white"></div>
-          <div class="w-8 h-8 rounded-full bg-gray-300 border-2 border-white"></div>
-          <div class="w-8 h-8 rounded-full bg-gray-400 border-2 border-white"></div>
-        </div>
-        <p class="text-center"><span class="font-semibold text-gray-900">37 ketua keluarga</span> telah dilindungi bulan
-          ini.</p>
+      <div class="grid md:grid-cols-3 gap-4 sm:gap-6">
+        <!-- Option 1 -->
+        <button onclick="document.getElementById('borang-konsultasi').scrollIntoView({behavior: 'smooth'})"
+          class="group p-6 sm:p-8 rounded-[2rem] sm:rounded-[2.5rem] bg-gray-50 border border-gray-100 hover:border-gray-900 transition-all text-left">
+          <div
+            class="w-12 h-12 sm:w-14 sm:h-14 bg-white rounded-xl sm:rounded-2xl flex items-center justify-center text-xl sm:text-2xl mb-4 sm:mb-6 shadow-sm">
+            💰</div>
+          <h3 class="text-lg sm:text-xl font-black text-gray-900 mb-2">Ganti Gaji</h3>
+          <p class="text-xs sm:text-sm text-gray-500 leading-relaxed mb-4 sm:mb-6">Pastikan keluarga tetap ada "gaji"
+            bulanan jika anda
+            sakit kritikal.</p>
+          <span class="text-[10px] font-bold uppercase tracking-widest text-rose-600 inline-block">Pilih
+            Solusi →</span>
+        </button>
+
+        <!-- Option 2 -->
+        <button onclick="document.getElementById('borang-konsultasi').scrollIntoView({behavior: 'smooth'})"
+          class="group p-6 sm:p-8 rounded-[2rem] sm:rounded-[2.5rem] bg-gray-50 border border-gray-100 hover:border-gray-900 transition-all text-left">
+          <div
+            class="w-12 h-12 sm:w-14 sm:h-14 bg-white rounded-xl sm:rounded-2xl flex items-center justify-center text-xl sm:text-2xl mb-4 sm:mb-6 shadow-sm">
+            🏠</div>
+          <h3 class="text-lg sm:text-xl font-black text-gray-900 mb-2">Hibah Takaful</h3>
+          <p class="text-xs sm:text-sm text-gray-500 leading-relaxed mb-4 sm:mb-6">Sediakan tunai segera untuk isteri &
+            anak-anak teruskan
+            hidup.</p>
+          <span class="text-[10px] font-bold uppercase tracking-widest text-rose-600 inline-block">Pilih
+            Solusi →</span>
+        </button>
+
+        <!-- Option 3 -->
+        <button onclick="document.getElementById('borang-konsultasi').scrollIntoView({behavior: 'smooth'})"
+          class="group p-6 sm:p-8 rounded-[2rem] sm:rounded-[2.5rem] bg-gray-50 border border-gray-100 hover:border-gray-900 transition-all text-left">
+          <div
+            class="w-12 h-12 sm:w-14 sm:h-14 bg-white rounded-xl sm:rounded-2xl flex items-center justify-center text-xl sm:text-2xl mb-4 sm:mb-6 shadow-sm">
+            🏥</div>
+          <h3 class="text-lg sm:text-xl font-black text-gray-900 mb-2">Medical Card</h3>
+          <p class="text-xs sm:text-sm text-gray-500 leading-relaxed mb-4 sm:mb-6">Limit tinggi & komprehensif untuk
+            rawatan hospital
+            swasta terbaik.</p>
+          <span class="text-[10px] font-bold uppercase tracking-widest text-rose-600 inline-block">Pilih
+            Solusi →</span>
+        </button>
       </div>
     </div>
   </section>
 
-  <!-- COMMITMENTS SECTION -->
-  <section class="bg-white py-12 sm:py-20 px-4 sm:px-6 border-b border-gray-100">
-    <div class="max-w-5xl mx-auto text-center">
-      <p class="text-gray-400 font-semibold mb-3 tracking-wide text-sm uppercase">Jangan Terlepas Pandang</p>
-      <h2 class="text-3xl font-bold text-gray-900 mb-12">Walau Anda Sakit, Bank Takkan Faham.</h2>
+  <!-- THE REALITY CHECK (Commitments) -->
+  <section class="bg-gray-900 py-16 sm:py-32 px-4 sm:px-6 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10 grid-bg invert pointer-events-none"></div>
+    <div class="max-w-5xl mx-auto relative z-10">
+      <div class="text-center mb-10 sm:mb-16">
+        <span
+          class="px-4 py-1 bg-rose-600 text-white text-[10px] font-bold rounded-full uppercase tracking-widest mb-6 inline-block">Reality
+          Check</span>
+        <h2 class="text-2xl md:text-5xl font-black text-white mb-4 sm:mb-6 px-4 leading-[1.3] sm:leading-tight">Walau
+          Anda Sakit,<br />Bank Tetap Mahu Bayaran.</h2>
+      </div>
 
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-        <div class="group cursor-default">
-          <div
-            class="w-16 h-16 mx-auto mb-4 bg-gray-50 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform text-gray-900">
-            🏠</div>
-          <p class="font-medium text-gray-900">Housing Loan</p>
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
+        <div class="p-4 sm:p-6 rounded-2xl sm:rounded-3xl bg-white/5 border border-white/10 text-center">
+          <div class="text-2xl sm:text-3xl mb-3 sm:mb-4">🏠</div>
+          <p class="text-white font-bold text-xs sm:text-sm mb-1">Housing Loan</p>
+          <p class="text-rose-500 text-[10px] uppercase font-black tracking-widest">RM2,500/bln</p>
         </div>
-        <div class="group cursor-default">
-          <div
-            class="w-16 h-16 mx-auto mb-4 bg-gray-50 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform group-hover:bg-gray-100 group-hover:text-gray-900">
-            🚗</div>
-          <p class="font-medium text-gray-900">Ansuran Kereta</p>
+        <div class="p-4 sm:p-6 rounded-2xl sm:rounded-3xl bg-white/5 border border-white/10 text-center">
+          <div class="text-2xl sm:text-3xl mb-3 sm:mb-4">🚗</div>
+          <p class="text-white font-bold text-xs sm:text-sm mb-1">Ansuran Kereta</p>
+          <p class="text-rose-500 text-[10px] uppercase font-black tracking-widest">RM800/bln</p>
         </div>
-        <div class="group cursor-default">
-          <div
-            class="w-16 h-16 mx-auto mb-4 bg-gray-50 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform group-hover:bg-gray-100 group-hover:text-gray-900">
-            🛒</div>
-          <p class="font-medium text-gray-900">Nafkah Isteri</p>
+        <div class="p-4 sm:p-6 rounded-2xl sm:rounded-3xl bg-white/5 border border-white/10 text-center">
+          <div class="text-2xl sm:text-3xl mb-3 sm:mb-4">🛒</div>
+          <p class="text-white font-bold text-xs sm:text-sm mb-1">Nafkah Isteri</p>
+          <p class="text-rose-500 text-[10px] uppercase font-black tracking-widest">RM1,000/bln</p>
         </div>
-        <div class="group cursor-default">
-          <div
-            class="w-16 h-16 mx-auto mb-4 bg-gray-50 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform group-hover:bg-gray-100 group-hover:text-gray-900">
-            🎓</div>
-          <p class="font-medium text-gray-900">Yuran Sekolah</p>
+        <div class="p-4 sm:p-6 rounded-2xl sm:rounded-3xl bg-white/5 border border-white/10 text-center">
+          <div class="text-2xl sm:text-3xl mb-3 sm:mb-4">🎓</div>
+          <p class="text-white font-bold text-xs sm:text-sm mb-1">Yuran Sekolah</p>
+          <p class="text-rose-500 text-[10px] uppercase font-black tracking-widest">RM500/bln</p>
         </div>
+      </div>
+
+      <div class="mt-10 sm:mt-16 p-6 sm:p-8 rounded-[1.5rem] sm:rounded-[2rem] bg-rose-600 text-white text-center">
+        <p class="text-lg sm:text-xl font-black mb-2">Total Komitmen: RM4,800 / Bulan</p>
+        <p class="text-xs opacity-90 leading-relaxed px-4">Jika gaji terhenti hari ini, berapa bulan anda boleh bertahan
+          dengan simpanan?</p>
       </div>
     </div>
   </section>
@@ -275,159 +358,211 @@
     </div>
   </section>
 
-  <!-- 4 STEPS SECTION -->
-  <section class="bg-white py-16 sm:py-24 px-4 sm:px-6">
+  <!-- 4 STEPS STRATEGY -->
+  <section class="bg-white py-12 sm:py-32 px-4 sm:px-6 relative">
     <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Langkah Mudah Untuk Dilindungi</h2>
-        <p class="text-gray-500 max-w-2xl mx-auto text-lg">Kami uruskan segalanya. Anda hanya perlu semak & setuju.</p>
+      <div class="text-center mb-12 sm:mb-20">
+        <span class="text-rose-600 font-black text-[10px] uppercase tracking-[0.3em] mb-4 block">The Process</span>
+        <h2 class="text-2xl md:text-5xl font-black text-gray-900 mb-4 sm:mb-6 leading-tight">Proses Blueprint Gaji Kedua
+        </h2>
+        <p class="text-sm sm:text-base text-gray-500 max-w-2xl mx-auto px-4">Sistematic approach untuk pastikan anda
+          tidak 'over-insure' atau 'under-protected'.</p>
       </div>
 
-      <div class="grid md:grid-cols-4 gap-8 relative">
-        <!-- Connecting Line (Desktop) -->
-        <div class="hidden md:block absolute top-8 left-0 w-full h-0.5 bg-gray-100 -z-10 transform translate-y-4"></div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 relative">
+        <!-- Progress Line (Desktop) -->
+        <div class="hidden lg:block absolute top-12 left-0 w-full h-px bg-gray-100 -z-10"></div>
 
         <!-- Step 1 -->
-        <div class="relative bg-white pt-4">
+        <div class="relative text-center sm:text-left group px-4 sm:px-0">
           <div
-            class="w-12 h-12 bg-gray-900 text-white rounded-full flex items-center justify-center text-xl font-bold mb-6 mx-auto md:mx-0 shadow-lg ring-8 ring-white">
-            1</div>
-          <h3 class="text-lg font-bold text-gray-900 mb-3 text-center md:text-left">Semak Kelayakan</h3>
-          <p class="text-gray-500 text-sm leading-relaxed text-center md:text-left">
-            Isi borang ringkas di bawah. Tiada dokumen rumit diperlukan untuk pengiraan awal.
-          </p>
+            class="w-14 h-14 sm:w-16 sm:h-16 bg-gray-900 text-white rounded-2xl flex items-center justify-center text-lg sm:text-xl font-black mb-6 sm:mb-8 mx-auto sm:mx-0 shadow-xl group-hover:bg-rose-600 transition-colors duration-300">
+            01</div>
+          <h3 class="text-lg font-black text-gray-900 mb-2 sm:mb-3">Audit Komitmen</h3>
+          <p class="text-xs sm:text-sm text-gray-500 leading-relaxed max-w-xs mx-auto sm:mx-0">Analisis jumlah hutang,
+            nafkah, dan kos sara hidup bulanan
+            anda secara telus.</p>
         </div>
 
         <!-- Step 2 -->
-        <div class="relative bg-white pt-4">
+        <div class="relative text-center sm:text-left group px-4 sm:px-0">
           <div
-            class="w-12 h-12 bg-gray-900 text-white rounded-full flex items-center justify-center text-xl font-bold mb-6 mx-auto md:mx-0 shadow-lg ring-8 ring-white">
-            2</div>
-          <h3 class="text-lg font-bold text-gray-900 mb-3 text-center md:text-left">Terima Quotation</h3>
-          <p class="text-gray-500 text-sm leading-relaxed text-center md:text-left">
-            Saya akan hantar 3 pilihan pelan (Basic/Standard/Premium) ke WhatsApp anda.
-          </p>
+            class="w-14 h-14 sm:w-16 sm:h-16 bg-gray-900 text-white rounded-2xl flex items-center justify-center text-lg sm:text-xl font-black mb-6 sm:mb-8 mx-auto sm:mx-0 shadow-xl group-hover:bg-rose-600 transition-colors duration-300">
+            02</div>
+          <h3 class="text-lg font-black text-gray-900 mb-2 sm:mb-3">Stress Test</h3>
+          <p class="text-xs sm:text-sm text-gray-500 leading-relaxed max-w-xs mx-auto sm:mx-0">Kami simulasi apa berlaku
+            jika gaji terhenti hari ini. Di
+            mana punca kebocoran?</p>
         </div>
 
         <!-- Step 3 -->
-        <div class="relative bg-white pt-4">
+        <div class="relative text-center sm:text-left group px-4 sm:px-0">
           <div
-            class="w-12 h-12 bg-gray-900 text-white rounded-full flex items-center justify-center text-xl font-bold mb-6 mx-auto md:mx-0 shadow-lg ring-8 ring-white">
-            3</div>
-          <h3 class="text-lg font-bold text-gray-900 mb-3 text-center md:text-left">Submit Online</h3>
-          <p class="text-gray-500 text-sm leading-relaxed text-center md:text-left">
-            Pilih pelan yang sesuai bajet, dan kami proses permohonan secara digital sepenuhnya.
-          </p>
+            class="w-14 h-14 sm:w-16 sm:h-16 bg-gray-900 text-white rounded-2xl flex items-center justify-center text-lg sm:text-xl font-black mb-6 sm:mb-8 mx-auto sm:mx-0 shadow-xl group-hover:bg-rose-600 transition-colors duration-300">
+            03</div>
+          <h3 class="text-lg font-black text-gray-900 mb-2 sm:mb-3">Custom Build</h3>
+          <p class="text-xs sm:text-sm text-gray-500 leading-relaxed max-w-xs mx-auto sm:mx-0">Bina 3 pilihan pelan
+            (Standard vs Premium) mengikut bajet
+            optimum anda.</p>
         </div>
 
         <!-- Step 4 -->
-        <div class="relative bg-white pt-4">
+        <div class="relative text-center sm:text-left group px-4 sm:px-0">
           <div
-            class="w-12 h-12 bg-gray-900 text-white rounded-full flex items-center justify-center text-xl font-bold mb-6 mx-auto md:mx-0 shadow-lg ring-8 ring-white">
-            4</div>
-          <h3 class="text-lg font-bold text-gray-900 mb-3 text-center md:text-left">Dilindungi ✅</h3>
-          <p class="text-gray-500 text-sm leading-relaxed text-center md:text-left">
-            Selesai! Polisi digital akan dihantar ke email anda. Keluarga anda kini selamat.
-          </p>
+            class="w-14 h-14 sm:w-16 sm:h-16 bg-gray-900 text-white rounded-2xl flex items-center justify-center text-lg sm:text-xl font-black mb-6 sm:mb-8 mx-auto sm:mx-0 shadow-xl group-hover:bg-rose-600 transition-colors duration-300">
+            04</div>
+          <h3 class="text-lg font-black text-gray-900 mb-2 sm:mb-3">Activation ✅</h3>
+          <p class="text-xs sm:text-sm text-gray-500 leading-relaxed max-w-xs mx-auto sm:mx-0">Submission digital 100%.
+            Polisi aktif dalam masa sesingkat 24
+            jam.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- WHY DR. TAKAFUL -->
-  <section id="why-dr-takaful" class="py-24 px-6 bg-gray-50">
-    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-      <div class="order-2 md:order-1">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Kenapa Pilih Dr. Hana?</h2>
-        <div class="prose prose-lg text-gray-500 leading-relaxed mb-8">
-          <p class="mb-4">
-            "Saya bukan jurujual yang mengejar komisen. Saya adalah <span class="text-gray-900 font-bold">Jurutera
-              Kewangan</span> anda."
-          </p>
-          <p class="mb-4">
-            Dengan latar belakang PhD in Engineering, saya mendekati Takaful dengan data & fakta. Saya bantu anda kira
-            <strong>berapa pampasan yang TEPAT</strong>—bukan main teka sahaja.
-          </p>
-        </div>
-
-        <div class="flex flex-wrap gap-4">
-          <div class="px-4 py-2 bg-white rounded-lg border border-gray-200 text-sm font-medium text-gray-700 shadow-sm">
-            ✅ Pengiraan Saintifik
-          </div>
-          <div class="px-4 py-2 bg-white rounded-lg border border-gray-200 text-sm font-medium text-gray-700 shadow-sm">
-            ✅ Tiada Hard-Selling
-          </div>
-          <div class="px-4 py-2 bg-white rounded-lg border border-gray-200 text-sm font-medium text-gray-700 shadow-sm">
-            ✅ Servis Pantas (WhatsApp)
-          </div>
-        </div>
-      </div>
-
-      <div class="order-1 md:order-2 flex justify-center">
-        <div class="relative group">
-          <div
-            class="absolute inset-0 bg-gray-200 rounded-[3rem] blur-3xl opacity-10 group-hover:opacity-20 transition-opacity">
-          </div>
-          <div
-            class="relative w-64 h-64 md:w-80 md:h-80 rounded-[3rem] bg-rose-50 overflow-hidden border-4 border-white shadow-2xl">
-            <img src="images/dr-takaful-hana-profile.png" alt="Dr. Takaful Hana" class="w-full h-full object-cover">
-          </div>
-          <div class="absolute -bottom-4 -right-4 bg-white px-6 py-3 rounded-2xl shadow-xl border border-gray-50">
-            <p class="text-[10px] font-black tracking-[0.2em] text-gray-900 uppercase sans-font">PhD Engineering</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TESTIMONIALS SECTION -->
-  <section id="testimonials" class="py-24 px-6 bg-white border-t border-gray-100">
+  <!-- ENGINEERING METHODOLOGY -->
+  <section id="methodology" class="py-12 sm:py-24 px-4 sm:px-6 bg-gray-50 overflow-hidden">
     <div class="max-w-6xl mx-auto">
-      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-16 text-center">Mereka Dah Buat Pilihan Bijak</h2>
+      <div class="grid lg:grid-cols-2 gap-10 sm:gap-16 items-center">
+        <!-- Content Side -->
+        <div class="order-2 lg:order-1 px-2 sm:px-0">
+          <span class="text-rose-600 font-black text-[10px] uppercase tracking-[0.3em] mb-4 block">Our Superpower</span>
+          <h2 class="text-2xl sm:text-5xl font-black text-gray-900 mb-6 sm:mb-8 leading-tight">Pendekatan <span
+              class="text-gray-400">Engineering</span> Dalam Takaful.</h2>
 
-      <div class="grid md:grid-cols-2 gap-10">
-        <!-- Testimonial 1 -->
-        <div class="flex flex-col h-full bg-gray-50 p-8 rounded-3xl">
-          <div class="mb-6 text-gray-900">
-            <svg class="w-8 h-8 opacity-100" fill="currentColor" viewBox="0 0 24 24">
-              <path
-                d="M14.017 21L14.017 18C14.017 16.896 14.789 15.547 15.86 14.706C16.92 13.856 18.006 13.567 18.006 12.049C18.006 10.519 16.834 9.423 15.344 9.423C13.837 9.423 12.673 10.605 12.673 12.049L12.673 13.856L10.5 13.856L10.5 7L17.75 7L17.75 13.757C17.75 16.592 15.852 19.539 14.017 21ZM5 21L5 18C5 16.896 5.772 15.547 6.843 14.706C7.903 13.856 8.989 13.567 8.989 12.049C8.989 10.519 7.817 9.423 6.327 9.423C4.82 9.423 3.656 10.605 3.656 12.049L3.656 13.856L1.5 13.856L1.5 7L8.75 7L8.75 13.757C8.75 16.592 6.852 19.539 5 21Z" />
-            </svg>
+          <div class="space-y-6 sm:space-y-8">
+            <div class="flex gap-4 sm:gap-6">
+              <div
+                class="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-xl sm:rounded-2xl flex items-center justify-center shadow-sm text-lg">
+                🎯
+              </div>
+              <div>
+                <h4 class="font-bold text-gray-900 mb-1 text-sm sm:text-base">Optimasi Bajet</h4>
+                <p class="text-xs sm:text-sm text-gray-500">Mencari titik keseimbangan terbaik antara harga premium dan
+                  jumlah
+                  perlindungan. Zero pembaziran.</p>
+              </div>
+            </div>
+            <div class="flex gap-4 sm:gap-6">
+              <div
+                class="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-xl sm:rounded-2xl flex items-center justify-center shadow-sm text-lg">
+                📊
+              </div>
+              <div>
+                <h4 class="font-bold text-gray-900 mb-1 text-sm sm:text-base">Analisis Data</h4>
+                <p class="text-xs sm:text-sm text-gray-500">Kami menggunakan data inflasi perubatan 2026 dan komitmen
+                  sebenar anda untuk pengiraan tepat.</p>
+              </div>
+            </div>
+            <div class="flex gap-4 sm:gap-6">
+              <div
+                class="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-xl sm:rounded-2xl flex items-center justify-center shadow-sm text-lg">
+                🛠️
+              </div>
+              <div>
+                <h4 class="font-bold text-gray-900 mb-1 text-sm sm:text-base">Custom Built</h4>
+                <p class="text-xs sm:text-sm text-gray-500">Setiap pelan dibina khusus (custom-engineered) mengikut fasa
+                  hidup
+                  anda—bukan pelan generic.</p>
+              </div>
+            </div>
           </div>
-          <p class="text-lg text-gray-700 leading-relaxed mb-6 italic flex-grow">
-            "Dulu saya ingat Takaful ni mahal. Tapi lepas Hana kira ikut bajet saya, rupanya RM150/bulan dah boleh cover
-            <strong>pampasan RM350,000</strong>. Sangat berbaloi."
+        </div>
+
+        <!-- Visual Side -->
+        <div class="relative order-1 lg:order-2 px-2 sm:px-0">
+          <div class="bg-gray-900 rounded-[2rem] sm:rounded-[3rem] p-8 sm:p-12 text-white shadow-2xl relative z-10">
+            <h3 class="text-lg sm:text-2xl font-black mb-4 sm:mb-6">"Saya bukan jurujual. Saya adalah Jurutera Kewangan
+              anda."</h3>
+            <p class="text-xs sm:text-base text-gray-400 leading-relaxed mb-6 sm:mb-8">
+              Dengan latar belakang <span class="text-white font-bold">PhD in Engineering</span>, saya mendekati Takaful
+              dengan logik dan ketepatan. Saya bantu anda melihat "lompong" dalam perlindungan yang orang lain
+              mungkin terlepas pandang.
+            </p>
+            <div class="pt-6 sm:pt-8 border-t border-white/10 flex items-center gap-3 sm:gap-4">
+              <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden border-2 border-rose-600">
+                <img src="images/dr-takaful-hana-profile.png" alt="Dr Hana" class="w-full h-full object-cover">
+              </div>
+              <div>
+                <p class="font-bold text-xs sm:text-sm">Dr. Hana, PhD</p>
+                <p class="text-[8px] sm:text-[10px] text-gray-500 uppercase tracking-widest leading-none mt-1">AIA
+                  Public Takaful Consultant</p>
+              </div>
+            </div>
+          </div>
+          <!-- Decorative Elements (Hidden on small mobile) -->
+          <div class="absolute -bottom-4 -right-4 w-24 h-24 bg-rose-600 rounded-2xl -z-10 rotate-12 hidden sm:block">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL PROOF / TESTIMONIALS -->
+  <section id="testimonials" class="py-24 px-6 bg-white overflow-hidden">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <span class="text-rose-600 font-black text-[10px] uppercase tracking-[0.3em] mb-4 block">Case Studies</span>
+        <h2 class="text-3xl md:text-5xl font-black text-gray-900">Mereka Dah Ambil Langkah Bijak.</h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Testimonial 1 -->
+        <div class="bg-gray-50 p-10 rounded-[3rem] border border-gray-100 hover:border-gray-200 transition-all">
+          <div class="flex gap-1 text-rose-600 mb-6">
+            <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
+          </div>
+          <p class="text-gray-700 italic leading-relaxed mb-8">
+            "Dulu saya ingat Takaful ni mahal. Tapi lepas Dr. Hana kira ikut bajet saya, rupanya RM150/bulan dah boleh
+            cover <strong>pampasan RM350,000</strong>. Sangat berbaloi."
           </p>
-          <div class="flex items-center gap-4 mt-auto">
+          <div class="flex items-center gap-4">
             <div
-              class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-gray-900 font-bold border border-gray-200">
+              class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center font-black text-gray-900 shadow-sm">
               EH</div>
             <div>
               <p class="font-bold text-gray-900 text-sm">Encik Hafizzi</p>
-              <p class="text-xs text-gray-500">Jurutera, 32 Tahun</p>
+              <p class="text-[10px] text-gray-400 uppercase tracking-widest">Jurutera, 32 Tahun</p>
             </div>
           </div>
         </div>
 
         <!-- Testimonial 2 -->
-        <div class="flex flex-col h-full bg-gray-50 p-8 rounded-3xl">
-          <div class="mb-6 text-gray-900">
-            <svg class="w-8 h-8 opacity-100" fill="currentColor" viewBox="0 0 24 24">
-              <path
-                d="M14.017 21L14.017 18C14.017 16.896 14.789 15.547 15.86 14.706C16.92 13.856 18.006 13.567 18.006 12.049C18.006 10.519 16.834 9.423 15.344 9.423C13.837 9.423 12.673 10.605 12.673 12.049L12.673 13.856L10.5 13.856L10.5 7L17.75 7L17.75 13.757C17.75 16.592 15.852 19.539 14.017 21ZM5 21L5 18C5 16.896 5.772 15.547 6.843 14.706C7.903 13.856 8.989 13.567 8.989 12.049C8.989 10.519 7.817 9.423 6.327 9.423C4.82 9.423 3.656 10.605 3.656 12.049L3.656 13.856L1.5 13.856L1.5 7L8.75 7L8.75 13.757C8.75 16.592 6.852 19.539 5 21Z" />
-            </svg>
+        <div class="bg-gray-50 p-10 rounded-[3rem] border border-gray-100 hover:border-gray-200 transition-all">
+          <div class="flex gap-1 text-rose-600 mb-6">
+            <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
           </div>
-          <p class="text-lg text-gray-700 leading-relaxed mb-6 italic flex-grow">
+          <p class="text-gray-700 italic leading-relaxed mb-8">
             "Saya suka cara Hana explain. Takde pusing-pusing. Dia tunjuk terus berapa lompong kewangan saya kalau saya
             sakit kritikal. Terus sign up on the spot."
           </p>
-          <div class="flex items-center gap-4 mt-auto">
+          <div class="flex items-center gap-4">
             <div
-              class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-gray-900 font-bold border border-gray-200">
+              class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center font-black text-gray-900 shadow-sm">
               PS</div>
             <div>
               <p class="font-bold text-gray-900 text-sm">Puan Sarah</p>
-              <p class="text-xs text-gray-500">Guru, 29 Tahun</p>
+              <p class="text-[10px] text-gray-400 uppercase tracking-widest">Guru, 29 Tahun</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 (Newly Added) -->
+        <div class="bg-gray-900 p-10 rounded-[3rem] text-white">
+          <div class="flex gap-1 text-rose-600 mb-6">
+            <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
+          </div>
+          <p class="text-gray-300 italic leading-relaxed mb-8">
+            "Pendekatan engineering Dr. Hana memang berbeza. Sangat logik dan mudah faham. Saya rasa selamat tahu
+            keluarga saya dilindungi dengan pelan yang dioptimumkan."
+          </p>
+          <div class="flex items-center gap-4">
+            <div
+              class="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center font-black text-white shadow-sm">
+              AM</div>
+            <div>
+              <p class="font-bold text-white text-sm">Arif Mansor</p>
+              <p class="text-[10px] text-gray-500 uppercase tracking-widest">Manager, 40 Tahun</p>
             </div>
           </div>
         </div>
@@ -435,80 +570,80 @@
     </div>
   </section>
 
-  <!-- FORM CARD SECTION - WHATSAPP -->
-  <section id="borang-konsultasi" class="py-16 sm:py-24 px-4 sm:px-6 bg-gray-50 border-t border-gray-100">
-    <div class="max-w-2xl mx-auto bg-white p-6 sm:p-10 rounded-3xl shadow-xl border border-gray-100">
-      <div class="text-center mb-8 sm:mb-10">
-        <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">Semak Kelayakan & Harga</h2>
-        <p class="text-sm sm:text-base text-gray-500">Terus chat dengan Dr. Hana di WhatsApp. Dapat quotation rasmi
-          dalam masa <strong>30-60 minit</strong>.</p>
-      </div>
+  <!-- FINAL CONVERSION FORM -->
+  <section id="borang-konsultasi" class="py-12 sm:py-24 px-4 sm:px-6 bg-gray-50">
+    <div class="max-w-4xl mx-auto">
+      <div
+        class="grid lg:grid-cols-2 gap-8 sm:gap-12 bg-white rounded-[2rem] sm:rounded-[4rem] p-6 sm:p-16 shadow-2xl border border-gray-100 overflow-hidden relative">
+        <!-- Decoration -->
+        <div class="absolute top-0 right-0 w-32 h-32 bg-rose-50 rounded-full -mr-16 -mt-16 hidden sm:block"></div>
 
-      <div class="space-y-6">
-        <!-- Trust Indicators -->
-        <div class="grid grid-cols-3 gap-4 mb-8">
-          <div class="text-center">
-            <div class="text-2xl mb-2">✅</div>
-            <p class="text-xs text-gray-600 font-medium">100% Percuma</p>
-          </div>
-          <div class="text-center">
-            <div class="text-2xl mb-2">⚡</div>
-            <p class="text-xs text-gray-600 font-medium">Respons Pantas</p>
-          </div>
-          <div class="text-center">
-            <div class="text-2xl mb-2">🔒</div>
-            <p class="text-xs text-gray-600 font-medium">Tiada Hard-Sell</p>
+        <div class="relative z-10">
+          <span class="text-rose-600 font-black text-[10px] uppercase tracking-[0.3em] mb-4 block">Get Started</span>
+          <h2 class="text-2xl sm:text-3xl font-black text-gray-900 mb-4 sm:mb-6">Mula Bina Blueprint Anda.</h2>
+          <p class="text-sm sm:text-base text-gray-500 mb-6 sm:mb-8 leading-relaxed">
+            Dapatkan quotation rasmi dan pengiraan ROI perlindungan dalam masa <span
+              class="text-gray-900 font-bold">30-60 minit</span> melalui WhatsApp.
+          </p>
+
+          <div class="space-y-3 sm:space-y-4 mb-8">
+            <div class="flex items-center gap-3 text-xs sm:text-sm text-gray-600">
+              <span
+                class="w-5 h-5 sm:w-6 sm:h-6 bg-green-50 text-green-600 rounded-full flex items-center justify-center text-[10px]">✓</span>
+              100% Sesi Percuma & Saintifik
+            </div>
+            <div class="flex items-center gap-3 text-xs sm:text-sm text-gray-600">
+              <span
+                class="w-5 h-5 sm:w-6 sm:h-6 bg-green-50 text-green-600 rounded-full flex items-center justify-center text-[10px]">✓</span>
+              Tiada 'Hard-Selling' Culture
+            </div>
+            <div class="flex items-center gap-3 text-xs sm:text-sm text-gray-600">
+              <span
+                class="w-5 h-5 sm:w-6 sm:h-6 bg-green-50 text-green-600 rounded-full flex items-center justify-center text-[10px]">✓</span>
+              Respons Pantas & Telus
+            </div>
           </div>
         </div>
 
-        <!-- 1-Click WhatsApp Button -->
-        <div class="pt-4">
+        <div class="flex flex-col justify-center gap-4 relative z-10">
           <a href="https://wa.me/60132522587?text=Assalamualaikum%20Dr.%20Hana%2C%0A%0ASaya%20nak%20tahu%20lebih%20lanjut%20tentang%20Takaful%20untuk%20lindungi%20gaji%20%26%20keluarga%20saya.%20Boleh%20bantu%20saya%20semak%20kelayakan%20%26%20harga%3F%0A%0ATerima%20kasih%21%20%F0%9F%99%8F"
             target="_blank"
-            class="w-full bg-[#25D366] text-white py-4 sm:py-5 rounded-xl hover:bg-[#20BA5A] active:scale-95 transition-all font-semibold text-base sm:text-lg shadow-lg hover:shadow-xl flex items-center justify-center gap-3 group">
-            <svg class="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+            class="w-full bg-[#25D366] text-white py-5 sm:py-6 rounded-2xl sm:rounded-3xl hover:bg-[#20BA5A] active:scale-95 transition-all font-black text-base sm:text-lg shadow-xl shadow-green-500/20 flex items-center justify-center gap-3 group">
+            <svg class="w-6 h-6 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
               <path
                 d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
             </svg>
-            <span class="leading-none">WhatsApp Dr. Hana Sekarang</span>
-            <svg xmlns="http://www.w3.org/2000/svg"
-              class="w-5 h-5 flex-shrink-0 group-hover:translate-x-1 transition-transform" fill="none"
-              viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-            </svg>
+            Chat di WhatsApp
           </a>
-          <p class="text-center text-xs text-gray-400 mt-4">
-            Tiada komitmen. Chat santai untuk tanya apa sahaja.
-          </p>
-        </div>
-
-        <!-- Optional: Small text link for those who prefer form -->
-        <div class="text-center pt-2">
-          <p class="text-xs text-gray-400">
-            Atau <a href="/analisis-keperluan.html" class="text-gray-900 hover:underline font-bold">isi borang
-              lengkap</a> untuk analisis terperinci
-          </p>
-          <p class="text-xs text-gray-400 mt-2">
-            Nak quotation medical card? <a href="/borang-fact-finding-medical-card.html"
-              class="text-gray-900 hover:underline font-bold">Isi fact-finding form</a> dulu
-          </p>
+          <p class="text-center text-[10px] text-gray-400 uppercase tracking-widest">Respons: ~15-30 Minit</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FEATURED ARTICLE SECTION -->
-  <section class="py-24 px-6 bg-white border-t border-gray-100">
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-3xl font-bold text-gray-900 mb-6">"Saya Dah Ada Medical Card, Cukup Kan?"</h2>
-      <p class="text-lg text-gray-500 max-w-2xl mx-auto mb-10 leading-relaxed">
-        Ramai yang silap di sini. Medical card bayar hospital, tapi siapa bayar hutang rumah & kereta bila anda hilang
-        upaya? Baca kisah benar ini.
-      </p>
-      <a href="/kos-rawatan-vs-gaji.html"
-        class="inline-flex items-center gap-2 text-gray-900 font-bold hover:underline transition group">
-        Baca Kisah Benar Penuh <span class="group-hover:translate-x-1 transition-transform">→</span>
-      </a>
+  <!-- FEATURED CASE STUDY -->
+  <section class="py-12 sm:py-24 px-4 sm:px-6 bg-white overflow-hidden">
+    <div class="max-w-4xl mx-auto">
+      <div
+        class="bg-gray-900 rounded-[2rem] sm:rounded-[3rem] p-8 sm:p-20 text-center relative overflow-hidden shadow-2xl">
+        <!-- Decoration -->
+        <div class="absolute inset-0 opacity-10 grid-bg invert pointer-events-none"></div>
+
+        <div class="relative z-10">
+          <span class="text-rose-600 font-black text-[10px] uppercase tracking-[0.3em] mb-4 sm:mb-6 block">Critical
+            Read</span>
+          <h2 class="text-2xl md:text-5xl font-black text-white mb-6 sm:mb-8 leading-tight">"Gaji vs Medical
+            Card:<br />Mana Lebih Utama?"</h2>
+          <p class="text-sm sm:text-lg text-gray-400 mb-8 sm:mb-12 leading-relaxed px-2">
+            Medical card hanya bayar bil hospital. Tapi siapa bayar ansuran rumah & nafkah isteri bila anda sakit
+            kritikal & hilangan punca pendapatan? Ini adalah 'lompong' terbesar dalam kewangan rakyat Malaysia.
+          </p>
+          <a href="/kos-rawatan-vs-gaji.html"
+            class="inline-flex items-center gap-3 text-white font-black uppercase tracking-widest text-[10px] border-b-2 border-rose-600 pb-2 hover:text-rose-600 transition-colors group">
+            Buka Analisis Penuh <span class="group-hover:translate-x-2 transition-transform">→</span>
+          </a>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -521,37 +656,38 @@
       <button onclick="document.getElementById('offer-banner').style.display='none'"
         class="absolute top-1 right-1 text-white text-3xl leading-none">&times;</button>
     </div>
-    <section id="blog" class="bg-white max-w-6xl mx-auto py-16 px-6 rounded-3xl shadow-sm border border-gray-100">
-      <h2 class="text-3xl font-bold text-center mb-4 text-gray-900">Pusat Ilmu Takaful</h2>
-      <p class="text-center text-gray-500 mb-12 max-w-2xl mx-auto">Panduan jujur & telus untuk bantu anda buat keputusan
-        bijak.</p>
+    <section id="blog"
+      class="bg-white max-w-6xl mx-auto py-12 sm:py-24 px-4 sm:px-6 rounded-[2rem] sm:rounded-[4rem] shadow-sm border border-gray-100">
+      <div class="text-center mb-10 sm:mb-16">
+        <span class="text-rose-600 font-black text-[10px] uppercase tracking-[0.3em] mb-4 block">Knowledge Hub</span>
+        <h2 class="text-2xl md:text-5xl font-black text-gray-900 mb-4 sm:mb-6 leading-tight">Pusat Ilmu Takaful</h2>
+        <p class="text-sm sm:text-base text-gray-500 max-w-2xl mx-auto px-4">Panduan berasaskan data untuk bantu anda
+          buat keputusan bijak.</p>
+      </div>
 
-      <!-- Search Input -->
-      <div class="mb-10 max-w-lg mx-auto">
-        <div class="relative">
-          <input type="text" id="searchInput" onkeyup="searchArticles()"
-            placeholder="Cari artikel... cth: hibah, medical card"
-            class="w-full px-6 py-4 bg-gray-50 border border-gray-200 rounded-full focus:bg-white focus:ring-2 focus:ring-gray-900 focus:border-gray-900 outline-none transition-all pl-12 shadow-sm"
-            autocomplete="off">
-          <svg class="w-5 h-5 text-gray-400 absolute top-1/2 left-4 transform -translate-y-1/2"
+      <!-- Search & Filter -->
+      <div class="mb-10 sm:mb-16 space-y-6 sm:space-y-8">
+        <div class="max-w-lg mx-auto relative px-2">
+          <input type="text" id="searchInput" onkeyup="searchArticles()" placeholder="Cari topik... cth: hibah"
+            class="w-full px-6 sm:px-8 py-4 sm:py-5 bg-gray-50 border border-gray-100 rounded-xl sm:rounded-2xl focus:bg-white focus:ring-2 focus:ring-rose-600 focus:border-rose-600 outline-none transition-all pl-12 sm:pl-14 shadow-sm font-medium text-sm sm:text-base">
+          <svg class="w-5 h-5 sm:w-6 sm:h-6 text-gray-300 absolute top-1/2 left-6 sm:left-5 transform -translate-y-1/2"
             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
           </svg>
+        </div>
+
+        <div class="flex justify-center flex-wrap gap-2 px-2">
+          <button onclick="filterArticles('all')" class="tab-button active-tab text-[10px] sm:text-xs">Semua</button>
+          <button onclick="filterArticles('hibah')" class="tab-button text-[10px] sm:text-xs">Hibah</button>
+          <button onclick="filterArticles('medical')" class="tab-button text-[10px] sm:text-xs">Medical Card</button>
+          <button onclick="filterArticles('asas')" class="tab-button text-[10px] sm:text-xs">Asas</button>
+          <button onclick="filterArticles('pinjaman')" class="tab-button text-[10px] sm:text-xs">Rumah</button>
         </div>
       </div>
 
-      <!-- Tab Navigation -->
-      <div class="flex justify-center flex-wrap gap-3 mb-12">
-        <button onclick="filterArticles('all')" class="tab-button active-tab">Semua</button>
-        <button onclick="filterArticles('hibah')" class="tab-button">Hibah</button>
-        <button onclick="filterArticles('medical')" class="tab-button">Medical Card</button>
-        <button onclick="filterArticles('asas')" class="tab-button">Asas Takaful</button>
-        <button onclick="filterArticles('pinjaman')" class="tab-button">Rumah</button>
-      </div>
-
       <!-- Blog Grid -->
-      <div id="article-grid" class="grid md:grid-cols-3 gap-8">
+      <div id="article-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 px-2 sm:px-0">
         <!-- Kategori: Asas Takaful -->
         <a href="/kenapa-perlu-rancang-kewangan-awal.html" target="_blank" class="blog-article group"
           data-category="asas" data-keywords="kewangan, simpanan, muda, awal, perancangan, gaji">
@@ -822,9 +958,9 @@
         <a href="/hibah-untuk-ibu-bapa.html" target="_blank" class="blog-article group" data-category="hibah"
           data-keywords="hibah ibu bapa, ibu, ayah, parents, adik beradik, kongsi, hadiah, bakti">
           <h3 class="text-lg font-bold text-gray-900 mb-2">Hibah Untuk Ibu Bapa</h3>
-          <p class="text-gray-600 text-sm mb-4 line-clamp-3">Panduan adik-beradik berkongsi caruman untuk jaminan
+          <p class="text-gray-500 text-sm mb-4 line-clamp-3">Panduan adik-beradik berkongsi caruman untuk jaminan
             kewangan ibu bapa.</p>
-          <p class="text-gray-900 font-bold mt-auto text-sm hover:underline">Baca lanjut →</p>
+          <p class="text-rose-600 font-medium mt-auto text-sm group-hover:underline">Baca lanjut →</p>
         </a>
         <div id="no-results" class="hidden md:col-span-3 text-center py-12">
           <p class="text-xl text-gray-500">Tiada artikel ditemui untuk carian anda.</p>
@@ -881,67 +1017,50 @@
     </section>
   </div>
 
-  <!-- TOOLS & CALCULATORS SECTION -->
-  <section class="py-24 px-6 bg-white" id="tools">
+  <!-- USEFUL TOOLS GRID -->
+  <section class="py-12 sm:py-24 px-4 sm:px-6 bg-white overflow-hidden" id="tools">
     <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl font-bold text-gray-900 mb-4">Link Berguna</h2>
-        <p class="text-gray-500 max-w-2xl mx-auto">Rancang kewangan anda dengan lebih bijak secara percuma.</p>
+      <div class="text-center mb-10 sm:mb-16">
+        <span class="text-rose-600 font-black text-[10px] uppercase tracking-[0.3em] mb-4 block">Self-Service
+          Tools</span>
+        <h2 class="text-2xl md:text-5xl font-black text-gray-900 mb-4 px-2">Akses Pantas & Percuma</h2>
       </div>
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-8">
         <!-- Tool 1 -->
-        <a href="/kalkulator-hibah.html" class="premium-card p-10 group block">
+        <a href="/kalkulator-hibah.html"
+          class="p-5 sm:p-8 rounded-[1.5rem] sm:rounded-[2.5rem] bg-gray-50 border border-gray-100 hover:border-gray-900 transition-all group text-center sm:text-left">
           <div
-            class="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center text-3xl mb-8 group-hover:bg-gray-900 group-hover:text-white transition-all group-hover:scale-110">
+            class="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-xl sm:rounded-2xl flex items-center justify-center text-lg mb-4 sm:mb-6 shadow-sm mx-auto sm:mx-0">
             🧮</div>
-          <h3 class="font-black text-xl mb-4 text-gray-900">Kalkulator Hibah
-          </h3>
-          <p class="text-gray-500 text-sm leading-relaxed mb-6">Kira jumlah perlindungan yang ideal untuk keluarga anda
-            jika
-            berlaku kematian.</p>
-          <p class="text-rose-600 font-black text-[10px] uppercase tracking-widest flex items-center gap-2">Launch Tool
-            <span class="group-hover:translate-x-1 transition-transform">→</span>
-          </p>
+          <h3 class="font-black text-gray-900 mb-2 text-xs sm:text-sm">Hibah Calc</h3>
+          <p class="text-[8px] sm:text-[10px] text-rose-600 font-black uppercase tracking-widest">Kira →</p>
         </a>
         <!-- Tool 2 -->
-        <a href="/borang-fact-finding-medical-card.html" class="premium-card p-10 group block">
+        <a href="/borang-fact-finding-medical-card.html"
+          class="p-5 sm:p-8 rounded-[1.5rem] sm:rounded-[2.5rem] bg-gray-50 border border-gray-100 hover:border-gray-900 transition-all group text-center sm:text-left">
           <div
-            class="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center text-3xl mb-8 group-hover:bg-gray-900 group-hover:text-white transition-all group-hover:scale-110">
+            class="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-xl sm:rounded-2xl flex items-center justify-center text-lg mb-4 sm:mb-6 shadow-sm mx-auto sm:mx-0">
             📋</div>
-          <h3 class="font-black text-xl mb-4 text-gray-900">Fact-Finding MC
-          </h3>
-          <p class="text-gray-500 text-sm leading-relaxed mb-6">Nak quotation medical card? Isi borang ini untuk
-            konsultasi
-            lebih fokus.</p>
-          <p class="text-rose-600 font-black text-[10px] uppercase tracking-widest flex items-center gap-2">Start Form
-            <span class="group-hover:translate-x-1 transition-transform">→</span>
-          </p>
+          <h3 class="font-black text-gray-900 mb-2 text-xs sm:text-sm">MC Form</h3>
+          <p class="text-[8px] sm:text-[10px] text-rose-600 font-black uppercase tracking-widest">Mula →</p>
         </a>
         <!-- Tool 3 -->
-        <a href="/borang-permohonan.html" class="premium-card p-10 group block">
+        <a href="/borang-permohonan.html"
+          class="p-5 sm:p-8 rounded-[1.5rem] sm:rounded-[2.5rem] bg-gray-50 border border-gray-100 hover:border-gray-900 transition-all group text-center sm:text-left">
           <div
-            class="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center text-3xl mb-8 group-hover:bg-gray-900 group-hover:text-white transition-all group-hover:scale-110">
+            class="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-xl sm:rounded-2xl flex items-center justify-center text-lg mb-4 sm:mb-6 shadow-sm mx-auto sm:mx-0">
             🚀</div>
-          <h3 class="font-black text-xl mb-4 text-gray-900">Permohonan Online
-          </h3>
-          <p class="text-gray-500 text-sm leading-relaxed mb-6">Sedia untuk dilindungi? Mulakan permohonan anda secara
-            online.</p>
-          <p class="text-rose-600 font-black text-[10px] uppercase tracking-widest flex items-center gap-2">Apply Now
-            <span class="group-hover:translate-x-1 transition-transform">→</span>
-          </p>
+          <h3 class="font-black text-gray-900 mb-2 text-xs sm:text-sm">Apply</h3>
+          <p class="text-[8px] sm:text-[10px] text-rose-600 font-black uppercase tracking-widest">Mohon →</p>
         </a>
         <!-- Tool 4 -->
-        <a href="/analisis-keperluan.html" class="premium-card p-10 group block">
+        <a href="/analisis-keperluan.html"
+          class="p-5 sm:p-8 rounded-[1.5rem] sm:rounded-[2.5rem] bg-gray-50 border border-gray-100 hover:border-gray-900 transition-all group text-center sm:text-left">
           <div
-            class="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center text-3xl mb-8 group-hover:bg-gray-900 group-hover:text-white transition-all group-hover:scale-110">
+            class="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-xl sm:rounded-2xl flex items-center justify-center text-lg mb-4 sm:mb-6 shadow-sm mx-auto sm:mx-0">
             📝</div>
-          <h3 class="font-black text-xl mb-4 text-gray-900">Analisis Kewangan
-          </h3>
-          <p class="text-gray-500 text-sm leading-relaxed mb-6">Sesi analisa kewangan 1-dengan-1 bersama Dr. Hana secara
-            percuma.</p>
-          <p class="text-rose-600 font-black text-[10px] uppercase tracking-widest flex items-center gap-2">Book Session
-            <span class="group-hover:translate-x-1 transition-transform">→</span>
-          </p>
+          <h3 class="font-black text-gray-900 mb-2 text-xs sm:text-sm">Analisis</h3>
+          <p class="text-[8px] sm:text-[10px] text-rose-600 font-black uppercase tracking-widest">Book →</p>
         </a>
       </div>
     </div>
@@ -961,21 +1080,75 @@
     </div>
   </section>
 
-  <footer class="py-12 border-t border-gray-100 text-center sans-font">
-    <p class="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-400">
-      &copy; <span id="current-year">2026</span> Dr. Takaful Strategy. Engineered for Legacy.
-    </p>
+  <!-- FOOTER -->
+  <footer class="bg-white pt-16 sm:pt-24 pb-12 px-6 border-t border-gray-50">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-12 mb-12 sm:mb-16">
+        <div class="col-span-full lg:col-span-1 text-center sm:text-left">
+          <a href="/" class="brand-logo block mb-4 sm:mb-6">
+            DR.<span class="text-rose-600">TAKAFUL</span>
+          </a>
+          <p class="text-sm text-gray-500 leading-relaxed max-w-xs mx-auto sm:mx-0">
+            Engineered for Legacy. Membantu profesional Malaysia mengoptimumkan perlindungan melalui data.
+          </p>
+        </div>
+
+        <div class="text-center sm:text-left">
+          <h4 class="font-black text-gray-900 mb-4 sm:mb-6 text-xs sm:text-sm uppercase tracking-widest">Solusi</h4>
+          <ul class="space-y-3 sm:space-y-4 text-sm text-gray-500">
+            <li><a href="/pelankritikal.html" class="hover:text-rose-600 transition-colors">Pelan Ganti Gaji</a></li>
+            <li><a href="/panduan-lengkap-hibah-takaful.html" class="hover:text-rose-600 transition-colors">Hibah
+                Strategik</a></li>
+            <li><a href="/panduan-lengkap-medical-card-2026.html" class="hover:text-rose-600 transition-colors">Medical
+                Card 2026</a></li>
+          </ul>
+        </div>
+
+        <div class="text-center sm:text-left">
+          <h4 class="font-black text-gray-900 mb-4 sm:mb-6 text-xs sm:text-sm uppercase tracking-widest">Sumber</h4>
+          <ul class="space-y-3 sm:space-y-4 text-sm text-gray-500">
+            <li><a href="#blog" class="hover:text-rose-600 transition-colors">Pusat Ilmu</a></li>
+            <li><a href="/kalkulator-hibah.html" class="hover:text-rose-600 transition-colors">Kalkulator</a></li>
+            <li><a href="/analisis-keperluan.html" class="hover:text-rose-600 transition-colors">Analisis Percuma</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="text-center sm:text-left">
+          <h4 class="font-black text-gray-900 mb-4 sm:mb-6 text-xs sm:text-sm uppercase tracking-widest">Hubungi</h4>
+          <p class="text-sm text-gray-500 mb-4">KL & Selangor (Zoom Available)</p>
+          <a href="https://wa.me/60132522587"
+            class="text-sm font-bold text-gray-900 hover:text-rose-600 transition-colors">
+            +60 13 252 2587
+          </a>
+        </div>
+      </div>
+
+      <div
+        class="pt-10 sm:pt-12 border-t border-gray-50 flex flex-col items-center sm:flex-row sm:justify-between gap-6">
+        <p
+          class="text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.2em] sm:tracking-[0.3em] text-gray-400 text-center">
+          &copy; <span id="current-year">2026</span> Dr. Takaful Strategy. All Rights Reserved.
+        </p>
+        <div class="flex gap-6">
+          <a href="#"
+            class="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-gray-400 hover:text-gray-900 transition-colors">Privacy</a>
+          <a href="#"
+            class="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-gray-400 hover:text-gray-900 transition-colors">Terms</a>
+        </div>
+      </div>
+    </div>
   </footer>
 
   <!-- Sticky CTA Button -->
   <a href="https://wa.me/60132522587?text=Assalamualaikum%20Dr.%20Hana%2C%0A%0ASaya%20nak%20tahu%20lebih%20lanjut%20tentang%20Takaful%20untuk%20lindungi%20gaji%20%26%20keluarga%20saya.%20Boleh%20bantu%20saya%20semak%20kelayakan%20%26%20harga%3F%0A%0ATerima%20kasih%21%20%F0%9F%99%8F"
     target="_blank" id="sticky-cta"
-    class="hidden fixed bottom-4 sm:bottom-6 right-4 sm:right-6 bg-[#25D366] text-white px-4 sm:px-6 py-3 sm:py-3 rounded-full shadow-2xl hover:bg-[#20BA5A] active:scale-95 transition-all z-50 font-semibold text-sm sm:text-base flex items-center gap-2">
-    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-      <path
-        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
-    </svg>
-    <span class="hidden sm:inline">WhatsApp</span>
+    class="hidden fixed bottom-6 right-6 bg-[#25D366] text-white pl-4 pr-6 py-4 rounded-full shadow-2xl hover:bg-[#20BA5A] active:scale-95 transition-all z-50 font-bold text-sm flex items-center gap-3 group">
+    <span class="relative flex h-3 w-3">
+      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+      <span class="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
+    </span>
+    <span class="leading-none">WhatsApp Dr. Hana</span>
   </a>
 
   <!-- Exit-Intent Popup -->

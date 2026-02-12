@@ -73,6 +73,46 @@ h6,
     background: #111827;
 }
 
+/* Mobile Navigation Adjustments */
+@media (max-width: 768px) {
+    .nav-container {
+        padding: 1rem !important;
+    }
+    .brand-logo {
+        font-size: 1.1rem !important;
+    }
+}
+
+/* Sticky CTA Mobile Optimization */
+#sticky-cta {
+    bottom: calc(1.5rem + env(safe-area-inset-bottom));
+}
+
+@media (max-width: 640px) {
+    #sticky-cta {
+        right: 1rem;
+        left: 1rem;
+        bottom: env(safe-area-inset-bottom, 1rem);
+    }
+    #sticky-cta a {
+        width: 100%;
+        justify-content: center;
+        padding: 1rem;
+        border-radius: 1rem;
+    }
+}
+
+/* Fix for horizontal scroll issues on mobile */
+body, html {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* Smoother transitions for mobile taps */
+button, a {
+    -webkit-tap-highlight-color: transparent;
+}
+
 .premium-shadow {
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
 }
