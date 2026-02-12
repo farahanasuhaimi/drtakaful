@@ -15,6 +15,9 @@ return [
     'hibah-ibu' => 'hibah-untuk-ibu-bapa.html',
     'hibah-lumpuh' => 'bolehkah-claim-hibah-jika-lumpuh.html',
     'hibah-sejuta' => 'hibah-aia-sejuta-makna-vs-legasi-beyond.html',
+    'hibah-murah' => 'hibah-sejuta-makna-mampu-milik.html',
+    'sejuta-makna' => 'hibah-sejuta-makna-mampu-milik.html',
+    'rm45' => 'hibah-sejuta-makna-mampu-milik.html',
     'kalkulator' => 'kalkulator-hibah.html',
     'kalkulator-hibah' => 'kalkulator-hibah-takaful.html',
 
