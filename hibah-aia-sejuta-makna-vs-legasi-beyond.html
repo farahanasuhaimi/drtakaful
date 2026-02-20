@@ -37,6 +37,8 @@
   <link rel="manifest" href="https://DrTakaful.com/site.webmanifest">
 
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="src/global.css">
+  <script src="src/tailwind-config.js"></script>
 </head>
 
 <body class="bg-gray-50 text-gray-800 antialiased selection:bg-gray-100 selection:text-gray-900">
@@ -78,15 +80,17 @@
         tersayang secara terukur.</p>
     </div>
 
-    <!-- Featured Image Placeholder -->
-    <div class="bg-rose-50 rounded-2xl h-64 flex items-center justify-center mb-12">
-      <span class="text-6xl">👨‍👩‍👧‍👦💝🎁</span>
+    <!-- Featured Image -->
+    <div
+      class="aspect-[16/9] bg-gray-900 rounded-[2.5rem] mb-12 overflow-hidden relative flex items-center justify-center">
+      <div class="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900"></div>
+      <span class="text-8xl relative z-10">👨‍👩‍👧‍👦💝🎁</span>
     </div>
 
     <!-- Content -->
     <div class="prose prose-lg max-w-none">
 
-      <h2 class="text-2xl font-semibold text-rose-700 mt-8 mb-4">"Hibah? Apa tu? Macam wasiat ke?"</h2>
+      <h2 class="text-2xl font-black text-gray-900 mt-8 mb-4">"Hibah? Apa tu? Macam wasiat ke?"</h2>
 
       <div class="bg-white border-l-4 border-gray-900 rounded-xl p-8 my-8 shadow-sm">
         <p class="text-gray-700 text-lg italic mb-4">
@@ -101,11 +105,11 @@
         </p>
       </div>
 
-      <h2 class="text-2xl font-semibold text-rose-700 mt-12 mb-4">Kenapa Hibah Takaful Sangat POWER?</h2>
+      <h2 class="text-2xl font-black text-gray-900 mt-12 mb-4">Kenapa Hibah Takaful Sangat POWER?</h2>
 
       <div class="space-y-6 my-8">
         <div class="bg-white border-l-4 border-gray-900 p-6 rounded-r-xl shadow-sm">
-          <h3 class="font-semibold text-green-800 mb-2">⚡ Pantas & Terus Kepada Penama</h3>
+          <h3 class="font-semibold text-gray-900 mb-2">⚡ Pantas &amp; Terus Kepada Penama</h3>
           <p class="text-gray-700 text-sm">
             Duit pampasan terus masuk ke akaun penama (waris) dalam masa 1-2 bulan, tanpa perlu surat kuasa atau proses
             mahkamah yang rumit.
@@ -126,15 +130,14 @@
           </p>
         </div>
         <div class="bg-white border-l-4 border-gray-900 p-6 rounded-r-xl shadow-sm">
-          <h3 class="font-semibold text-rose-800 mb-2">💰 Kos Rendah, Manfaat Tinggi</h3>
+          <h3 class="font-semibold text-gray-900 mb-2">💰 Kos Rendah, Manfaat Tinggi</h3>
           <p class="text-gray-700 text-sm">
             Dengan caruman serendah RM100 sebulan, anda boleh sediakan hibah ratusan ribu ringgit untuk keluarga.
           </p>
         </div>
       </div>
 
-      <h2 class="text-2xl font-semibold text-rose-700 mt-12 mb-4">Memperkenalkan 2 Pelan Hibah Hebat dari AIA Takaful
-      </h2>
+      <h2 class="text-2xl font-black text-gray-900 mt-12 mb-4">Memperkenalkan 2 Pelan Hibah Hebat dari AIA Takaful</h2>
       <p>AIA Public Takaful menawarkan dua pelan hibah utama yang direka untuk keperluan berbeza. Jom kita kenali
         mereka.</p>
 
@@ -153,9 +156,9 @@
         </div>
 
         <!-- A-Life Legasi Beyond -->
-        <div class="bg-rose-50 border border-gray-100 rounded-2xl p-6 text-center">
-          <h3 class="text-2xl font-bold text-rose-700 mb-2">A-Life Legasi Beyond</h3>
-          <p class="text-rose-700 font-semibold mb-4">Legasi Premium Perlindungan Menyeluruh</p>
+        <div class="bg-gray-50 border border-gray-100 rounded-2xl p-6 text-center">
+          <h3 class="text-2xl font-bold text-gray-900 mb-2">A-Life Legasi Beyond</h3>
+          <p class="text-gray-700 font-semibold mb-4">Legasi Premium Perlindungan Menyeluruh</p>
           <p class="text-gray-700 text-sm leading-relaxed">
             Pelan hibah premium dengan manfaat tambahan dan nilai tunai. Direka untuk mereka yang ingin meninggalkan
             legasi yang besar, melindungi perniagaan, atau sebagai pengganti MLTA.
@@ -166,8 +169,7 @@
         </div>
       </div>
 
-      <h2 class="text-2xl font-semibold text-rose-700 mt-12 mb-4">Jadual Perbandingan: Sejuta Makna vs Legasi Beyond
-      </h2>
+      <h2 class="text-2xl font-black text-gray-900 mt-12 mb-4">Jadual Perbandingan: Sejuta Makna vs Legasi Beyond</h2>
 
       <div class="overflow-x-auto my-8">
         <table class="w-full bg-white rounded-xl overflow-hidden shadow-lg">
@@ -192,11 +194,11 @@
             <tr class="border-b">
               <td class="p-4 font-semibold">Anggaran Caruman (serendah dari)</td>
               <td class="p-4 text-center font-bold text-gray-700">~RM45/bulan untuk RM350k</td>
-              <td class="p-4 text-center font-bold text-rose-700">~RM150/bulan untuk RM500k</td>
+              <td class="p-4 text-center font-bold text-gray-700">~RM150/bulan untuk RM500k</td>
             </tr>
             <tr class="border-b bg-gray-50">
               <td class="p-4 font-semibold">Nilai Tunai (Cash Value)</td>
-              <td class="p-4 text-center text-rose-600 font-bold">✅ ADA (sedikit sangat)</td>
+              <td class="p-4 text-center text-gray-700 font-bold">✅ ADA (sedikit sangat)</td>
               <td class="p-4 text-center text-gray-900 font-bold">✅ ADA</td>
             </tr>
             <tr class="border-b">
@@ -232,7 +234,7 @@
             <tr class="bg-gray-100">
               <td class="p-4 font-bold text-gray-800">Sesuai Untuk</td>
               <td class="p-4 text-center font-semibold text-gray-900">Perlindungan pendapatan & keluarga</td>
-              <td class="p-4 text-center font-semibold text-rose-800">Perancangan legasi, pengganti MLTT, perlindungan
+              <td class="p-4 text-center font-semibold text-gray-900">Perancangan legasi, pengganti MLTT, perlindungan
                 bisnes</td>
             </tr>
           </tbody>
@@ -255,7 +257,7 @@
         </a>
       </div>
 
-      <h2 class="text-2xl font-semibold text-rose-700 mt-12 mb-4">Contoh Situasi: Siapa Patut Ambil Apa?</h2>
+      <h2 class="text-2xl font-black text-gray-900 mt-12 mb-4">Contoh Situasi: Siapa Patut Ambil Apa?</h2>
 
       <div class="space-y-8 my-8">
         <!-- Scenario 1 -->
@@ -302,8 +304,8 @@
           </div>
 
           <div class="space-y-4 text-gray-700">
-            <div class="bg-white rounded-lg p-4 border-l-4 border-rose-500">
-              <p class="font-semibold text-rose-700 mb-2">Matlamat Dr. Sarah:</p>
+            <div class="bg-white rounded-lg p-4 border-l-4 border-gray-900">
+              <p class="font-semibold text-gray-900 mb-2">Matlamat Dr. Sarah:</p>
               <p class="text-sm leading-relaxed">
                 "Saya nak pastikan loan rumah terus lunas, setiap anak dapat dana pendidikan RM200k, dan suami ada dana
                 tambahan untuk uruskan klinik jika saya tiada."
@@ -327,41 +329,41 @@
         </div>
       </div>
 
-      <h2 class="text-2xl font-semibold text-rose-700 mt-12 mb-4">"Legasi Beyond ada pampasan berganda? Macam mana tu?"
+      <h2 class="text-2xl font-black text-gray-900 mt-12 mb-4">"Legasi Beyond ada pampasan berganda? Macam mana tu?"
       </h2>
 
-      <div class="bg-yellow-400 text-gray-800 rounded-2xl p-8 my-8">
+      <div class="bg-gray-900 text-white rounded-2xl p-8 my-8">
         <p class="text-2xl font-bold text-center mb-4">🔥 Kehebatan A-Life Legasi Beyond Multiplier</p>
-        <p class="text-gray-700 text-center mb-6">Ini adalah ciri premium yang tiada pada pelan hibah biasa. Pampasan
+        <p class="text-gray-400 text-center mb-6">Ini adalah ciri premium yang tiada pada pelan hibah biasa. Pampasan
           anda boleh berganda jika kematian berlaku dalam situasi tertentu.</p>
 
-        <div class="bg-white/50 rounded-xl p-6 space-y-4">
-          <p class="text-center font-semibold">Contoh: Hibah Asas RM1,000,000</p>
+        <div class="bg-white/10 rounded-xl p-6 space-y-4">
+          <p class="text-center font-semibold text-white">Contoh: Hibah Asas RM1,000,000</p>
           <div class="grid md:grid-cols-3 gap-4 text-center">
             <div class="bg-white p-4 rounded-lg">
-              <p class="font-bold text-lg">Kematian Biasa</p>
-              <p class="text-2xl font-bold text-rose-700 mt-2">RM1 Juta</p>
+              <p class="font-bold text-lg text-gray-900">Kematian Biasa</p>
+              <p class="text-2xl font-bold text-gray-900 mt-2">RM1 Juta</p>
               <p class="text-xs text-gray-600">(100% Pampasan)</p>
             </div>
             <div class="bg-white p-4 rounded-lg">
-              <p class="font-bold text-lg">Kematian Akibat Kemalangan</p>
-              <p class="text-2xl font-bold text-rose-700 mt-2">RM2 Juta</p>
+              <p class="font-bold text-lg text-gray-900">Kematian Akibat Kemalangan</p>
+              <p class="text-2xl font-bold text-gray-900 mt-2">RM2 Juta</p>
               <p class="text-xs text-gray-600">(200% Pampasan)</p>
             </div>
             <div class="bg-white p-4 rounded-lg">
-              <p class="font-bold text-lg">Kematian Kemalangan (Pengangkutan Awam)</p>
-              <p class="text-2xl font-bold text-rose-700 mt-2">RM3 Juta</p>
+              <p class="font-bold text-lg text-gray-900">Kematian Kemalangan (Pengangkutan Awam)</p>
+              <p class="text-2xl font-bold text-gray-900 mt-2">RM3 Juta</p>
               <p class="text-xs text-gray-600">(300% Pampasan)</p>
             </div>
           </div>
-          <p class="text-sm text-center text-gray-700 mt-4 italic">
+          <p class="text-sm text-center text-gray-400 mt-4 italic">
             *Tertakluk kepada terma dan syarat pelan. Ini adalah ciri utama yang menjadikan Legasi Beyond pilihan
             premium.
           </p>
         </div>
       </div>
 
-      <h2 class="text-2xl font-semibold text-rose-700 mt-12 mb-4">Kesimpulan: Pilih Hadiah Mengikut Keperluan</h2>
+      <h2 class="text-2xl font-black text-gray-900 mt-12 mb-4">Kesimpulan: Pilih Hadiah Mengikut Keperluan</h2>
 
       <div class="bg-gray-900 text-white rounded-[2.5rem] p-10 my-10 shadow-2xl relative overflow-hidden">
         <div class="absolute inset-0 bg-gradient-to-br from-rose-600/10 to-transparent"></div>

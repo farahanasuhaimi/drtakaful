@@ -37,6 +37,8 @@
     <link rel="manifest" href="https://DrTakaful.com/site.webmanifest">
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="src/global.css">
+    <script src="src/tailwind-config.js"></script>
 </head>
 
 <body class="bg-gray-50 text-gray-800 antialiased selection:bg-gray-100 selection:text-gray-900">
@@ -79,15 +81,17 @@
                 bijak untuk lindungi keluarga tanpa bebankan bajet.</p>
         </div>
 
-        <!-- Featured Image Placeholder -->
-        <div class="bg-rose-50 rounded-2xl h-64 flex items-center justify-center mb-12">
-            <span class="text-6xl">💰🎁👨‍👩‍👧‍👦</span>
+        <!-- Featured Image -->
+        <div
+            class="aspect-[16/9] bg-gray-900 rounded-[2.5rem] mb-12 overflow-hidden relative flex items-center justify-center">
+            <div class="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900"></div>
+            <span class="text-8xl relative z-10">💰🎁👨‍👩‍👧‍👦</span>
         </div>
 
         <!-- Content -->
         <div class="prose prose-lg max-w-none">
 
-            <h2 class="text-2xl font-semibold text-rose-700 mt-8 mb-4">"Hibah? Mahal la... Saya tak mampu."</h2>
+            <h2 class="text-2xl font-black text-gray-900 mt-8 mb-4">"Hibah? Mahal la... Saya tak mampu."</h2>
 
             <div class="bg-white border-l-4 border-gray-900 rounded-xl p-8 my-8 shadow-sm">
                 <p class="text-gray-700 text-lg italic mb-4">
@@ -102,13 +106,13 @@
                 </p>
             </div>
 
-            <h2 class="text-2xl font-semibold text-rose-700 mt-12 mb-4">Kenapa AIA Takaful Sejuta Makna Berbeza?</h2>
+            <h2 class="text-2xl font-black text-gray-900 mt-12 mb-4">Kenapa AIA Takaful Sejuta Makna Berbeza?</h2>
 
             <p>AIA Takaful Sejuta Makna adalah pelan hibah yang direka khas untuk rakyat Malaysia yang:</p>
 
             <div class="space-y-6 my-8">
-                <div class="bg-white border-l-4 border-rose-600 p-6 rounded-r-xl shadow-sm">
-                    <h3 class="font-semibold text-rose-800 mb-2">💸 Bajet Terhad Tapi Nak Coverage Baik</h3>
+                <div class="bg-white border-l-4 border-gray-900 p-6 rounded-r-xl shadow-sm">
+                    <h3 class="font-semibold text-gray-900 mb-2">💸 Bajet Terhad Tapi Nak Coverage Baik</h3>
                     <p class="text-gray-700 text-sm">
                         Dengan caruman serendah RM45/bulan, anda dah boleh sediakan hibah RM350,000 untuk keluarga. Ini
                         lebih murah dari bayaran Netflix!
@@ -129,7 +133,7 @@
                     </p>
                 </div>
                 <div class="bg-white border-l-4 border-gray-900 p-6 rounded-r-xl shadow-sm">
-                    <h3 class="font-semibold text-green-800 mb-2">🔄 Fleksibiliti Penukaran (Conversion Option)</h3>
+                    <h3 class="font-semibold text-gray-900 mb-2">🔄 Fleksibiliti Penukaran (Conversion Option)</h3>
                     <p class="text-gray-700 text-sm">
                         Ini adalah GAME CHANGER. Sebelum tempoh 10 tahun tamat, anda boleh tukar kepada pelan jangka
                         panjang atau tingkatkan coverage tanpa perlu medical checkup lagi. Ini sangat penting kalau
@@ -152,19 +156,19 @@
                 </a>
             </div>
 
-            <h2 class="text-2xl font-semibold text-rose-700 mt-12 mb-4">Strategi "Mula Kecil, Upgrade Bila Mampu"</h2>
+            <h2 class="text-2xl font-black text-gray-900 mt-12 mb-4">Strategi "Mula Kecil, Upgrade Bila Mampu"</h2>
 
             <p>Inilah pendekatan yang saya recommend untuk kebanyakan klien muda saya:</p>
 
-            <div class="bg-gradient-to-br from-rose-50 to-white rounded-2xl p-8 my-8 border border-rose-100">
+            <div class="bg-white rounded-2xl p-8 my-8 border border-gray-100">
                 <h3 class="text-xl font-bold text-gray-900 mb-6 text-center">🎯 Pelan 3 Fasa</h3>
 
                 <div class="space-y-6">
                     <!-- Phase 1 -->
-                    <div class="bg-white rounded-xl p-6 border-l-4 border-rose-600">
+                    <div class="bg-white rounded-xl p-6 border-l-4 border-gray-900">
                         <div class="flex items-center gap-3 mb-3">
                             <span
-                                class="bg-rose-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">1</span>
+                                class="bg-gray-900 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">1</span>
                             <h4 class="font-bold text-gray-900">Fasa Permulaan (Umur 25-30)</h4>
                         </div>
                         <p class="text-sm text-gray-700 mb-3">
@@ -195,10 +199,10 @@
                     </div>
 
                     <!-- Phase 3 -->
-                    <div class="bg-white rounded-xl p-6 border-l-4 border-green-600">
+                    <div class="bg-white rounded-xl p-6 border-l-4 border-gray-900">
                         <div class="flex items-center gap-3 mb-3">
                             <span
-                                class="bg-green-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">3</span>
+                                class="bg-gray-900 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">3</span>
                             <h4 class="font-bold text-gray-900">Fasa Matang (Umur 35+)</h4>
                         </div>
                         <p class="text-sm text-gray-700 mb-3">
@@ -212,8 +216,8 @@
                     </div>
                 </div>
 
-                <div class="mt-6 bg-yellow-50 border border-yellow-200 rounded-xl p-4">
-                    <p class="text-sm text-gray-800 font-semibold mb-2">⚡ Kelebihan Strategi Ini:</p>
+                <div class="mt-6 bg-white border-l-4 border-gray-900 rounded-r-xl p-4">
+                    <p class="text-sm text-gray-900 font-semibold mb-2">⚡ Kelebihan Strategi Ini:</p>
                     <ul class="text-sm text-gray-700 space-y-1">
                         <li>• Tak bebankan bajet masa muda</li>
                         <li>• Keluarga tetap dilindungi dari awal</li>
@@ -223,16 +227,15 @@
                 </div>
             </div>
 
-            <h2 class="text-2xl font-semibold text-rose-700 mt-12 mb-4">Conversion Option: Kenapa Ini Sangat Penting?
-            </h2>
+            <h2 class="text-2xl font-black text-gray-900 mt-12 mb-4">Conversion Option: Kenapa Ini Sangat Penting?</h2>
 
-            <div class="bg-yellow-400 text-gray-800 rounded-2xl p-8 my-8">
+            <div class="bg-gray-900 text-white rounded-2xl p-8 my-8">
                 <p class="text-2xl font-bold text-center mb-4">🔥 Ini Adalah Ciri PALING Underrated</p>
-                <p class="text-gray-700 text-center mb-6">Ramai yang tak faham betapa berharganya "conversion right"
+                <p class="text-gray-400 text-center mb-6">Ramai yang tak faham betapa berharganya "conversion Privilege"
                     ini. Jom saya explain dengan contoh real.</p>
 
-                <div class="bg-white/50 rounded-xl p-6 space-y-4">
-                    <p class="font-semibold text-center">Scenario: Ahmad, 28 tahun</p>
+                <div class="bg-white/10 rounded-xl p-6 space-y-4">
+                    <p class="font-semibold text-center text-white">Scenario: Ahmad, 28 tahun</p>
 
                     <div class="space-y-4">
                         <div class="bg-white p-4 rounded-lg">
@@ -248,13 +251,13 @@
                         </div>
 
                         <div class="bg-red-50 border-2 border-red-300 p-4 rounded-lg">
-                            <p class="font-bold text-sm mb-2 text-red-800">❌ TANPA Conversion Right:</p>
+                            <p class="font-bold text-sm mb-2 text-red-800">❌ TANPA Conversion Privilege:</p>
                             <p class="text-sm text-gray-700">Kena apply baru, kena medical exam. Kemungkinan BESAR
                                 ditolak atau kena bayar premium tinggi sebab ada diabetes.</p>
                         </div>
 
                         <div class="bg-green-50 border-2 border-green-300 p-4 rounded-lg">
-                            <p class="font-bold text-sm mb-2 text-green-800">✅ DENGAN Conversion Right:</p>
+                            <p class="font-bold text-sm mb-2 text-green-800">✅ DENGAN Conversion Privilege:</p>
                             <p class="text-sm text-gray-700">Ahmad boleh upgrade terus ke RM750k TANPA medical exam.
                                 Diabetes tak jadi masalah. Premium dikira based on umur semasa, bukan kesihatan.</p>
                         </div>
@@ -294,7 +297,7 @@
                             <td class="p-4 text-center">Kerjaya stabil, pendapatan tinggi</td>
                         </tr>
                         <tr class="border-b">
-                            <td class="p-4 font-semibold">Conversion Right</td>
+                            <td class="p-4 font-semibold">Conversion Privilege</td>
                             <td class="p-4 text-center text-green-700 font-bold">✅ ADA</td>
                             <td class="p-4 text-center">Tidak perlu (dah long term)</td>
                         </tr>
@@ -314,8 +317,7 @@
                     Pilih mengikut fasa hidup anda.</p>
             </div>
 
-            <h2 class="text-2xl font-semibold text-rose-700 mt-12 mb-4">Contoh Real: Siapa Sesuai Ambil Sejuta Makna?
-            </h2>
+            <h2 class="text-2xl font-black text-gray-900 mt-12 mb-4">Contoh Real: Siapa Sesuai Ambil Sejuta Makna?</h2>
 
             <div class="space-y-8 my-8">
                 <!-- Scenario 1 -->
@@ -365,8 +367,8 @@
                     </div>
 
                     <div class="space-y-4 text-gray-700">
-                        <div class="bg-white rounded-lg p-4 border-l-4 border-rose-500">
-                            <p class="font-semibold text-rose-700 mb-2">Matlamat Siti:</p>
+                        <div class="bg-white rounded-lg p-4 border-l-4 border-gray-900">
+                            <p class="font-semibold text-gray-900 mb-2">Matlamat Siti:</p>
                             <p class="text-sm leading-relaxed">
                                 "Kalau jadi apa-apa pada saya, saya nak pastikan ibu bapa ada duit untuk sara hidup dan
                                 PTPTN saya tak jadi beban keluarga. Tapi gaji saya tak tinggi sangat."
@@ -403,14 +405,14 @@
                 </a>
             </div>
 
-            <h2 class="text-2xl font-semibold text-rose-700 mt-12 mb-4">FAQ: Soalan Yang Selalu Ditanya</h2>
+            <h2 class="text-2xl font-black text-gray-900 mt-12 mb-4">FAQ: Soalan Yang Selalu Ditanya</h2>
 
             <div class="space-y-6 my-8">
                 <div class="bg-white border border-gray-100 rounded-xl p-6">
                     <h3 class="font-bold text-gray-900 mb-3">❓ Kalau saya tak convert selepas 10 tahun, apa jadi?</h3>
                     <p class="text-sm text-gray-700 leading-relaxed">
                         Pelan akan tamat. Tapi anda boleh apply pelan baru (kena medical exam lagi). Itulah sebabnya
-                        conversion right sangat penting - ia bagi anda pilihan untuk extend tanpa medical exam.
+                        conversion privilege sangat penting - ia bagi anda pilihan untuk extend tanpa medical exam.
                     </p>
                 </div>
 
@@ -450,7 +452,7 @@
                 </div>
             </div>
 
-            <h2 class="text-2xl font-semibold text-rose-700 mt-12 mb-4">Kesimpulan: Jangan Tunggu Sampai "Mampu"</h2>
+            <h2 class="text-2xl font-black text-gray-900 mt-12 mb-4">Kesimpulan: Jangan Tunggu Sampai "Mampu"</h2>
 
             <div class="bg-gray-900 text-white rounded-[2.5rem] p-10 my-10 shadow-2xl relative overflow-hidden">
                 <div class="absolute inset-0 bg-gradient-to-br from-rose-600/10 to-transparent"></div>
@@ -542,22 +544,7 @@
         </p>
     </footer>
 
-    <style>
-        .glass-nav {
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(10px);
-        }
 
-        .brand-logo {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            font-weight: 900;
-            letter-spacing: -0.02em;
-        }
-
-        .sans-font {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-        }
-    </style>
 
 </body>
 
