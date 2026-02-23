@@ -134,8 +134,37 @@ function filterArticles(category, isInitialLoad = false) {
   }
 }
 
+
+function trackWhatsAppCtaClicksForAdsTraffic() {
+  const params = new URLSearchParams(window.location.search);
+  const utmSource = params.get('utm_source') || '';
+  const utmCampaign = params.get('utm_campaign') || '';
+  const utmMedium = params.get('utm_medium') || '';
+  const gclid = params.get('gclid') || '';
+
+  const isAdsTraffic = Boolean(gclid || utmSource.toLowerCase() === 'google' || utmMedium.toLowerCase() === 'cpc');
+  const trafficLabel = isAdsTraffic ? 'google_ads' : 'organic_or_direct';
+
+  document.querySelectorAll('.wa-cta').forEach(link => {
+    link.addEventListener('click', () => {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: 'whatsapp_cta_click',
+        traffic_source: trafficLabel,
+        cta_source: link.getAttribute('data-wa-source') || 'unknown',
+        cta_intent: link.getAttribute('data-wa-intent') || 'General',
+        utm_source: utmSource || '(not set)',
+        utm_campaign: utmCampaign || '(not set)',
+        utm_medium: utmMedium || '(not set)',
+        has_gclid: Boolean(gclid)
+      });
+    });
+  });
+}
+
 // --- Load Blog Section Dynamically ---
 document.addEventListener('DOMContentLoaded', async () => {
+  trackWhatsAppCtaClicksForAdsTraffic();
   // --- Mobile Menu Script ---
   const mobileMenuButton = document.getElementById('mobile-menu-button');
   const mobileMenu = document.getElementById('mobile-menu');
