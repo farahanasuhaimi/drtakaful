@@ -136,6 +136,23 @@ function filterArticles(category, isInitialLoad = false) {
 
 
 function trackWhatsAppCtaClicksForAdsTraffic() {
+  const createEventId = () => {
+    if (window.crypto?.randomUUID) {
+      return window.crypto.randomUUID();
+    }
+    return `wa-${Date.now()}-${Math.random().toString(36).slice(2, 10)}`;
+  };
+
+  const pushDataLayerEvent = (eventName, payload = {}) => {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: eventName,
+      event_id: createEventId(),
+      page_path: window.location.pathname,
+      ...payload
+    });
+  };
+
   const params = new URLSearchParams(window.location.search);
   const utmSource = params.get('utm_source') || '';
   const utmCampaign = params.get('utm_campaign') || '';
@@ -146,10 +163,12 @@ function trackWhatsAppCtaClicksForAdsTraffic() {
   const trafficLabel = isAdsTraffic ? 'google_ads' : 'organic_or_direct';
 
   document.querySelectorAll('.wa-cta').forEach(link => {
+    if (link.dataset.analyticsBound === '1') {
+      return;
+    }
+
     link.addEventListener('click', () => {
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({
-        event: 'whatsapp_cta_click',
+      pushDataLayerEvent('whatsapp_cta_click', {
         traffic_source: trafficLabel,
         cta_source: link.getAttribute('data-wa-source') || 'unknown',
         cta_intent: link.getAttribute('data-wa-intent') || 'General',
@@ -159,6 +178,8 @@ function trackWhatsAppCtaClicksForAdsTraffic() {
         has_gclid: Boolean(gclid)
       });
     });
+
+    link.dataset.analyticsBound = '1';
   });
 }
 
