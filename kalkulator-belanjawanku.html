@@ -63,6 +63,7 @@
         .radio-card input[type="radio"] {
             display: none;
         }
+
         .radio-card label {
             display: flex;
             flex-direction: column;
@@ -77,14 +78,17 @@
             text-align: center;
             gap: 0.5rem;
         }
-        .radio-card input[type="radio"]:checked + label {
+
+        .radio-card input[type="radio"]:checked+label {
             border-color: #111827;
             background: #ffffff;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
         }
-        .radio-card input[type="radio"]:checked + label .icon {
+
+        .radio-card input[type="radio"]:checked+label .icon {
             transform: scale(1.1);
         }
+
         .icon {
             font-size: 2rem;
             transition: transform 0.2s ease;
@@ -116,11 +120,11 @@
                 <div
                     class="flex justify-between text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-3 px-2">
                     <span>Mula</span>
-                    <span id="step-label">Langkah 1 dari 4</span>
+                    <span id="step-label">Langkah 1 dari 5</span>
                     <span>Selesai</span>
                 </div>
                 <div class="h-1.5 w-full bg-gray-200 rounded-full overflow-hidden">
-                    <div id="progress" class="progress-bar h-full bg-rose-600 rounded-full" style="width: 25%;"></div>
+                    <div id="progress" class="progress-bar h-full bg-rose-600 rounded-full" style="width: 20%;"></div>
                 </div>
             </div>
 
@@ -130,8 +134,33 @@
 
                 <form id="belanjawanku-wizard" onsubmit="return false">
 
-                    <!-- STEP 1: Status Perkahwinan -->
+                    <!-- STEP 1: Lokasi -->
                     <div class="step active" data-step="1">
+                        <div class="mb-8 text-center">
+                            <span class="text-4xl mb-6 block">📍</span>
+                            <h2 class="text-2xl md:text-3xl font-black text-gray-900 leading-tight mb-4">
+                                Di bandar manakah anda tinggal?
+                            </h2>
+                            <p class="text-gray-500">Pilih bandar terhampir untuk ketepatan data kos sara hidup.</p>
+                        </div>
+                        <div class="relative">
+                            <select id="input-city"
+                                class="w-full px-6 py-5 bg-gray-50 border-2 border-transparent focus:border-rose-600 focus:bg-white rounded-2xl text-lg font-bold transition-all outline-none appearance-none cursor-pointer">
+                                <option value="" disabled selected>Memuatkan senarai bandar...</option>
+                            </select>
+                            <div
+                                class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-6 text-gray-700">
+                                <svg class="fill-current h-5 w-5" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20">
+                                    <path
+                                        d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- STEP 2: Status Perkahwinan -->
+                    <div class="step" data-step="2">
                         <div class="mb-8 text-center">
                             <span class="text-4xl mb-6 block">👥</span>
                             <h2 class="text-2xl md:text-3xl font-black text-gray-900 leading-tight mb-4">
@@ -171,28 +200,30 @@
                         </div>
                     </div>
 
-                    <!-- STEP 2: Butiran Tambahan (Dynamic) -->
-                    <div class="step" data-step="2">
+                    <!-- STEP 3: Butiran Tambahan (Dynamic) -->
+                    <div class="step" data-step="3">
                         <div class="mb-8 text-center">
-                            <span class="text-4xl mb-6 block" id="step2-emoji">🚗</span>
-                            <h2 class="text-2xl md:text-3xl font-black text-gray-900 leading-tight mb-4" id="step2-title">
+                            <span class="text-4xl mb-6 block" id="step3-emoji">🚗</span>
+                            <h2 class="text-2xl md:text-3xl font-black text-gray-900 leading-tight mb-4"
+                                id="step3-title">
                                 Maklumat Tambahan
                             </h2>
-                            <p class="text-gray-500" id="step2-desc">Pilih butiran yang bersesuaian.</p>
+                            <p class="text-gray-500" id="step3-desc">Pilih butiran yang bersesuaian.</p>
                         </div>
                         <div id="sub-options-container" class="grid grid-cols-2 gap-4">
                             <!-- Options injected by JS -->
                         </div>
                     </div>
 
-                    <!-- STEP 3: Income -->
-                    <div class="step" data-step="3">
+                    <!-- STEP 4: Income -->
+                    <div class="step" data-step="4">
                         <div class="mb-8 text-center">
                             <span class="text-4xl mb-6 block">💰</span>
                             <h2 class="text-2xl md:text-3xl font-black text-gray-900 leading-tight mb-4">
                                 Berapakah pendapatan anda?
                             </h2>
-                            <p class="text-gray-500">Anggaran gaji/pendapatan bulanan untuk dibuat perbandingan (RM).</p>
+                            <p class="text-gray-500">Anggaran gaji/pendapatan bulanan untuk dibuat perbandingan (RM).
+                            </p>
                         </div>
                         <div class="relative">
                             <span
@@ -203,19 +234,21 @@
                         </div>
                     </div>
 
-                    <!-- STEP 4: Summary -->
-                    <div class="step" data-step="4">
+                    <!-- STEP 5: Summary -->
+                    <div class="step" data-step="5">
                         <div class="text-center">
                             <span class="text-5xl mb-4 block">📋</span>
                             <h2 class="text-xl font-bold text-gray-500 uppercase tracking-widest mb-2">
                                 Profil Belanjawanku
                             </h2>
-                            <p class="text-sm text-gray-400 mb-6 font-medium" id="profil-name">Bujang (Ada Kereta)</p>
+                            <p class="text-sm text-gray-400 mb-6 font-medium" id="profil-name">Bujang (Ada Kereta) -
+                                Lembah Klang</p>
 
                             <div class="bg-gray-50 rounded-2xl p-6 text-left space-y-4 mb-8 border border-gray-100">
                                 <div>
                                     <div class="flex justify-between text-sm mb-1">
-                                        <span class="text-gray-500 font-medium">Anggaran KWSP (Lembah Klang)</span>
+                                        <span class="text-gray-500 font-medium tracking-wide">Anggaran KWSP (<span
+                                                id="summary-city">Bandar</span>)</span>
                                     </div>
                                     <div id="summary-belanjawan" class="text-3xl font-black text-gray-900">RM 0</div>
                                 </div>
@@ -226,7 +259,8 @@
                                     </div>
                                 </div>
                                 <div class="relative pt-4 overflow-hidden rounded-lg bg-gray-200 h-6">
-                                    <div id="progress-compare" class="absolute left-0 top-0 h-full bg-rose-500" style="width: 50%;"></div>
+                                    <div id="progress-compare" class="absolute left-0 top-0 h-full bg-rose-500"
+                                        style="width: 50%;"></div>
                                 </div>
                                 <div class="pt-2 flex justify-between text-sm">
                                     <span class="text-gray-500 font-bold" id="status-label">Baki Berlebihan:</span>
@@ -262,14 +296,63 @@
 
     <script>
         let currentStep = 1;
-        const totalSteps = 4;
+        const totalSteps = 5;
 
-        // Data Belanjawanku 2023 (Klang Valley)
-        const belanjawankuData = {
+        // Global variables for CSV Data
+        let csvDb = {};
+
+        async function fetchCSVData() {
+            try {
+                // Add timestamp to prevent aggressive caching
+                const response = await fetch('belanjawanku.csv?t=' + new Date().getTime());
+                const rawData = await response.text();
+
+                const lines = rawData.trim().split('\n');
+                const headers = lines[0].split(',').map(s => s.trim());
+
+                const selectEl = document.getElementById('input-city');
+                selectEl.innerHTML = '<option value="" disabled selected>Pilih bandar anda...</option>';
+
+                for (let i = 1; i < lines.length; i++) {
+                    const row = lines[i].split(',').map(s => s.trim());
+                    if (row.length < headers.length) continue;
+
+                    const cityId = row[0];
+                    const cityName = row[1];
+
+                    csvDb[cityId] = {
+                        name: cityName,
+                        bujang_none: parseInt(row[2]),
+                        bujang_car: parseInt(row[3]),
+                        berkahwin_0: parseInt(row[4]),
+                        berkahwin_1: parseInt(row[5]),
+                        berkahwin_2: parseInt(row[6]),
+                        ibt_1: parseInt(row[7]),
+                        ibt_2: parseInt(row[8]),
+                        emas_bujang: parseInt(row[9]),
+                        emas_pasangan: parseInt(row[10])
+                    };
+
+                    const opt = document.createElement('option');
+                    opt.value = cityId;
+                    opt.textContent = cityName;
+                    selectEl.appendChild(opt);
+                }
+            } catch (err) {
+                console.error("Gagal memuat turun data CSV: ", err);
+                document.getElementById('input-city').innerHTML = '<option value="">Ralat: Sila refresh laman web</option>';
+            }
+        }
+
+        // Initialize CSV Download
+        window.onload = fetchCSVData;
+
+        // Configuration structures mapping radio inputs to CSV columns
+        const belanjawankuBase = {
             'bujang': {
                 options: [
-                    { val: 'none', label: 'Tiada Kereta', icon: '🚶', cost: 1930 },
-                    { val: 'car', label: 'Ada Kereta', icon: '🚗', cost: 2600 }
+                    { val: 'bujang_none', label: 'Tiada Kereta', icon: '🚶' },
+                    { val: 'bujang_car', label: 'Ada Kereta', icon: '🚗' }
                 ],
                 title: 'Pemilikan Kenderaan',
                 desc: 'Adakah anda memiliki kereta sendiri?',
@@ -277,9 +360,9 @@
             },
             'berkahwin': {
                 options: [
-                    { val: '0', label: 'Tiada Anak', icon: '💑', cost: 4630 },
-                    { val: '1', label: '1 Orang Anak', icon: '👨‍👩‍👦', cost: 5980 },
-                    { val: '2', label: '2 Orang Anak', icon: '👨‍👩‍👧‍👦', cost: 6890 }
+                    { val: 'berkahwin_0', label: 'Tiada Anak', icon: '💑' },
+                    { val: 'berkahwin_1', label: '1 Orang Anak', icon: '👨‍👩‍👦' },
+                    { val: 'berkahwin_2', label: '2 Orang Anak', icon: '👨‍👩‍👧‍👦' }
                 ],
                 title: 'Bilangan Anak',
                 desc: 'Berapakah bilangan anak anda?',
@@ -287,8 +370,8 @@
             },
             'ibt': {
                 options: [
-                    { val: '1', label: '1 Orang Anak', icon: '👩‍👦', cost: 4740 },
-                    { val: '2', label: '2 Orang Anak', icon: '👩‍👧‍👦', cost: 5650 }
+                    { val: 'ibt_1', label: '1 Orang Anak', icon: '👩‍👦' },
+                    { val: 'ibt_2', label: '2 Orang Anak', icon: '👩‍👧‍👦' }
                 ],
                 title: 'Bilangan Anak',
                 desc: 'Berapakah bilangan anak anda?',
@@ -296,8 +379,8 @@
             },
             'emas': {
                 options: [
-                    { val: 'bujang', label: 'Bujang', icon: '👴', cost: 2520 },
-                    { val: 'pasangan', label: 'Pasangan', icon: '🧓👴', cost: 3210 }
+                    { val: 'emas_bujang', label: 'Bujang', icon: '👴' },
+                    { val: 'emas_pasangan', label: 'Pasangan', icon: '🧓👴' }
                 ],
                 title: 'Status Warga Emas',
                 desc: 'Adakah anda bujang atau bersama pasangan?',
@@ -305,27 +388,28 @@
             }
         };
 
+        let selectedCity = '';
         let selectedStatus = '';
-        let selectedSub = '';
+        let selectedSubKey = '';
         let currentCost = 0;
         let currentProfileName = '';
 
         function renderSubOptions(status) {
-            const data = belanjawankuData[status];
-            document.getElementById('step2-title').textContent = data.title;
-            document.getElementById('step2-desc').textContent = data.desc;
-            document.getElementById('step2-emoji').textContent = data.emoji;
+            const data = belanjawankuBase[status];
+            document.getElementById('step3-title').textContent = data.title;
+            document.getElementById('step3-desc').textContent = data.desc;
+            document.getElementById('step3-emoji').textContent = data.emoji;
 
             const container = document.getElementById('sub-options-container');
             container.innerHTML = '';
-            
+
             // Adjust grid if 3 items
             container.className = data.options.length === 3 ? 'grid grid-cols-1 md:grid-cols-3 gap-4' : 'grid grid-cols-2 gap-4';
 
             data.options.forEach(opt => {
                 const html = `
                     <div class="radio-card">
-                        <input type="radio" name="substatus" id="sub-${opt.val}" value="${opt.val}" data-cost="${opt.cost}" data-label="${opt.label}">
+                        <input type="radio" name="substatus" id="sub-${opt.val}" value="${opt.val}" data-label="${opt.label}">
                         <label for="sub-${opt.val}">
                             <span class="icon">${opt.icon}</span>
                             <span class="font-bold text-gray-900 text-sm">${opt.label}</span>
@@ -353,6 +437,13 @@
             // Validation before moving forward
             if (delta > 0) {
                 if (currentStep === 1) {
+                    const citySelect = document.getElementById('input-city');
+                    if (citySelect.value === "") {
+                        alert("Sila pilih lokasi/bandar anda terlebih dahulu.");
+                        return;
+                    }
+                    selectedCity = citySelect.value;
+                } else if (currentStep === 2) {
                     const statusRadios = document.querySelector('input[name="status"]:checked');
                     if (!statusRadios) {
                         alert("Sila pilih status anda.");
@@ -362,16 +453,16 @@
                         selectedStatus = statusRadios.value;
                         renderSubOptions(selectedStatus);
                     }
-                } else if (currentStep === 2) {
+                } else if (currentStep === 3) {
                     const subRadios = document.querySelector('input[name="substatus"]:checked');
                     if (!subRadios) {
                         alert("Sila pilih pilihan yang disediakan.");
                         return;
                     }
-                    selectedSub = subRadios.value;
-                    currentCost = parseInt(subRadios.dataset.cost);
+                    selectedSubKey = subRadios.value;
+                    currentCost = csvDb[selectedCity][selectedSubKey]; // Fetching live from DB object
                     currentProfileName = getProfileLabel(selectedStatus, subRadios.dataset.label);
-                } else if (currentStep === 3) {
+                } else if (currentStep === 4) {
                     const income = document.getElementById('input-income').value;
                     if (income === "" || parseFloat(income) < 0) {
                         alert("Sila masukkan jumlah pendapatan yang sah.");
@@ -398,7 +489,7 @@
             const nextBtn = document.getElementById('next-btn');
             const waBtn = document.getElementById('whatsapp-btn');
 
-            prevBtn.classList.toggle('hidden', currentStep === 1 || currentStep === 4);
+            prevBtn.classList.toggle('hidden', currentStep === 1 || currentStep === totalSteps);
 
             if (currentStep === totalSteps) {
                 nextBtn.classList.add('hidden');
@@ -417,16 +508,18 @@
         function calculateResults() {
             const income = parseFloat(document.getElementById('input-income').value) || 0;
             const diff = income - currentCost;
-            
+
             const format = (num) => new Intl.NumberFormat('ms-MY', { style: 'currency', currency: 'MYR', maximumFractionDigits: 0 }).format(num);
 
-            document.getElementById('profil-name').textContent = currentProfileName;
+            const cityStringName = csvDb[selectedCity].name;
+            document.getElementById('profil-name').textContent = `${currentProfileName} - ${cityStringName}`;
+            document.getElementById('summary-city').textContent = cityStringName;
             animateValue('summary-belanjawan', 0, currentCost, 800);
             document.getElementById('summary-income').textContent = format(income);
-            
+
             const diffEl = document.getElementById('summary-diff');
             const statusLabel = document.getElementById('status-label');
-            
+
             if (diff >= 0) {
                 diffEl.textContent = '+' + format(diff);
                 diffEl.className = 'font-black text-green-600';
@@ -439,11 +532,11 @@
 
             // Progress bar calc (capped at 100%)
             let ratio = (currentCost / income) * 100;
-            if(!isFinite(ratio)) ratio = 100;
-            if(ratio > 100) ratio = 100;
+            if (!isFinite(ratio)) ratio = 100;
+            if (ratio > 100) ratio = 100;
             const progBar = document.getElementById('progress-compare');
             progBar.style.width = `${ratio}%`;
-            if(ratio > 90) {
+            if (ratio > 90) {
                 progBar.className = 'absolute left-0 top-0 h-full bg-rose-600';
             } else if (ratio > 70) {
                 progBar.className = 'absolute left-0 top-0 h-full bg-yellow-500';
@@ -452,7 +545,7 @@
             }
 
             // Update WhatsApp Link
-            const message = `Hai Hana! Saya baru semak perbelanjaan saya guna Kalkulator Belanjawanku.\n\n📊 Profil: ${currentProfileName}\n📈 Belanjawanku KWSP: ${format(currentCost)}\n💰 Gaji Saya: ${format(income)}\n📉 ${diff >= 0 ? 'Lebihan' : 'Kekurangan'}: ${format(Math.abs(diff))}\n\nBoleh Hana bantu saya rancang kewangan & perlindungan yang sesuai? Terima kasih!`;
+            const message = `Hai Hana! Saya baru semak perbelanjaan saya guna Kalkulator Belanjawanku.\n\n📍 Lokasi: ${cityStringName}\n📊 Profil: ${currentProfileName}\n📈 Belanjawanku KWSP: ${format(currentCost)}\n💰 Gaji Saya: ${format(income)}\n📉 ${diff >= 0 ? 'Lebihan' : 'Kekurangan'}: ${format(Math.abs(diff))}\n\nBoleh Hana bantu saya rancang kewangan & perlindungan yang sesuai? Terima kasih!`;
             document.getElementById('whatsapp-btn').href = `https://wa.me/60132522587?text=${encodeURIComponent(message)}`;
         }
 
