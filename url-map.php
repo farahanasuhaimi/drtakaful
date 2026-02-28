@@ -19,6 +19,8 @@ return [
     'sejuta-makna' => 'hibah-sejuta-makna-mampu-milik.html',
     'rm45' => 'hibah-sejuta-makna-mampu-milik.html',
     'kalkulator' => 'kalkulator-hibah.html',
+    'belanjawanku' => 'kalkulator-belanjawanku.html',
+    'kalkulator-belanjawanku' => 'kalkulator-belanjawanku.html',
     'kalkulator-hibah' => 'kalkulator-hibah-takaful.html',
 
     // === MEDICAL CARD ===

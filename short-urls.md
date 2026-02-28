@@ -60,6 +60,8 @@ http://localhost:8000/go/your-code
 - `/go/hibah-lumpuh` → Claim Hibah Jika Lumpuh
 - `/go/hibah-sejuta` → Sejuta Makna vs Legasi Beyond
 - `/go/kalkulator` → Kalkulator Hibah
+- `/go/belanjawanku` → Kalkulator Belanjawanku KWSP
+- `/go/kalkulator-belanjawanku` → Kalkulator Belanjawanku KWSP
 - `/go/kalkulator-hibah` → Kalkulator Hibah Takaful
 
 ### Medical Card
