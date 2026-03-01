@@ -5,6 +5,7 @@ Static marketing website for Dr. Takaful (Malay language), with many SEO landing
 ## 1) Structure
 
 - `index.html` — primary homepage and main conversion funnel.
+- `kalkulator-belanjawanku.html` — interactive Belanjawanku calculator tool.
 - `*.html` (root) — supporting landing pages/articles.
 - `main.js` — global interaction logic (CTA tracking, menu, filtering, scroll effects).
 - `src/global.css` — shared styling.
