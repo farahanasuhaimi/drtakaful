@@ -1,0 +1,548 @@
+﻿---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout 
+  title="Kalkulator Belanjawanku KWSP (Lembah Klang) | Dr. Takaful" 
+  description="Ketahui panduan perbelanjaan bulanan anda berdasarkan Belanjawanku KWSP 2023 untuk warga Lembah Klang. Bandingkan profil anda sekarang."
+  hideNav={true}
+  hideFooter={true}
+>
+    <style>
+        .step {
+            display: none;
+        }
+
+        .step.active {
+            display: block;
+            animation: slideIn 0.3s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .progress-bar {
+            transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        /* Radio Card Styling */
+        .radio-card input[type="radio"] {
+            display: none;
+        }
+
+        .radio-card label {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem 1rem;
+            border: 2px solid #f3f4f6;
+            border-radius: 1rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            background: #f9fafb;
+            text-align: center;
+            gap: 0.5rem;
+        }
+
+        .radio-card input[type="radio"]:checked+label {
+            border-color: #111827;
+            background: #ffffff;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .radio-card input[type="radio"]:checked+label .icon {
+            transform: scale(1.1);
+        }
+
+        .icon {
+            font-size: 2rem;
+            transition: transform 0.2s ease;
+        }
+    </style>
+
+    <header class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-gray-100">
+        <div class="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="/" class="brand-logo">DR.<span class="text-rose-600">TAKAFUL</span></a>
+            <a href="/"
+                class="text-xs font-bold uppercase tracking-widest text-gray-400 hover:text-gray-900 transition-colors sans-font">←
+                Kembali</a>
+        </div>
+    </header>
+
+    <main class="flex-grow pt-24 pb-12 px-4 flex items-center justify-center">
+        <div class="max-w-xl w-full">
+
+            <!-- Progress Tracker -->
+            <div class="mb-10 text-center">
+                <div
+                    class="flex justify-between text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-3 px-2">
+                    <span>Mula</span>
+                    <span id="step-label">Langkah 1 dari 5</span>
+                    <span>Selesai</span>
+                </div>
+                <div class="h-1.5 w-full bg-gray-200 rounded-full overflow-hidden">
+                    <div id="progress" class="progress-bar h-full bg-rose-600 rounded-full" style="width: 20%;"></div>
+                </div>
+            </div>
+
+            <!-- Wizard Card -->
+            <div class="glass-card rounded-[2.5rem] p-8 md:p-12 shadow-2xl shadow-gray-900/5 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-rose-50 rounded-full -mr-16 -mt-16 opacity-50"></div>
+
+                <form id="belanjawanku-wizard" onsubmit="return false">
+
+                    <!-- STEP 1: Lokasi -->
+                    <div class="step active" data-step="1">
+                        <div class="mb-8 text-center">
+                            <span class="text-4xl mb-6 block">📍</span>
+                            <h2 class="text-2xl md:text-3xl font-black text-gray-900 leading-tight mb-4">
+                                Di bandar manakah anda tinggal?
+                            </h2>
+                            <p class="text-gray-500">Pilih bandar terhampir untuk ketepatan data kos sara hidup.</p>
+                        </div>
+                        <div class="relative">
+                            <select id="input-city"
+                                class="w-full px-6 py-5 bg-gray-50 border-2 border-transparent focus:border-rose-600 focus:bg-white rounded-2xl text-lg font-bold transition-all outline-none appearance-none cursor-pointer">
+                                <option value="" disabled selected>Memuatkan senarai bandar...</option>
+                            </select>
+                            <div
+                                class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-6 text-gray-700">
+                                <svg class="fill-current h-5 w-5" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20">
+                                    <path
+                                        d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- STEP 2: Status Perkahwinan -->
+                    <div class="step" data-step="2">
+                        <div class="mb-8 text-center">
+                            <span class="text-4xl mb-6 block">👥</span>
+                            <h2 class="text-2xl md:text-3xl font-black text-gray-900 leading-tight mb-4">
+                                Apa status anda sekarang?
+                            </h2>
+                            <p class="text-gray-500">Pilih kategori profil yang paling tepat untuk anda.</p>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="radio-card">
+                                <input type="radio" name="status" id="status-bujang" value="bujang">
+                                <label for="status-bujang">
+                                    <span class="icon">🧑</span>
+                                    <span class="font-bold text-gray-900">Bujang</span>
+                                </label>
+                            </div>
+                            <div class="radio-card">
+                                <input type="radio" name="status" id="status-berkahwin" value="berkahwin">
+                                <label for="status-berkahwin">
+                                    <span class="icon">👫</span>
+                                    <span class="font-bold text-gray-900">Berkahwin</span>
+                                </label>
+                            </div>
+                            <div class="radio-card">
+                                <input type="radio" name="status" id="status-ibt" value="ibt">
+                                <label for="status-ibt">
+                                    <span class="icon">👩‍👧</span>
+                                    <span class="font-bold text-gray-900 text-sm">Ibu Bapa Tunggal</span>
+                                </label>
+                            </div>
+                            <div class="radio-card">
+                                <input type="radio" name="status" id="status-emas" value="emas">
+                                <label for="status-emas">
+                                    <span class="icon">👵</span>
+                                    <span class="font-bold text-gray-900 text-sm">Warga Emas</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- STEP 3: Butiran Tambahan (Dynamic) -->
+                    <div class="step" data-step="3">
+                        <div class="mb-8 text-center">
+                            <span class="text-4xl mb-6 block" id="step3-emoji">🚗</span>
+                            <h2 class="text-2xl md:text-3xl font-black text-gray-900 leading-tight mb-4"
+                                id="step3-title">
+                                Maklumat Tambahan
+                            </h2>
+                            <p class="text-gray-500" id="step3-desc">Pilih butiran yang bersesuaian.</p>
+                        </div>
+                        <div id="sub-options-container" class="grid grid-cols-2 gap-4">
+                            <!-- Options injected by JS -->
+                        </div>
+                    </div>
+
+                    <!-- STEP 4: Income -->
+                    <div class="step" data-step="4">
+                        <div class="mb-8 text-center">
+                            <span class="text-4xl mb-6 block">💰</span>
+                            <h2 class="text-2xl md:text-3xl font-black text-gray-900 leading-tight mb-4">
+                                Berapakah pendapatan anda?
+                            </h2>
+                            <p class="text-gray-500">Anggaran gaji/pendapatan bulanan untuk dibuat perbandingan (RM).
+                            </p>
+                        </div>
+                        <div class="relative">
+                            <span
+                                class="absolute left-6 top-1/2 -translate-y-1/2 text-xl font-bold text-gray-400">RM</span>
+                            <input type="number" id="input-income"
+                                class="w-full pl-16 pr-6 py-6 bg-gray-50 border-2 border-transparent focus:border-rose-600 focus:bg-white rounded-2xl text-2xl font-bold transition-all outline-none text-center"
+                                placeholder="cth: 5000">
+                        </div>
+                    </div>
+
+                    <!-- STEP 5: Summary -->
+                    <div class="step" data-step="5">
+                        <div class="text-center">
+                            <span class="text-5xl mb-4 block">📋</span>
+                            <h2 class="text-xl font-bold text-gray-500 uppercase tracking-widest mb-2">
+                                Profil Belanjawanku
+                            </h2>
+                            <p class="text-sm text-gray-400 mb-6 font-medium" id="profil-name">Bujang (Ada Kereta) -
+                                Lembah Klang</p>
+
+                            <div class="bg-gray-50 rounded-2xl p-6 text-left space-y-4 mb-8 border border-gray-100">
+                                <div>
+                                    <div class="flex justify-between text-sm mb-1">
+                                        <span class="text-gray-500 font-medium tracking-wide">Anggaran KWSP (<span
+                                                id="summary-city">Bandar</span>)</span>
+                                    </div>
+                                    <div id="summary-belanjawan" class="text-3xl font-black text-gray-900">RM 0</div>
+                                </div>
+                                <div class="pt-4 border-t border-gray-200">
+                                    <div class="flex justify-between text-sm mb-1">
+                                        <span class="text-gray-500 font-medium">Pendapatan Anda</span>
+                                        <span id="summary-income" class="font-bold text-gray-700">RM 0</span>
+                                    </div>
+                                </div>
+                                <div class="relative pt-4 overflow-hidden rounded-lg bg-gray-200 h-6">
+                                    <div id="progress-compare" class="absolute left-0 top-0 h-full bg-rose-500"
+                                        style="width: 50%;"></div>
+                                </div>
+                                <div class="pt-2 flex justify-between text-sm">
+                                    <span class="text-gray-500 font-bold" id="status-label">Baki Berlebihan:</span>
+                                    <span id="summary-diff" class="font-black text-green-600">RM 0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Navigation Buttons -->
+                    <div class="mt-12 flex gap-4">
+                        <button id="prev-btn" onclick="moveStep(-1)"
+                            class="hidden flex-1 py-5 rounded-2xl font-bold text-gray-400 hover:text-gray-900 transition-colors uppercase tracking-widest text-xs">
+                            ← Kembali
+                        </button>
+                        <button id="next-btn" onclick="moveStep(1)"
+                            class="flex-[2] bg-gray-900 text-white py-5 rounded-2xl font-bold hover:bg-gray-800 transition shadow-lg shadow-gray-200 uppercase tracking-widest text-xs">
+                            Seterusnya
+                        </button>
+                        <a id="whatsapp-btn" href="#" target="_blank"
+                            class="hidden flex-[2] bg-rose-600 text-white py-5 rounded-2xl font-bold hover:bg-rose-700 transition shadow-lg shadow-rose-100 text-center uppercase tracking-widest text-xs">
+                            Dapatkan Nasihat Kewangan 👋
+                        </a>
+                    </div>
+                </form>
+            </div>
+
+            <p class="text-center mt-10 text-gray-400 text-[10px] font-bold uppercase tracking-[0.2em] leading-relaxed">
+                Rujukan: Panduan Belanjawanku KWSP 2022/2023. <br />Dr. Takaful Strategy. Engineered for Legacy.
+            </p>
+        </div>
+    </main>
+
+    <script is:inline>
+        let currentStep = 1;
+        const totalSteps = 5;
+
+        // Global variables for CSV Data
+        let csvDb = {};
+
+        async function fetchCSVData() {
+            try {
+                // Add timestamp to prevent aggressive caching
+                const response = await fetch('belanjawanku.csv?t=' + new Date().getTime());
+                const rawData = await response.text();
+
+                const lines = rawData.trim().split('\n');
+                const headers = lines[0].split(',').map(s => s.trim());
+
+                const selectEl = document.getElementById('input-city');
+                selectEl.innerHTML = '<option value="" disabled selected>Pilih bandar anda...</option>';
+
+                for (let i = 1; i < lines.length; i++) {
+                    const row = lines[i].split(',').map(s => s.trim());
+                    if (row.length < headers.length) continue;
+
+                    const cityId = row[0];
+                    const cityName = row[1];
+
+                    csvDb[cityId] = {
+                        name: cityName,
+                        bujang_none: parseInt(row[2]),
+                        bujang_car: parseInt(row[3]),
+                        berkahwin_0: parseInt(row[4]),
+                        berkahwin_1: parseInt(row[5]),
+                        berkahwin_2: parseInt(row[6]),
+                        ibt_1: parseInt(row[7]),
+                        ibt_2: parseInt(row[8]),
+                        emas_bujang: parseInt(row[9]),
+                        emas_pasangan: parseInt(row[10])
+                    };
+
+                    const opt = document.createElement('option');
+                    opt.value = cityId;
+                    opt.textContent = cityName;
+                    selectEl.appendChild(opt);
+                }
+            } catch (err) {
+                console.error("Gagal memuat turun data CSV: ", err);
+                document.getElementById('input-city').innerHTML = '<option value="">Ralat: Sila refresh laman web</option>';
+            }
+        }
+
+        // Initialize CSV Download
+        window.onload = fetchCSVData;
+
+        // Configuration structures mapping radio inputs to CSV columns
+        const belanjawankuBase = {
+            'bujang': {
+                options: [
+                    { val: 'bujang_none', label: 'Tiada Kereta', icon: '🚶' },
+                    { val: 'bujang_car', label: 'Ada Kereta', icon: '🚗' }
+                ],
+                title: 'Pemilikan Kenderaan',
+                desc: 'Adakah anda memiliki kereta sendiri?',
+                emoji: '🚗'
+            },
+            'berkahwin': {
+                options: [
+                    { val: 'berkahwin_0', label: 'Tiada Anak', icon: '💑' },
+                    { val: 'berkahwin_1', label: '1 Orang Anak', icon: '👨‍👩‍👦' },
+                    { val: 'berkahwin_2', label: '2 Orang Anak', icon: '👨‍👩‍👧‍👦' }
+                ],
+                title: 'Bilangan Anak',
+                desc: 'Berapakah bilangan anak anda?',
+                emoji: '👶'
+            },
+            'ibt': {
+                options: [
+                    { val: 'ibt_1', label: '1 Orang Anak', icon: '👩‍👦' },
+                    { val: 'ibt_2', label: '2 Orang Anak', icon: '👩‍👧‍👦' }
+                ],
+                title: 'Bilangan Anak',
+                desc: 'Berapakah bilangan anak anda?',
+                emoji: '👶'
+            },
+            'emas': {
+                options: [
+                    { val: 'emas_bujang', label: 'Bujang', icon: '👴' },
+                    { val: 'emas_pasangan', label: 'Pasangan', icon: '🧓👴' }
+                ],
+                title: 'Status Warga Emas',
+                desc: 'Adakah anda bujang atau bersama pasangan?',
+                emoji: '🧓'
+            }
+        };
+
+        let selectedCity = '';
+        let selectedStatus = '';
+        let selectedSubKey = '';
+        let currentCost = 0;
+        let currentProfileName = '';
+
+        function renderSubOptions(status) {
+            const data = belanjawankuBase[status];
+            document.getElementById('step3-title').textContent = data.title;
+            document.getElementById('step3-desc').textContent = data.desc;
+            document.getElementById('step3-emoji').textContent = data.emoji;
+
+            const container = document.getElementById('sub-options-container');
+            container.innerHTML = '';
+
+            // Adjust grid if 3 items
+            container.className = data.options.length === 3 ? 'grid grid-cols-1 md:grid-cols-3 gap-4' : 'grid grid-cols-2 gap-4';
+
+            data.options.forEach(opt => {
+                const html = `
+                    <div class="radio-card">
+                        <input type="radio" name="substatus" id="sub-${opt.val}" value="${opt.val}" data-label="${opt.label}">
+                        <label for="sub-${opt.val}">
+                            <span class="icon">${opt.icon}</span>
+                            <span class="font-bold text-gray-900 text-sm">${opt.label}</span>
+                        </label>
+                    </div>
+                `;
+                container.insertAdjacentHTML('beforeend', html);
+            });
+        }
+
+        function getProfileLabel(status, subLabel) {
+            const statusLabels = {
+                'bujang': 'Bujang',
+                'berkahwin': 'Berkahwin',
+                'ibt': 'Ibu Bapa Tunggal',
+                'emas': 'Warga Emas'
+            };
+            return `${statusLabels[status]} (${subLabel})`;
+        }
+
+        function moveStep(delta) {
+            const nextStep = currentStep + delta;
+            if (nextStep < 1 || nextStep > totalSteps) return;
+
+            // Validation before moving forward
+            if (delta > 0) {
+                if (currentStep === 1) {
+                    const citySelect = document.getElementById('input-city');
+                    if (citySelect.value === "") {
+                        alert("Sila pilih lokasi/bandar anda terlebih dahulu.");
+                        return;
+                    }
+                    selectedCity = citySelect.value;
+                } else if (currentStep === 2) {
+                    const statusRadios = document.querySelector('input[name="status"]:checked');
+                    if (!statusRadios) {
+                        alert("Sila pilih status anda.");
+                        return;
+                    }
+                    if (selectedStatus !== statusRadios.value) {
+                        selectedStatus = statusRadios.value;
+                        renderSubOptions(selectedStatus);
+                    }
+                } else if (currentStep === 3) {
+                    const subRadios = document.querySelector('input[name="substatus"]:checked');
+                    if (!subRadios) {
+                        alert("Sila pilih pilihan yang disediakan.");
+                        return;
+                    }
+                    selectedSubKey = subRadios.value;
+                    currentCost = csvDb[selectedCity][selectedSubKey]; // Fetching live from DB object
+                    currentProfileName = getProfileLabel(selectedStatus, subRadios.dataset.label);
+                } else if (currentStep === 4) {
+                    const income = document.getElementById('input-income').value;
+                    if (income === "" || parseFloat(income) < 0) {
+                        alert("Sila masukkan jumlah pendapatan yang sah.");
+                        return;
+                    }
+                }
+            }
+
+            document.querySelector(`.step[data-step="${currentStep}"]`).classList.remove('active');
+            currentStep = nextStep;
+            document.querySelector(`.step[data-step="${currentStep}"]`).classList.add('active');
+
+            updateUI();
+        }
+
+        function updateUI() {
+            // Update Progress
+            const progressPercent = ((currentStep - 1) / (totalSteps - 1)) * 100;
+            document.getElementById('progress').style.width = `${progressPercent}%`;
+            document.getElementById('step-label').textContent = `Langkah ${currentStep} dari ${totalSteps}`;
+
+            // Update Buttons
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            const waBtn = document.getElementById('whatsapp-btn');
+
+            prevBtn.classList.toggle('hidden', currentStep === 1 || currentStep === totalSteps);
+
+            if (currentStep === totalSteps) {
+                nextBtn.classList.add('hidden');
+                waBtn.classList.remove('hidden');
+                calculateResults();
+            } else {
+                nextBtn.classList.remove('hidden');
+                waBtn.classList.add('hidden');
+            }
+
+            // Focus input if any
+            const currentInput = document.querySelector(`.step[data-step="${currentStep}"] input[type="number"]`);
+            if (currentInput) currentInput.focus();
+        }
+
+        function calculateResults() {
+            const income = parseFloat(document.getElementById('input-income').value) || 0;
+            const diff = income - currentCost;
+
+            const format = (num) => new Intl.NumberFormat('ms-MY', { style: 'currency', currency: 'MYR', maximumFractionDigits: 0 }).format(num);
+
+            const cityStringName = csvDb[selectedCity].name;
+            document.getElementById('profil-name').textContent = `${currentProfileName} - ${cityStringName}`;
+            document.getElementById('summary-city').textContent = cityStringName;
+            animateValue('summary-belanjawan', 0, currentCost, 800);
+            document.getElementById('summary-income').textContent = format(income);
+
+            const diffEl = document.getElementById('summary-diff');
+            const statusLabel = document.getElementById('status-label');
+
+            if (diff >= 0) {
+                diffEl.textContent = '+' + format(diff);
+                diffEl.className = 'font-black text-green-600';
+                statusLabel.textContent = 'Lebihan:';
+            } else {
+                diffEl.textContent = format(diff);
+                diffEl.className = 'font-black text-rose-600';
+                statusLabel.textContent = 'Kekurangan:';
+            }
+
+            // Progress bar calc (capped at 100%)
+            let ratio = (currentCost / income) * 100;
+            if (!isFinite(ratio)) ratio = 100;
+            if (ratio > 100) ratio = 100;
+            const progBar = document.getElementById('progress-compare');
+            progBar.style.width = `${ratio}%`;
+            if (ratio > 90) {
+                progBar.className = 'absolute left-0 top-0 h-full bg-rose-600';
+            } else if (ratio > 70) {
+                progBar.className = 'absolute left-0 top-0 h-full bg-yellow-500';
+            } else {
+                progBar.className = 'absolute left-0 top-0 h-full bg-green-500';
+            }
+
+            // Update WhatsApp Link
+            const message = `Hai Hana! Saya baru semak perbelanjaan saya guna Kalkulator Belanjawanku.\n\n📍 Lokasi: ${cityStringName}\n📊 Profil: ${currentProfileName}\n📈 Belanjawanku KWSP: ${format(currentCost)}\n💰 Gaji Saya: ${format(income)}\n📉 ${diff >= 0 ? 'Lebihan' : 'Kekurangan'}: ${format(Math.abs(diff))}\n\nBoleh Hana bantu saya rancang kewangan & perlindungan yang sesuai? Terima kasih!`;
+            document.getElementById('whatsapp-btn').href = `https://wa.me/60132522587?text=${encodeURIComponent(message)}`;
+        }
+
+        function animateValue(id, start, end, duration) {
+            const obj = document.getElementById(id);
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                const currentVal = Math.floor(progress * (end - start) + start);
+                obj.textContent = new Intl.NumberFormat('ms-MY', { style: 'currency', currency: 'MYR', maximumFractionDigits: 0 }).format(currentVal);
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                }
+            };
+            window.requestAnimationFrame(step);
+        }
+
+        // Handle Enter key for income step
+        document.getElementById('input-income').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                moveStep(1);
+            }
+        });
+    </script>
+</BaseLayout>
+
