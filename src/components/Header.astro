@@ -1,0 +1,51 @@
+---
+// Header.astro
+---
+<!-- NAVIGATION BAR -->
+<header class="fixed w-full top-0 glass-nav border-b border-gray-100 z-50">
+  <nav class="max-w-6xl mx-auto px-6 h-20 flex justify-between items-center">
+    <!-- Logo -->
+    <a href="/" class="brand-logo">
+      DR.<span class="text-rose-600">TAKAFUL</span>
+    </a>
+
+    <!-- Desktop Menu -->
+    <ul class="hidden md:flex space-x-10 items-center text-sm font-medium text-gray-500">
+      <li><a href="/#punca-gaji-terhenti" class="hover:text-gray-900 transition-colors">Punca Gaji Terhenti</a></li>
+      <li><a href="/#testimonials" class="hover:text-gray-900 transition-colors">Testimoni</a></li>
+      <li><a href="/kalkulator-hibah.html" class="hover:text-gray-900 transition-colors">Kira Hibah</a></li>
+      <li><a href="/kalkulator-belanjawanku.html" class="hover:text-gray-900 transition-colors">Bajet KWSP</a></li>
+    </ul>
+
+    <!-- CTA Buttons (Desktop) -->
+    <div class="hidden md:flex items-center gap-4">
+      <a href="/#blog" class="text-sm font-medium text-gray-500 hover:text-gray-900 transition">
+        Blog
+      </a>
+      <a href="/#borang-konsultasi"
+        class="bg-gray-900 text-white px-6 py-2.5 rounded-full text-sm font-medium hover:bg-gray-800 transition-all shadow-sm hover:shadow-md">
+        Konsultasi Percuma
+      </a>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button id="mobile-menu-button" class="md:hidden text-gray-900">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16m-7 6h7" />
+      </svg>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full left-0 shadow-lg">
+    <div class="px-6 py-4 space-y-3">
+      <a href="/#punca-gaji-terhenti" class="block text-gray-600 hover:text-gray-900 font-medium pb-2 border-b border-gray-50">Punca Gaji Terhenti</a>
+      <a href="/#testimonials" class="block text-gray-600 hover:text-gray-900 font-medium pb-2 border-b border-gray-50">Testimoni</a>
+      <a href="/kalkulator-hibah.html" class="block text-gray-600 hover:text-gray-900 font-medium pb-2 border-b border-gray-50">Kira Hibah</a>
+      <a href="/kalkulator-belanjawanku.html" class="block text-gray-600 hover:text-gray-900 font-medium pb-2 border-b border-gray-50">Bajet KWSP</a>
+      <a href="/#blog" class="block text-gray-600 hover:text-gray-900 font-medium pb-2">Blog</a>
+      <a href="/#borang-konsultasi"
+        class="block w-full text-center bg-gray-900 text-white py-3 rounded-lg font-medium mt-4">Konsultasi Percuma</a>
+    </div>
+  </div>
+</header>

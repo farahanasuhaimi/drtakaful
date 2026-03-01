@@ -1,0 +1,56 @@
+---
+// Footer.astro
+const currentYear = new Date().getFullYear();
+---
+<!-- FOOTER -->
+<footer class="bg-white pt-16 sm:pt-24 pb-12 px-6 border-t border-gray-50">
+  <div class="max-w-6xl mx-auto">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-12 mb-12 sm:mb-16">
+      <div class="col-span-full lg:col-span-1 text-center sm:text-left">
+        <a href="/" class="brand-logo block mb-4 sm:mb-6">
+          DR.<span class="text-rose-600">TAKAFUL</span>
+        </a>
+        <p class="text-sm text-gray-500 leading-relaxed max-w-xs mx-auto sm:mx-0">
+          Engineered for Legacy. Membantu profesional Malaysia mengoptimumkan perlindungan melalui data.
+        </p>
+      </div>
+
+      <div class="text-center sm:text-left">
+        <h4 class="font-black text-gray-900 mb-4 sm:mb-6 text-xs sm:text-sm uppercase tracking-widest">Solusi</h4>
+        <ul class="space-y-3 sm:space-y-4 text-sm text-gray-500">
+          <li><a href="/pelankritikal.html" class="hover:text-rose-600 transition-colors">Pelan Ganti Gaji</a></li>
+          <li><a href="/panduan-lengkap-hibah-takaful.html" class="hover:text-rose-600 transition-colors">Hibah Strategik</a></li>
+          <li><a href="/panduan-lengkap-medical-card-2026.html" class="hover:text-rose-600 transition-colors">Medical Card 2026</a></li>
+        </ul>
+      </div>
+
+      <div class="text-center sm:text-left">
+        <h4 class="font-black text-gray-900 mb-4 sm:mb-6 text-xs sm:text-sm uppercase tracking-widest">Sumber</h4>
+        <ul class="space-y-3 sm:space-y-4 text-sm text-gray-500">
+          <li><a href="/#blog" class="hover:text-rose-600 transition-colors">Pusat Ilmu</a></li>
+          <li><a href="/kalkulator-hibah.html" class="hover:text-rose-600 transition-colors">Kira Hibah</a></li>
+          <li><a href="/kalkulator-belanjawanku.html" class="hover:text-rose-600 transition-colors">Bajet KWSP</a></li>
+          <li><a href="/analisis-keperluan.html" class="hover:text-rose-600 transition-colors">Analisis Percuma</a></li>
+        </ul>
+      </div>
+
+      <div class="text-center sm:text-left">
+        <h4 class="font-black text-gray-900 mb-4 sm:mb-6 text-xs sm:text-sm uppercase tracking-widest">Hubungi</h4>
+        <p class="text-sm text-gray-500 mb-4">KL & Selangor (Zoom Available)</p>
+        <a href="https://wa.me/60132522587" class="text-sm font-bold text-gray-900 hover:text-rose-600 transition-colors">
+          +60 13 252 2587
+        </a>
+      </div>
+    </div>
+
+    <div class="pt-10 sm:pt-12 border-t border-gray-50 flex flex-col items-center sm:flex-row sm:justify-between gap-6">
+      <p class="text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.2em] sm:tracking-[0.3em] text-gray-400 text-center">
+        &copy; <span id="current-year">{currentYear}</span> Dr. Takaful Strategy. All Rights Reserved.
+      </p>
+      <div class="flex gap-6">
+        <a href="#" class="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-gray-400 hover:text-gray-900 transition-colors">Privacy</a>
+        <a href="#" class="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-gray-400 hover:text-gray-900 transition-colors">Terms</a>
+      </div>
+    </div>
+  </div>
+</footer>

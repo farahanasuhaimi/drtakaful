@@ -4,25 +4,32 @@ Static marketing website for Dr. Takaful (Malay language), with many SEO landing
 
 ## 1) Structure
 
-- `index.html` — primary homepage and main conversion funnel.
-- `kalkulator-belanjawanku.html` — interactive Belanjawanku calculator tool.
-- `*.html` (root) — supporting landing pages/articles.
-- `main.js` — global interaction logic (CTA tracking, menu, filtering, scroll effects).
-- `src/global.css` — shared styling.
-- `robots.txt` and `sitemap.xml` — crawling/indexing controls.
+The website has been migrated to **Astro Static Site Generator (SSG)** for better maintainability and component reusability.
+
+- `src/pages/index.astro` — primary homepage and main conversion funnel.
+- `src/pages/kalkulator-belanjawanku.astro` — interactive Belanjawanku calculator tool.
+- `src/pages/*.astro` — supporting landing pages/articles.
+- `src/components/Header.astro`, `Footer.astro` — global UI components.
+- `src/layouts/BaseLayout.astro` — main layout wrapping SEO and standard tools.
+- `public/main.js` & `public/short-url-helper.js` — global interaction logic (CTA tracking, menu, filtering).
+- `src/styles/global.css` — shared styling (Tailwind CSS).
+- `public/robots.txt` and `public/sitemap.xml` — crawling/indexing controls.
 
 ## 2) Content Editing Workflow
 
-1. Edit the target page (`*.html`).
-2. Keep SEO tags aligned:
-   - `<title>`
-   - `<meta name="description">`
-   - `<link rel="canonical">`
-   - OpenGraph/Twitter URL + image tags
-3. Ensure URL format is canonical and lowercase domain:
-   - `https://drtakaful.com/...`
-4. If page is new or removed, update:
-   - `sitemap.xml`
+1. Edit the target page in `src/pages/*.astro`.
+2. All global SEO metadata is managed via props in `<BaseLayout title="..." description="...">`.
+3. To test changes locally, run:
+   ```bash
+   npm run dev
+   ```
+4. To build for production, run:
+   ```bash
+   npm run build
+   ```
+   *The generated HTML files will be in the `dist/` folder.*
+5. If a page is new or removed, update:
+   - `public/sitemap.xml`
    - internal links from related pages
 
 ## 3) Analytics Operating Rules
