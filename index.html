@@ -135,7 +135,9 @@
           </p>
         </div>
         <div class="hidden sm:block w-px h-4 bg-gray-200"></div>
-        <a href="#blog" class="flex items-center gap-2 group">
+        <a href="#blog"
+          onclick="if(typeof filterArticles === 'function') { filterArticles('viral'); document.getElementById('blog').scrollIntoView({ behavior: 'smooth' }); return false; }"
+          class="flex items-center gap-2 group">
           <span
             class="bg-red-600 text-white text-[9px] font-bold px-1.5 py-0.5 rounded animate-pulse uppercase tracking-widest">🔥
             Viral 2026</span>
@@ -736,8 +738,21 @@
       <div class="text-center mb-10 sm:mb-16">
         <span class="text-rose-600 font-black text-[10px] uppercase tracking-[0.3em] mb-4 block">Knowledge Hub</span>
         <h2 class="text-2xl md:text-5xl font-black text-gray-900 mb-4 sm:mb-6 leading-tight">Pusat Ilmu Takaful</h2>
-        <p class="text-sm sm:text-base text-gray-500 max-w-2xl mx-auto px-4">Panduan berasaskan data untuk bantu anda
-          buat keputusan bijak.</p>
+        <p class="text-sm sm:text-base text-gray-500 max-w-2xl mx-auto px-4 mb-10">Panduan berasaskan data untuk bantu
+          anda buat keputusan bijak.</p>
+
+        <!-- Viral Update Ticker -->
+        <a href="#blog" onclick="filterArticles('viral'); return false;"
+          class="inline-flex items-center gap-4 bg-red-50 border border-red-100 rounded-2xl px-6 py-4 mx-auto group hover:bg-red-100 transition-all shadow-sm">
+          <span
+            class="bg-red-600 text-white text-[9px] font-black px-2 py-1 rounded-full uppercase tracking-widest animate-pulse">🔥
+            Viral 2026</span>
+          <div class="text-left">
+            <p class="text-xs sm:text-sm font-bold text-gray-900">RM13 Bilion Duit Rakyat Tersadai!</p>
+            <p class="text-[10px] sm:text-xs text-red-600 group-hover:underline">Klik untuk tapis strategi & solusi
+              viral →</p>
+          </div>
+        </a>
       </div>
 
       <!-- Search & Filter -->
