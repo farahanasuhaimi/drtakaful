@@ -95,10 +95,10 @@ function filterArticles(category, isInitialLoad = false) {
   let displayedCount = 0;
 
   articles.forEach(article => {
-    const articleCategory = article.getAttribute('data-category');
+    const articleCategories = article.getAttribute('data-category')?.split(',').map(c => c.trim()) || [];
     const articleKeywords = article.getAttribute('data-keywords') || '';
     const articleText = article.innerText.toLowerCase();
-    const categoryMatch = (currentCategory === 'all' || articleCategory === currentCategory);
+    const categoryMatch = (currentCategory === 'all' || articleCategories.includes(currentCategory));
     const searchMatch = articleText.includes(searchInput) || articleKeywords.toLowerCase().includes(searchInput);
 
     if (categoryMatch && searchMatch) {
