@@ -99,6 +99,8 @@ http://localhost:8000/go/your-code
 - `/go/analisis` → Analisis Keperluan
 - `/go/borang` → Borang Permohonan
 - `/go/konsultasi` → Konsultasi Percuma
+- `/go/belanjawanku` → Kalkulator Belanjawanku KWSP
+- `/go/kes-sebenar` → Kes Sebenar Claim Medical Card
 
 ## Sharing on WhatsApp
 

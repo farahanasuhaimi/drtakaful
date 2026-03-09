@@ -15,14 +15,15 @@ const shortUrlMap = {
   '/hibah-aia-sejuta-makna-vs-legasi-beyond.html': 'hibah-sejuta',
   '/kalkulator-hibah.html': 'kalkulator',
   '/kalkulator-hibah-takaful.html': 'kalkulator-hibah',
-  
+
   // Medical Card
-  '/panduan-lengkap-medical-card-takaful.html': 'mc',
+  '/panduan-lengkap-medical-card-2026.html': 'mc',
+  '/panduan-lengkap-medical-card-takaful.html': 'mc-2025',
   '/beza-medical-card-mediflex-vs-idaman.html': 'mediflex',
   '/tempoh-menunggu-medical-card.html': 'mc-waiting',
   '/perkeso-vs-takaful-medical-card.html': 'perkeso-mc',
   '/company-policy-vs-personal-takaful.html': 'company-mc',
-  
+
   // Penyakit Kritikal (CI)
   '/panduan-lengkap-penyakit-kritikal-takaful.html': 'ci',
   '/medical-card-atau-ci-dulu.html': 'mc-ci',
@@ -31,7 +32,7 @@ const shortUrlMap = {
   '/pelankritikal.html': 'gaji',
   '/kos-rawatan-vs-gaji.html': 'kos-rawatan',
   '/socso-vs-takaful-penyakit-kritikal.html': 'socso-ci',
-  
+
   // Asas Takaful
   '/kenapa-perlu-rancang-kewangan-awal.html': 'mula-awal',
   '/perlindungan-pertama-untuk-orang-muda.html': 'fresh-grad',
@@ -40,10 +41,10 @@ const shortUrlMap = {
   '/formula-10-peratus-pendapatan-takaful.html': 'formula-10',
   '/sepuluhpercentincome.html': 'sepuluh-persen',
   '/kenapa-pilih-aia-takaful.html': 'kenapa-aia',
-  
+
   // Pinjaman Perumahan
   '/panduan-lengkap-mltt-mrtt.html': 'mltt',
-  
+
   // Lain-lain
   '/panduan-personal-accident.html': 'pa',
   '/bila-perlu-mula-takaful-anak.html': 'anak',
@@ -52,6 +53,8 @@ const shortUrlMap = {
   '/analisis-keperluan.html': 'analisis',
   '/borang-permohonan.html': 'borang',
   '/konsultasi-percuma.html': 'konsultasi',
+  '/kalkulator-belanjawanku.html': 'belanjawanku',
+  '/kes-sebenar-medical-card.html': 'kes-sebenar',
 };
 
 // Get short URL for a given full URL
@@ -89,16 +92,16 @@ function copyToClipboard(text) {
 // Add share buttons to blog articles
 function addShareButtons() {
   const articles = document.querySelectorAll('.blog-article');
-  
+
   articles.forEach(article => {
     const href = article.getAttribute('href');
     const shortUrl = getShortUrl(href);
-    
+
     if (shortUrl) {
       // Create share button container
       const shareContainer = document.createElement('div');
       shareContainer.className = 'mt-4 pt-4 border-t border-gray-100 flex items-center gap-2';
-      
+
       // Create copy button
       const copyButton = document.createElement('button');
       copyButton.className = 'flex items-center gap-1.5 text-xs text-gray-500 hover:text-rose-600 transition-colors';
@@ -108,17 +111,17 @@ function addShareButtons() {
         </svg>
         <span class="copy-text">Salin Pautan</span>
       `;
-      
+
       copyButton.addEventListener('click', (e) => {
         e.preventDefault();
         e.stopPropagation();
-        
+
         copyToClipboard(shortUrl).then(() => {
           const textSpan = copyButton.querySelector('.copy-text');
           const originalText = textSpan.textContent;
           textSpan.textContent = 'Disalin! ✓';
           copyButton.classList.add('text-green-600');
-          
+
           setTimeout(() => {
             textSpan.textContent = originalText;
             copyButton.classList.remove('text-green-600');
@@ -128,7 +131,7 @@ function addShareButtons() {
           alert('Gagal menyalin. Cuba lagi.');
         });
       });
-      
+
       // Create WhatsApp share button
       const whatsappButton = document.createElement('a');
       const title = article.querySelector('h3').textContent;
@@ -142,14 +145,14 @@ function addShareButtons() {
         </svg>
         <span>Kongsi</span>
       `;
-      
+
       whatsappButton.addEventListener('click', (e) => {
         e.stopPropagation();
       });
-      
+
       shareContainer.appendChild(copyButton);
       shareContainer.appendChild(whatsappButton);
-      
+
       // Insert before the "Baca lanjut" link
       const readMoreLink = article.querySelector('.text-rose-600.font-medium');
       if (readMoreLink) {
