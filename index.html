@@ -62,6 +62,109 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="src/tailwind-config.js"></script>
   <link rel="stylesheet" href="src/global.css">
+
+  <!-- Structured Data (Schema.org JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://drtakaful.com/#website",
+        "url": "https://drtakaful.com/",
+        "name": "Dr. Takaful",
+        "description": "Panduan dan konsultasi takaful pakar untuk profesional Malaysia — perlindungan gaji, hibah, dan medical card",
+        "inLanguage": "ms-MY",
+        "publisher": { "@id": "https://drtakaful.com/#business" }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://drtakaful.com/#author",
+        "name": "Dr. Hana",
+        "honorificPrefix": "Dr.",
+        "jobTitle": "Jurutera Kewangan Takaful",
+        "description": "Konsultan AIA Public Takaful berlesen dengan PhD in Engineering. Pakar dalam perancangan takaful komprehensif untuk profesional Malaysia — Hibah, CI, PA, Medical Card, dan Simpanan.",
+        "url": "https://drtakaful.com/",
+        "telephone": "+60132522587",
+        "hasCredential": {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "degree",
+          "name": "Doctor of Philosophy (PhD) in Engineering"
+        },
+        "worksFor": { "@type": "Organization", "name": "AIA Public Takaful" },
+        "knowsAbout": ["Takaful", "Hibah Takaful", "Medical Card Malaysia", "Income Replacement", "Perlindungan Penyakit Kritikal", "Kewangan Islam"]
+      },
+      {
+        "@type": "FinancialService",
+        "@id": "https://drtakaful.com/#business",
+        "name": "Dr. Takaful — Konsultasi Takaful Malaysia",
+        "alternateName": ["Takaful by Hana", "DrTakaful"],
+        "description": "Perkhidmatan konsultasi takaful pakar untuk profesional Malaysia. Khusus dalam perlindungan pendapatan (ganti gaji), hibah takaful, dan medical card AIA Public Takaful.",
+        "url": "https://drtakaful.com/",
+        "telephone": "+60132522587",
+        "priceRange": "Percuma (Konsultasi)",
+        "currenciesAccepted": "MYR",
+        "areaServed": { "@type": "Country", "name": "Malaysia" },
+        "founder": { "@id": "https://drtakaful.com/#author" },
+        "employee": { "@id": "https://drtakaful.com/#author" },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5",
+          "bestRating": "5",
+          "worstRating": "1",
+          "ratingCount": "3",
+          "reviewCount": "3"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Perkhidmatan Takaful",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pelan Ganti Gaji (Income Replacement)", "description": "Perlindungan pendapatan bulanan semasa sakit kritikal, hilang upaya, atau kematian" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Hibah Takaful", "description": "Tunai segera untuk waris dalam 24 jam tanpa menunggu proses pusaka atau faraid" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Medical Card AIA Public Takaful", "description": "Perlindungan bil hospital komprehensif untuk rawatan di hospital swasta Malaysia" } }
+          ]
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://drtakaful.com/#faq",
+        "isPartOf": { "@id": "https://drtakaful.com/#website" },
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Apa beza Takaful dan Insurans biasa?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Takaful berasaskan prinsip Islam — caruman dikumpul ke dana tabarru' (derma) untuk membantu ahli yang ditimpa musibah, bebas dari unsur riba dan gharar. Lebihan dana dikembalikan kepada peserta sebagai surplus. Insurans konvensional beroperasi secara komersial di mana premium menjadi pendapatan syarikat sepenuhnya." }
+          },
+          {
+            "@type": "Question",
+            "name": "Berapa banyak perlu saya bayar untuk Takaful sebulan?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Formula asas: 10% daripada pendapatan bulanan. Contoh: Gaji RM5,000 = peruntukan takaful RM500/bulan, merangkumi medical card (RM150-250/bulan), perlindungan ganti gaji atau CI (RM100-200/bulan), dan hibah takaful (RM45-150/bulan). Jumlah tepat bergantung pada umur, tanggungan, dan komitmen kewangan semasa." }
+          },
+          {
+            "@type": "Question",
+            "name": "Apa itu Hibah Takaful dan kenapa ia lebih baik dari wasiat?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Hibah Takaful ialah pemberian manfaat takaful terus kepada penerima yang dilantik, dicairkan dalam 24-48 jam tanpa melalui proses pusaka atau faraid. Wasiat dan harta pusaka biasa boleh beku 3-7 tahun di mahkamah, meninggalkan keluarga tanpa wang tunai untuk bayar ansuran rumah dan keperluan harian. Hibah adalah satu-satunya 'liquid asset' yang boleh diakses segera." }
+          },
+          {
+            "@type": "Question",
+            "name": "Kenapa Medical Card sahaja tidak cukup — perlukah Pelan Ganti Gaji?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Medical card hanya membayar bil hospital, bukan gaji bulanan yang terhenti semasa sakit kritikal. Rawatan kanser boleh mengambil masa 1-3 tahun — bererti kehilangan RM60,000 hingga RM180,000 pendapatan (berdasarkan gaji RM5,000 sebulan) yang medical card tidak akan bayar. Pelan Ganti Gaji atau CI memberikan lump sum untuk teruskan hidup semasa tempoh pemulihan." }
+          },
+          {
+            "@type": "Question",
+            "name": "Berapa jumlah perlindungan Takaful yang sesuai untuk saya?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Panduan asas: (1) Hibah dan Life coverage: 10x pendapatan tahunan — contoh gaji RM60,000 setahun bermakna perlindungan RM600,000. (2) Penyakit Kritikal (CI): minimum 5 tahun pendapatan tahunan. (3) Medical Card: limit tahunan minimum RM150,000 dengan had seumur hidup tanpa had (unlimited). Angka tepat bergantung pada tanggungan keluarga, hutang semasa, dan gaya hidup." }
+          },
+          {
+            "@type": "Question",
+            "name": "Siapakah Dr. Hana dan apakah kelayakannya dalam Takaful?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Dr. Hana adalah Konsultan AIA Public Takaful berlesen dengan PhD in Engineering. Beliau menggunakan pendekatan kejuruteraan — analisis data, simulasi kewangan, pengoptimuman bajet — untuk merancang takaful yang tepat mengikut profil setiap klien. Telah membantu lebih 500 keluarga di Malaysia. Konsultasi percuma melalui WhatsApp +60132522587." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body class="bg-gray-50 text-gray-800 antialiased selection:bg-gray-100 selection:text-gray-900">
@@ -198,11 +301,11 @@
           <!-- Mobile Social Proof (visible on mobile, hidden on desktop where the badge is shown) -->
           <div class="lg:hidden mt-6 flex items-center gap-4">
             <div class="bg-gray-900 text-white px-4 py-2 rounded-2xl text-center">
-              <p class="text-xl font-black leading-none">500+</p>
+              <p class="text-xl font-black leading-none">50+</p>
               <p class="text-[9px] uppercase font-bold tracking-widest opacity-70">Keluarga</p>
             </div>
             <div class="text-xs text-gray-500 leading-relaxed">
-              <span class="font-bold text-gray-900">500+ keluarga</span> dah percayakan<br>Dr. Hana untuk pelan mereka.
+              <span class="font-bold text-gray-900">50+ keluarga</span> dibantu secara strategik —<br>Hibah, CI, PA, Medical Card & Simpanan.
             </div>
           </div>
 
@@ -233,8 +336,8 @@
           </div>
           <!-- Experience Badge -->
           <div class="absolute -top-6 -right-6 bg-gray-900 text-white p-6 rounded-3xl shadow-2xl rotate-12">
-            <p class="text-3xl font-black mb-0 leading-none">500+</p>
-            <p class="text-[10px] uppercase font-bold tracking-widest opacity-70">Client Happy</p>
+            <p class="text-3xl font-black mb-0 leading-none">50+</p>
+            <p class="text-[10px] uppercase font-bold tracking-widest opacity-70">Pelan Lengkap</p>
           </div>
         </div>
       </div>
@@ -258,8 +361,8 @@
             <p class="text-[10px] text-gray-500 uppercase font-bold tracking-widest">Analisis</p>
           </div>
           <div class="bg-gray-50 rounded-2xl p-3">
-            <p class="text-lg font-black text-gray-900">500+</p>
-            <p class="text-[10px] text-gray-500 uppercase font-bold tracking-widest">Keluarga</p>
+            <p class="text-lg font-black text-gray-900">50+</p>
+            <p class="text-[10px] text-gray-500 uppercase font-bold tracking-widest">Pelan Lengkap</p>
           </div>
           <div class="bg-gray-50 rounded-2xl p-3">
             <p class="text-lg font-black text-gray-900">100%</p>
@@ -1213,6 +1316,80 @@
       </div>
     </section>
   </div>
+
+  <!-- FAQ SECTION — for featured snippets & AI search citations -->
+  <section id="faq" class="py-16 sm:py-24 px-4 sm:px-6 bg-gray-50">
+    <div class="max-w-3xl mx-auto">
+      <div class="text-center mb-10 sm:mb-14">
+        <span class="text-rose-600 font-black text-[10px] uppercase tracking-[0.3em] mb-4 block">Soalan Lazim</span>
+        <h2 class="text-2xl md:text-4xl font-black text-gray-900 mb-3">Yang Selalu Ditanya</h2>
+        <p class="text-sm text-gray-500">Jawapan tepat untuk keputusan bijak.</p>
+      </div>
+      <div class="space-y-3">
+
+        <details class="group bg-white border border-gray-100 rounded-2xl overflow-hidden">
+          <summary class="flex justify-between items-center px-6 py-5 cursor-pointer font-bold text-gray-900 text-sm sm:text-base [list-style:none] [&::-webkit-details-marker]:hidden">
+            Apa beza Takaful dan Insurans biasa?
+            <span class="text-gray-400 ml-4 shrink-0 group-open:rotate-45 transition-transform duration-200 text-2xl font-thin leading-none">+</span>
+          </summary>
+          <div class="px-6 pb-6 text-gray-500 text-sm leading-relaxed border-t border-gray-50 pt-4">
+            Takaful berasaskan prinsip Islam — caruman dikumpul ke dana <em>tabarru'</em> (derma) untuk membantu ahli yang ditimpa musibah, bebas dari unsur riba dan gharar. Lebihan dana dikembalikan kepada peserta sebagai <em>surplus</em>. Insurans konvensional beroperasi secara komersial di mana premium menjadi pendapatan syarikat sepenuhnya.
+          </div>
+        </details>
+
+        <details class="group bg-white border border-gray-100 rounded-2xl overflow-hidden">
+          <summary class="flex justify-between items-center px-6 py-5 cursor-pointer font-bold text-gray-900 text-sm sm:text-base [list-style:none] [&::-webkit-details-marker]:hidden">
+            Berapa banyak perlu saya bayar untuk Takaful sebulan?
+            <span class="text-gray-400 ml-4 shrink-0 group-open:rotate-45 transition-transform duration-200 text-2xl font-thin leading-none">+</span>
+          </summary>
+          <div class="px-6 pb-6 text-gray-500 text-sm leading-relaxed border-t border-gray-50 pt-4">
+            Formula asas: <strong class="text-gray-900">10% daripada pendapatan bulanan</strong>. Contoh: Gaji RM5,000 = peruntukan takaful RM500/bulan, merangkumi medical card (RM150–250), perlindungan ganti gaji/CI (RM100–200), dan hibah takaful (RM45–150). Jumlah tepat bergantung pada umur, tanggungan, dan komitmen kewangan semasa.
+          </div>
+        </details>
+
+        <details class="group bg-white border border-gray-100 rounded-2xl overflow-hidden">
+          <summary class="flex justify-between items-center px-6 py-5 cursor-pointer font-bold text-gray-900 text-sm sm:text-base [list-style:none] [&::-webkit-details-marker]:hidden">
+            Apa itu Hibah Takaful dan kenapa ia lebih baik dari wasiat?
+            <span class="text-gray-400 ml-4 shrink-0 group-open:rotate-45 transition-transform duration-200 text-2xl font-thin leading-none">+</span>
+          </summary>
+          <div class="px-6 pb-6 text-gray-500 text-sm leading-relaxed border-t border-gray-50 pt-4">
+            Hibah Takaful ialah pemberian manfaat takaful terus kepada penerima yang dilantik, dicairkan dalam <strong class="text-gray-900">24–48 jam</strong> tanpa melalui proses pusaka atau faraid. Wasiat dan harta pusaka biasa boleh beku <strong class="text-gray-900">3–7 tahun</strong> di mahkamah, meninggalkan keluarga tanpa wang tunai untuk bayar ansuran rumah dan keperluan harian. Hibah adalah satu-satunya <em>'liquid asset'</em> yang boleh diakses segera.
+          </div>
+        </details>
+
+        <details class="group bg-white border border-gray-100 rounded-2xl overflow-hidden">
+          <summary class="flex justify-between items-center px-6 py-5 cursor-pointer font-bold text-gray-900 text-sm sm:text-base [list-style:none] [&::-webkit-details-marker]:hidden">
+            Kenapa Medical Card sahaja tidak cukup — perlukah Pelan Ganti Gaji?
+            <span class="text-gray-400 ml-4 shrink-0 group-open:rotate-45 transition-transform duration-200 text-2xl font-thin leading-none">+</span>
+          </summary>
+          <div class="px-6 pb-6 text-gray-500 text-sm leading-relaxed border-t border-gray-50 pt-4">
+            Medical card hanya membayar bil hospital — bukan gaji bulanan yang terhenti semasa sakit kritikal. Rawatan kanser boleh mengambil masa 1–3 tahun, bererti kehilangan <strong class="text-gray-900">RM60,000–RM180,000 pendapatan</strong> (gaji RM5,000/bulan) yang medical card tidak akan bayar. Pelan Ganti Gaji atau CI memberikan lump sum untuk teruskan hidup semasa tempoh pemulihan.
+          </div>
+        </details>
+
+        <details class="group bg-white border border-gray-100 rounded-2xl overflow-hidden">
+          <summary class="flex justify-between items-center px-6 py-5 cursor-pointer font-bold text-gray-900 text-sm sm:text-base [list-style:none] [&::-webkit-details-marker]:hidden">
+            Berapa jumlah perlindungan Takaful yang sesuai untuk saya?
+            <span class="text-gray-400 ml-4 shrink-0 group-open:rotate-45 transition-transform duration-200 text-2xl font-thin leading-none">+</span>
+          </summary>
+          <div class="px-6 pb-6 text-gray-500 text-sm leading-relaxed border-t border-gray-50 pt-4">
+            Panduan asas: (1) <strong class="text-gray-900">Hibah/Life: 10x pendapatan tahunan</strong> — contoh gaji RM60,000/tahun = perlindungan RM600,000. (2) <strong class="text-gray-900">Penyakit Kritikal (CI): minimum 5 tahun pendapatan tahunan</strong>. (3) <strong class="text-gray-900">Medical Card: limit tahunan minimum RM150,000</strong> dengan had seumur hidup tanpa had (unlimited). Angka tepat bergantung pada tanggungan, hutang semasa, dan gaya hidup.
+          </div>
+        </details>
+
+        <details class="group bg-white border border-gray-100 rounded-2xl overflow-hidden">
+          <summary class="flex justify-between items-center px-6 py-5 cursor-pointer font-bold text-gray-900 text-sm sm:text-base [list-style:none] [&::-webkit-details-marker]:hidden">
+            Siapakah Dr. Hana dan apakah kelayakannya?
+            <span class="text-gray-400 ml-4 shrink-0 group-open:rotate-45 transition-transform duration-200 text-2xl font-thin leading-none">+</span>
+          </summary>
+          <div class="px-6 pb-6 text-gray-500 text-sm leading-relaxed border-t border-gray-50 pt-4">
+            Dr. Hana adalah Konsultan AIA Public Takaful berlesen dengan <strong class="text-gray-900">PhD in Engineering</strong>. Beliau menggunakan pendekatan kejuruteraan — analisis data, simulasi kewangan, pengoptimuman bajet — untuk merancang takaful komprehensif: Hibah, CI, PA, Medical Card, dan Simpanan. Telah membantu <strong class="text-gray-900">50+ keluarga</strong> secara strategik di Malaysia. Konsultasi percuma melalui WhatsApp.
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
 
   <!-- USEFUL TOOLS GRID -->
   <section class="py-12 sm:py-24 px-4 sm:px-6 bg-white overflow-hidden" id="tools">
