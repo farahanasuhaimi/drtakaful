@@ -278,12 +278,16 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 // --- Sticky CTA Script ---
 const stickyCta = document.getElementById('sticky-cta');
-const heroSection = document.querySelector('header + section'); // Selects the hero section right after the header
+const heroSection = document.querySelector('header + section');
 
+// On mobile (95% of traffic): show sticky CTA after 2 seconds — don't make them scroll to find it
+if (stickyCta && window.innerWidth < 768) {
+  setTimeout(() => stickyCta.classList.remove('hidden'), 2000);
+}
+
+// On desktop: show after scrolling past the hero section
 window.addEventListener('scroll', () => {
-  if (!heroSection || !stickyCta) return;
-
-  // Show button if user has scrolled past the bottom of the hero section
+  if (!heroSection || !stickyCta || window.innerWidth < 768) return;
   const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
   if (window.scrollY > heroBottom) {
     stickyCta.classList.remove('hidden');
