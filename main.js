@@ -235,6 +235,47 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 });
 
+// --- Exit-Intent Popup ---
+(function () {
+  const exitPopup = document.getElementById('exit-popup');
+  const popupContent = document.getElementById('popup-content');
+  const closePopupBtn = document.getElementById('close-popup');
+  if (!exitPopup || !popupContent || !closePopupBtn) return;
+
+  let shown = false;
+
+  function showPopup() {
+    if (shown || sessionStorage.getItem('exitPopupShown')) return;
+    shown = true;
+    sessionStorage.setItem('exitPopupShown', '1');
+    exitPopup.classList.remove('hidden');
+    requestAnimationFrame(() => {
+      popupContent.classList.remove('scale-95', 'opacity-0');
+      popupContent.classList.add('scale-100', 'opacity-100');
+    });
+  }
+
+  function hidePopup() {
+    popupContent.classList.remove('scale-100', 'opacity-100');
+    popupContent.classList.add('scale-95', 'opacity-0');
+    setTimeout(() => exitPopup.classList.add('hidden'), 300);
+  }
+
+  // Desktop: mouse moves toward browser chrome (exit intent)
+  document.addEventListener('mouseleave', (e) => {
+    if (e.clientY <= 5) showPopup();
+  });
+
+  // Mobile: show after 30 seconds on page
+  const mobileTimer = setTimeout(showPopup, 30000);
+
+  closePopupBtn.addEventListener('click', hidePopup);
+  exitPopup.addEventListener('click', (e) => {
+    if (e.target === exitPopup) hidePopup();
+  });
+  document.getElementById('popup-cta')?.addEventListener('click', hidePopup);
+})();
+
 // --- Sticky CTA Script ---
 const stickyCta = document.getElementById('sticky-cta');
 const heroSection = document.querySelector('header + section'); // Selects the hero section right after the header
