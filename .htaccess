@@ -1,6 +1,9 @@
 # Enable URL Rewriting
 RewriteEngine On
 
+# Permanent redirect for old slug
+Redirect 301 /simpananvstakaful.html /simpanan-vs-takaful.html
+
 # Short URL Handler
 # Redirects /go/[code] to redirect.php
 RewriteRule ^go/([a-zA-Z0-9-]+)/?$ redirect.php?code=$1 [L,QSA]
