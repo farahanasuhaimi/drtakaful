@@ -54,9 +54,9 @@
         }
 
         .glass-card {
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(248, 245, 239, 0.85);
             backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            border: 1px solid rgba(194, 219, 201, 0.4);
         }
 
         /* Radio Card Styling */
@@ -70,19 +70,19 @@
             align-items: center;
             justify-content: center;
             padding: 1.5rem 1rem;
-            border: 2px solid #f3f4f6;
+            border: 2px solid var(--matcha-light);
             border-radius: 1rem;
             cursor: pointer;
             transition: all 0.2s ease;
-            background: #f9fafb;
+            background: var(--matcha-pale);
             text-align: center;
             gap: 0.5rem;
         }
 
         .radio-card input[type="radio"]:checked+label {
-            border-color: #111827;
+            border-color: var(--matcha-deep);
             background: #ffffff;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            box-shadow: 0 4px 6px -1px rgba(61, 107, 79, 0.12), 0 2px 4px -1px rgba(61, 107, 79, 0.08);
         }
 
         .radio-card input[type="radio"]:checked+label .icon {
@@ -110,17 +110,17 @@
 </head>
 
 <body
-    class="bg-gray-50 text-gray-800 antialiased selection:bg-gray-100 selection:text-gray-900 min-h-screen flex flex-col">
+    class="bg-cream text-ink antialiased selection:bg-matcha-pale selection:text-matcha-deep min-h-screen flex flex-col brand-bg">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFWGX5DS" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <header class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-gray-100">
+    <header class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-matcha-light">
         <div class="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
-            <a href="/" class="brand-logo">DR.<span class="text-rose-600">TAKAFUL</span></a>
+            <a href="/" class="brand-logo">DR.<span class="text-strawberry">TAKAFUL</span></a>
             <a href="/"
-                class="text-xs font-bold uppercase tracking-widest text-gray-400 hover:text-gray-900 transition-colors sans-font">←
+                class="text-xs font-bold uppercase tracking-widest text-ink-muted hover:text-ink transition-colors sans-font">←
                 Kembali</a>
         </div>
     </header>
@@ -129,24 +129,24 @@
         <div class="max-w-xl w-full">
 
             <!-- Main Page Title for SEO -->
-            <h1 class="text-2xl md:text-3xl font-black text-gray-900 text-center mb-8">Kalkulator Belanjawanku KWSP: Semak Perbelanjaan Bulanan Anda</h1>
+            <h1 class="text-2xl md:text-3xl font-black text-ink text-center mb-8">Kalkulator Belanjawanku KWSP: Semak Perbelanjaan Bulanan Anda</h1>
 
             <!-- Progress Tracker -->
             <div class="mb-10 text-center">
                 <div
-                    class="flex justify-between text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-3 px-2">
+                    class="flex justify-between text-[10px] font-bold text-ink-muted uppercase tracking-widest mb-3 px-2">
                     <span>Mula</span>
                     <span id="step-label">Langkah 1 dari 5</span>
                     <span>Selesai</span>
                 </div>
-                <div class="h-1.5 w-full bg-gray-200 rounded-full overflow-hidden">
-                    <div id="progress" class="progress-bar h-full bg-rose-600 rounded-full" style="width: 20%;"></div>
+                <div class="h-1.5 w-full bg-matcha-light rounded-full overflow-hidden">
+                    <div id="progress" class="progress-bar h-full bg-matcha-deep rounded-full" style="width: 20%;"></div>
                 </div>
             </div>
 
             <!-- Wizard Card -->
-            <div class="glass-card rounded-[2.5rem] p-8 md:p-12 shadow-2xl shadow-gray-900/5 relative overflow-hidden">
-                <div class="absolute top-0 right-0 w-32 h-32 bg-rose-50 rounded-full -mr-16 -mt-16 opacity-50"></div>
+            <div class="glass-card rounded-[2.5rem] p-8 md:p-12 shadow-2xl shadow-matcha-deep/5 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-matcha-pale rounded-full -mr-16 -mt-16 opacity-50"></div>
 
                 <form id="belanjawanku-wizard" onsubmit="return false">
 
@@ -154,18 +154,18 @@
                     <div class="step active" data-step="1">
                         <div class="mb-8 text-center">
                             <span class="text-4xl mb-6 block">📍</span>
-                            <h2 class="text-2xl md:text-3xl font-black text-gray-900 leading-tight mb-4">
+                            <h2 class="text-2xl md:text-3xl font-black text-ink leading-tight mb-4">
                                 Di bandar manakah anda tinggal?
                             </h2>
-                            <p class="text-gray-500">Pilih bandar terhampir untuk ketepatan data kos sara hidup.</p>
+                            <p class="text-ink-soft">Pilih bandar terhampir untuk ketepatan data kos sara hidup.</p>
                         </div>
                         <div class="relative">
                             <select id="input-city"
-                                class="w-full px-6 py-5 bg-gray-50 border-2 border-transparent focus:border-rose-600 focus:bg-white rounded-2xl text-lg font-bold transition-all outline-none appearance-none cursor-pointer">
+                                class="w-full px-6 py-5 bg-matcha-pale border-2 border-transparent focus:border-matcha-deep focus:bg-white rounded-2xl text-lg font-bold transition-all outline-none appearance-none cursor-pointer">
                                 <option value="" disabled selected>Memuatkan senarai bandar...</option>
                             </select>
                             <div
-                                class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-6 text-gray-700">
+                                class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-6 text-ink-soft">
                                 <svg class="fill-current h-5 w-5" xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 20 20">
                                     <path
@@ -179,38 +179,38 @@
                     <div class="step" data-step="2">
                         <div class="mb-8 text-center">
                             <span class="text-4xl mb-6 block">👥</span>
-                            <h2 class="text-2xl md:text-3xl font-black text-gray-900 leading-tight mb-4">
+                            <h2 class="text-2xl md:text-3xl font-black text-ink leading-tight mb-4">
                                 Apa status anda sekarang?
                             </h2>
-                            <p class="text-gray-500">Pilih kategori profil yang paling tepat untuk anda.</p>
+                            <p class="text-ink-soft">Pilih kategori profil yang paling tepat untuk anda.</p>
                         </div>
                         <div class="grid grid-cols-2 gap-4">
                             <div class="radio-card">
                                 <input type="radio" name="status" id="status-bujang" value="bujang">
                                 <label for="status-bujang">
                                     <span class="icon">🧑</span>
-                                    <span class="font-bold text-gray-900">Bujang</span>
+                                    <span class="font-bold text-ink">Bujang</span>
                                 </label>
                             </div>
                             <div class="radio-card">
                                 <input type="radio" name="status" id="status-berkahwin" value="berkahwin">
                                 <label for="status-berkahwin">
                                     <span class="icon">👫</span>
-                                    <span class="font-bold text-gray-900">Berkahwin</span>
+                                    <span class="font-bold text-ink">Berkahwin</span>
                                 </label>
                             </div>
                             <div class="radio-card">
                                 <input type="radio" name="status" id="status-ibt" value="ibt">
                                 <label for="status-ibt">
                                     <span class="icon">👩‍👧</span>
-                                    <span class="font-bold text-gray-900 text-sm">Ibu Bapa Tunggal</span>
+                                    <span class="font-bold text-ink text-sm">Ibu Bapa Tunggal</span>
                                 </label>
                             </div>
                             <div class="radio-card">
                                 <input type="radio" name="status" id="status-emas" value="emas">
                                 <label for="status-emas">
                                     <span class="icon">👵</span>
-                                    <span class="font-bold text-gray-900 text-sm">Warga Emas</span>
+                                    <span class="font-bold text-ink text-sm">Warga Emas</span>
                                 </label>
                             </div>
                         </div>
@@ -220,11 +220,11 @@
                     <div class="step" data-step="3">
                         <div class="mb-8 text-center">
                             <span class="text-4xl mb-6 block" id="step3-emoji">🚗</span>
-                            <h2 class="text-2xl md:text-3xl font-black text-gray-900 leading-tight mb-4"
+                            <h2 class="text-2xl md:text-3xl font-black text-ink leading-tight mb-4"
                                 id="step3-title">
                                 Maklumat Tambahan
                             </h2>
-                            <p class="text-gray-500" id="step3-desc">Pilih butiran yang bersesuaian.</p>
+                            <p class="text-ink-soft" id="step3-desc">Pilih butiran yang bersesuaian.</p>
                         </div>
                         <div id="sub-options-container" class="grid grid-cols-2 gap-4">
                             <!-- Options injected by JS -->
@@ -235,17 +235,17 @@
                     <div class="step" data-step="4">
                         <div class="mb-8 text-center">
                             <span class="text-4xl mb-6 block">💰</span>
-                            <h2 class="text-2xl md:text-3xl font-black text-gray-900 leading-tight mb-4">
+                            <h2 class="text-2xl md:text-3xl font-black text-ink leading-tight mb-4">
                                 Berapakah pendapatan anda?
                             </h2>
-                            <p class="text-gray-500">Anggaran gaji/pendapatan bulanan untuk dibuat perbandingan (RM).
+                            <p class="text-ink-soft">Anggaran gaji/pendapatan bulanan untuk dibuat perbandingan (RM).
                             </p>
                         </div>
                         <div class="relative">
                             <span
-                                class="absolute left-6 top-1/2 -translate-y-1/2 text-xl font-bold text-gray-400">RM</span>
+                                class="absolute left-6 top-1/2 -translate-y-1/2 text-xl font-bold text-ink-muted">RM</span>
                             <input type="number" id="input-income"
-                                class="w-full pl-16 pr-6 py-6 bg-gray-50 border-2 border-transparent focus:border-rose-600 focus:bg-white rounded-2xl text-2xl font-bold transition-all outline-none text-center"
+                                class="w-full pl-16 pr-6 py-6 bg-matcha-pale border-2 border-transparent focus:border-matcha-deep focus:bg-white rounded-2xl text-2xl font-bold transition-all outline-none text-center"
                                 placeholder="cth: 5000">
                         </div>
                     </div>
@@ -254,33 +254,33 @@
                     <div class="step" data-step="5">
                         <div class="text-center">
                             <span class="text-5xl mb-4 block">📋</span>
-                            <h2 class="text-xl font-bold text-gray-500 uppercase tracking-widest mb-2">
+                            <h2 class="text-xl font-bold text-ink-muted uppercase tracking-widest mb-2">
                                 Profil Belanjawanku
                             </h2>
-                            <p class="text-sm text-gray-400 mb-6 font-medium" id="profil-name">Bujang (Ada Kereta) -
+                            <p class="text-sm text-ink-muted mb-6 font-medium" id="profil-name">Bujang (Ada Kereta) -
                                 Lembah Klang</p>
 
-                            <div class="bg-gray-50 rounded-2xl p-6 text-left space-y-4 mb-8 border border-gray-100">
+                            <div class="bg-matcha-pale rounded-2xl p-6 text-left space-y-4 mb-8 border border-matcha-light">
                                 <div>
                                     <div class="flex justify-between text-sm mb-1">
-                                        <span class="text-gray-500 font-medium tracking-wide">Anggaran KWSP (<span
+                                        <span class="text-ink-soft font-medium tracking-wide">Anggaran KWSP (<span
                                                 id="summary-city">Bandar</span>)</span>
                                     </div>
-                                    <div id="summary-belanjawan" class="text-3xl font-black text-gray-900">RM 0</div>
+                                    <div id="summary-belanjawan" class="text-3xl font-black text-ink">RM 0</div>
                                 </div>
-                                <div class="pt-4 border-t border-gray-200">
+                                <div class="pt-4 border-t border-matcha-light">
                                     <div class="flex justify-between text-sm mb-1">
-                                        <span class="text-gray-500 font-medium">Pendapatan Anda</span>
-                                        <span id="summary-income" class="font-bold text-gray-700">RM 0</span>
+                                        <span class="text-ink-soft font-medium">Pendapatan Anda</span>
+                                        <span id="summary-income" class="font-bold text-ink-soft">RM 0</span>
                                     </div>
                                 </div>
-                                <div class="relative pt-4 overflow-hidden rounded-lg bg-gray-200 h-6">
-                                    <div id="progress-compare" class="absolute left-0 top-0 h-full bg-rose-500"
+                                <div class="relative pt-4 overflow-hidden rounded-lg bg-matcha-light h-6">
+                                    <div id="progress-compare" class="absolute left-0 top-0 h-full bg-strawberry"
                                         style="width: 50%;"></div>
                                 </div>
                                 <div class="pt-2 flex justify-between text-sm">
-                                    <span class="text-gray-500 font-bold" id="status-label">Baki Berlebihan:</span>
-                                    <span id="summary-diff" class="font-black text-green-600">RM 0</span>
+                                    <span class="text-ink-soft font-bold" id="status-label">Baki Berlebihan:</span>
+                                    <span id="summary-diff" class="font-black text-matcha-deep">RM 0</span>
                                 </div>
                             </div>
                         </div>
@@ -289,22 +289,22 @@
                     <!-- Navigation Buttons -->
                     <div class="mt-12 flex gap-4">
                         <button id="prev-btn" onclick="moveStep(-1)"
-                            class="hidden flex-1 py-5 rounded-2xl font-bold text-gray-400 hover:text-gray-900 transition-colors uppercase tracking-widest text-xs">
+                            class="hidden flex-1 py-5 rounded-2xl font-bold text-ink-muted hover:text-ink transition-colors uppercase tracking-widest text-xs">
                             ← Kembali
                         </button>
                         <button id="next-btn" onclick="moveStep(1)"
-                            class="flex-[2] bg-gray-900 text-white py-5 rounded-2xl font-bold hover:bg-gray-800 transition shadow-lg shadow-gray-200 uppercase tracking-widest text-xs">
+                            class="flex-[2] bg-matcha-deep text-white py-5 rounded-2xl font-bold hover:bg-matcha-mid transition shadow-lg shadow-matcha-light uppercase tracking-widest text-xs">
                             Seterusnya
                         </button>
                         <a id="whatsapp-btn" href="#" target="_blank"
-                            class="hidden flex-[2] bg-rose-600 text-white py-5 rounded-2xl font-bold hover:bg-rose-700 transition shadow-lg shadow-rose-100 text-center uppercase tracking-widest text-xs">
+                            class="hidden flex-[2] bg-strawberry text-white py-5 rounded-2xl font-bold hover:bg-[#c0294e] transition shadow-lg shadow-berry text-center uppercase tracking-widest text-xs">
                             Dapatkan Nasihat Kewangan 👋
                         </a>
                     </div>
                 </form>
             </div>
 
-            <p class="text-center mt-10 text-gray-400 text-[10px] font-bold uppercase tracking-[0.2em] leading-relaxed">
+            <p class="text-center mt-10 text-ink-muted text-[10px] font-bold uppercase tracking-[0.2em] leading-relaxed">
                 Rujukan: Panduan Belanjawanku KWSP 2022/2023. <br />Dr. Takaful Strategy. Engineered for Legacy.
             </p>
         </div>
@@ -428,7 +428,7 @@
                         <input type="radio" name="substatus" id="sub-${opt.val}" value="${opt.val}" data-label="${opt.label}">
                         <label for="sub-${opt.val}">
                             <span class="icon">${opt.icon}</span>
-                            <span class="font-bold text-gray-900 text-sm">${opt.label}</span>
+                            <span class="font-bold text-ink text-sm">${opt.label}</span>
                         </label>
                     </div>
                 `;
@@ -538,11 +538,11 @@
 
             if (diff >= 0) {
                 diffEl.textContent = '+' + format(diff);
-                diffEl.className = 'font-black text-green-600';
+                diffEl.className = 'font-black text-matcha-deep';
                 statusLabel.textContent = 'Lebihan:';
             } else {
                 diffEl.textContent = format(diff);
-                diffEl.className = 'font-black text-rose-600';
+                diffEl.className = 'font-black text-strawberry';
                 statusLabel.textContent = 'Kekurangan:';
             }
 
@@ -553,11 +553,11 @@
             const progBar = document.getElementById('progress-compare');
             progBar.style.width = `${ratio}%`;
             if (ratio > 90) {
-                progBar.className = 'absolute left-0 top-0 h-full bg-rose-600';
+                progBar.className = 'absolute left-0 top-0 h-full bg-strawberry';
             } else if (ratio > 70) {
-                progBar.className = 'absolute left-0 top-0 h-full bg-yellow-500';
+                progBar.className = 'absolute left-0 top-0 h-full bg-gold';
             } else {
-                progBar.className = 'absolute left-0 top-0 h-full bg-green-500';
+                progBar.className = 'absolute left-0 top-0 h-full bg-matcha-deep';
             }
 
             // Update WhatsApp Link
