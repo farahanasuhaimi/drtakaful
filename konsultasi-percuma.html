@@ -12,7 +12,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Konsultasi Takaful Percuma | Dr. Takaful</title>
   <meta name="description" content="Dapatkan konsultasi takaful percuma dari Dr. Takaful (Hana). Semak keperluan perlindungan anda tanpa sebarang komitmen.">
-  <meta name="robots" content="noindex, follow"> <!-- Noindex as it's a conversion page, not content -->
+  <meta name="robots" content="noindex, follow">
+  <meta name="theme-color" content="#3D6B4F">
 
   <!-- Favicon -->
   <link rel="icon" href="favicon.png" type="image/x-icon">
@@ -20,7 +21,10 @@
   <link rel="icon" type="image/png" sizes="32x32" href="src/android-chrome-512x512.png">
   <link rel="manifest" href="https://DrTakaful.com/site.webmanifest">
 
+  <!-- Styling -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="src/tailwind-config.js"></script>
+  <link rel="stylesheet" href="src/global.css">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Konsultasi Takaful Percuma | Dr. Takaful">
@@ -35,51 +39,110 @@
   <meta name="twitter:description" content="Dapatkan konsultasi takaful percuma dari Dr. Takaful (Hana). Semak keperluan perlindungan anda tanpa sebarang komitmen.">
   <meta name="twitter:image" content="https://drtakaful.com/images/og/konsultasi-percuma.png">
 </head>
-<body class="bg-rose-50">
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFWGX5DS"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
 
-  <!-- Header -->
-  <header class="bg-white py-4 px-6 shadow-sm">
-    <div class="max-w-2xl mx-auto">
-      <a href="/" class="text-sm text-rose-600 hover:underline">← Kembali ke Laman Utama</a>
-    </div>
+<body class="bg-cream text-ink antialiased selection:bg-matcha-pale selection:text-matcha-deep font-sans brand-bg">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFWGX5DS"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <header class="fixed w-full top-0 glass-nav border-b border-matcha-light z-50">
+    <nav class="max-w-4xl mx-auto px-6 h-16 flex justify-between items-center">
+      <a href="/" class="brand-logo text-lg">
+        DR.<span class="text-strawberry">TAKAFUL</span>
+      </a>
+      <a href="/"
+        class="text-xs font-bold uppercase tracking-widest text-ink-muted hover:text-ink transition-colors sans-font">
+        ← Laman Utama
+      </a>
+    </nav>
   </header>
 
-  <!-- FORM CARD SECTION -->
-  <section id="health-form" class="py-12 md:py-20 px-6">
-    <div class="max-w-lg mx-auto bg-white p-8 rounded-2xl shadow-2xl border border-rose-100">
-      <div class="text-center">
-        <h1 class="text-3xl font-bold text-rose-700 mb-2">Satu Langkah Mudah Untuk Bermula</h1>
-        <p class="text-gray-600 mb-8">Isi nama dan nombor telefon anda. Saya akan hubungi anda di WhatsApp untuk sesi konsultasi percuma.</p>
+  <!-- Form Card Section -->
+  <section id="health-form" class="min-h-screen flex items-center justify-center py-32 px-6">
+    <div class="w-full max-w-lg">
+
+      <div class="text-center mb-10">
+        <div
+          class="inline-block bg-matcha-deep text-white px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-[0.2em] mb-4">
+          💬 Konsultasi Percuma
+        </div>
+        <h1 class="text-4xl md:text-5xl font-black text-ink mb-4 tracking-tight leading-tight">
+          Satu Langkah <span class="text-ink-muted">Untuk Bermula</span>
+        </h1>
+        <p class="text-ink-soft leading-relaxed">
+          Isi nama dan nombor telefon anda. Saya akan hubungi anda di WhatsApp untuk sesi konsultasi percuma.
+        </p>
       </div>
 
-      <div class="grid grid-cols-1 gap-6">
-        <!-- Name -->
-        <div>
-          <label for="name" class="block text-sm font-medium text-gray-700">Nama Penuh</label>
-          <input type="text" id="name" class="w-full mt-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-rose-500 focus:border-rose-500" placeholder="cth: Abdul Rahman">
-        </div>
+      <div class="bg-white rounded-[2.5rem] p-8 sm:p-12 shadow-2xl border border-matcha-light">
+        <div class="grid grid-cols-1 gap-6">
 
-        <!-- Phone Number -->
-        <div>
-          <label for="phone" class="block text-sm font-medium text-gray-700">No. Telefon (WhatsApp)</label>
-          <input type="tel" id="phone" class="w-full mt-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-rose-500 focus:border-rose-500" placeholder="cth: 0123456789">
-        </div>
+          <!-- Name -->
+          <div>
+            <label for="name" class="block text-sm font-semibold text-ink-soft mb-2">Nama Penuh</label>
+            <input type="text" id="name"
+              class="w-full px-4 py-3 bg-matcha-pale border border-matcha-light rounded-xl focus:bg-white focus:ring-2 focus:ring-matcha-deep focus:border-matcha-deep outline-none transition-all"
+              placeholder="cth: Abdul Rahman">
+          </div>
 
-        <!-- Submit Button -->
-        <div class="text-center pt-4">
-          <button onclick="sendWhatsApp()" class="w-full bg-rose-600 text-white py-3 rounded-lg hover:bg-rose-700 transition font-medium text-lg">
-            Hantar & Minta Konsultasi 💬
-          </button>
-          <p id="formMessage" class="text-center text-sm mt-3 text-gray-600">Konsultasi percuma, 100% tanpa paksaan.</p>
+          <!-- Phone Number -->
+          <div>
+            <label for="phone" class="block text-sm font-semibold text-ink-soft mb-2">No. Telefon (WhatsApp)</label>
+            <input type="tel" id="phone"
+              class="w-full px-4 py-3 bg-matcha-pale border border-matcha-light rounded-xl focus:bg-white focus:ring-2 focus:ring-matcha-deep focus:border-matcha-deep outline-none transition-all"
+              placeholder="cth: 0123456789">
+          </div>
+
+          <!-- Submit -->
+          <div class="pt-2">
+            <button onclick="sendWhatsApp()"
+              class="w-full bg-[#25D366] text-white px-8 py-4 rounded-xl hover:bg-[#20BA5A] active:scale-95 transition-all font-bold text-lg shadow-lg hover:shadow-xl flex items-center justify-center gap-3">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+              </svg>
+              Hantar & Minta Konsultasi
+            </button>
+            <p id="formMessage" class="text-center text-sm mt-4 text-ink-muted font-medium">
+              Konsultasi percuma, 100% tanpa paksaan.
+            </p>
+          </div>
+
         </div>
       </div>
+
     </div>
   </section>
 
-  <script src="/main.js"></script>
+  <footer class="py-12 border-t border-matcha-light text-center sans-font">
+    <p class="text-[10px] font-bold uppercase tracking-[0.3em] text-ink-muted">
+      &copy; <span id="current-year">2026</span> Dr. Takaful Strategy. Engineered for Legacy.
+    </p>
+  </footer>
+
+  <script>
+    function sendWhatsApp() {
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const msgEl = document.getElementById('formMessage');
+
+      if (!name || !phone) {
+        msgEl.innerHTML = '<span class="text-strawberry">❌ Sila isi nama dan nombor telefon anda.</span>';
+        return;
+      }
+
+      const message = `Assalamualaikum Hana! Saya *${name}* (${phone}) nak minta konsultasi takaful percuma. Boleh bantu?`;
+      const encodedMessage = encodeURIComponent(message);
+      const whatsappURL = `https://wa.me/60132522587?text=${encodedMessage}`;
+
+      msgEl.innerHTML = '<span class="text-matcha-deep flex items-center justify-center gap-2">✅ Berjaya! Membuka WhatsApp...</span>';
+
+      setTimeout(() => {
+        window.open(whatsappURL, '_blank');
+      }, 500);
+    }
+  </script>
+
 </body>
 </html>
