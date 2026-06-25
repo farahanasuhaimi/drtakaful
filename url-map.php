@@ -29,6 +29,7 @@ return [
     'mc-waiting' => 'tempoh-menunggu-medical-card.html',
     'perkeso-mc' => 'perkeso-vs-takaful-medical-card.html',
     'company-mc' => 'company-policy-vs-personal-takaful.html',
+    'mc-lengkap' => 'medical-card-lengkap-2026.html',
 
     // === PENYAKIT KRITIKAL (CI) ===
     'ci' => 'panduan-lengkap-penyakit-kritikal-takaful.html',

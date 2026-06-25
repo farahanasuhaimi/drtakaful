@@ -70,6 +70,7 @@ http://localhost:8000/go/your-code
 - `/go/mc-waiting` → Tempoh Menunggu Medical Card
 - `/go/perkeso-mc` → PERKESO vs Medical Card
 - `/go/company-mc` → Company Policy vs Personal
+- `/go/mc-lengkap` → Medical Card Lengkap 2026 (RM1.5–3 Juta + Health Wallet NCB)
 
 ### Penyakit Kritikal (CI)
 - `/go/ci` → Panduan Lengkap CI
