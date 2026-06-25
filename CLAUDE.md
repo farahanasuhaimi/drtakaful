@@ -88,6 +88,62 @@ Events documented in `docs/analytics-governance.md`. Key rules:
 5. Add a short URL entry to `url-map.php` if needed
 6. Ensure all `.wa-cta` elements have proper data attributes
 
+## Writing Style Guide (drtakaful articles)
+
+Derived from Nufa's manual edits on `medical-card-lengkap-2026.html` (2026-06-25).
+Apply to all new articles and when rewriting old ones.
+
+### Language & Tone
+
+**Takaful-specific terminology — always use these:**
+- `Caruman` not `Premium` (Takaful uses "contribution", not "insurance premium")
+- `Tuntutan` not `Klaim`
+- `Had` for coverage limit
+- `Pilihan` not `Opsyen` (for "option")
+
+**Hedged language for statistics:**
+- `boleh mencecah 15%` not `mencecah 15%` — say "can reach", not a stated fact
+- `boleh jadi lebih dari RM320,000` not `akan menjadi` — "could become", not "will become"
+
+**Natural BM sentence construction:**
+- `perlu ambil kira berdasarkan data` not `ia dikira berdasarkan data` — conversational, not textbook
+- `paling berbeza antara X berbanding Y` not `paling membezakan X daripada Y` — correct comparative structure
+- `tidak dituntut` (passive) not `tidak menuntut` (active) — for insurance/claim context
+- `manfaat tidak dikembalikan` not `manfaat tidak terkumpul` — precise: money is not returned, not just "not accumulated"
+- `semua tu dalam satu pelan 'X' ini` — colloquial closing, name the product explicitly
+
+**Punctuation & style:**
+- Use commas in running prose instead of em-dash (—) for more conversational flow
+- Add `Circa` for historical era references: "Itu Pemikiran Circa 2015"
+- Technical English terms go in single quotes: `'peak load'`, not plain text
+- Explain acronyms inline on first use: `NCB (No Claim Bonus)`
+
+**Product name references:**
+- Shorten to common name: `(Idaman)` not `(A-Life Idaman atau setara)`
+- When referencing the article's product by its alias, quote it: `pelan 'Medical Card Lengkap' ini`
+
+### Content Structure
+
+**"What is X?" sections:**
+Lead with the emotional/conceptual benefit first, technical structure second.
+- ✓ "Medical card yang care of you while you are healthy" → then explain rider mechanic
+- ✗ "Rider perubatan yang dilampirkan kepada..." (technical first, nobody cares yet)
+
+**Section titles:**
+- Strip redundant acronyms from titles when the body already explains them
+- ✓ `Health Wallet: Your Wallet Grows When You Stay Healthy`
+- ✗ `Health Wallet NCB: Duit Yang Tumbuh Bila Anda Sihat`
+
+### Articles to Rewrite (Backlog)
+
+These old articles likely use `Premium`, overly definitive language, and less natural BM:
+- `panduan-lengkap-medical-card-takaful.html`
+- `beza-medical-card-mediflex-vs-idaman.html`
+- `panduan-lengkap-medical-card-2026.html` (partial — "Pilihan Baru 2026" section uses new style)
+- Any article with `Premium dibayar` or `Opsyen` in body copy
+
+---
+
 ## Pre-Publish Checklist
 
 From `README.md`:
