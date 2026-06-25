@@ -520,101 +520,29 @@
     </div>
   </section>
 
-  <!-- SOCIAL PROOF / TESTIMONIALS -->
-  <section id="testimonials" class="py-24 px-6 bg-matcha-pale overflow-hidden">
-    <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-16">
-        <span class="text-matcha-mid font-black text-[10px] uppercase tracking-[0.3em] mb-4 block">Case Studies</span>
-        <h2 class="text-3xl md:text-5xl font-black text-ink">Mereka Dah Ambil Langkah Bijak.</h2>
-      </div>
-
-      <div id="testimonials-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Testimonial 1 -->
-        <div class="bg-white p-10 rounded-[3rem] border border-matcha-light hover:border-matcha-mid transition-all">
-          <div class="flex gap-1 text-gold mb-6">
-            <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
-          </div>
-          <p class="text-ink-soft italic leading-relaxed mb-8">
-            "Dulu saya ingat Takaful ni mahal. Tapi lepas Dr. Hana kira ikut bajet saya, rupanya RM150/bulan dah boleh
-            cover <strong class="text-ink">pampasan RM350,000</strong>. Sangat berbaloi."
-          </p>
-          <div class="flex items-center gap-4">
-            <div class="w-12 h-12 bg-matcha-pale rounded-2xl flex items-center justify-center font-black text-matcha-deep shadow-sm">EH</div>
-            <div>
-              <p class="font-bold text-ink text-sm">Encik Hafizzi</p>
-              <p class="text-[10px] text-ink-muted uppercase tracking-widest">Jurutera, 32 Tahun</p>
-            </div>
-          </div>
+  <!-- SOCIAL PROOF / TRUST STRIP -->
+  <section id="testimonials" class="py-16 sm:py-20 px-4 sm:px-6 bg-matcha-pale">
+    <div class="max-w-4xl mx-auto">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 text-center">
+        <div class="flex flex-col items-center gap-2">
+          <p class="text-4xl sm:text-5xl font-black text-matcha-deep">50+</p>
+          <p class="text-[10px] text-ink-muted uppercase tracking-widest font-bold leading-tight">Keluarga<br>Dilindungi</p>
         </div>
-
-        <!-- Testimonial 2 -->
-        <div class="bg-white p-10 rounded-[3rem] border border-matcha-light hover:border-matcha-mid transition-all">
-          <div class="flex gap-1 text-gold mb-6">
-            <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
-          </div>
-          <p class="text-ink-soft italic leading-relaxed mb-8">
-            "Saya suka cara Hana explain. Takde pusing-pusing. Dia tunjuk terus berapa lompong kewangan saya kalau saya
-            sakit kritikal. Terus sign up on the spot."
-          </p>
-          <div class="flex items-center gap-4">
-            <div class="w-12 h-12 bg-matcha-pale rounded-2xl flex items-center justify-center font-black text-matcha-deep shadow-sm">PS</div>
-            <div>
-              <p class="font-bold text-ink text-sm">Puan Sarah</p>
-              <p class="text-[10px] text-ink-muted uppercase tracking-widest">Guru, 29 Tahun</p>
-            </div>
-          </div>
+        <div class="flex flex-col items-center gap-2">
+          <p class="text-4xl sm:text-5xl font-black text-matcha-deep">5★</p>
+          <p class="text-[10px] text-ink-muted uppercase tracking-widest font-bold leading-tight">Rating<br>Google</p>
         </div>
-
-        <!-- Testimonial 3 -->
-        <div class="bg-matcha-deep p-10 rounded-[3rem]">
-          <div class="flex gap-1 text-gold mb-6">
-            <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
-          </div>
-          <p class="text-matcha-light italic leading-relaxed mb-8">
-            "Pendekatan engineering Dr. Hana memang berbeza. Sangat logik dan mudah faham. Saya rasa selamat tahu
-            keluarga saya dilindungi dengan pelan yang dioptimumkan."
-          </p>
-          <div class="flex items-center gap-4">
-            <div class="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center font-black text-matcha-pale shadow-sm">AM</div>
-            <div>
-              <p class="font-bold text-matcha-pale text-sm">Arif Mansor</p>
-              <p class="text-[10px] text-matcha-mid uppercase tracking-widest">Manager, 40 Tahun</p>
-            </div>
-          </div>
+        <div class="flex flex-col items-center gap-2">
+          <p class="text-4xl sm:text-5xl font-black text-matcha-deep">AIA</p>
+          <p class="text-[10px] text-ink-muted uppercase tracking-widest font-bold leading-tight">Konsultan<br>Berlesen</p>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <p class="text-4xl sm:text-5xl font-black text-matcha-deep">PhD</p>
+          <p class="text-[10px] text-ink-muted uppercase tracking-widest font-bold leading-tight">Engineering<br>Background</p>
         </div>
       </div>
     </div>
   </section>
-
-  <style>
-    @media (max-width: 767px) {
-      #testimonials-grid {
-        display: flex;
-        overflow-x: auto;
-        overflow-y: hidden;
-        gap: 1rem;
-        margin-left: -1rem;
-        margin-right: -1rem;
-        padding-left: 1rem;
-        padding-right: 1rem;
-        padding-bottom: 2rem;
-        scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: auto;
-      }
-
-      #testimonials-grid::-webkit-scrollbar {
-        display: none;
-      }
-
-      #testimonials-grid>div {
-        flex-shrink: 0;
-        width: 85vw;
-        max-width: 340px;
-        scroll-snap-align: center;
-      }
-    }
-  </style>
 
   <!-- FINAL CONVERSION FORM -->
   <section id="borang-konsultasi" class="py-12 sm:py-24 px-4 sm:px-6 bg-cream">
@@ -795,6 +723,16 @@
             Penyakit Kritikal (CI)</h3>
           <p class="text-ink-muted text-sm mb-4 line-clamp-3">Apa itu pelan CI, kenapa lebih penting dari medical card,
             dan cara kira jumlah perlindungan ganti gaji.</p>
+          <p class="text-matcha-deep font-medium mt-auto text-sm group-hover:underline">Baca lanjut →</p>
+        </a>
+        <a href="/medical-card-lengkap-2026.html" target="_blank" class="blog-article group"
+          data-category="medical"
+          data-keywords="medical card lengkap, health wallet, ncb, ncb1000, smart pathway, a-plus health360, aia, 2026, rider, plan 200, plan 300">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="bg-strawberry text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">Baru 2026</span>
+          </div>
+          <h3 class="text-lg font-bold text-ink mb-2 group-hover:text-matcha-deep transition-colors">Medical Card Lengkap: RM1.5 Juta + Health Wallet</h3>
+          <p class="text-ink-muted text-sm mb-4 line-clamp-3">Perlindungan RM1.5–3 juta dengan NCB RM1,000/tahun. Medical card yang bukan sekadar cover — ia tumbuhkan wang dalam wallet anda.</p>
           <p class="text-matcha-deep font-medium mt-auto text-sm group-hover:underline">Baca lanjut →</p>
         </a>
         <a href="/panduan-lengkap-medical-card-2026.html" target="_blank" class="blog-article group"
@@ -1311,7 +1249,7 @@
 
         <div class="text-center sm:text-left">
           <h4 class="font-black text-ink mb-4 sm:mb-6 text-xs sm:text-sm uppercase tracking-widest">Hubungi</h4>
-          <p class="text-sm text-ink-muted mb-4">KL & Selangor (Zoom Available)</p>
+          <p class="text-sm text-ink-muted mb-4">Seluruh Malaysia (Zoom Available)</p>
           <a href="https://wa.me/60132522587"
             class="text-sm font-bold text-ink hover:text-matcha-deep transition-colors">
             +60 13 252 2587
@@ -1326,10 +1264,8 @@
           &copy; <span id="current-year">2026</span> Dr. Takaful Strategy. All Rights Reserved.
         </p>
         <div class="flex gap-6">
-          <a href="#"
-            class="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-ink-muted hover:text-ink transition-colors">Privacy</a>
-          <a href="#"
-            class="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-ink-muted hover:text-ink transition-colors">Terms</a>
+          <a href="https://wa.me/60132522587"
+            class="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-ink-muted hover:text-ink transition-colors">Hubungi</a>
         </div>
       </div>
     </div>
@@ -1343,7 +1279,7 @@
       <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
       <span class="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
     </span>
-    <span class="leading-none">WhatsApp Dr. Hana</span>
+    <span class="leading-none">WhatsApp Hana</span>
   </a>
 
   <!-- Exit-Intent Popup -->

@@ -11,7 +11,7 @@ function sendWhatsApp() {
   }
 
   // Create WhatsApp message
-  let message = `Assalamualaikum,\n\n`;
+  let message = `Hi Hana,\n\n`;
   message += `Saya ingin minta anggaran quotation untuk saya.\n\n`;
   message += `*Nama:* ${name}\n`;
   message += `*Umur:* ${age}\n\n`;
@@ -50,7 +50,7 @@ function sendDetailedWhatsApp() {
 
   // Create WhatsApp message
   let message = `*ANALISIS KEPERLUAN TAKAFUL*\n\n`;
-  message += `Assalamualaikum Dr. Takaful (Hana),\n\n`;
+  message += `Hi Hana,\n\n`;
   message += `Berikut adalah butiran saya untuk analisis percuma:\n\n`;
   message += `*Nama:* ${name}\n`;
   message += `*Umur:* ${age} tahun\n`;
