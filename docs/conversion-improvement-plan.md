@@ -57,6 +57,17 @@ Mirrored all 52 static files (HTML/JS/CSS/XML/txt/webmanifest) from https://drta
 
 **Exit criteria**: every `wa.me` anchor on the site fires `whatsapp_cta_click` with a meaningful source label.
 
+### Phase A Results (2026-07-14, office laptop)
+
+Items 1–3 done in-repo; items 4–5 (GA4 key event, GTM Preview) are manual steps for Nufa after deploy.
+
+- **main.js on all 43 real pages** (was 4), injected deferred after the Tailwind CDN line. Skipped: `blog-section.html` / `new-section.html` (scratch includes) and `simpananvstakaful.html` (redirect stub — also deliberately skipped for GTM; Phase D's 301 makes instrumenting it pointless).
+- **109 `.wa-cta` elements tagged** with `data-wa-source="<slug>-<position>"` + `data-wa-intent`; position labels derived from section comments (`author`, `final-cta`, `sticky`…) with `body-N` fallback; existing 12 tags untouched. Intent taxonomy reuses index's values (Medical Card, Hibah Takaful, Baru Explore…) plus topic categories — 17 values total.
+- **3 JS-driven CTAs tagged manually** (regex pass can't see them): `#whatsapp-btn` result anchors on both kalkulator pages, and konsultasi-percuma's form submit button (matches index's `consultation-form` convention — fires on click even if validation fails, same as index).
+- **GTM+GA4 added to `borang-permohonan.html`** (exact block from index.html).
+- Verified structurally: every page has main.js exactly once + GTM + noscript; zero untagged `wa.me` anchors; no duplicate source labels per page; all files parse. Runtime QA = GTM Preview checklist below, post-deploy.
+- **Requires a full bulk upload** (~46 files) — see Housekeeping note on manual deploy.
+
 ## Phase B — Put CTAs where the readers are (~1–2 sessions)
 
 1. **Sticky mobile WA bar on every article page** — currently index-only; this is the single biggest lever with 95% mobile traffic. Reuse the existing `#sticky-cta` markup; the JS is already in main.js from Phase A.

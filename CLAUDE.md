@@ -75,7 +75,7 @@ To add a new short URL: add to `url-map.php`:
 
 Events documented in `docs/analytics-governance.md`. Key rules:
 - Primary event: `whatsapp_cta_click` pushed to `window.dataLayer`
-- Every `.wa-cta` element needs `data-cta-source` and `data-cta-intent` attributes
+- Every `.wa-cta` element needs `data-wa-source` and `data-wa-intent` attributes (main.js maps them to `cta_source`/`cta_intent` event params)
 - Traffic source detected via `gclid` param or `utm_source=google`
 - Domain casing must always be lowercase `drtakaful.com` (not `DrTakaful.com`)
 
