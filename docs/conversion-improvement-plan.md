@@ -34,6 +34,19 @@ Measure → Capture → Convert → Iterate. Don't touch copy or design experime
 3. Also diff against the home copy `D:\WebDev\Takaful` if it has uncommitted changes.
 4. From then on: repo is the single source of truth — every deploy goes repo → host, never edit on host.
 
+### Phase 0 Results (2026-07-14, office laptop)
+
+Mirrored all 52 static files (HTML/JS/CSS/XML/txt/webmanifest) from https://drtakaful.com and diffed against the repo:
+
+- **51 / 52 in sync** — 26 files differ only by line endings (host serves LF, repo is CRLF; normalize before diffing in future).
+- **1 real drift, and it inverts the plan's assumption**: live `simpananvstakaful.html` is byte-identical to the repo's *new* `simpanan-vs-takaful.html` — a past deploy uploaded the new article's content under both filenames. The repo's redirect stub (from `f0a2c9b`, 2026-05-03) was never uploaded. **There are no live-only fixes to fold back; the repo is strictly ahead of live.** The live duplicate's canonical correctly points at the new URL, so exposure is limited until Phase D's 301 lands.
+- **Functional check**: short-URL system live-verified (`/go/hibah` → 301 → `/panduan-lengkap-hibah-takaful.html`, matches `url-map.php`).
+- **Not verifiable over HTTP** (server executes/hides them): `url-map.php`, `redirect.php`, `default.php`, `.htaccess`, and host-only files (e.g. `images/og/`). Assume repo versions authoritative; confirm at next FTP/cPanel deploy.
+- **Deferred**: home copy `D:\WebDev\Takaful` is on the home PC — diff it against the repo there before the Phase A bulk upload.
+- **To deploy with Phase A's bulk upload**: the `simpananvstakaful.html` redirect stub (or go straight to the Phase D `.htaccess` 301 and delete the file).
+
+**Status: done** (except the home-copy diff, deferred to home PC). Repo is confirmed the single source of truth from here on.
+
 ## Phase A — See the funnel (do first, ~1 session)
 
 1. **Load `main.js` on all pages** (deferred, after Tailwind CDN) — one automation script pass, same pattern as `inject_og_tags.py`.
