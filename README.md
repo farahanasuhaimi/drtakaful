@@ -20,18 +20,21 @@ main.js                     ← Global JS (CTA tracking, menu, filtering, scroll
 short-url-helper.js         ← Short URL redirect helper
 src/
   global.css                ← Brand CSS variables + shared component styles
-  tailwind-config.js        ← Tailwind CDN custom token config
+  tailwind-build.css        ← Compiled/purged Tailwind output (committed, static)
+  tailwind-input.css        ← Tailwind directives source, fed into the build
 robots.txt
 sitemap.xml
 docs/
   analytics-governance.md
+tailwind.config.js          ← Tailwind custom token config (brand colors/fonts)
+package.json                ← devDependency for the one-time CSS build (`npm run build:css`)
 ```
 
 ---
 
 ## 2. Brand Theme — Matcha × Strawberry
 
-All pages use a shared design system. No build step — Tailwind CDN with a custom config.
+All pages use a shared design system. Deploy has no build step; styling is a compiled, purged CSS file (`src/tailwind-build.css`) committed as a static asset — see `CLAUDE.md` for how to regenerate it after adding new utility classes.
 
 ### CSS Variables (`src/global.css`)
 
@@ -49,7 +52,7 @@ All pages use a shared design system. No build step — Tailwind CDN with a cust
 --ink-muted:    #8A8A84   /* captions, placeholders */
 ```
 
-### Tailwind Tokens (`src/tailwind-config.js`)
+### Tailwind Tokens (`tailwind.config.js`)
 
 Custom classes available across all pages:
 
@@ -69,7 +72,7 @@ Custom classes available across all pages:
 
 | Phase | Scope | Status |
 |---|---|---|
-| Phase 1 | `src/global.css` + `src/tailwind-config.js` | ✅ Done |
+| Phase 1 | `src/global.css` + `tailwind.config.js` | ✅ Done |
 | Phase 2 | `index.html` (homepage, all sections) | ✅ Done |
 | Phase 3 | Tool & form pages (6 files) | ⏳ Pending |
 | Phase 4 | Article / blog pages (~40 files) | ⏳ Pending |

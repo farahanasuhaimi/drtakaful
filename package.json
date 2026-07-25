@@ -1,0 +1,10 @@
+{
+  "name": "drtakaful-site",
+  "private": true,
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/tailwind-input.css -o ./src/tailwind-build.css --minify"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3"
+  }
+}

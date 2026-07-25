@@ -11,13 +11,22 @@ Static HTML marketing site for Dr. Takaful (takaful/Islamic insurance advisor). 
 - **Language**: Malay (ms-MY)
 - **Live domain**: `https://drtakaful.com`
 
-## No Build Step
+## No Build Step (for deploy) / One-Time CSS Build (for styling)
 
-This is plain HTML/CSS/JS. To preview locally, just open any `.html` file in a browser or use a local server:
+Pages deploy as plain static HTML/CSS/JS — no server-side build. To preview locally, just open any `.html` file in a browser or use a local server:
 
 ```bash
 python -m http.server 8080
 ```
+
+Styling used to load Tailwind via the CDN Play script (`cdn.tailwindcss.com`), which JIT-compiles in the browser on every page load — this was a real page-speed cost (slow first paint, especially on mobile). It's been replaced with a **compiled, purged CSS file** (`src/tailwind-build.css`) committed to the repo like any other static asset. There is still no build step at deploy time; the compiled file just needs regenerating locally whenever you add new Tailwind utility classes to the HTML that aren't already covered:
+
+```bash
+npm install          # one-time, installs tailwindcss as a devDependency
+npm run build:css    # regenerates src/tailwind-build.css from tailwind.config.js + all *.html
+```
+
+Brand theme customizations (matcha/strawberry/ink/cream/gold colors, DM Serif/DM Sans fonts) live in `tailwind.config.js` (previously `src/tailwind-config.js`, now unused/removed from pages — content-driven purge means both `src/tailwind-build.css` and `src/global.css` must be linked in `<head>`, in that order).
 
 ## Python Automation Scripts
 
