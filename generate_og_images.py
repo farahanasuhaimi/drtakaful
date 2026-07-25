@@ -104,6 +104,9 @@ POSTS = [
     ("socso-vs-takaful-penyakit-kritikal.png", "PENYAKIT KRITIKAL",
      "Dah Ada SOCSO,\nPerlu Lagi Takaful CI?",
      "Jawapan Yang Mengejutkan Ramai"),
+    ("ci-pelbagai-peringkat-2026.png", "PENYAKIT KRITIKAL",
+     "CI Pelbagai Peringkat",
+     "Bayar Dari Peringkat Awal,\nBukan Tunggu Stage Lanjut"),
     # ASAS TAKAFUL
     ("kenapa-perlu-rancang-kewangan-awal.png", "ASAS TAKAFUL",
      "Kenapa Rancang\nKewangan Awal?",

@@ -39,6 +39,7 @@ return [
     'gaji' => 'pelankritikal.html',
     'kos-rawatan' => 'kos-rawatan-vs-gaji.html',
     'socso-ci' => 'socso-vs-takaful-penyakit-kritikal.html',
+    'ci-peringkat' => 'ci-pelbagai-peringkat-2026.html',
 
     // === ASAS TAKAFUL ===
     'mula-awal' => 'kenapa-perlu-rancang-kewangan-awal.html',
