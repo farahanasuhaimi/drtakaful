@@ -10,6 +10,7 @@ const shortUrlMap = {
   '/perancangan-hibah-2026.html': 'hibah-2026',
   '/harta-beku-dan-hibah-takaful.html': 'hibah-beku',
   '/hibah-untuk-bisnes.html': 'hibah-bisnes',
+  '/hibah-untuk-content-creator.html': 'hibah-creator',
   '/hibah-untuk-ibu-bapa.html': 'hibah-ibu',
   '/bolehkah-claim-hibah-jika-lumpuh.html': 'hibah-lumpuh',
   '/hibah-aia-sejuta-makna-vs-legasi-beyond.html': 'hibah-sejuta',

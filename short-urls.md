@@ -56,6 +56,7 @@ http://localhost:8000/go/your-code
 - `/go/hibah-2026` → Perancangan Hibah 2026
 - `/go/hibah-beku` → Harta Beku dan Hibah
 - `/go/hibah-bisnes` → Hibah Untuk Bisnes
+- `/go/hibah-creator` → Hibah Untuk Content Creator & Gig Worker
 - `/go/hibah-ibu` → Hibah Untuk Ibu Bapa
 - `/go/hibah-lumpuh` → Claim Hibah Jika Lumpuh
 - `/go/hibah-sejuta` → Sejuta Makna vs Legasi Beyond

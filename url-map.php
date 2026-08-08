@@ -12,6 +12,7 @@ return [
     'hibah-2026' => 'perancangan-hibah-2026.html',
     'hibah-beku' => 'harta-beku-dan-hibah-takaful.html',
     'hibah-bisnes' => 'hibah-untuk-bisnes.html',
+    'hibah-creator' => 'hibah-untuk-content-creator.html',
     'hibah-ibu' => 'hibah-untuk-ibu-bapa.html',
     'hibah-lumpuh' => 'bolehkah-claim-hibah-jika-lumpuh.html',
     'hibah-sejuta' => 'hibah-aia-sejuta-makna-vs-legasi-beyond.html',
