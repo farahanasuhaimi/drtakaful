@@ -72,6 +72,7 @@ http://localhost:8000/go/your-code
 - `/go/perkeso-mc` → PERKESO vs Medical Card
 - `/go/company-mc` → Company Policy vs Personal
 - `/go/mc-lengkap` → Medical Card Lengkap 2026 (RM1.5–3 Juta + Health Wallet NCB)
+- `/go/mc-creator` → Medical Card Untuk Content Creator & Gig Worker
 
 ### Penyakit Kritikal (CI)
 - `/go/ci` → Panduan Lengkap CI
