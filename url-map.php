@@ -32,6 +32,7 @@ return [
     'company-mc' => 'company-policy-vs-personal-takaful.html',
     'mc-lengkap' => 'medical-card-lengkap-2026.html',
     'mc-creator' => 'medical-card-untuk-content-creator.html',
+    'gl-decline' => 'gl-medical-card-decline.html',
 
     // === PENYAKIT KRITIKAL (CI) ===
     'ci' => 'panduan-lengkap-penyakit-kritikal-takaful.html',

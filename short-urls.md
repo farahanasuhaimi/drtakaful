@@ -69,6 +69,7 @@ http://localhost:8000/go/your-code
 - `/go/mc-2025` → Panduan Lengkap Medical Card 2025
 - `/go/mediflex` → MediFlex vs Idaman
 - `/go/mc-waiting` → Tempoh Menunggu Medical Card
+- `/go/gl-decline` → GL Medical Card Kena Decline?
 - `/go/perkeso-mc` → PERKESO vs Medical Card
 - `/go/company-mc` → Company Policy vs Personal
 - `/go/mc-lengkap` → Medical Card Lengkap 2026 (RM1.5–3 Juta + Health Wallet NCB)

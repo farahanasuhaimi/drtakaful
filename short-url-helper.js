@@ -25,6 +25,7 @@ const shortUrlMap = {
   '/perkeso-vs-takaful-medical-card.html': 'perkeso-mc',
   '/company-policy-vs-personal-takaful.html': 'company-mc',
   '/medical-card-untuk-content-creator.html': 'mc-creator',
+  '/gl-medical-card-decline.html': 'gl-decline',
 
   // Penyakit Kritikal (CI)
   '/panduan-lengkap-penyakit-kritikal-takaful.html': 'ci',
