@@ -95,7 +95,7 @@
         </div>
 
         <!-- Interactive Checklist (same recommender engine as medical-card-lengkap-2026.html) -->
-        <div id="mc-checklist" class="bg-yellow-400 text-gray-900 rounded-[2.5rem] p-10 mb-16 shadow-xl relative overflow-hidden">
+        <div id="mc-checklist" data-skip-active-plan-gate="true" class="bg-yellow-400 text-gray-900 rounded-[2.5rem] p-10 mb-16 shadow-xl relative overflow-hidden">
             <div class="absolute -top-10 -right-10 text-9xl transform rotate-12 opacity-10">📋</div>
             <h3 class="text-2xl font-black mb-2">Checklist Dr. Hana: Risiko Mana Yang Membimbangkan Anda?</h3>
             <p class="text-sm font-semibold text-gray-700 mb-6">Tekan yang berkenaan dengan anda — Dr. Hana cadangkan pelan yang sesuai serta-merta.</p>
@@ -103,27 +103,27 @@
                 <button type="button" data-checklist-item="1" aria-pressed="false"
                     class="mc-checklist-btn w-full flex items-center gap-4 text-left font-bold text-lg rounded-2xl px-3 py-3 -mx-3 transition-colors hover:bg-white/20">
                     <span class="checklist-badge w-7 h-7 rounded-full border-2 border-gray-900 flex items-center justify-center text-xs flex-shrink-0 transition-colors">1</span>
-                    Anda ada pelan takaful keluarga, tapi rasa perlindungan medicalnya boleh ditambah baik?
+                    <span class="checklist-question">Risau Guarantee Letter (GL) anda kena "decline" masa kecemasan, sebab syarat teknikal yang anda tak perasan?</span>
                 </button>
                 <button type="button" data-checklist-item="2" aria-pressed="false"
                     class="mc-checklist-btn w-full flex items-center gap-4 text-left font-bold text-lg rounded-2xl px-3 py-3 -mx-3 transition-colors hover:bg-white/20 border-t border-gray-800/10 mt-3 pt-4">
                     <span class="checklist-badge w-7 h-7 rounded-full border-2 border-gray-900 flex items-center justify-center text-xs flex-shrink-0 transition-colors">2</span>
-                    Risau kalau kena masuk wad lama, bil hospital boleh melebihi had pelan sedia ada anda?
+                    <span class="checklist-question">Risau kalau kena masuk wad lama, bil hospital boleh melebihi had pelan sedia ada anda?</span>
                 </button>
                 <button type="button" data-checklist-item="3" aria-pressed="false"
                     class="mc-checklist-btn w-full flex items-center gap-4 text-left font-bold text-lg rounded-2xl px-3 py-3 -mx-3 transition-colors hover:bg-white/20 border-t border-gray-800/10 mt-3 pt-4">
                     <span class="checklist-badge w-7 h-7 rounded-full border-2 border-gray-900 flex items-center justify-center text-xs flex-shrink-0 transition-colors">3</span>
-                    Rasa "rugi" bila caruman dibayar tahun-tahun tapi sihat sepanjang tahun, tak dapat apa balik?
+                    <span class="checklist-question">Rasa "rugi" bila caruman dibayar tahun-tahun tapi sihat sepanjang tahun, tak dapat apa balik?</span>
                 </button>
                 <button type="button" data-checklist-item="4" aria-pressed="false"
                     class="mc-checklist-btn w-full flex items-center gap-4 text-left font-bold text-lg rounded-2xl px-3 py-3 -mx-3 transition-colors hover:bg-white/20 border-t border-gray-800/10 mt-3 pt-4">
                     <span class="checklist-badge w-7 h-7 rounded-full border-2 border-gray-900 flex items-center justify-center text-xs flex-shrink-0 transition-colors">4</span>
-                    Risau kalau kena masalah kesihatan mental, pemulihan kanser, atau rawatan luar negara — tapi tak dilindungi?
+                    <span class="checklist-question">Risau kalau kena masalah kesihatan mental, pemulihan kanser, atau rawatan luar negara — tapi tak dilindungi?</span>
                 </button>
                 <button type="button" data-checklist-item="5" aria-pressed="false"
                     class="mc-checklist-btn w-full flex items-center gap-4 text-left font-bold text-lg rounded-2xl px-3 py-3 -mx-3 transition-colors hover:bg-white/20 border-t border-gray-800/10 mt-3 pt-4">
                     <span class="checklist-badge w-7 h-7 rounded-full border-2 border-gray-900 flex items-center justify-center text-xs flex-shrink-0 transition-colors">5</span>
-                    Risau keperluan perlindungan keluarga anda akan berubah atau membesar akan datang?
+                    <span class="checklist-question">Risau keperluan perlindungan keluarga anda akan berubah atau membesar akan datang?</span>
                 </button>
             </div>
 

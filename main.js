@@ -194,6 +194,10 @@ function initMedicalCardChecklist() {
   const waCta = document.getElementById('mc-checklist-cta-wa');
   const standaloneCta = document.getElementById('mc-checklist-cta-standalone');
 
+  // Fallback labels for pages that don't mark up a per-button .checklist-question
+  // span (e.g. medical-card-lengkap-2026.html) — pages that do (the ads landing
+  // page) get their recap built straight from the button's own visible text,
+  // so the WhatsApp message always matches whatever question is actually shown.
   const itemLabels = {
     1: 'Ada pelan takaful keluarga aktif',
     2: 'Nak had tahunan RM1.5 juta+ tanpa had seumur hidup',
@@ -201,8 +205,15 @@ function initMedicalCardChecklist() {
     4: 'Nak mental health, pemulihan & evakuasi dalam satu pelan',
     5: 'Merancang keluarga / nak perlindungan sepanjang hayat lebih tinggi'
   };
+  const skipActivePlanGate = wrapper.getAttribute('data-skip-active-plan-gate') === 'true';
 
   const checked = new Set();
+
+  function getItemLabel(btn) {
+    const question = btn.querySelector('.checklist-question');
+    if (question) return question.textContent.trim();
+    return itemLabels[btn.getAttribute('data-checklist-item')] || '';
+  }
 
   function setButtonState(btn, isChecked) {
     const badge = btn.querySelector('.checklist-badge');
@@ -215,23 +226,23 @@ function initMedicalCardChecklist() {
   function updateResult() {
     resultBox.classList.remove('hidden');
 
-    if (!checked.has('1')) {
+    if (!skipActivePlanGate && !checked.has('1')) {
       resultHeading.textContent = 'Rider Ini Mungkin Belum Sesuai';
       resultBody.innerHTML = 'Medical Card Lengkap ini adalah <strong>rider</strong> — perlu ada pelan takaful keluarga aktif dahulu. Tanpa itu, produk standalone (tiada syarat pelan sedia ada) mungkin lebih sesuai untuk anda.';
       waCta.classList.add('hidden');
-      standaloneCta.classList.remove('hidden');
+      standaloneCta?.classList.remove('hidden');
       return;
     }
 
-    standaloneCta.classList.add('hidden');
+    standaloneCta?.classList.add('hidden');
     waCta.classList.remove('hidden');
 
     const wantsPlan300 = checked.has('5');
     const plan = wantsPlan300 ? 'Plan 300' : 'Plan 200';
     const limit = wantsPlan300 ? 'RM3 juta' : 'RM1.5 juta';
-    const selectedLabels = ['1', '2', '3', '4', '5']
-      .filter(n => checked.has(n))
-      .map(n => `- ${itemLabels[n]}`)
+    const selectedLabels = Array.from(buttons)
+      .filter(btn => checked.has(btn.getAttribute('data-checklist-item')))
+      .map(btn => `- ${getItemLabel(btn)}`)
       .join('\n');
 
     resultHeading.textContent = `Cadangan Dr. Hana: ${plan}`;
