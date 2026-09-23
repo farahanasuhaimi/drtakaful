@@ -178,10 +178,85 @@ function hideBlogFramingForAdsTraffic() {
   document.getElementById('read-time-badge')?.classList.add('hidden');
 }
 
+// --- Interactive "Adakah Sesuai Untuk Anda?" Checklist (medical-card-lengkap-2026.html) ---
+// Turns the static checklist into a live plan recommendation: each button
+// toggles on/off, and the result (and its pre-filled WhatsApp message)
+// recomputes after every click. No active family plan (item 1) routes to
+// the standalone product page instead of a WhatsApp CTA for the rider.
+function initMedicalCardChecklist() {
+  const wrapper = document.getElementById('mc-checklist');
+  if (!wrapper) return;
+
+  const buttons = wrapper.querySelectorAll('.mc-checklist-btn');
+  const resultBox = document.getElementById('mc-checklist-result');
+  const resultHeading = document.getElementById('mc-checklist-result-heading');
+  const resultBody = document.getElementById('mc-checklist-result-body');
+  const waCta = document.getElementById('mc-checklist-cta-wa');
+  const standaloneCta = document.getElementById('mc-checklist-cta-standalone');
+
+  const itemLabels = {
+    1: 'Ada pelan takaful keluarga aktif',
+    2: 'Nak had tahunan RM1.5 juta+ tanpa had seumur hidup',
+    3: 'Nak NCB Health Wallet (credit back tahunan)',
+    4: 'Nak mental health, pemulihan & evakuasi dalam satu pelan',
+    5: 'Merancang keluarga / nak perlindungan sepanjang hayat lebih tinggi'
+  };
+
+  const checked = new Set();
+
+  function setButtonState(btn, isChecked) {
+    const badge = btn.querySelector('.checklist-badge');
+    btn.setAttribute('aria-pressed', String(isChecked));
+    badge.classList.toggle('bg-gray-900', isChecked);
+    badge.classList.toggle('text-white', isChecked);
+    badge.textContent = isChecked ? '✓' : btn.getAttribute('data-checklist-item');
+  }
+
+  function updateResult() {
+    resultBox.classList.remove('hidden');
+
+    if (!checked.has('1')) {
+      resultHeading.textContent = 'Rider Ini Mungkin Belum Sesuai';
+      resultBody.innerHTML = 'Medical Card Lengkap ini adalah <strong>rider</strong> — perlu ada pelan takaful keluarga aktif dahulu. Tanpa itu, produk standalone (tiada syarat pelan sedia ada) mungkin lebih sesuai untuk anda.';
+      waCta.classList.add('hidden');
+      standaloneCta.classList.remove('hidden');
+      return;
+    }
+
+    standaloneCta.classList.add('hidden');
+    waCta.classList.remove('hidden');
+
+    const wantsPlan300 = checked.has('5');
+    const plan = wantsPlan300 ? 'Plan 300' : 'Plan 200';
+    const limit = wantsPlan300 ? 'RM3 juta' : 'RM1.5 juta';
+    const selectedLabels = ['1', '2', '3', '4', '5']
+      .filter(n => checked.has(n))
+      .map(n => `- ${itemLabels[n]}`)
+      .join('\n');
+
+    resultHeading.textContent = `Cadangan Dr. Hana: ${plan}`;
+    resultBody.innerHTML = `Berdasarkan jawapan anda, <strong>${plan}</strong> (had tahunan ${limit}) nampak paling sesuai. WhatsApp Dr. Hana untuk sahkan caruman sebenar ikut umur &amp; profil kesihatan anda.`;
+
+    const message = `Hi Hana,\n\nSaya dah jawab checklist Medical Card Lengkap di website:\n${selectedLabels}\n\nCadangan sistem: ${plan}. Boleh sahkan caruman sebenar untuk saya?\n\nTerima kasih!`;
+    waCta.href = `https://wa.me/60132522587?text=${encodeURIComponent(message)}`;
+  }
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.getAttribute('data-checklist-item');
+      const isChecked = !checked.has(item);
+      isChecked ? checked.add(item) : checked.delete(item);
+      setButtonState(btn, isChecked);
+      updateResult();
+    });
+  });
+}
+
 // --- Load Blog Section Dynamically ---
 document.addEventListener('DOMContentLoaded', async () => {
   trackWhatsAppCtaClicksForAdsTraffic();
   hideBlogFramingForAdsTraffic();
+  initMedicalCardChecklist();
   // --- Mobile Menu Script ---
   const mobileMenuButton = document.getElementById('mobile-menu-button');
   const mobileMenu = document.getElementById('mobile-menu');
