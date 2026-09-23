@@ -153,8 +153,8 @@
     <!-- Blog Article -->
     <article class="max-w-4xl mx-auto pt-32 pb-20 px-6">
 
-        <!-- Breadcrumbs -->
-        <div class="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400 mb-8">
+        <!-- Breadcrumbs (hidden for Google Ads traffic — see hideBlogFramingForAdsTraffic() in main.js) -->
+        <div id="page-breadcrumb" class="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400 mb-8">
             <a href="/" class="hover:text-gray-900 transition-colors">Home</a>
             <span class="text-gray-300">/</span>
             <a href="/#blog" class="hover:text-gray-900 transition-colors">Blog</a>
@@ -177,8 +177,8 @@
                     <span class="w-8 h-[1px] bg-gray-200"></span>
                     25 Jun 2026
                 </span>
-                <span>•</span>
-                <span>12 minit bacaan</span>
+                <span id="read-time-separator">•</span>
+                <span id="read-time-badge">12 minit bacaan</span>
             </div>
         </div>
 
@@ -669,6 +669,17 @@
         </div>
 
     </article>
+
+    <!-- Sticky CTA Button (mobile: shows after 2s; desktop: shows past hero — see main.js) -->
+    <a href="https://wa.me/60132522587?text=Hi%20Hana%2C%0A%0ASaya%20nak%20buat%20analisis%20Medical%20Card%20Lengkap%20RM1.5%20Juta%20dengan%20Health%20Wallet%20untuk%20situasi%20saya.%20Boleh%20bantu%3F%0A%0ATerima%20kasih%21"
+        data-wa-source="sticky-cta-medical-card-lengkap" data-wa-intent="Medical Card" id="sticky-cta"
+        class="wa-cta hidden fixed bottom-6 right-6 bg-[#25D366] text-white pl-4 pr-6 py-4 rounded-full shadow-2xl hover:bg-[#20BA5A] active:scale-95 transition-all z-50 font-bold text-sm flex items-center gap-3 group">
+        <span class="relative flex h-3 w-3">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
+        </span>
+        <span class="leading-none">WhatsApp Hana</span>
+    </a>
 
     <footer class="py-12 border-t border-gray-100 text-center sans-font">
         <p class="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-400">

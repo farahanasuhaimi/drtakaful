@@ -135,14 +135,19 @@ function filterArticles(category, isInitialLoad = false) {
 }
 
 
-function trackWhatsAppCtaClicksForAdsTraffic() {
+function getAdsTrafficContext() {
   const params = new URLSearchParams(window.location.search);
   const utmSource = params.get('utm_source') || '';
   const utmCampaign = params.get('utm_campaign') || '';
   const utmMedium = params.get('utm_medium') || '';
   const gclid = params.get('gclid') || '';
-
   const isAdsTraffic = Boolean(gclid || utmSource.toLowerCase() === 'google' || utmMedium.toLowerCase() === 'cpc');
+
+  return { isAdsTraffic, utmSource, utmCampaign, utmMedium, gclid };
+}
+
+function trackWhatsAppCtaClicksForAdsTraffic() {
+  const { isAdsTraffic, utmSource, utmCampaign, utmMedium, gclid } = getAdsTrafficContext();
   const trafficLabel = isAdsTraffic ? 'google_ads' : 'organic_or_direct';
 
   document.querySelectorAll('.wa-cta').forEach(link => {
@@ -162,9 +167,21 @@ function trackWhatsAppCtaClicksForAdsTraffic() {
   });
 }
 
+// Cold ad traffic expects a fast answer, not a blog read — hide the
+// "Blog" breadcrumb + reading-time badge on landing pages when the visit
+// came from a Google Ads click (gclid / utm_source=google / utm_medium=cpc).
+function hideBlogFramingForAdsTraffic() {
+  if (!getAdsTrafficContext().isAdsTraffic) return;
+
+  document.getElementById('page-breadcrumb')?.classList.add('hidden');
+  document.getElementById('read-time-separator')?.classList.add('hidden');
+  document.getElementById('read-time-badge')?.classList.add('hidden');
+}
+
 // --- Load Blog Section Dynamically ---
 document.addEventListener('DOMContentLoaded', async () => {
   trackWhatsAppCtaClicksForAdsTraffic();
+  hideBlogFramingForAdsTraffic();
   // --- Mobile Menu Script ---
   const mobileMenuButton = document.getElementById('mobile-menu-button');
   const mobileMenu = document.getElementById('mobile-menu');
