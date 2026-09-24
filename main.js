@@ -323,11 +323,23 @@ function initFloatingWhatsApp() {
 
   const label = document.getElementById('wa-float-label');
   const inlineCtas = Array.from(document.querySelectorAll('.wa-cta')).filter(el => el !== float);
-  const visible = new Set();
   let labelTimerStarted = false;
+  let scheduled = false;
+
+  // Plain rect check on scroll (100ms-throttled) rather than IntersectionObserver
+  // or rAF, which both depend on rendered frames. Hidden CTAs
+  // (display:none, e.g. closed mobile menu / popup) have a zero-size rect.
+  function anyCtaOnScreen() {
+    const vh = window.innerHeight;
+    return inlineCtas.some(el => {
+      const r = el.getBoundingClientRect();
+      return r.width > 0 && r.height > 0 && r.bottom > 0 && r.top < vh;
+    });
+  }
 
   function render() {
-    const show = visible.size === 0;
+    scheduled = false;
+    const show = !anyCtaOnScreen();
     float.classList.toggle('hidden', !show);
     if (show && label && !labelTimerStarted) {
       labelTimerStarted = true;
@@ -335,21 +347,15 @@ function initFloatingWhatsApp() {
     }
   }
 
-  if (!('IntersectionObserver' in window)) {
-    float.classList.remove('hidden');
-    return;
+  function schedule() {
+    if (scheduled) return;
+    scheduled = true;
+    setTimeout(render, 100);
   }
 
-  // First callback fires with every observed CTA's initial state, so render()
-  // only runs once we actually know what's on screen.
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      entry.isIntersecting ? visible.add(entry.target) : visible.delete(entry.target);
-    });
-    render();
-  });
-  inlineCtas.forEach(el => observer.observe(el));
-  if (inlineCtas.length === 0) render();
+  window.addEventListener('scroll', schedule, { passive: true });
+  window.addEventListener('resize', schedule);
+  render();
 }
 
 // --- Load Blog Section Dynamically ---
