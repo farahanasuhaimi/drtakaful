@@ -337,13 +337,15 @@ function initFloatingWhatsApp() {
     });
   }
 
+  // Toggled via inline style (not Tailwind's .hidden) so the button also works
+  // on pages that don't load the compiled Tailwind CSS.
   function render() {
     scheduled = false;
     const show = !anyCtaOnScreen();
-    float.classList.toggle('hidden', !show);
+    float.style.display = show ? 'flex' : 'none';
     if (show && label && !labelTimerStarted) {
       labelTimerStarted = true;
-      setTimeout(() => label.classList.add('hidden'), 5000);
+      setTimeout(() => { label.style.display = 'none'; }, 5000);
     }
   }
 
