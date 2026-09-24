@@ -263,11 +263,102 @@ function initMedicalCardChecklist() {
   });
 }
 
+// --- Two-step quote quiz (medical-card-sebut-harga.html) ---
+// Step 1 picks an age band, step 2 picks the ONE main worry. The result shows
+// a short answer to that worry and a WhatsApp CTA whose pre-filled message is
+// short and human — never lists health conditions, only "ada soalan pasal
+// sejarah kesihatan", so nothing sensitive sits in the visitor's own chat.
+function initQuoteQuiz() {
+  const quiz = document.getElementById('mc-quiz');
+  if (!quiz) return;
+
+  const ageChips = quiz.querySelectorAll('[data-quiz-age]');
+  const concernChips = quiz.querySelectorAll('[data-quiz-concern]');
+  const resultBox = document.getElementById('mc-quiz-result');
+  const resultBody = document.getElementById('mc-quiz-result-body');
+  const waCta = document.getElementById('mc-quiz-cta');
+  let age = '';
+  let concern = null;
+
+  function select(chips, chosen) {
+    chips.forEach(chip => {
+      const isOn = chip === chosen;
+      chip.setAttribute('aria-pressed', String(isOn));
+      chip.classList.toggle('bg-gray-900', isOn);
+      chip.classList.toggle('text-white', isOn);
+      chip.classList.toggle('bg-white', !isOn);
+    });
+  }
+
+  function update() {
+    if (!concern) return;
+    resultBody.innerHTML = concern.getAttribute('data-answer');
+    const ageText = age ? `saya umur ${age}. ` : '';
+    const message = `Hi Dr. Hana, ${ageText}Paling risau: ${concern.getAttribute('data-message')}. Boleh bagi anggaran caruman medical card?`;
+    waCta.href = `https://wa.me/60132522587?text=${encodeURIComponent(message)}`;
+    const wasHidden = resultBox.classList.contains('hidden');
+    resultBox.classList.remove('hidden');
+    if (wasHidden) resultBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+
+  ageChips.forEach(chip => chip.addEventListener('click', () => {
+    age = chip.getAttribute('data-quiz-age');
+    select(ageChips, chip);
+    update();
+  }));
+  concernChips.forEach(chip => chip.addEventListener('click', () => {
+    concern = chip;
+    select(concernChips, chip);
+    update();
+  }));
+}
+
+// --- Floating round WhatsApp button (#wa-float) ---
+// Appears only while no other WhatsApp CTA is on screen (so it never stacks on
+// top of the hero / quiz / final CTA and invites accidental taps), and shows a
+// "Tanya Dr. Hana" label for its first 5 seconds on screen, then icon only.
+function initFloatingWhatsApp() {
+  const float = document.getElementById('wa-float');
+  if (!float) return;
+
+  const label = document.getElementById('wa-float-label');
+  const inlineCtas = Array.from(document.querySelectorAll('.wa-cta')).filter(el => el !== float);
+  const visible = new Set();
+  let labelTimerStarted = false;
+
+  function render() {
+    const show = visible.size === 0;
+    float.classList.toggle('hidden', !show);
+    if (show && label && !labelTimerStarted) {
+      labelTimerStarted = true;
+      setTimeout(() => label.classList.add('hidden'), 5000);
+    }
+  }
+
+  if (!('IntersectionObserver' in window)) {
+    float.classList.remove('hidden');
+    return;
+  }
+
+  // First callback fires with every observed CTA's initial state, so render()
+  // only runs once we actually know what's on screen.
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      entry.isIntersecting ? visible.add(entry.target) : visible.delete(entry.target);
+    });
+    render();
+  });
+  inlineCtas.forEach(el => observer.observe(el));
+  if (inlineCtas.length === 0) render();
+}
+
 // --- Load Blog Section Dynamically ---
 document.addEventListener('DOMContentLoaded', async () => {
   trackWhatsAppCtaClicksForAdsTraffic();
   hideBlogFramingForAdsTraffic();
   initMedicalCardChecklist();
+  initQuoteQuiz();
+  initFloatingWhatsApp();
   // --- Mobile Menu Script ---
   const mobileMenuButton = document.getElementById('mobile-menu-button');
   const mobileMenu = document.getElementById('mobile-menu');

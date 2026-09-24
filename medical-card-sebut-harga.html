@@ -50,56 +50,117 @@
 
     <!-- Landing page (not a blog article) — deliberately no navbar (no exit path other
          than the CTA), no breadcrumb, no read-time badge -->
-    <section class="max-w-3xl mx-auto pt-14 md:pt-20 pb-20 px-6">
+    <section class="max-w-3xl mx-auto pt-10 pb-20 px-6">
 
-        <!-- Hero: immediate CTA, no scrolling required -->
+        <!-- Hero: immediate CTA + face/credentials on the first screen -->
         <div class="text-center mb-12">
             <span
                 class="inline-block bg-gray-900 text-white text-[10px] font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-6">
-                Untuk Pemegang Pelan Takaful Keluarga Sedia Ada
+                Medical Card Takaful · Konsultan AIA Public Takaful Berlesen
             </span>
             <h1 class="text-3xl md:text-5xl font-black text-gray-900 tracking-tight leading-tight mb-6">
                 Medical Card RM1.5 Juta+ Dengan <span class="text-rose-600">Health Wallet</span>
             </h1>
             <p class="text-lg text-gray-500 max-w-xl mx-auto leading-relaxed mb-8">
-                Pelan rider yang bukan sekadar cover bil hospital — ia kreditkan duit balik ke wallet anda setiap
-                tahun anda sihat. Semak caruman sebenar ikut umur dan profil anda, terus dengan Dr. Hana.
+                Had tahunan sehingga RM3 juta untuk bil hospital besar. Tahun tak claim, kredit RM1,000–2,500 masuk
+                Health Wallet untuk kos kesihatan anda. Semak caruman ikut umur anda, terus dengan Dr. Hana.
             </p>
             <a data-wa-source="mc-quote-hero" data-wa-intent="Medical Card Quote"
-                href="https://wa.me/60132522587?text=Hi%20Hana%2C%0A%0ASaya%20nak%20dapatkan%20sebut%20harga%20percuma%20untuk%20Medical%20Card%20Lengkap%20RM1.5%20Juta%20dengan%20Health%20Wallet.%0A%0ATerima%20kasih%21"
+                href="https://wa.me/60132522587?text=Hi%20Dr.%20Hana%2C%20boleh%20bagi%20anggaran%20caruman%20medical%20card%20untuk%20saya%3F"
                 class="wa-cta inline-flex items-center justify-center gap-2 bg-gray-900 text-white px-10 py-5 rounded-2xl font-black uppercase tracking-widest text-sm shadow-xl hover:bg-black hover:scale-105 active:scale-95 transition-all"
                 rel="noopener noreferrer">
                 💬 Dapatkan Sebut Harga Percuma
             </a>
-            <p class="text-xs text-gray-400 mt-4">⚡ Respon pantas dalam masa bekerja · Tanpa sebarang komitmen</p>
+            <div class="flex items-center justify-center gap-3 mt-6">
+                <div class="w-10 h-10 rounded-full bg-rose-50 overflow-hidden flex-shrink-0">
+                    <img src="images/dr-takaful-hana-profile.png" alt="Dr. Hana" class="w-full h-full object-cover">
+                </div>
+                <p class="text-xs text-gray-500 text-left leading-tight">
+                    <span class="font-bold text-gray-900">Dr. Hana, PhD</span> · 50+ keluarga dilindungi<br>
+                    Respon pantas dalam masa bekerja · Tanpa komitmen
+                </p>
+            </div>
         </div>
 
-        <!-- Condensed value strip — not a full explanation, just enough to qualify the click -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
+        <!-- Value strip — plain words, no product jargon for cold traffic -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
             <div class="bg-white border border-gray-100 rounded-2xl p-5 text-center shadow-sm">
                 <p class="text-xl font-black text-gray-900">RM1.5–3M</p>
                 <p class="text-[11px] text-gray-500 mt-1 leading-tight">Had Tahunan, Tiada Had Seumur Hidup</p>
             </div>
             <div class="bg-white border border-gray-100 rounded-2xl p-5 text-center shadow-sm">
                 <p class="text-xl font-black text-gray-900">RM1,000–2,500</p>
-                <p class="text-[11px] text-gray-500 mt-1 leading-tight">Health Wallet NCB Setahun</p>
+                <p class="text-[11px] text-gray-500 mt-1 leading-tight">Kredit Health Wallet Tahun Tak Claim</p>
             </div>
             <div class="bg-white border border-gray-100 rounded-2xl p-5 text-center shadow-sm">
-                <p class="text-xl font-black text-gray-900">20%</p>
-                <p class="text-[11px] text-gray-500 mt-1 leading-tight">Diskaun Caruman Via SMART Pathway</p>
+                <p class="text-xl font-black text-gray-900">Swasta</p>
+                <p class="text-[11px] text-gray-500 mt-1 leading-tight">Rangkaian Hospital Panel</p>
             </div>
             <div class="bg-white border border-gray-100 rounded-2xl p-5 text-center shadow-sm">
-                <p class="text-xl font-black text-gray-900">6 Keadaan</p>
-                <p class="text-[11px] text-gray-500 mt-1 leading-tight">Kesihatan Mental Termasuk Dalam Wallet</p>
+                <p class="text-xl font-black text-gray-900">Wad & ICU</p>
+                <p class="text-[11px] text-gray-500 mt-1 leading-tight">Pembedahan & Rawatan Kanser</p>
             </div>
         </div>
 
-        <!-- 3-tier content (library/marketing/medical-card-conversion-malaysia.md in MemoryCore):
-             1. myth-busting → 2. trust (real case + process) → 3. corporate-gap comparison.
-             Research: Malaysian prospects respond to trust/social proof over pure education,
-             and 3 unaddressed objections kill interest before first contact. -->
+        <!-- Two-step quiz (initQuoteQuiz in main.js): age → ONE main worry → short answer +
+             short human WhatsApp pre-fill. Replaces the 5-item "Risau..." checklist. -->
+        <div id="mc-quiz" class="bg-yellow-400 text-gray-900 rounded-[2.5rem] p-6 md:p-10 mb-12 shadow-xl">
+            <h2 class="text-2xl font-black mb-2">Semak Dalam 10 Saat</h2>
+            <p class="text-sm font-semibold text-gray-700 mb-6">2 soalan je. Dr. Hana guna jawapan ini untuk bagi anggaran caruman anda.</p>
 
-        <!-- Tier 1: Myth-busting — the objections that stop people before they ever ask -->
+            <p class="text-xs font-black uppercase tracking-widest mb-3">1. Umur anda?</p>
+            <div class="flex flex-wrap gap-2 mb-8">
+                <button type="button" data-quiz-age="bawah 30" aria-pressed="false" class="bg-white border-2 border-gray-900 rounded-full px-4 py-2 text-sm font-bold">Bawah 30</button>
+                <button type="button" data-quiz-age="30-an" aria-pressed="false" class="bg-white border-2 border-gray-900 rounded-full px-4 py-2 text-sm font-bold">30–39</button>
+                <button type="button" data-quiz-age="40-an" aria-pressed="false" class="bg-white border-2 border-gray-900 rounded-full px-4 py-2 text-sm font-bold">40–49</button>
+                <button type="button" data-quiz-age="50 ke atas" aria-pressed="false" class="bg-white border-2 border-gray-900 rounded-full px-4 py-2 text-sm font-bold">50+</button>
+            </div>
+
+            <p class="text-xs font-black uppercase tracking-widest mb-3">2. Apa paling anda risau?</p>
+            <div class="space-y-3">
+                <button type="button" data-quiz-concern="bil" aria-pressed="false"
+                    data-message="bil hospital besar"
+                    data-answer="Had tahunan <strong>RM1.5–3 juta</strong>, tiada had seumur hidup — cukup untuk pembedahan besar, ICU atau rawatan kanser di hospital swasta panel. Dr. Hana boleh kira caruman sebenar ikut umur anda."
+                    class="w-full text-left bg-white border-2 border-gray-900 rounded-2xl px-5 py-4 font-bold">🏥 Bil hospital besar</button>
+                <button type="button" data-quiz-concern="company" aria-pressed="false"
+                    data-message="company cover tak cukup"
+                    data-answer="Cover syarikat biasanya tamat bila anda berhenti kerja, dan hadnya ditentukan majikan. Medical card sendiri kekal dengan anda — ia <strong>penampal jurang</strong>, bukan pengganti."
+                    class="w-full text-left bg-white border-2 border-gray-900 rounded-2xl px-5 py-4 font-bold">💼 Company cover tak cukup</button>
+                <button type="button" data-quiz-concern="sejarah" aria-pressed="false"
+                    data-message="ada soalan pasal sejarah kesihatan"
+                    data-answer="Ada sejarah sakit <strong>tak semestinya ditolak</strong> — permohonan boleh diterima biasa, dengan pengecualian, atau dengan caruman tambahan. Dr. Hana semak borang isytihar bersama anda supaya tiada masalah GL nanti."
+                    class="w-full text-left bg-white border-2 border-gray-900 rounded-2xl px-5 py-4 font-bold">🩺 Ada sejarah sakit</button>
+                <button type="button" data-quiz-concern="rugi" aria-pressed="false"
+                    data-message="rasa rugi kalau tak claim"
+                    data-answer="Tahun tak claim, kredit <strong>RM1,000–2,500</strong> masuk Health Wallet untuk kos kesihatan anda — caruman tak hangus begitu sahaja."
+                    class="w-full text-left bg-white border-2 border-gray-900 rounded-2xl px-5 py-4 font-bold">💸 Rasa rugi kalau tak claim</button>
+            </div>
+
+            <div id="mc-quiz-result" class="hidden mt-8 pt-6 border-t border-gray-800/10">
+                <p class="text-xs font-black uppercase tracking-widest text-rose-700 mb-2">Jawapan Dr. Hana</p>
+                <p id="mc-quiz-result-body" class="text-gray-800 leading-relaxed mb-6"></p>
+                <a id="mc-quiz-cta" data-wa-source="mc-quote-quiz" data-wa-intent="Medical Card Quiz"
+                    href="https://wa.me/60132522587?text=Hi%20Dr.%20Hana%2C%20boleh%20bagi%20anggaran%20caruman%20medical%20card%20untuk%20saya%3F"
+                    class="wa-cta block w-full text-center bg-gray-900 text-white px-6 py-5 rounded-2xl font-black uppercase tracking-widest text-sm shadow-xl hover:bg-black transition"
+                    rel="noopener noreferrer">
+                    Hantar Ke Dr. Hana 💬
+                </a>
+                <p class="text-xs text-gray-700 text-center mt-3">Mesej dah siap — tekan hantar sahaja. Tanpa komitmen.</p>
+            </div>
+        </div>
+
+        <!-- Process box — strongest trust copy on the page, right under the quiz -->
+        <div class="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm mb-16">
+            <p class="font-black text-gray-900 mb-4">Apa saya buat untuk setiap klien — sebelum dan selepas daftar:</p>
+            <ul class="space-y-3 text-sm text-gray-600 leading-relaxed">
+                <li>✅ <strong>Terangkan apa yang TAK dicover dulu</strong> — pengecualian, tempoh menunggu, syarat GL. Tiada kejutan masa kecemasan.</li>
+                <li>✅ <strong>Semak borang isytihar kesihatan bersama</strong> — supaya tak ada ruang GL decline sebab butiran tertinggal.</li>
+                <li>✅ <strong>Anda WhatsApp saya terus bila masuk hospital</strong> — saya bantu uruskan proses GL, bukan hilang lepas jual.</li>
+            </ul>
+            <p class="text-xs text-gray-400 mt-4">Konsultan AIA Public Takaful berlesen · 50+ keluarga dilindungi · Tiada hard-selling</p>
+        </div>
+
+        <!-- Myth-busting — the objections that stop people before they ever ask -->
         <div class="mb-16">
             <p class="text-xs font-black uppercase tracking-widest text-rose-600 mb-2 text-center">Salah Faham Biasa</p>
             <h2 class="text-2xl md:text-3xl font-black text-gray-900 text-center mb-8">3 Sebab Orang Tak Ambil Medical Card — Dan Kenapa Ia Silap</h2>
@@ -107,10 +168,10 @@
                 <div class="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
                     <p class="font-black text-gray-900 mb-2">❌ "Buang duit je kalau tak claim."</p>
                     <p class="text-sm text-gray-600 leading-relaxed">
-                        Pelan ini ada <strong>Health Wallet</strong> — setiap tahun anda sihat, RM1,000–2,500 dikreditkan
-                        ke wallet anda untuk kegunaan kesihatan. Dan satu kemasukan wad biasa di hospital swasta
-                        (contohnya appendix) boleh mencecah <strong>RM10k–15k</strong>. Caruman bukan "hangus" —
-                        ia harga untuk tak perlu keluarkan duit simpanan bila hari itu tiba.
+                        Tahun tak claim, kredit RM1,000–2,500 masuk <strong>Health Wallet</strong> untuk kos kesihatan
+                        anda. Dan satu kemasukan wad biasa di hospital swasta (contohnya appendix) boleh mencecah
+                        <strong>RM10k–15k</strong>. Caruman bukan "hangus" — ia harga untuk tak perlu keluarkan duit
+                        simpanan bila hari itu tiba.
                     </p>
                 </div>
                 <div class="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
@@ -133,75 +194,24 @@
             </div>
         </div>
 
-        <!-- Tier 2: Trust — real public cases (news + social media screenshots) + what actually happens,
-             so it's not "ejen dulu tipu" all over again. These are NOT Dr. Hana's clients — framed as
-             public stories, and we make no claim about what cover these families did or didn't have. -->
+        <!-- One public news headline, text only (no photos of real families/children) -->
         <div class="mb-16">
             <p class="text-xs font-black uppercase tracking-widest text-rose-600 mb-2 text-center">Kisah Sebenar</p>
-            <h2 class="text-2xl md:text-3xl font-black text-gray-900 text-center mb-3">Ini Bukan Cerita Rekaan</h2>
-            <p class="text-sm text-gray-500 text-center max-w-xl mx-auto mb-8">Tiga kisah dari berita dan media sosial Malaysia. Coraknya sama: bila seorang dalam keluarga sakit teruk, simpanan habis dulu — kemudian keluarga terpaksa minta bantuan.</p>
-
-            <div class="space-y-6 mb-6">
-                <div class="bg-white border border-gray-100 rounded-2xl shadow-sm overflow-hidden">
-                    <img src="images/suami-terlantar.png" alt="Keratan berita: Suami terlantar sakit, keluarga bakal hilang pendapatan (27 Disember 2024)"
-                        loading="lazy" class="w-full object-cover" style="height:12rem;object-position:top">
-                    <div class="p-6">
-                        <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">Berita · 27 Disember 2024</p>
-                        <p class="font-black text-gray-900 mb-2">"Suami terlantar sakit, keluarga bakal hilang pendapatan"</p>
-                        <p class="text-sm text-gray-600 leading-relaxed">
-                            Bila pencari nafkah terlantar, dua beban datang serentak: kos rawatan, dan gaji yang berhenti masuk.
-                            Keluarga yang terpaksa bayar bil hospital dengan duit simpanan tak ada apa-apa lagi untuk tampung belanja bulanan.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="bg-white border border-gray-100 rounded-2xl shadow-sm overflow-hidden">
-                    <img src="images/minta-bantuan-suami-strok.png" alt="Keratan berita: Ibu Tiga Anak Mohon Sumbangan Bantu Suami Strok (15 November 2016)"
-                        loading="lazy" class="w-full object-cover" style="height:12rem;object-position:top">
-                    <div class="p-6">
-                        <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">Berita · 15 November 2016</p>
-                        <p class="font-black text-gray-900 mb-2">"Ibu Tiga Anak Mohon Sumbangan Bantu Suami Strok"</p>
-                        <p class="text-sm text-gray-600 leading-relaxed">
-                            Strok boleh jadi pada umur produktif. Rawatan dan pemulihan berbulan-bulan, dan bila tiada perlindungan,
-                            jalan terakhir ialah minta sumbangan orang ramai — dengan tiga anak kecil yang masih perlu disara.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="bg-white border border-gray-100 rounded-2xl shadow-sm overflow-hidden">
-                    <img src="images/minta-fasakh-suami-sakit.png" alt="Hantaran Facebook Kisah Rumah Tangga: isteri menanggung suami sakit kronik, simpanan habis"
-                        loading="lazy" class="w-full object-cover" style="height:12rem;object-position:top">
-                    <div class="p-6">
-                        <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">Facebook · Kisah Rumah Tangga</p>
-                        <p class="font-black text-gray-900 mb-2">"Habis harta saya lebur... Apa-apa simpanan pun takde."</p>
-                        <p class="text-sm text-gray-600 leading-relaxed">
-                            Seorang isteri menanggung suami yang sakit kronik seorang diri, sampai terfikir untuk minta fasakh.
-                            Penyakit yang panjang bukan sahaja menguji kesihatan — ia menguji rumah tangga bila duit dah tiada.
-                        </p>
-                    </div>
-                </div>
+            <h2 class="text-2xl md:text-3xl font-black text-gray-900 text-center mb-8">Bila Sakit Teruk, Simpanan Habis Dulu</h2>
+            <div class="bg-white border-l-4 border-gray-900 rounded-r-2xl p-6 shadow-sm mb-6">
+                <p class="text-lg font-black text-gray-900 italic mb-2">"Suami terlantar sakit, keluarga bakal hilang pendapatan"</p>
+                <p class="text-xs font-bold uppercase tracking-widest text-gray-400">Tajuk berita · 27 Disember 2024</p>
             </div>
-
-            <div class="bg-gray-900 text-white rounded-[2.5rem] p-8 md:p-10 shadow-xl mb-6">
+            <div class="bg-gray-900 text-white rounded-[2.5rem] p-8 md:p-10 shadow-xl">
                 <p class="text-lg leading-relaxed text-gray-200">
-                    Medical card tak boleh halang penyakit, dan ia bukan ganti gaji. Tapi ia boleh pastikan
-                    <strong class="text-white">bil hospital tak makan simpanan keluarga</strong> — supaya duit yang ada
-                    masih boleh sara rumah tangga masa paling susah.
+                    Kisah macam ini berulang dalam berita. Medical card tak boleh halang penyakit, dan ia bukan ganti gaji.
+                    Tapi ia boleh pastikan <strong class="text-white">bil hospital tak makan simpanan keluarga</strong> —
+                    supaya duit yang ada masih boleh sara rumah tangga masa paling susah.
                 </p>
-            </div>
-
-            <div class="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
-                <p class="font-black text-gray-900 mb-4">Apa saya buat untuk setiap klien — sebelum dan selepas daftar:</p>
-                <ul class="space-y-3 text-sm text-gray-600 leading-relaxed">
-                    <li>✅ <strong>Terangkan apa yang TAK dicover dulu</strong> — pengecualian, tempoh menunggu, syarat GL. Tiada kejutan masa kecemasan.</li>
-                    <li>✅ <strong>Semak borang isytihar kesihatan bersama</strong> — supaya tak ada ruang GL decline sebab butiran tertinggal.</li>
-                    <li>✅ <strong>Anda WhatsApp saya terus bila masuk hospital</strong> — saya bantu uruskan proses GL, bukan hilang lepas jual.</li>
-                </ul>
-                <p class="text-xs text-gray-400 mt-4">Konsultan AIA Public Takaful berlesen · 50+ keluarga dilindungi · Tiada hard-selling</p>
             </div>
         </div>
 
-        <!-- Tier 3: Corporate-gap comparison — for salaried M40 who think "company dah cover" -->
+        <!-- Corporate-gap comparison — for salaried M40 who think "company dah cover" -->
         <div class="mb-16">
             <p class="text-xs font-black uppercase tracking-widest text-rose-600 mb-2 text-center">"Company Dah Cover"</p>
             <h2 class="text-2xl md:text-3xl font-black text-gray-900 text-center mb-3">Insurans Syarikat vs Medical Card Sendiri</h2>
@@ -233,7 +243,7 @@
                         </tr>
                         <tr>
                             <td class="p-4 font-bold text-gray-900">Bila bersara</td>
-                            <td class="p-4">Tiada — tepat bila risiko paling tinggi</td>
+                            <td class="p-4">Selalunya tamat (kecuali pesara kerajaan)</td>
                             <td class="p-4">Masih dilindungi</td>
                         </tr>
                     </tbody>
@@ -245,54 +255,6 @@
             </p>
         </div>
 
-        <!-- Interactive Checklist (same recommender engine as medical-card-lengkap-2026.html) -->
-        <div id="mc-checklist" data-skip-active-plan-gate="true" class="bg-yellow-400 text-gray-900 rounded-[2.5rem] p-10 mb-16 shadow-xl relative overflow-hidden">
-            <div class="absolute -top-10 -right-10 text-9xl transform rotate-12 opacity-10">📋</div>
-            <h3 class="text-2xl font-black mb-2">Checklist Dr. Hana: Risiko Mana Yang Membimbangkan Anda?</h3>
-            <p class="text-sm font-semibold text-gray-700 mb-6">Tekan yang berkenaan dengan anda — Dr. Hana cadangkan pelan yang sesuai serta-merta.</p>
-            <div class="space-y-1">
-                <button type="button" data-checklist-item="1" aria-pressed="false"
-                    class="mc-checklist-btn w-full flex items-center gap-4 text-left font-bold text-lg rounded-2xl px-3 py-3 -mx-3 transition-colors hover:bg-white/20">
-                    <span class="checklist-badge w-7 h-7 rounded-full border-2 border-gray-900 flex items-center justify-center text-xs flex-shrink-0 transition-colors">1</span>
-                    <span class="checklist-question">Risau Guarantee Letter (GL) anda kena "decline" masa kecemasan, sebab syarat teknikal yang anda tak perasan?</span>
-                </button>
-                <button type="button" data-checklist-item="2" aria-pressed="false"
-                    class="mc-checklist-btn w-full flex items-center gap-4 text-left font-bold text-lg rounded-2xl px-3 py-3 -mx-3 transition-colors hover:bg-white/20 border-t border-gray-800/10 mt-3 pt-4">
-                    <span class="checklist-badge w-7 h-7 rounded-full border-2 border-gray-900 flex items-center justify-center text-xs flex-shrink-0 transition-colors">2</span>
-                    <span class="checklist-question">Risau kalau kena masuk wad lama, bil hospital boleh melebihi had pelan sedia ada anda?</span>
-                </button>
-                <button type="button" data-checklist-item="3" aria-pressed="false"
-                    class="mc-checklist-btn w-full flex items-center gap-4 text-left font-bold text-lg rounded-2xl px-3 py-3 -mx-3 transition-colors hover:bg-white/20 border-t border-gray-800/10 mt-3 pt-4">
-                    <span class="checklist-badge w-7 h-7 rounded-full border-2 border-gray-900 flex items-center justify-center text-xs flex-shrink-0 transition-colors">3</span>
-                    <span class="checklist-question">Rasa "rugi" bila caruman dibayar tahun-tahun tapi sihat sepanjang tahun, tak dapat apa balik?</span>
-                </button>
-                <button type="button" data-checklist-item="4" aria-pressed="false"
-                    class="mc-checklist-btn w-full flex items-center gap-4 text-left font-bold text-lg rounded-2xl px-3 py-3 -mx-3 transition-colors hover:bg-white/20 border-t border-gray-800/10 mt-3 pt-4">
-                    <span class="checklist-badge w-7 h-7 rounded-full border-2 border-gray-900 flex items-center justify-center text-xs flex-shrink-0 transition-colors">4</span>
-                    <span class="checklist-question">Risau kalau kena masalah kesihatan mental, pemulihan kanser, atau rawatan luar negara — tapi tak dilindungi?</span>
-                </button>
-                <button type="button" data-checklist-item="5" aria-pressed="false"
-                    class="mc-checklist-btn w-full flex items-center gap-4 text-left font-bold text-lg rounded-2xl px-3 py-3 -mx-3 transition-colors hover:bg-white/20 border-t border-gray-800/10 mt-3 pt-4">
-                    <span class="checklist-badge w-7 h-7 rounded-full border-2 border-gray-900 flex items-center justify-center text-xs flex-shrink-0 transition-colors">5</span>
-                    <span class="checklist-question">Risau keperluan perlindungan keluarga anda akan berubah atau membesar akan datang?</span>
-                </button>
-            </div>
-
-            <div id="mc-checklist-result" class="hidden mt-8 pt-8 border-t border-gray-800/20">
-                <p id="mc-checklist-result-heading" class="text-xs font-black uppercase tracking-widest text-rose-700 mb-2"></p>
-                <p id="mc-checklist-result-body" class="text-gray-800 leading-relaxed mb-6"></p>
-                <a id="mc-checklist-cta-wa" data-wa-source="mc-quote-checklist" data-wa-intent="Medical Card Checklist"
-                    class="wa-cta hidden inline-block bg-gray-900 text-white px-8 py-4 rounded-full font-black uppercase tracking-widest text-xs hover:bg-black transition"
-                    href="#" rel="noopener noreferrer">
-                    Sahkan Dengan Dr. Hana 💬
-                </a>
-                <a id="mc-checklist-cta-standalone" href="medical-card-untuk-content-creator.html"
-                    class="hidden inline-block bg-gray-900 text-white px-8 py-4 rounded-full font-black uppercase tracking-widest text-xs hover:bg-black transition">
-                    Lihat Medical Card Standalone →
-                </a>
-            </div>
-        </div>
-
         <!-- Final CTA -->
         <div class="bg-gray-900 text-white rounded-[3rem] p-10 md:p-12 text-center shadow-2xl relative overflow-hidden">
             <div class="absolute inset-0 bg-gradient-to-br from-rose-600/30 via-transparent to-rose-900/10 opacity-50">
@@ -300,19 +262,20 @@
             <div class="relative z-10">
                 <h3 class="text-2xl md:text-3xl font-black text-white mb-4">Nak Tahu Caruman Sebenar Untuk Profil Anda?</h3>
                 <p class="text-gray-300 mb-8 max-w-md mx-auto text-sm leading-relaxed">
-                    Umur, jantina & tahap kesihatan pengaruhi caruman sebenar. WhatsApp Dr. Hana untuk "Engineering
-                    Audit" percuma — tanpa perlu daftar atau isi borang panjang.
+                    Umur, jantina & tahap kesihatan pengaruhi caruman sebenar. WhatsApp Dr. Hana untuk semakan
+                    percuma — tanpa perlu daftar atau isi borang panjang.
                 </p>
                 <a data-wa-source="mc-quote-final" data-wa-intent="Medical Card Quote"
-                    href="https://wa.me/60132522587?text=Hi%20Hana%2C%0A%0ASaya%20nak%20tahu%20caruman%20sebenar%20untuk%20Medical%20Card%20Lengkap%20ikut%20profil%20saya.%0A%0ATerima%20kasih%21"
-                    class="wa-cta inline-block bg-white text-gray-900 px-10 py-5 rounded-2xl font-black uppercase tracking-widest text-sm shadow-xl hover:bg-rose-50 hover:scale-105 active:scale-95 transition-all">
+                    href="https://wa.me/60132522587?text=Hi%20Dr.%20Hana%2C%20saya%20nak%20tahu%20caruman%20sebenar%20medical%20card%20ikut%20profil%20saya."
+                    class="wa-cta inline-block bg-white text-gray-900 px-10 py-5 rounded-2xl font-black uppercase tracking-widest text-sm shadow-xl hover:bg-rose-50 hover:scale-105 active:scale-95 transition-all"
+                    rel="noopener noreferrer">
                     Mulakan Sebut Harga Percuma 💬
                 </a>
             </div>
         </div>
 
         <!-- Compact trust strip + escape hatch to the full guide, for anyone who wants to read before they WhatsApp -->
-        <div class="flex flex-col items-center gap-4 mt-14 text-center">
+        <div class="flex flex-col items-center gap-4 mt-12 text-center">
             <div class="flex items-center gap-3">
                 <div class="w-12 h-12 rounded-2xl bg-rose-50 overflow-hidden flex-shrink-0 border-2 border-rose-50">
                     <img src="images/dr-takaful-hana-profile.png" alt="Dr. Takaful Hana" class="w-full h-full object-cover">
@@ -322,21 +285,25 @@
                 </p>
             </div>
             <a href="medical-card-lengkap-2026.html" class="text-xs font-bold text-gray-400 hover:text-gray-900 underline transition-colors">
-                Nak baca penjelasan penuh dulu (Health Wallet, SMART Pathway, Plan 200 vs 300)? →
+                Nak baca penjelasan penuh dulu? →
             </a>
         </div>
 
     </section>
 
-    <!-- Sticky CTA Button (mobile: shows after 2s; desktop: shows past hero — see main.js) -->
-    <a href="https://wa.me/60132522587?text=Hi%20Hana%2C%0A%0ASaya%20nak%20dapatkan%20sebut%20harga%20percuma%20untuk%20Medical%20Card%20Lengkap%20RM1.5%20Juta%20dengan%20Health%20Wallet.%0A%0ATerima%20kasih%21"
-        data-wa-source="mc-quote-sticky" data-wa-intent="Medical Card Quote" id="sticky-cta"
-        class="wa-cta hidden fixed bottom-6 right-6 bg-[#25D366] text-white pl-4 pr-6 py-4 rounded-full shadow-2xl hover:bg-[#20BA5A] active:scale-95 transition-all z-50 font-bold text-sm flex items-center gap-3 group">
-        <span class="relative flex h-3 w-3">
-            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
-            <span class="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
+    <!-- Floating round WhatsApp button — shown only while no other WhatsApp CTA is on
+         screen, "Tanya Dr. Hana" label for its first 5s (see initFloatingWhatsApp in main.js) -->
+    <a id="wa-float" data-wa-source="mc-quote-float" data-wa-intent="Medical Card Quote"
+        href="https://wa.me/60132522587?text=Hi%20Dr.%20Hana%2C%20boleh%20bagi%20anggaran%20caruman%20medical%20card%20untuk%20saya%3F"
+        class="wa-cta hidden fixed z-50 flex items-center gap-3"
+        style="right:1rem;bottom:calc(1rem + env(safe-area-inset-bottom))"
+        aria-label="WhatsApp Dr. Hana" rel="noopener noreferrer">
+        <span id="wa-float-label" class="bg-white text-gray-900 text-xs font-bold px-3 py-2 rounded-full shadow-xl">Tanya Dr. Hana</span>
+        <span class="flex items-center justify-center rounded-full shadow-2xl" style="width:3.5rem;height:3.5rem;background:#25D366">
+            <svg class="w-8 h-8" fill="#ffffff" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+            </svg>
         </span>
-        <span class="leading-none">WhatsApp Hana</span>
     </a>
 
     <footer class="py-12 border-t border-gray-100 text-center sans-font">
