@@ -207,22 +207,30 @@
       <!-- Headline -->
       <div class="text-center mb-8">
         <h1 class="text-2xl sm:text-3xl font-black text-ink leading-snug mb-3">
-          Medical card ada.<br>
-          <span class="text-strawberry">Tapi siapa bayar gaji anda bila sakit kritikal?</span>
+          Takaful yang jelas.<br>
+          <span class="text-strawberry">Tanpa hard-selling.</span>
         </h1>
-        <p class="text-sm text-ink-muted">Hana &mdash; a client before a consultant.</p>
+        <p class="text-sm text-ink-soft leading-snug mb-4">Saya Dr. Hana. Saya terangkan apa yang TAK dicover dulu, dan saya sendiri bantu bila anda masuk hospital.</p>
+        <div class="inline-flex items-center justify-center gap-2 mb-4">
+          <span class="w-8 h-8 rounded-full overflow-hidden flex-shrink-0">
+            <img src="images/dr-takaful-hana-profile.png" alt="Dr. Hana" class="w-full h-full object-cover">
+          </span>
+          <span class="text-xs text-ink-muted text-left leading-snug">&#x2B50; 50+ keluarga dilindungi · Konsultan AIA Public Takaful berlesen<br>A client before a consultant</span>
+        </div>
+        <p class="text-sm font-black text-ink">Apa yang paling anda risau?</p>
       </div>
 
       <!-- 6 Intent Blocks: 2-column grid -->
       <div class="grid grid-cols-2 gap-3">
 
         <!-- 1. Medical Card -->
-        <a href="https://wa.me/60132522587?text=Hi%20Hana%2C%0A%0ASaya%20nak%20tanya%20pasal%20medical%20card%20untuk%20diri%20sendiri.%20Boleh%20cadangkan%20plan%20dan%20limit%20yang%20sesuai%20ikut%20umur%20dan%20bajet%20saya%3F%0A%0ATerima%20kasih%21"
-          data-wa-source="intent-medical" data-wa-intent="Medical Card"
-          class="wa-cta group flex flex-col gap-2 p-4 rounded-2xl bg-white border border-matcha-light active:scale-95 transition-all hover:border-matcha-mid hover:shadow-md shadow-sm text-left">
+        <!-- Goes to the quote page (quiz + prices) instead of straight to WhatsApp; not a
+             .wa-cta, so it doesn't count as a whatsapp_cta_click conversion. -->
+        <a href="/medical-card-sebut-harga.html"
+          class="group flex flex-col gap-2 p-4 rounded-2xl bg-white border border-matcha-light active:scale-95 transition-all hover:border-matcha-mid hover:shadow-md shadow-sm text-left">
           <span class="text-2xl leading-none">&#x1F3E5;</span>
           <span class="font-black text-ink text-sm leading-tight">Nak Medical Card</span>
-          <span class="text-[11px] text-ink-muted leading-snug">Nak tahu limit sesuai untuk rawatan hospital swasta</span>
+          <span class="text-[11px] text-ink-muted leading-snug">Semak caruman dalam 10 saat, dari RM169/bulan</span>
         </a>
 
         <!-- 2. Ganti Gaji / CI -->
