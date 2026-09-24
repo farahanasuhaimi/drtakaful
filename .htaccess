@@ -16,3 +16,12 @@ RewriteRule ^go/([a-zA-Z0-9-]+)/?$ redirect.php?code=$1 [L,QSA]
 # RewriteCond %{REQUEST_FILENAME} !-f
 # RewriteCond %{REQUEST_FILENAME} !-d
 # RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+# Cache: make browsers revalidate HTML/JS/CSS on every visit (cheap 304 when
+# unchanged) so a push shows up immediately instead of a stale cached copy
+# (seen 2026-09-24: new medical-card-sebut-harga.html not showing after deploy).
+<IfModule mod_headers.c>
+  <FilesMatch "\.(html|js|css)$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+</IfModule>
